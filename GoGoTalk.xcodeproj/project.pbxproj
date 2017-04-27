@@ -37,7 +37,9 @@
 		D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC31EB18EF100EBF0D1 /* BaseNetManager.m */; };
 		D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC61EB1903900EBF0D1 /* UIButton+XCHelperBlock.m */; };
 		D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC91EB190DA00EBF0D1 /* NSString+XCHelper.m */; };
-		D6C7AB8E1EB1C7A800EBF0D1 /* GGT_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AB8D1EB1C7A800EBF0D1 /* GGT_LoginView.m */; };
+		D6C7AB911EB1CC1C00EBF0D1 /* GGT_ForgotPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AB901EB1CC1C00EBF0D1 /* GGT_ForgotPasswordView.m */; };
+		D6C7AB941EB1CC3500EBF0D1 /* GGT_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AB931EB1CC3500EBF0D1 /* GGT_LoginView.m */; };
+		D6C7AB971EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AB961EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,8 +123,12 @@
 		D6C7AAC81EB190DA00EBF0D1 /* NSString+XCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XCHelper.h"; sourceTree = "<group>"; };
 		D6C7AAC91EB190DA00EBF0D1 /* NSString+XCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XCHelper.m"; sourceTree = "<group>"; };
 		D6C7AACB1EB1974700EBF0D1 /* AppInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInformation.h; sourceTree = "<group>"; };
-		D6C7AB8C1EB1C7A800EBF0D1 /* GGT_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_LoginView.h; sourceTree = "<group>"; };
-		D6C7AB8D1EB1C7A800EBF0D1 /* GGT_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_LoginView.m; sourceTree = "<group>"; };
+		D6C7AB8F1EB1CC1C00EBF0D1 /* GGT_ForgotPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ForgotPasswordView.h; sourceTree = "<group>"; };
+		D6C7AB901EB1CC1C00EBF0D1 /* GGT_ForgotPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ForgotPasswordView.m; sourceTree = "<group>"; };
+		D6C7AB921EB1CC3500EBF0D1 /* GGT_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_LoginView.h; sourceTree = "<group>"; };
+		D6C7AB931EB1CC3500EBF0D1 /* GGT_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_LoginView.m; sourceTree = "<group>"; };
+		D6C7AB951EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGT_ ForgotPasswordViewController.h"; sourceTree = "<group>"; };
+		D6C7AB961EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GGT_ ForgotPasswordViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,6 +436,8 @@
 				D6C7AABE1EB1879600EBF0D1 /* GGT_NewFeatherViewController.m */,
 				5BC2AFC31EB054A8004DF44D /* GGT_RegisterViewController.h */,
 				5BC2AFC41EB054A8004DF44D /* GGT_RegisterViewController.m */,
+				D6C7AB951EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.h */,
+				D6C7AB961EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -437,8 +445,10 @@
 		5BC2AFA11EB05057004DF44D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7AB8C1EB1C7A800EBF0D1 /* GGT_LoginView.h */,
-				D6C7AB8D1EB1C7A800EBF0D1 /* GGT_LoginView.m */,
+				D6C7AB921EB1CC3500EBF0D1 /* GGT_LoginView.h */,
+				D6C7AB931EB1CC3500EBF0D1 /* GGT_LoginView.m */,
+				D6C7AB8F1EB1CC1C00EBF0D1 /* GGT_ForgotPasswordView.h */,
+				D6C7AB901EB1CC1C00EBF0D1 /* GGT_ForgotPasswordView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -688,6 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */,
+				D6C7AB911EB1CC1C00EBF0D1 /* GGT_ForgotPasswordView.m in Sources */,
 				D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */,
 				D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */,
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
@@ -701,16 +712,17 @@
 				D6C7AAAE1EB1873200EBF0D1 /* GGT_MineViewController.m in Sources */,
 				D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */,
 				5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */,
-				D6C7AB8E1EB1C7A800EBF0D1 /* GGT_LoginView.m in Sources */,
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
 				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
+				D6C7AB941EB1CC3500EBF0D1 /* GGT_LoginView.m in Sources */,
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
 				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
 				D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */,
 				D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */,
 				D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */,
+				D6C7AB971EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.m in Sources */,
 				D6C7AAA81EB1870900EBF0D1 /* GGT_Request_Url.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

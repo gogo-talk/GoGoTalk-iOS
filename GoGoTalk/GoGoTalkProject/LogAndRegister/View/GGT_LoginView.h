@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) UITextField *passwordField;
 
-@property (nonatomic, strong) UIButton *fogetPasswordButton;
+@property (nonatomic, strong) UIButton *forgotPasswordButton;
 
 @property (nonatomic, strong) UIButton *loginButton;
 
