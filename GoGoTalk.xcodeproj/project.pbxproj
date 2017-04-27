@@ -122,6 +122,7 @@
 		D6C7AAC61EB1903900EBF0D1 /* UIButton+XCHelperBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XCHelperBlock.m"; sourceTree = "<group>"; };
 		D6C7AAC81EB190DA00EBF0D1 /* NSString+XCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XCHelper.h"; sourceTree = "<group>"; };
 		D6C7AAC91EB190DA00EBF0D1 /* NSString+XCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XCHelper.m"; sourceTree = "<group>"; };
+		D6C7AACB1EB1974700EBF0D1 /* AppInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInformation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +207,7 @@
 				5BC2AF681EB0473D004DF44D /* Info.plist */,
 				5BC2AF581EB0473D004DF44D /* main.m */,
 				D6C7AAC11EB187AB00EBF0D1 /* PrefixHeader.pch */,
+				D6C7AACB1EB1974700EBF0D1 /* AppInformation.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
