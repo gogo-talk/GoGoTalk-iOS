@@ -7,6 +7,7 @@
 //
 
 #import "GGT_RegisterViewController.h"
+#import "GGT_RegisterView.h"
 
 @interface GGT_RegisterViewController ()
 
@@ -14,10 +15,36 @@
 
 @implementation GGT_RegisterViewController
 
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setLeftBackButton];
+
+    GGT_RegisterView *registerView = [[GGT_RegisterView alloc]init];
+    registerView.backgroundColor = [UIColor whiteColor];
+    self.view = registerView;
+    
+    
+    [registerView.backButton xc_addClickBlock:^(UIButton *button) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    
+    
+    
+    [registerView.registerButton xc_addClickBlock:^(UIButton *button) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

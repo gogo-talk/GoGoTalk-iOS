@@ -30,7 +30,7 @@
         make.left.equalTo(self.mas_left).with.offset(30);
         make.right.equalTo(self.mas_right).with.offset(-30);
         make.top.equalTo(self.mas_top).with.offset(200);
-        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH()-20, 44));
+        make.height.mas_offset(44);
     }];
     
     
@@ -44,14 +44,22 @@
         make.left.equalTo(self.mas_left).with.offset(30);
         make.right.equalTo(self.mas_right).with.offset(-30);
         make.top.equalTo(self.phoneAccountField.mas_bottom).with.offset(20);
-        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH()-20, 44));
+        make.height.mas_offset(44);
     }];
     
     
     self.forgotPasswordButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [self.forgotPasswordButton setTitle:@"忘记密码" forState:(UIControlStateNormal)];
     [self.forgotPasswordButton setTitleColor:UICOLOR_RANDOM_COLOR() forState:(UIControlStateNormal)];
+    self.forgotPasswordButton.backgroundColor = UICOLOR_RANDOM_COLOR();
     [self addSubview:self.forgotPasswordButton];
+    
+    
+    [self.forgotPasswordButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.passwordField.mas_right).with.offset(-20);
+        make.top.equalTo(self.passwordField.mas_bottom).with.offset(10);
+        make.height.mas_offset(20);
+    }];
     
     
     self.loginButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -61,23 +69,13 @@
     self.loginButton.layer.borderColor = UICOLOR_RANDOM_COLOR().CGColor;
     [self addSubview:self.loginButton];
     
-    [self.forgotPasswordButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.passwordField.mas_right).with.offset(-20);
-        make.top.equalTo(self.passwordField.mas_bottom).with.offset(10);
-        make.bottom.equalTo(self.forgotPasswordButton.mas_top).with.offset(-30);
-        make.size.mas_offset(CGSizeMake(100, 20));
-
-    }];
-    
-    
-    
     [self.loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).with.offset(30);
         make.right.equalTo(self.mas_right).with.offset(-30);
         make.top.equalTo(self.forgotPasswordButton.mas_bottom).with.offset(30);
-        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH()-20, 44));
+        make.height.mas_offset(44);
     }];
-    
+
     
     self.registerButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [self.registerButton setTitle:@"注册" forState:(UIControlStateNormal)];
@@ -90,7 +88,7 @@
         make.left.equalTo(self.mas_left).with.offset(30);
         make.right.equalTo(self.mas_right).with.offset(-30);
         make.top.equalTo(self.loginButton.mas_bottom).with.offset(20);
-        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH()-20, 44));
+        make.height.mas_offset(44);
     }];
     
     
