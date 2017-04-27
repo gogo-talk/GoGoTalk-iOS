@@ -41,8 +41,6 @@
 		D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC31EB18EF100EBF0D1 /* BaseNetManager.m */; };
 		D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC61EB1903900EBF0D1 /* UIButton+XCHelperBlock.m */; };
 		D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC91EB190DA00EBF0D1 /* NSString+XCHelper.m */; };
-		D6C7ABAA1EB1D50900EBF0D1 /* GGT_Text.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7ABA81EB1D50900EBF0D1 /* GGT_Text.m */; };
-		D6C7ABAE1EB1D58A00EBF0D1 /* GGT_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7ABAD1EB1D58A00EBF0D1 /* GGT_Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,10 +132,6 @@
 		D6C7AAC81EB190DA00EBF0D1 /* NSString+XCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XCHelper.h"; sourceTree = "<group>"; };
 		D6C7AAC91EB190DA00EBF0D1 /* NSString+XCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XCHelper.m"; sourceTree = "<group>"; };
 		D6C7AACB1EB1974700EBF0D1 /* AppInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInformation.h; sourceTree = "<group>"; };
-		D6C7ABA71EB1D50900EBF0D1 /* GGT_Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Text.h; sourceTree = "<group>"; };
-		D6C7ABA81EB1D50900EBF0D1 /* GGT_Text.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Text.m; sourceTree = "<group>"; };
-		D6C7ABAC1EB1D58A00EBF0D1 /* GGT_Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Model.h; sourceTree = "<group>"; };
-		D6C7ABAD1EB1D58A00EBF0D1 /* GGT_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Model.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,8 +508,6 @@
 		D6C7ABA41EB1D50900EBF0D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7ABA71EB1D50900EBF0D1 /* GGT_Text.h */,
-				D6C7ABA81EB1D50900EBF0D1 /* GGT_Text.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -523,8 +515,6 @@
 		D6C7ABAB1EB1D58A00EBF0D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7ABAC1EB1D58A00EBF0D1 /* GGT_Model.h */,
-				D6C7ABAD1EB1D58A00EBF0D1 /* GGT_Model.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -725,13 +715,11 @@
 				5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */,
 				D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */,
 				D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */,
-				D6C7ABAE1EB1D58A00EBF0D1 /* GGT_Model.m in Sources */,
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
 				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
 				D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */,
 				D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */,
 				D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */,
-				D6C7ABAA1EB1D50900EBF0D1 /* GGT_Text.m in Sources */,
 				5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */,
 				5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */,
 				D6C7AAB71EB1876900EBF0D1 /* GGT_OrderCourseViewController.m in Sources */,

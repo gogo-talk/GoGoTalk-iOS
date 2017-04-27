@@ -11,4 +11,11 @@
 @interface BaseViewController : UIViewController
 
 - (void)setLeftBackButton;
+
+- (void)setLeftItem:(NSString *)imageName;
+
+- (void)setRightBarButtonItemTitle:(NSString *)title;
+
+- (void)leftAction;
+
 @end

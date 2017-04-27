@@ -16,10 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor redColor];
     
     self.view.backgroundColor = UICOLOR_RANDOM_COLOR();
     
+    self.navigationItem.title = @"GogoTalk";
+    self.navigationController.navigationBar.translucent = NO;
+    
+    [self setLeftItem:@"button_back"];
+    
+    [self setRightBarButtonItemTitle:@"客服"];
 }
 
 @end

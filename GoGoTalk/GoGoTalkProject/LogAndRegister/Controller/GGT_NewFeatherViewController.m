@@ -74,8 +74,9 @@
 - (void)btnAction:(UIButton *)btn {
     
     GGT_LoginViewController *userLoginVc = [[GGT_LoginViewController alloc] init];
-    self.view.window.rootViewController = userLoginVc;
-    
+    UINavigationController *mainVc = [[UINavigationController alloc]initWithRootViewController:userLoginVc];
+    self.view.window.rootViewController = mainVc;
+
 }
 
 

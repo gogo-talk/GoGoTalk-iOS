@@ -30,6 +30,7 @@
 
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -39,9 +40,10 @@
     self.view = self.loginView;
     
     [self.loginView.forgotPasswordButton xc_addClickBlock:^(UIButton *button) {
+        NSLog(@"likai");
+
         GGT_ForgotPasswordViewController *vc = [[GGT_ForgotPasswordViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
-
     }];
 
     
@@ -55,6 +57,7 @@
     
     
     [self.loginView.registerButton xc_addClickBlock:^(UIButton *button) {
+
         GGT_RegisterViewController *vc = [[GGT_RegisterViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }];

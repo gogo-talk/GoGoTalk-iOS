@@ -29,9 +29,31 @@
     
 }
 
+- (void)setLeftItem:(NSString *)imageName
+{
+    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil action:nil];
+    negativeSpacer.width = 0;
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
+}
+
+- (void)setRightBarButtonItemTitle:(NSString *)title{
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
+    self.navigationItem.rightBarButtonItem = right;
+    self.navigationItem.rightBarButtonItem.tintColor = MainColor;
+    
+}
+
 - (void)leftAction{
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (void)rightAction{
+
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
