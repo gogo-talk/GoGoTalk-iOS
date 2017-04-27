@@ -10,6 +10,7 @@
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5BA10D031EB1CDEE0091093C /* GGT_RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D021EB1CDEE0091093C /* GGT_RegisterView.m */; };
+		5BA10D061EB1CE8B0091093C /* GGT_MyView123.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D051EB1CE8B0091093C /* GGT_MyView123.m */; };
 		5BC2AF591EB0473D004DF44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF581EB0473D004DF44D /* main.m */; };
 		5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */; };
 		5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF631EB0473D004DF44D /* Assets.xcassets */; };
@@ -68,6 +69,8 @@
 		5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
 		5BA10D011EB1CDEE0091093C /* GGT_RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGT_RegisterView.h; path = "../../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/LogAndRegister/View/GGT_RegisterView.h"; sourceTree = "<group>"; };
 		5BA10D021EB1CDEE0091093C /* GGT_RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGT_RegisterView.m; path = "../../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/LogAndRegister/View/GGT_RegisterView.m"; sourceTree = "<group>"; };
+		5BA10D041EB1CE8B0091093C /* GGT_MyView123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_MyView123.h; sourceTree = "<group>"; };
+		5BA10D051EB1CE8B0091093C /* GGT_MyView123.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_MyView123.m; sourceTree = "<group>"; };
 		5BC2AF541EB0473D004DF44D /* GoGoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC2AF581EB0473D004DF44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BC2AF5A1EB0473D004DF44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -452,6 +455,8 @@
 				D6C7AB931EB1CC3500EBF0D1 /* GGT_LoginView.m */,
 				D6C7AB8F1EB1CC1C00EBF0D1 /* GGT_ForgotPasswordView.h */,
 				D6C7AB901EB1CC1C00EBF0D1 /* GGT_ForgotPasswordView.m */,
+				5BA10D041EB1CE8B0091093C /* GGT_MyView123.h */,
+				5BA10D051EB1CE8B0091093C /* GGT_MyView123.m */,
 				5BA10D011EB1CDEE0091093C /* GGT_RegisterView.h */,
 				5BA10D021EB1CDEE0091093C /* GGT_RegisterView.m */,
 			);
@@ -724,6 +729,7 @@
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
 				D6C7AB941EB1CC3500EBF0D1 /* GGT_LoginView.m in Sources */,
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
+				5BA10D061EB1CE8B0091093C /* GGT_MyView123.m in Sources */,
 				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
 				D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */,
 				D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */,
