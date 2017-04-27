@@ -30,7 +30,7 @@
         make.left.equalTo(self.mas_left).with.offset(30);
         make.right.equalTo(self.mas_right).with.offset(-30);
         make.top.equalTo(self.mas_top).with.offset(200);
-        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH-20, 44));
+        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH()-20, 44));
     }];
     
     
@@ -44,7 +44,7 @@
         make.left.equalTo(self.mas_left).with.offset(30);
         make.right.equalTo(self.mas_right).with.offset(-30);
         make.top.equalTo(self.phoneAccountField.mas_bottom).with.offset(20);
-        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH-20, 44));
+        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH()-20, 44));
     }];
     
     
@@ -75,7 +75,7 @@
         make.left.equalTo(self.mas_left).with.offset(30);
         make.right.equalTo(self.mas_right).with.offset(-30);
         make.top.equalTo(self.fogetPasswordButton.mas_bottom).with.offset(30);
-        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH-20, 44));
+        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH()-20, 44));
     }];
     
     
@@ -90,7 +90,7 @@
         make.left.equalTo(self.mas_left).with.offset(30);
         make.right.equalTo(self.mas_right).with.offset(-30);
         make.top.equalTo(self.loginButton.mas_bottom).with.offset(20);
-        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH-20, 44));
+        make.size.mas_offset(CGSizeMake(SCREEN_WIDTH()-20, 44));
     }];
     
     
