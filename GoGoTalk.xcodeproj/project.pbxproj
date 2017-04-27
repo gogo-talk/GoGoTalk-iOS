@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
-		5BA10CF71EB19BBC0091093C /* GGT_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10CF61EB19BBC0091093C /* GGT_LoginView.m */; };
 		5BC2AF591EB0473D004DF44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF581EB0473D004DF44D /* main.m */; };
 		5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */; };
 		5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF631EB0473D004DF44D /* Assets.xcassets */; };
@@ -38,6 +37,7 @@
 		D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC31EB18EF100EBF0D1 /* BaseNetManager.m */; };
 		D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC61EB1903900EBF0D1 /* UIButton+XCHelperBlock.m */; };
 		D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC91EB190DA00EBF0D1 /* NSString+XCHelper.m */; };
+		D6C7AB8E1EB1C7A800EBF0D1 /* GGT_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AB8D1EB1C7A800EBF0D1 /* GGT_LoginView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,6 @@
 		5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Singleton.m; sourceTree = "<group>"; };
 		5B0B4F461EB06D5400D81B8E /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
 		5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
-		5BA10CF51EB19BBC0091093C /* GGT_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGT_LoginView.h; path = ../../../../../../../xiehenry/Desktop/GoGoTalkApp/GoGoTalk/GoGoTalkProject/LogAndRegister/View/GGT_LoginView.h; sourceTree = "<group>"; };
-		5BA10CF61EB19BBC0091093C /* GGT_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGT_LoginView.m; path = ../../../../../../../xiehenry/Desktop/GoGoTalkApp/GoGoTalk/GoGoTalkProject/LogAndRegister/View/GGT_LoginView.m; sourceTree = "<group>"; };
 		5BC2AF541EB0473D004DF44D /* GoGoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC2AF581EB0473D004DF44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BC2AF5A1EB0473D004DF44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +121,8 @@
 		D6C7AAC81EB190DA00EBF0D1 /* NSString+XCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XCHelper.h"; sourceTree = "<group>"; };
 		D6C7AAC91EB190DA00EBF0D1 /* NSString+XCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XCHelper.m"; sourceTree = "<group>"; };
 		D6C7AACB1EB1974700EBF0D1 /* AppInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInformation.h; sourceTree = "<group>"; };
+		D6C7AB8C1EB1C7A800EBF0D1 /* GGT_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_LoginView.h; sourceTree = "<group>"; };
+		D6C7AB8D1EB1C7A800EBF0D1 /* GGT_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_LoginView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,8 +437,8 @@
 		5BC2AFA11EB05057004DF44D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5BA10CF51EB19BBC0091093C /* GGT_LoginView.h */,
-				5BA10CF61EB19BBC0091093C /* GGT_LoginView.m */,
+				D6C7AB8C1EB1C7A800EBF0D1 /* GGT_LoginView.h */,
+				D6C7AB8D1EB1C7A800EBF0D1 /* GGT_LoginView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -647,7 +647,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A14247F9C90CA6A5493AF65A /* [CP] Copy Pods Resources */ = {
@@ -701,7 +701,7 @@
 				D6C7AAAE1EB1873200EBF0D1 /* GGT_MineViewController.m in Sources */,
 				D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */,
 				5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */,
-				5BA10CF71EB19BBC0091093C /* GGT_LoginView.m in Sources */,
+				D6C7AB8E1EB1C7A800EBF0D1 /* GGT_LoginView.m in Sources */,
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
 				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
