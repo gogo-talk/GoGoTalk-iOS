@@ -11,9 +11,6 @@
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D1A1EB1D19F0091093C /* GGT_ForgotPasswordView.m */; };
 		5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D1C1EB1D19F0091093C /* GGT_LoginView.m */; };
-		5BA10D261EB1D2D90091093C /* GGT_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D251EB1D2D90091093C /* GGT_Model.m */; };
-		5BA10D331EB1D40C0091093C /* GGT_Text.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D321EB1D40C0091093C /* GGT_Text.m */; };
-		5BA10D361EB1D48F0091093C /* GGT_99999.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D351EB1D48F0091093C /* GGT_99999.m */; };
 		5BC2AF591EB0473D004DF44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF581EB0473D004DF44D /* main.m */; };
 		5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */; };
 		5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF631EB0473D004DF44D /* Assets.xcassets */; };
@@ -43,6 +40,9 @@
 		D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC61EB1903900EBF0D1 /* UIButton+XCHelperBlock.m */; };
 		D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC91EB190DA00EBF0D1 /* NSString+XCHelper.m */; };
 		D6C7AB971EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AB961EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.m */; };
+		D6C7ABA91EB1D50900EBF0D1 /* GGT_99999.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7ABA61EB1D50900EBF0D1 /* GGT_99999.m */; };
+		D6C7ABAA1EB1D50900EBF0D1 /* GGT_Text.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7ABA81EB1D50900EBF0D1 /* GGT_Text.m */; };
+		D6C7ABAE1EB1D58A00EBF0D1 /* GGT_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7ABAD1EB1D58A00EBF0D1 /* GGT_Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,12 +72,6 @@
 		5BA10D1B1EB1D19F0091093C /* GGT_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_LoginView.h; sourceTree = "<group>"; };
 		5BA10D1C1EB1D19F0091093C /* GGT_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_LoginView.m; sourceTree = "<group>"; };
 		5BA10D1D1EB1D19F0091093C /* GGT_ForgotPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ForgotPasswordView.h; sourceTree = "<group>"; };
-		5BA10D241EB1D2D90091093C /* GGT_Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Model.h; sourceTree = "<group>"; };
-		5BA10D251EB1D2D90091093C /* GGT_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Model.m; sourceTree = "<group>"; };
-		5BA10D311EB1D40C0091093C /* GGT_Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Text.h; sourceTree = "<group>"; };
-		5BA10D321EB1D40C0091093C /* GGT_Text.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Text.m; sourceTree = "<group>"; };
-		5BA10D341EB1D48F0091093C /* GGT_99999.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_99999.h; sourceTree = "<group>"; };
-		5BA10D351EB1D48F0091093C /* GGT_99999.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_99999.m; sourceTree = "<group>"; };
 		5BC2AF541EB0473D004DF44D /* GoGoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC2AF581EB0473D004DF44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BC2AF5A1EB0473D004DF44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,6 +132,12 @@
 		D6C7AACB1EB1974700EBF0D1 /* AppInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInformation.h; sourceTree = "<group>"; };
 		D6C7AB951EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGT_ ForgotPasswordViewController.h"; sourceTree = "<group>"; };
 		D6C7AB961EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GGT_ ForgotPasswordViewController.m"; sourceTree = "<group>"; };
+		D6C7ABA51EB1D50900EBF0D1 /* GGT_99999.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_99999.h; sourceTree = "<group>"; };
+		D6C7ABA61EB1D50900EBF0D1 /* GGT_99999.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_99999.m; sourceTree = "<group>"; };
+		D6C7ABA71EB1D50900EBF0D1 /* GGT_Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Text.h; sourceTree = "<group>"; };
+		D6C7ABA81EB1D50900EBF0D1 /* GGT_Text.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Text.m; sourceTree = "<group>"; };
+		D6C7ABAC1EB1D58A00EBF0D1 /* GGT_Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Model.h; sourceTree = "<group>"; };
+		D6C7ABAD1EB1D58A00EBF0D1 /* GGT_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Model.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,16 +179,6 @@
 			children = (
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		5BA10D231EB1D2B00091093C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				5BA10D241EB1D2D90091093C /* GGT_Model.h */,
-				5BA10D251EB1D2D90091093C /* GGT_Model.m */,
-			);
-			name = Model;
-			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/LogAndRegister/Model";
 			sourceTree = "<group>";
 		};
 		5BA10D271EB1D32B0091093C /* Model */ = {
@@ -253,18 +243,6 @@
 			);
 			name = View;
 			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/OrderTheCourse/View";
-			sourceTree = "<group>";
-		};
-		5BA10D2F1EB1D3C30091093C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				5BA10D311EB1D40C0091093C /* GGT_Text.h */,
-				5BA10D321EB1D40C0091093C /* GGT_Text.m */,
-				5BA10D341EB1D48F0091093C /* GGT_99999.h */,
-				5BA10D351EB1D48F0091093C /* GGT_99999.m */,
-			);
-			name = Model;
-			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/HomeReservation/Model";
 			sourceTree = "<group>";
 		};
 		5BA10D301EB1D3C30091093C /* View */ = {
@@ -358,7 +336,7 @@
 		5BC2AF8B1EB04E92004DF44D /* LogAndRegister */ = {
 			isa = PBXGroup;
 			children = (
-				5BA10D231EB1D2B00091093C /* Model */,
+				D6C7ABAB1EB1D58A00EBF0D1 /* Model */,
 				5BC2AFA01EB05057004DF44D /* Controller */,
 				5BC2AFA11EB05057004DF44D /* View */,
 			);
@@ -368,7 +346,7 @@
 		5BC2AF8C1EB04F70004DF44D /* HomeReservation */ = {
 			isa = PBXGroup;
 			children = (
-				5BA10D2F1EB1D3C30091093C /* Model */,
+				D6C7ABA41EB1D50900EBF0D1 /* Model */,
 				5BA10D301EB1D3C30091093C /* View */,
 				5BC2AF9D1EB05051004DF44D /* Controller */,
 			);
@@ -538,6 +516,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D6C7ABA41EB1D50900EBF0D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6C7ABA51EB1D50900EBF0D1 /* GGT_99999.h */,
+				D6C7ABA61EB1D50900EBF0D1 /* GGT_99999.m */,
+				D6C7ABA71EB1D50900EBF0D1 /* GGT_Text.h */,
+				D6C7ABA81EB1D50900EBF0D1 /* GGT_Text.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6C7ABAB1EB1D58A00EBF0D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6C7ABAC1EB1D58A00EBF0D1 /* GGT_Model.h */,
+				D6C7ABAD1EB1D58A00EBF0D1 /* GGT_Model.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -683,7 +681,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A14247F9C90CA6A5493AF65A /* [CP] Copy Pods Resources */ = {
@@ -723,17 +721,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BA10D361EB1D48F0091093C /* GGT_99999.m in Sources */,
 				D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */,
 				5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */,
 				D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */,
 				D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */,
+				D6C7ABAE1EB1D58A00EBF0D1 /* GGT_Model.m in Sources */,
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
-				5BA10D331EB1D40C0091093C /* GGT_Text.m in Sources */,
 				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
 				D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */,
 				D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */,
 				D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */,
+				D6C7ABAA1EB1D50900EBF0D1 /* GGT_Text.m in Sources */,
 				5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */,
 				5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */,
 				D6C7AAB71EB1876900EBF0D1 /* GGT_OrderCourseViewController.m in Sources */,
@@ -747,9 +745,9 @@
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
 				5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */,
 				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
-				5BA10D261EB1D2D90091093C /* GGT_Model.m in Sources */,
 				D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */,
 				D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */,
+				D6C7ABA91EB1D50900EBF0D1 /* GGT_99999.m in Sources */,
 				D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */,
 				D6C7AB971EB1CC5500EBF0D1 /* GGT_ ForgotPasswordViewController.m in Sources */,
 				D6C7AAA81EB1870900EBF0D1 /* GGT_Request_Url.m in Sources */,
