@@ -8,7 +8,8 @@
 
 #import "GGT_LoginViewController.h"
 #import "BaseTabBarController.h"
-#import "GGT_ ForgotPasswordViewController.h"
+#import "GGT_ForgotPasswordViewController.h"
+#import "GGT_RegisterViewController.h"
 #import "GGT_LoginView.h"
 
 
@@ -27,30 +28,41 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UICOLOR_RANDOM_COLOR();
 
     
     self.loginView = [[GGT_LoginView alloc]init];
+    self.loginView.backgroundColor = [UIColor whiteColor];
     self.view = self.loginView;
     
     [self.loginView.forgotPasswordButton xc_addClickBlock:^(UIButton *button) {
-        GGT__ForgotPasswordViewController *vc = [[GGT__ForgotPasswordViewController alloc]init];
+        GGT_ForgotPasswordViewController *vc = [[GGT_ForgotPasswordViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
 
     }];
-  
 
-}
-
-- (void)loginButtonClick {
-    BaseTabBarController *tabVc = [[BaseTabBarController alloc]init];
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:@"yes" forKey:@"login"];
-    self.view.window.rootViewController = tabVc;
+    
+    [self.loginView.loginButton xc_addClickBlock:^(UIButton *button) {
+        BaseTabBarController *tabVc = [[BaseTabBarController alloc]init];
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:@"yes" forKey:@"login"];
+        self.view.window.rootViewController = tabVc;
+        
+    }];
+    
+    
+    [self.loginView.registerButton xc_addClickBlock:^(UIButton *button) {
+        GGT_RegisterViewController *vc = [[GGT_RegisterViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    
     
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

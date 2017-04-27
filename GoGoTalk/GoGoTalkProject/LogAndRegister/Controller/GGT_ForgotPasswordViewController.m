@@ -1,20 +1,19 @@
 //
-//  GGT_ ForgotPasswordViewController.m
+//  GGT_ForgotPasswordViewController.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/27.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "GGT_ ForgotPasswordViewController.h"
+#import "GGT_ForgotPasswordViewController.h"
 #import "GGT_ForgotPasswordView.h"
 
-@interface GGT__ForgotPasswordViewController ()
+@interface GGT_ForgotPasswordViewController ()
 
 @end
 
-@implementation GGT__ForgotPasswordViewController
-
+@implementation GGT_ForgotPasswordViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -24,18 +23,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UICOLOR_RANDOM_COLOR();
     [self setLeftBackButton];
     
     self.navigationItem.title = @"找回密码";
+    
+    
+    GGT_ForgotPasswordView *forgotPasswordView = [[GGT_ForgotPasswordView alloc]init];
+    forgotPasswordView.backgroundColor = [UIColor whiteColor];
+    self.view = forgotPasswordView;
+    
+    
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 
 @end

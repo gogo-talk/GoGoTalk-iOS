@@ -10,5 +10,14 @@
 
 @interface GGT_ForgotPasswordView : UIView
 
+@property (nonatomic, strong) UITextField *phoneAccountField;
+
+@property (nonatomic, strong) UITextField *verificationCodeField;
+
+@property (nonatomic, strong) UITextField *passwordField;
+
+@property (nonatomic, strong) UIButton *getCodeButton;
+
+@property (nonatomic, strong) UIButton *confirmButton;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  GGT_ ForgotPasswordViewController.h
+//  GGT_ForgotPasswordViewController.h
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/27.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface GGT__ForgotPasswordViewController : BaseViewController
+@interface GGT_ForgotPasswordViewController : BaseViewController
 
 @end
