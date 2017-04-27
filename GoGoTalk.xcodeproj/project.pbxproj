@@ -13,6 +13,7 @@
 		5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D1C1EB1D19F0091093C /* GGT_LoginView.m */; };
 		5BA10D261EB1D2D90091093C /* GGT_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D251EB1D2D90091093C /* GGT_Model.m */; };
 		5BA10D331EB1D40C0091093C /* GGT_Text.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D321EB1D40C0091093C /* GGT_Text.m */; };
+		5BA10D361EB1D48F0091093C /* GGT_99999.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D351EB1D48F0091093C /* GGT_99999.m */; };
 		5BC2AF591EB0473D004DF44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF581EB0473D004DF44D /* main.m */; };
 		5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */; };
 		5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF631EB0473D004DF44D /* Assets.xcassets */; };
@@ -75,6 +76,8 @@
 		5BA10D251EB1D2D90091093C /* GGT_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Model.m; sourceTree = "<group>"; };
 		5BA10D311EB1D40C0091093C /* GGT_Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Text.h; sourceTree = "<group>"; };
 		5BA10D321EB1D40C0091093C /* GGT_Text.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Text.m; sourceTree = "<group>"; };
+		5BA10D341EB1D48F0091093C /* GGT_99999.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_99999.h; sourceTree = "<group>"; };
+		5BA10D351EB1D48F0091093C /* GGT_99999.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_99999.m; sourceTree = "<group>"; };
 		5BC2AF541EB0473D004DF44D /* GoGoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC2AF581EB0473D004DF44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BC2AF5A1EB0473D004DF44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 			children = (
 				5BA10D311EB1D40C0091093C /* GGT_Text.h */,
 				5BA10D321EB1D40C0091093C /* GGT_Text.m */,
+				5BA10D341EB1D48F0091093C /* GGT_99999.h */,
+				5BA10D351EB1D48F0091093C /* GGT_99999.m */,
 			);
 			name = Model;
 			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/HomeReservation/Model";
@@ -718,6 +723,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA10D361EB1D48F0091093C /* GGT_99999.m in Sources */,
 				D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */,
 				5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */,
 				D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */,
