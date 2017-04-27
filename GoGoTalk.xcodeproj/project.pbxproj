@@ -11,6 +11,7 @@
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D1A1EB1D19F0091093C /* GGT_ForgotPasswordView.m */; };
 		5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D1C1EB1D19F0091093C /* GGT_LoginView.m */; };
+		5BA10D3E1EB1D90A0091093C /* GGT_111111.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D3D1EB1D90A0091093C /* GGT_111111.m */; };
 		5BC2AF591EB0473D004DF44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF581EB0473D004DF44D /* main.m */; };
 		5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */; };
 		5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF631EB0473D004DF44D /* Assets.xcassets */; };
@@ -74,6 +75,8 @@
 		5BA10D1B1EB1D19F0091093C /* GGT_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_LoginView.h; sourceTree = "<group>"; };
 		5BA10D1C1EB1D19F0091093C /* GGT_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_LoginView.m; sourceTree = "<group>"; };
 		5BA10D1D1EB1D19F0091093C /* GGT_ForgotPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ForgotPasswordView.h; sourceTree = "<group>"; };
+		5BA10D3C1EB1D90A0091093C /* GGT_111111.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_111111.h; sourceTree = "<group>"; };
+		5BA10D3D1EB1D90A0091093C /* GGT_111111.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_111111.m; sourceTree = "<group>"; };
 		5BC2AF541EB0473D004DF44D /* GoGoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC2AF581EB0473D004DF44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BC2AF5A1EB0473D004DF44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -542,6 +545,8 @@
 				D6C7ABB01EB1D7B100EBF0D1 /* GGT_0000000.m */,
 				D6C7ABB31EB1D8A600EBF0D1 /* GGT_My0000011111.h */,
 				D6C7ABB41EB1D8A700EBF0D1 /* GGT_My0000011111.m */,
+				5BA10D3C1EB1D90A0091093C /* GGT_111111.h */,
+				5BA10D3D1EB1D90A0091093C /* GGT_111111.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -738,6 +743,7 @@
 				D6C7ABAE1EB1D58A00EBF0D1 /* GGT_Model.m in Sources */,
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
 				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
+				5BA10D3E1EB1D90A0091093C /* GGT_111111.m in Sources */,
 				D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */,
 				D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */,
 				D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */,
