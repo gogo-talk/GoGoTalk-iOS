@@ -1,23 +1,22 @@
 //
-//  DiscoveryViewController.m
+//  GGT_RegisterViewController.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "DiscoveryViewController.h"
+#import "GGT_RegisterViewController.h"
 
-@interface DiscoveryViewController ()
+@interface GGT_RegisterViewController ()
 
 @end
 
-@implementation DiscoveryViewController
+@implementation GGT_RegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor grayColor];
-    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

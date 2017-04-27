@@ -17,11 +17,11 @@
 #import "Masonry.h"
 #import "UIView+Layout.h"
 #import "UIColor+XCAdditions.h"
-#import "NetManager.h"
+#import "BaseNetManager.h"
 #import "MBProgressHUD+Extension.h"
 #import <MJRefresh.h>
 #import "NSArray+SafeExtension.h"
-#import "GGTalkSingleton.h"
+#import "GGT_Singleton.h"
 #import "NSObject+YYModel.h"
 #import "UIImageView+WebCache.h"
 

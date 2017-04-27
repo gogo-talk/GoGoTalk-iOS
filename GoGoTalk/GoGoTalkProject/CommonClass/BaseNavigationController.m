@@ -1,18 +1,18 @@
 //
-//  GGTalkNavigationController.m
+//  BaseNavigationController.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "GGTalkNavigationController.h"
+#import "BaseNavigationController.h"
 
-@interface GGTalkNavigationController ()
+@interface BaseNavigationController ()
 
 @end
 
-@implementation GGTalkNavigationController
+@implementation BaseNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

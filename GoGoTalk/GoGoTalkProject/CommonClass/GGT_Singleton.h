@@ -1,5 +1,5 @@
 //
-//  GGTalkSingleton.h
+//  GGT_Singleton.h
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GGTalkSingleton : NSObject
+@interface GGT_Singleton : NSObject
 
-+ (GGTalkSingleton *)sharedSingleton;
++ (GGT_Singleton *)sharedSingleton;
 
 @end

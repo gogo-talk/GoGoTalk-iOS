@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B0B4F3D1EB0665B00D81B8E /* GGTalkSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGTalkSingleton.m */; };
-		5B0B4F401EB067AB00D81B8E /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3F1EB067AB00D81B8E /* NetManager.m */; };
+		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5BC2AF591EB0473D004DF44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF581EB0473D004DF44D /* main.m */; };
 		5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */; };
@@ -16,9 +15,9 @@
 		5BC2AF671EB0473D004DF44D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF651EB0473D004DF44D /* LaunchScreen.storyboard */; };
 		5BC2AF721EB0473E004DF44D /* GoGoTalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF711EB0473E004DF44D /* GoGoTalkTests.m */; };
 		5BC2AF7D1EB0473E004DF44D /* GoGoTalkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF7C1EB0473E004DF44D /* GoGoTalkUITests.m */; };
-		5BC2AFAA1EB05241004DF44D /* GGTalkTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFA91EB05241004DF44D /* GGTalkTabBarController.m */; };
-		5BC2AFB01EB05320004DF44D /* GGTalkNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFAF1EB05320004DF44D /* GGTalkNavigationController.m */; };
-		5BC2AFC51EB054A8004DF44D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFC41EB054A8004DF44D /* RegisterViewController.m */; };
+		5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFA91EB05241004DF44D /* BaseTabBarController.m */; };
+		5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFAF1EB05320004DF44D /* BaseNavigationController.m */; };
+		5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFC41EB054A8004DF44D /* GGT_RegisterViewController.m */; };
 		5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05A11EB07C3400469368 /* UIColor+XCAdditions.m */; };
 		5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05A81EB07D3300469368 /* UIImage+Category.m */; };
 		5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05AB1EB07DA200469368 /* UIView+Layout.m */; };
@@ -26,15 +25,16 @@
 		5BED05B11EB07EA200469368 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */; };
 		D696AFD3BE34379B2D601BF6 /* libPods-GoGoTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */; };
 		D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */; };
-		D6C7AAA81EB1870900EBF0D1 /* Request_Url.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA71EB1870900EBF0D1 /* Request_Url.m */; };
+		D6C7AAA81EB1870900EBF0D1 /* GGT_Request_Url.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA71EB1870900EBF0D1 /* GGT_Request_Url.m */; };
 		D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAAA1EB1872000EBF0D1 /* NSArray+SafeExtension.m */; };
-		D6C7AAAE1EB1873200EBF0D1 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAAD1EB1873200EBF0D1 /* MineViewController.m */; };
-		D6C7AAB11EB1874800EBF0D1 /* DiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB01EB1874800EBF0D1 /* DiscoveryViewController.m */; };
-		D6C7AAB41EB1875800EBF0D1 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB31EB1875800EBF0D1 /* ScheduleViewController.m */; };
-		D6C7AAB71EB1876900EBF0D1 /* OrderCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB61EB1876900EBF0D1 /* OrderCourseViewController.m */; };
-		D6C7AABA1EB1877800EBF0D1 /* HomeReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB91EB1877800EBF0D1 /* HomeReservationViewController.m */; };
-		D6C7AABF1EB1879600EBF0D1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AABC1EB1879600EBF0D1 /* LoginViewController.m */; };
-		D6C7AAC01EB1879600EBF0D1 /* NewFeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AABE1EB1879600EBF0D1 /* NewFeatherViewController.m */; };
+		D6C7AAAE1EB1873200EBF0D1 /* GGT_MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAAD1EB1873200EBF0D1 /* GGT_MineViewController.m */; };
+		D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB01EB1874800EBF0D1 /* GGT_DiscoveryViewController.m */; };
+		D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB31EB1875800EBF0D1 /* GGT_ScheduleViewController.m */; };
+		D6C7AAB71EB1876900EBF0D1 /* GGT_OrderCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB61EB1876900EBF0D1 /* GGT_OrderCourseViewController.m */; };
+		D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB91EB1877800EBF0D1 /* GGT_HomeReservationViewController.m */; };
+		D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AABC1EB1879600EBF0D1 /* GGT_LoginViewController.m */; };
+		D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AABE1EB1879600EBF0D1 /* GGT_NewFeatherViewController.m */; };
+		D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC31EB18EF100EBF0D1 /* BaseNetManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +56,8 @@
 
 /* Begin PBXFileReference section */
 		1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGoTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk.debug.xcconfig"; sourceTree = "<group>"; };
-		5B0B4F3B1EB0665B00D81B8E /* GGTalkSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTalkSingleton.h; sourceTree = "<group>"; };
-		5B0B4F3C1EB0665B00D81B8E /* GGTalkSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTalkSingleton.m; sourceTree = "<group>"; };
-		5B0B4F3E1EB067AB00D81B8E /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
-		5B0B4F3F1EB067AB00D81B8E /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
+		5B0B4F3B1EB0665B00D81B8E /* GGT_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Singleton.h; sourceTree = "<group>"; };
+		5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Singleton.m; sourceTree = "<group>"; };
 		5B0B4F461EB06D5400D81B8E /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
 		5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
 		5BC2AF541EB0473D004DF44D /* GoGoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,12 +73,12 @@
 		5BC2AF781EB0473E004DF44D /* GoGoTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoGoTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC2AF7C1EB0473E004DF44D /* GoGoTalkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoGoTalkUITests.m; sourceTree = "<group>"; };
 		5BC2AF7E1EB0473E004DF44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BC2AFA81EB05241004DF44D /* GGTalkTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTalkTabBarController.h; sourceTree = "<group>"; };
-		5BC2AFA91EB05241004DF44D /* GGTalkTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTalkTabBarController.m; sourceTree = "<group>"; };
-		5BC2AFAE1EB05320004DF44D /* GGTalkNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTalkNavigationController.h; sourceTree = "<group>"; };
-		5BC2AFAF1EB05320004DF44D /* GGTalkNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTalkNavigationController.m; sourceTree = "<group>"; };
-		5BC2AFC31EB054A8004DF44D /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		5BC2AFC41EB054A8004DF44D /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		5BC2AFA81EB05241004DF44D /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		5BC2AFA91EB05241004DF44D /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		5BC2AFAE1EB05320004DF44D /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		5BC2AFAF1EB05320004DF44D /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		5BC2AFC31EB054A8004DF44D /* GGT_RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_RegisterViewController.h; sourceTree = "<group>"; };
+		5BC2AFC41EB054A8004DF44D /* GGT_RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_RegisterViewController.m; sourceTree = "<group>"; };
 		5BED05A01EB07C3400469368 /* UIColor+XCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XCAdditions.h"; sourceTree = "<group>"; };
 		5BED05A11EB07C3400469368 /* UIColor+XCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XCAdditions.m"; sourceTree = "<group>"; };
 		5BED05A71EB07D3300469368 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
@@ -94,25 +92,27 @@
 		BDDE48A6BF0DF60B4B82782D /* Pods-GoGoTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGoTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk.release.xcconfig"; sourceTree = "<group>"; };
 		D6C7AAA31EB186F800EBF0D1 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		D6C7AAA61EB1870900EBF0D1 /* Request_Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request_Url.h; sourceTree = "<group>"; };
-		D6C7AAA71EB1870900EBF0D1 /* Request_Url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request_Url.m; sourceTree = "<group>"; };
+		D6C7AAA61EB1870900EBF0D1 /* GGT_Request_Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Request_Url.h; sourceTree = "<group>"; };
+		D6C7AAA71EB1870900EBF0D1 /* GGT_Request_Url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Request_Url.m; sourceTree = "<group>"; };
 		D6C7AAA91EB1872000EBF0D1 /* NSArray+SafeExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeExtension.h"; sourceTree = "<group>"; };
 		D6C7AAAA1EB1872000EBF0D1 /* NSArray+SafeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeExtension.m"; sourceTree = "<group>"; };
-		D6C7AAAC1EB1873200EBF0D1 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
-		D6C7AAAD1EB1873200EBF0D1 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		D6C7AAAF1EB1874800EBF0D1 /* DiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveryViewController.h; sourceTree = "<group>"; };
-		D6C7AAB01EB1874800EBF0D1 /* DiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveryViewController.m; sourceTree = "<group>"; };
-		D6C7AAB21EB1875800EBF0D1 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
-		D6C7AAB31EB1875800EBF0D1 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
-		D6C7AAB51EB1876900EBF0D1 /* OrderCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderCourseViewController.h; sourceTree = "<group>"; };
-		D6C7AAB61EB1876900EBF0D1 /* OrderCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderCourseViewController.m; sourceTree = "<group>"; };
-		D6C7AAB81EB1877800EBF0D1 /* HomeReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeReservationViewController.h; sourceTree = "<group>"; };
-		D6C7AAB91EB1877800EBF0D1 /* HomeReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeReservationViewController.m; sourceTree = "<group>"; };
-		D6C7AABB1EB1879600EBF0D1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		D6C7AABC1EB1879600EBF0D1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		D6C7AABD1EB1879600EBF0D1 /* NewFeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFeatherViewController.h; sourceTree = "<group>"; };
-		D6C7AABE1EB1879600EBF0D1 /* NewFeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFeatherViewController.m; sourceTree = "<group>"; };
+		D6C7AAAC1EB1873200EBF0D1 /* GGT_MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_MineViewController.h; sourceTree = "<group>"; };
+		D6C7AAAD1EB1873200EBF0D1 /* GGT_MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_MineViewController.m; sourceTree = "<group>"; };
+		D6C7AAAF1EB1874800EBF0D1 /* GGT_DiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_DiscoveryViewController.h; sourceTree = "<group>"; };
+		D6C7AAB01EB1874800EBF0D1 /* GGT_DiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_DiscoveryViewController.m; sourceTree = "<group>"; };
+		D6C7AAB21EB1875800EBF0D1 /* GGT_ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleViewController.h; sourceTree = "<group>"; };
+		D6C7AAB31EB1875800EBF0D1 /* GGT_ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleViewController.m; sourceTree = "<group>"; };
+		D6C7AAB51EB1876900EBF0D1 /* GGT_OrderCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_OrderCourseViewController.h; sourceTree = "<group>"; };
+		D6C7AAB61EB1876900EBF0D1 /* GGT_OrderCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderCourseViewController.m; sourceTree = "<group>"; };
+		D6C7AAB81EB1877800EBF0D1 /* GGT_HomeReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_HomeReservationViewController.h; sourceTree = "<group>"; };
+		D6C7AAB91EB1877800EBF0D1 /* GGT_HomeReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_HomeReservationViewController.m; sourceTree = "<group>"; };
+		D6C7AABB1EB1879600EBF0D1 /* GGT_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_LoginViewController.h; sourceTree = "<group>"; };
+		D6C7AABC1EB1879600EBF0D1 /* GGT_LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_LoginViewController.m; sourceTree = "<group>"; };
+		D6C7AABD1EB1879600EBF0D1 /* GGT_NewFeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_NewFeatherViewController.h; sourceTree = "<group>"; };
+		D6C7AABE1EB1879600EBF0D1 /* GGT_NewFeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_NewFeatherViewController.m; sourceTree = "<group>"; };
 		D6C7AAC11EB187AB00EBF0D1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D6C7AAC21EB18EF100EBF0D1 /* BaseNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetManager.h; sourceTree = "<group>"; };
+		D6C7AAC31EB18EF100EBF0D1 /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,8 +298,8 @@
 		5BC2AF911EB05030004DF44D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7AAAC1EB1873200EBF0D1 /* MineViewController.h */,
-				D6C7AAAD1EB1873200EBF0D1 /* MineViewController.m */,
+				D6C7AAAC1EB1873200EBF0D1 /* GGT_MineViewController.h */,
+				D6C7AAAD1EB1873200EBF0D1 /* GGT_MineViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,8 +321,8 @@
 		5BC2AF941EB0503B004DF44D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7AAAF1EB1874800EBF0D1 /* DiscoveryViewController.h */,
-				D6C7AAB01EB1874800EBF0D1 /* DiscoveryViewController.m */,
+				D6C7AAAF1EB1874800EBF0D1 /* GGT_DiscoveryViewController.h */,
+				D6C7AAB01EB1874800EBF0D1 /* GGT_DiscoveryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -344,8 +344,8 @@
 		5BC2AF971EB05042004DF44D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7AAB21EB1875800EBF0D1 /* ScheduleViewController.h */,
-				D6C7AAB31EB1875800EBF0D1 /* ScheduleViewController.m */,
+				D6C7AAB21EB1875800EBF0D1 /* GGT_ScheduleViewController.h */,
+				D6C7AAB31EB1875800EBF0D1 /* GGT_ScheduleViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -367,8 +367,8 @@
 		5BC2AF9A1EB0504A004DF44D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7AAB51EB1876900EBF0D1 /* OrderCourseViewController.h */,
-				D6C7AAB61EB1876900EBF0D1 /* OrderCourseViewController.m */,
+				D6C7AAB51EB1876900EBF0D1 /* GGT_OrderCourseViewController.h */,
+				D6C7AAB61EB1876900EBF0D1 /* GGT_OrderCourseViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -390,8 +390,8 @@
 		5BC2AF9D1EB05051004DF44D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7AAB81EB1877800EBF0D1 /* HomeReservationViewController.h */,
-				D6C7AAB91EB1877800EBF0D1 /* HomeReservationViewController.m */,
+				D6C7AAB81EB1877800EBF0D1 /* GGT_HomeReservationViewController.h */,
+				D6C7AAB91EB1877800EBF0D1 /* GGT_HomeReservationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -413,12 +413,12 @@
 		5BC2AFA01EB05057004DF44D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7AABB1EB1879600EBF0D1 /* LoginViewController.h */,
-				D6C7AABC1EB1879600EBF0D1 /* LoginViewController.m */,
-				D6C7AABD1EB1879600EBF0D1 /* NewFeatherViewController.h */,
-				D6C7AABE1EB1879600EBF0D1 /* NewFeatherViewController.m */,
-				5BC2AFC31EB054A8004DF44D /* RegisterViewController.h */,
-				5BC2AFC41EB054A8004DF44D /* RegisterViewController.m */,
+				D6C7AABB1EB1879600EBF0D1 /* GGT_LoginViewController.h */,
+				D6C7AABC1EB1879600EBF0D1 /* GGT_LoginViewController.m */,
+				D6C7AABD1EB1879600EBF0D1 /* GGT_NewFeatherViewController.h */,
+				D6C7AABE1EB1879600EBF0D1 /* GGT_NewFeatherViewController.m */,
+				5BC2AFC31EB054A8004DF44D /* GGT_RegisterViewController.h */,
+				5BC2AFC41EB054A8004DF44D /* GGT_RegisterViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -459,16 +459,16 @@
 			children = (
 				D6C7AAA31EB186F800EBF0D1 /* BaseViewController.h */,
 				D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */,
-				5BC2AFA81EB05241004DF44D /* GGTalkTabBarController.h */,
-				5BC2AFA91EB05241004DF44D /* GGTalkTabBarController.m */,
-				5BC2AFAE1EB05320004DF44D /* GGTalkNavigationController.h */,
-				5BC2AFAF1EB05320004DF44D /* GGTalkNavigationController.m */,
-				D6C7AAA61EB1870900EBF0D1 /* Request_Url.h */,
-				D6C7AAA71EB1870900EBF0D1 /* Request_Url.m */,
-				5B0B4F3B1EB0665B00D81B8E /* GGTalkSingleton.h */,
-				5B0B4F3C1EB0665B00D81B8E /* GGTalkSingleton.m */,
-				5B0B4F3E1EB067AB00D81B8E /* NetManager.h */,
-				5B0B4F3F1EB067AB00D81B8E /* NetManager.m */,
+				5BC2AFA81EB05241004DF44D /* BaseTabBarController.h */,
+				5BC2AFA91EB05241004DF44D /* BaseTabBarController.m */,
+				5BC2AFAE1EB05320004DF44D /* BaseNavigationController.h */,
+				5BC2AFAF1EB05320004DF44D /* BaseNavigationController.m */,
+				D6C7AAC21EB18EF100EBF0D1 /* BaseNetManager.h */,
+				D6C7AAC31EB18EF100EBF0D1 /* BaseNetManager.m */,
+				D6C7AAA61EB1870900EBF0D1 /* GGT_Request_Url.h */,
+				D6C7AAA71EB1870900EBF0D1 /* GGT_Request_Url.m */,
+				5B0B4F3B1EB0665B00D81B8E /* GGT_Singleton.h */,
+				5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */,
 				5B0B4F461EB06D5400D81B8E /* MBProgressHUD+Extension.h */,
 				5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */,
 				5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */,
@@ -550,6 +550,7 @@
 		5BC2AF4C1EB0473D004DF44D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GGT_;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = XieHenry;
 				TargetAttributes = {
@@ -669,28 +670,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C7AABA1EB1877800EBF0D1 /* HomeReservationViewController.m in Sources */,
-				D6C7AABF1EB1879600EBF0D1 /* LoginViewController.m in Sources */,
+				D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */,
+				D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */,
 				D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */,
-				5BC2AFB01EB05320004DF44D /* GGTalkNavigationController.m in Sources */,
-				5B0B4F3D1EB0665B00D81B8E /* GGTalkSingleton.m in Sources */,
-				D6C7AAC01EB1879600EBF0D1 /* NewFeatherViewController.m in Sources */,
-				D6C7AAB11EB1874800EBF0D1 /* DiscoveryViewController.m in Sources */,
+				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
+				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
+				D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */,
+				D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */,
+				D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */,
 				5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */,
 				5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */,
-				D6C7AAB71EB1876900EBF0D1 /* OrderCourseViewController.m in Sources */,
-				5B0B4F401EB067AB00D81B8E /* NetManager.m in Sources */,
-				D6C7AAAE1EB1873200EBF0D1 /* MineViewController.m in Sources */,
+				D6C7AAB71EB1876900EBF0D1 /* GGT_OrderCourseViewController.m in Sources */,
+				D6C7AAAE1EB1873200EBF0D1 /* GGT_MineViewController.m in Sources */,
 				5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */,
-				5BC2AFC51EB054A8004DF44D /* RegisterViewController.m in Sources */,
+				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
 				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
-				5BC2AFAA1EB05241004DF44D /* GGTalkTabBarController.m in Sources */,
+				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
 				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
-				D6C7AAB41EB1875800EBF0D1 /* ScheduleViewController.m in Sources */,
+				D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */,
 				D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */,
-				D6C7AAA81EB1870900EBF0D1 /* Request_Url.m in Sources */,
+				D6C7AAA81EB1870900EBF0D1 /* GGT_Request_Url.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

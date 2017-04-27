@@ -1,21 +1,21 @@
 //
-//  NewFeatherViewController.m
+//  GGT_NewFeatherViewController.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "NewFeatherViewController.h"
-#import "LoginViewController.h"
+#import "GGT_NewFeatherViewController.h"
+#import "GGT_LoginViewController.h"
 
 #define NEWVIEWCOUNT 3
 
-@interface NewFeatherViewController () <UIScrollViewDelegate>
+@interface GGT_NewFeatherViewController () <UIScrollViewDelegate>
 
 @end
 
-@implementation NewFeatherViewController
+@implementation GGT_NewFeatherViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -73,7 +73,7 @@
 
 - (void)btnAction:(UIButton *)btn {
     
-    LoginViewController *userLoginVc = [[LoginViewController alloc] init];
+    GGT_LoginViewController *userLoginVc = [[GGT_LoginViewController alloc] init];
     self.view.window.rootViewController = userLoginVc;
     
 }

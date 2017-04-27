@@ -1,8 +1,8 @@
 //
-//  NetManager.h
+//  BaseNetManager.h
 //  GoGoTalk
 //
-//  Created by XieHenry on 2017/4/26.
+//  Created by 辰 on 2017/4/27.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
@@ -11,14 +11,13 @@
 typedef void (^RequestFinishedBlock)(id responseObj);
 typedef void (^RequestFailedBlock)(NSString *errorMsg);
 
-@interface NetManager : NSObject
+@interface BaseNetManager : NSObject
 
 //封装AFNetWorking的get请求逻辑
 + (void)afGetRequest:(NSString *)urlString contentType:(NSString *)type finished:(RequestFinishedBlock)finishedBlock
-                         failed:(RequestFailedBlock)failedBlock;
+              failed:(RequestFailedBlock)failedBlock;
 
 //封装AFNetWorking的post请求逻辑
 + (void)afPostRequest:(NSString *)urlString parms:(NSDictionary *)dic finished:(RequestFinishedBlock)finishedBlock failed:(RequestFailedBlock)failedBlock;
-
 
 @end

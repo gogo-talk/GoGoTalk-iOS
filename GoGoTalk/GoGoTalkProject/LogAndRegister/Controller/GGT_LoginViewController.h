@@ -1,5 +1,5 @@
 //
-//  OrderCourseViewController.h
+//  GGT_LoginViewController.h
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface OrderCourseViewController : BaseViewController
+@interface GGT_LoginViewController : BaseViewController
 
 @end

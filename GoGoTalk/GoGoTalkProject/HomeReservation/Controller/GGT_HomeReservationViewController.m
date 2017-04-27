@@ -1,22 +1,24 @@
 //
-//  RegisterViewController.m
+//  GGT_HomeReservationViewController.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "GGT_HomeReservationViewController.h"
 
-@interface RegisterViewController ()
+@interface GGT_HomeReservationViewController ()
 
 @end
 
-@implementation RegisterViewController
+@implementation GGT_HomeReservationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor redColor];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {

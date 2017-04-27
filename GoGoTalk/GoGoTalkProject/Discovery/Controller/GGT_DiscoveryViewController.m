@@ -1,22 +1,23 @@
 //
-//  MineViewController.m
+//  GGT_DiscoveryViewController.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "MineViewController.h"
+#import "GGT_DiscoveryViewController.h"
 
-@interface MineViewController ()
+@interface GGT_DiscoveryViewController ()
 
 @end
 
-@implementation MineViewController
+@implementation GGT_DiscoveryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor grayColor];
+    
 }
 
 - (void)didReceiveMemoryWarning {

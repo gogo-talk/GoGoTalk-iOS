@@ -1,5 +1,5 @@
 //
-//  HomeReservationViewController.h
+//  GGT_OrderCourseViewController.h
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface HomeReservationViewController : BaseViewController
+@interface GGT_OrderCourseViewController : BaseViewController
 
 @end

@@ -1,14 +1,14 @@
 //
-//  Request_Url.m
+//  GGT_Request_Url.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "Request_Url.h"
+#import "GGT_Request_Url.h"
 
-@implementation Request_Url
+@implementation GGT_Request_Url
 
 //注册
 + (NSString *)URL_Resigt {

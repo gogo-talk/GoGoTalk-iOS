@@ -1,27 +1,27 @@
 //
-//  GGTalkTabBarController.m
+//  BaseTabBarController.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "GGTalkTabBarController.h"
-#import "HomeReservationViewController.h"
-#import "OrderCourseViewController.h"
-#import "ScheduleViewController.h"
-#import "DiscoveryViewController.h"
-#import "MineViewController.h"
+#import "BaseTabBarController.h"
+#import "GGT_HomeReservationViewController.h"
+#import "GGT_OrderCourseViewController.h"
+#import "GGT_ScheduleViewController.h"
+#import "GGT_DiscoveryViewController.h"
+#import "GGT_MineViewController.h"
 
-#import "GGTalkNavigationController.h"
+#import "BaseNavigationController.h"
 
 
 
-@interface GGTalkTabBarController ()
+@interface BaseTabBarController ()
 
 @end
 
-@implementation GGTalkTabBarController
+@implementation BaseTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,13 +33,13 @@
 
 - (void)setupChildControllers {
     
-    [self setupChildNavigationControllerWithClass:[GGTalkNavigationController class] tabbarImageName:@"icon_activity" rootViewControllerClass:[HomeReservationViewController class] tabbarTitle:@"首页"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"icon_activity" rootViewControllerClass:[GGT_HomeReservationViewController class] tabbarTitle:@"首页"];
     
-    [self setupChildNavigationControllerWithClass:[GGTalkNavigationController class] tabbarImageName:@"icon_position" rootViewControllerClass:[OrderCourseViewController class] tabbarTitle:@"预约"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"icon_position" rootViewControllerClass:[GGT_OrderCourseViewController class] tabbarTitle:@"预约"];
     
-    [self setupChildNavigationControllerWithClass:[GGTalkNavigationController class] tabbarImageName:@"icon_message" rootViewControllerClass:[ScheduleViewController class] tabbarTitle:@"课表"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"icon_message" rootViewControllerClass:[GGT_ScheduleViewController class] tabbarTitle:@"课表"];
     
-    [self setupChildNavigationControllerWithClass:[GGTalkNavigationController class] tabbarImageName:@"icon_personal" rootViewControllerClass:[DiscoveryViewController class] tabbarTitle:@"发现"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"icon_personal" rootViewControllerClass:[GGT_DiscoveryViewController class] tabbarTitle:@"发现"];
 
 }
 

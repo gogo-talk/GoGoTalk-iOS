@@ -1,5 +1,5 @@
 //
-//  ScheduleViewController.h
+//  GGT_MineViewController.h
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface ScheduleViewController : BaseViewController
+@interface GGT_MineViewController : BaseViewController
 
 @end

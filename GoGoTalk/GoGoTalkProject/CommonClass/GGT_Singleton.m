@@ -1,21 +1,21 @@
 //
-//  GGTalkSingleton.m
+//  GGT_Singleton.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "GGTalkSingleton.h"
+#import "GGT_Singleton.h"
 
 
-static GGTalkSingleton *singleton = nil;
-@implementation GGTalkSingleton
+static GGT_Singleton *singleton = nil;
+@implementation GGT_Singleton
 
-+ (GGTalkSingleton *)sharedSingleton {
++ (GGT_Singleton *)sharedSingleton {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        singleton = [[GGTalkSingleton alloc]init];
+        singleton = [[GGT_Singleton alloc]init];
     });
     
     return singleton;

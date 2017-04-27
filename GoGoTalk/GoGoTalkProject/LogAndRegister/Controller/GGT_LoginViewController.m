@@ -1,19 +1,19 @@
 //
-//  LoginViewController.m
+//  GGT_LoginViewController.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "LoginViewController.h"
-#import "GGTalkTabBarController.h"
+#import "GGT_LoginViewController.h"
+#import "BaseTabBarController.h"
 
-@interface LoginViewController ()
+@interface GGT_LoginViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation GGT_LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,7 +28,7 @@
 }
 
 - (void)loginButtonClick {
-    GGTalkTabBarController *tabVc = [[GGTalkTabBarController alloc]init];
+    BaseTabBarController *tabVc = [[BaseTabBarController alloc]init];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:@"yes" forKey:@"login"];
     self.view.window.rootViewController = tabVc;

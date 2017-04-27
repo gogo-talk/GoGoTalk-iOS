@@ -1,22 +1,22 @@
 //
-//  ScheduleViewController.m
+//  GGT_MineViewController.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "ScheduleViewController.h"
+#import "GGT_MineViewController.h"
 
-@interface ScheduleViewController ()
+@interface GGT_MineViewController ()
 
 @end
 
-@implementation ScheduleViewController
+@implementation GGT_MineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor greenColor];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,5 +1,5 @@
 //
-//  GGTalkTabBarController.h
+//  GGT_NewFeatherViewController.h
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GGTalkTabBarController : UITabBarController
+@interface GGT_NewFeatherViewController : UIViewController
 
 @end

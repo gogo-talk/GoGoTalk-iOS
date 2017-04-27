@@ -1,5 +1,5 @@
 //
-//  GGTalkNavigationController.h
+//  BaseNavigationController.h
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GGTalkNavigationController : UINavigationController
+@interface BaseNavigationController : UINavigationController
 
 @end

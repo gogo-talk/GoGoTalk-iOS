@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "GGTalkTabBarController.h"
-#import "NewFeatherViewController.h"
-#import "LoginViewController.h"
+#import "BaseTabBarController.h"
+#import "GGT_NewFeatherViewController.h"
+#import "GGT_LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,9 +23,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
 
-    GGTalkTabBarController *tabVc = [[GGTalkTabBarController alloc] init];
-    LoginViewController *loginVc = [[LoginViewController alloc]init];
-    NewFeatherViewController *newVc = [[NewFeatherViewController alloc]init];
+    BaseTabBarController *tabVc = [[BaseTabBarController alloc] init];
+    GGT_LoginViewController *loginVc = [[GGT_LoginViewController alloc]init];
+    GGT_NewFeatherViewController *newVc = [[GGT_NewFeatherViewController alloc]init];
     
     
     

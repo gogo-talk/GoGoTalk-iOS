@@ -1,14 +1,14 @@
 //
-//  NetManager.m
+//  BaseNetManager.m
 //  GoGoTalk
 //
-//  Created by XieHenry on 2017/4/26.
+//  Created by 辰 on 2017/4/27.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "NetManager.h"
+#import "BaseNetManager.h"
 
-@implementation NetManager
+@implementation BaseNetManager
 
 + (void)afGetRequest:(NSString *)urlString contentType:(NSString *)type finished:(RequestFinishedBlock)finishedBlock failed:(RequestFailedBlock)failedBlock{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -44,6 +44,5 @@
     }];
     
 }
-
 
 @end

@@ -1,24 +1,22 @@
 //
-//  HomeReservationViewController.m
+//  GGT_ScheduleViewController.m
 //  GoGoTalk
 //
 //  Created by XieHenry on 2017/4/26.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "HomeReservationViewController.h"
+#import "GGT_ScheduleViewController.h"
 
-@interface HomeReservationViewController ()
+@interface GGT_ScheduleViewController ()
 
 @end
 
-@implementation HomeReservationViewController
+@implementation GGT_ScheduleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
-    
-
+    self.view.backgroundColor = [UIColor greenColor];
 }
 
 - (void)didReceiveMemoryWarning {
