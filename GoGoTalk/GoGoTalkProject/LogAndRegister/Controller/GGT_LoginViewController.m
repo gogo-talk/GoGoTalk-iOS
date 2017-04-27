@@ -8,8 +8,11 @@
 
 #import "GGT_LoginViewController.h"
 #import "BaseTabBarController.h"
+#import "GGT_LoginView.h"
 
 @interface GGT_LoginViewController ()
+
+@property (nonatomic, strong) GGT_LoginView *loginView;
 
 @end
 
@@ -18,12 +21,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UIButton *loginButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    loginButton.frame = CGRectMake((SCREEN_WIDTH-100)/2, (SCREEN_HEIGHT-44)/2, 100, 44);
-    [loginButton setTitle:@"立即登录" forState:(UIControlStateNormal)];
-    [loginButton setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
-    [loginButton addTarget:self action:@selector(loginButtonClick) forControlEvents:(UIControlEventTouchUpInside)];
-    [self.view addSubview:loginButton];
+    
+    self.loginView = [[GGT_LoginView alloc]init];
+    self.view = self.loginView;
+    
+    
+    
+    
+    
+    
+    
+    
+//    UIButton *loginButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+//    loginButton.frame = CGRectMake((SCREEN_WIDTH-100)/2, (SCREEN_HEIGHT-44)/2, 100, 44);
+//    [loginButton setTitle:@"立即登录" forState:(UIControlStateNormal)];
+//    [loginButton setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
+//    [loginButton addTarget:self action:@selector(loginButtonClick) forControlEvents:(UIControlEventTouchUpInside)];
+//    [self.view addSubview:loginButton];
 
 }
 
