@@ -20,9 +20,6 @@
     
     self.view.backgroundColor = UICOLOR_RANDOM_COLOR();
     
-
 }
-
-
 
 @end
