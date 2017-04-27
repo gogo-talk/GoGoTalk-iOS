@@ -42,7 +42,8 @@
             self.window.rootViewController = mainVc;
             
         }else{
-            self.window.rootViewController = loginVc;
+            UINavigationController *mainVc = [[UINavigationController alloc]initWithRootViewController:loginVc];
+            self.window.rootViewController = mainVc;
         }
         
     }else{

@@ -8,7 +8,10 @@
 
 #import "GGT_LoginViewController.h"
 #import "BaseTabBarController.h"
+#import "GGT_ ForgotPasswordViewController.h"
 #import "GGT_LoginView.h"
+
+
 
 @interface GGT_LoginViewController ()
 
@@ -18,15 +21,25 @@
 
 @implementation GGT_LoginViewController
 
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UICOLOR_RANDOM_COLOR();
 
     
     self.loginView = [[GGT_LoginView alloc]init];
     self.view = self.loginView;
     
-    
-    
+    [self.loginView.forgotPasswordButton xc_addClickBlock:^(UIButton *button) {
+        GGT__ForgotPasswordViewController *vc = [[GGT__ForgotPasswordViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+
+    }];
   
 
 }

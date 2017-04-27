@@ -48,10 +48,10 @@
     }];
     
     
-    self.fogetPasswordButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [self.fogetPasswordButton setTitle:@"忘记密码" forState:(UIControlStateNormal)];
-    [self.fogetPasswordButton setTitleColor:UICOLOR_RANDOM_COLOR() forState:(UIControlStateNormal)];
-    [self addSubview:self.fogetPasswordButton];
+    self.forgotPasswordButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [self.forgotPasswordButton setTitle:@"忘记密码" forState:(UIControlStateNormal)];
+    [self.forgotPasswordButton setTitleColor:UICOLOR_RANDOM_COLOR() forState:(UIControlStateNormal)];
+    [self addSubview:self.forgotPasswordButton];
     
     
     self.loginButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -61,10 +61,10 @@
     self.loginButton.layer.borderColor = UICOLOR_RANDOM_COLOR().CGColor;
     [self addSubview:self.loginButton];
     
-    [self.fogetPasswordButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.forgotPasswordButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.passwordField.mas_right).with.offset(-20);
         make.top.equalTo(self.passwordField.mas_bottom).with.offset(10);
-        make.bottom.equalTo(self.fogetPasswordButton.mas_top).with.offset(-30);
+        make.bottom.equalTo(self.forgotPasswordButton.mas_top).with.offset(-30);
         make.size.mas_offset(CGSizeMake(100, 20));
 
     }];
@@ -74,7 +74,7 @@
     [self.loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).with.offset(30);
         make.right.equalTo(self.mas_right).with.offset(-30);
-        make.top.equalTo(self.fogetPasswordButton.mas_bottom).with.offset(30);
+        make.top.equalTo(self.forgotPasswordButton.mas_bottom).with.offset(30);
         make.size.mas_offset(CGSizeMake(SCREEN_WIDTH()-20, 44));
     }];
     
