@@ -18,12 +18,8 @@
 #define NSLog(FORMAT, ...) nil
 #endif
 
-//屏幕尺寸
-#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
-#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
-
 //等比
-#define GGTFrom_X(value) (value*SCREEN_WIDTH)/375
+#define GGTFrom_X(value) (value*SCREEN_WIDTH())/375
 //字体等比
 #define GGT_font(font) [UIFont systemFontOfSize:SXFrom_X(font)]
 
@@ -47,6 +43,31 @@
  @abstract UIAlterController弹框.
  **/
 #define LOSAlert(msg) {UIAlertController * alertController = [UIAlertController alertControllerWithTitle:nil message:msg preferredStyle:UIAlertControllerStyleAlert];[alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:0 handler:^(UIAlertAction * _Nonnull action) {}]];;[self presentViewController:alertController animated:YES completion:nil];}
+
+/**
+ @abstract 未验证.
+ **/
+//static inline void LOSALERT(NSString *alterMessage)
+//{
+//    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:nil message:alterMessage preferredStyle:UIAlertControllerStyleAlert];
+//    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:0 handler:^(UIAlertAction * _Nonnull action) {}]];
+//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+//}
+
+/**
+ @abstract 获取本机屏幕的宽度.
+ **/
+static inline CGFloat SCREEN_WIDTH()
+{
+    return [UIScreen mainScreen].bounds.size.width;
+}
+/**
+ @abstract 获取本机屏幕的高度.
+ **/
+static inline CGFloat SCREEN_HEIGHT()
+{
+    return [UIScreen mainScreen].bounds.size.height;
+}
 /**
  @abstract 打印CGRECT.
  **/

@@ -27,17 +27,7 @@
     
     
     
-    
-    
-    
-    
-    
-//    UIButton *loginButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-//    loginButton.frame = CGRectMake((SCREEN_WIDTH-100)/2, (SCREEN_HEIGHT-44)/2, 100, 44);
-//    [loginButton setTitle:@"立即登录" forState:(UIControlStateNormal)];
-//    [loginButton setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
-//    [loginButton addTarget:self action:@selector(loginButtonClick) forControlEvents:(UIControlEventTouchUpInside)];
-//    [self.view addSubview:loginButton];
+  
 
 }
 
