@@ -1,0 +1,73 @@
+//
+//  PrefixHeader.pch
+//  GoGoTalk
+//
+//  Created by XieHenry on 2017/4/26.
+//  Copyright © 2017年 XieHenry. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "BaseViewController.h"
+#import "Masonry.h"
+#import "UIView+Layout.h"
+#import "UIColor+XCAdditions.h"
+#import "NetManager.h"
+#import "MBProgressHUD+Extension.h"
+#import <MJRefresh.h>
+#import "NSArray+SafeExtension.h"
+#import "GGTalkSingleton.h"
+#import "NSObject+YYModel.h"
+#import "UIImageView+WebCache.h"
+
+
+
+
+//重写NSLog,Debug模式下打印日志和当前行数
+#if DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"😯😯😄😄\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+//屏幕尺寸
+#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+
+//等比
+#define GGTFrom_X(value) (value*SCREEN_WIDTH)/375
+//字体等比
+#define GGT_font(font) [UIFont systemFontOfSize:SXFrom_X(font)]
+
+
+//字符串是否为空
+#define IsStrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref)isEqualToString:@""]))
+//数组是否为空
+#define IsArrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref) count] == 0))
+//字典是否为空
+#define IsDicEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref) count] == 0))
+
+
+//公司地址
+#define PrefixAddress @"http://www.gogo-talk.com"
+
+
+#define MainColor [UIColor colorWithHexString:@"#ea5514"]
+
+
+#endif /* PrefixHeader_pch */
+
+
+
+
+
+
+
+
+
+

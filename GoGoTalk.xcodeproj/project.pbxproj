@@ -1,0 +1,948 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B0B4F3A1EB065D100D81B8E /* Request_Url.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F391EB065D100D81B8E /* Request_Url.m */; };
+		5B0B4F3D1EB0665B00D81B8E /* GGTalkSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGTalkSingleton.m */; };
+		5B0B4F401EB067AB00D81B8E /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3F1EB067AB00D81B8E /* NetManager.m */; };
+		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
+		5BC2AF591EB0473D004DF44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF581EB0473D004DF44D /* main.m */; };
+		5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */; };
+		5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF631EB0473D004DF44D /* Assets.xcassets */; };
+		5BC2AF671EB0473D004DF44D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF651EB0473D004DF44D /* LaunchScreen.storyboard */; };
+		5BC2AF721EB0473E004DF44D /* GoGoTalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF711EB0473E004DF44D /* GoGoTalkTests.m */; };
+		5BC2AF7D1EB0473E004DF44D /* GoGoTalkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF7C1EB0473E004DF44D /* GoGoTalkUITests.m */; };
+		5BC2AFA71EB0514B004DF44D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFA61EB0514B004DF44D /* BaseViewController.m */; };
+		5BC2AFAA1EB05241004DF44D /* GGTalkTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFA91EB05241004DF44D /* GGTalkTabBarController.m */; };
+		5BC2AFB01EB05320004DF44D /* GGTalkNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFAF1EB05320004DF44D /* GGTalkNavigationController.m */; };
+		5BC2AFB31EB053D1004DF44D /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFB21EB053D1004DF44D /* MineViewController.m */; };
+		5BC2AFB61EB053F6004DF44D /* DiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFB51EB053F6004DF44D /* DiscoveryViewController.m */; };
+		5BC2AFB91EB05416004DF44D /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFB81EB05416004DF44D /* ScheduleViewController.m */; };
+		5BC2AFBC1EB05436004DF44D /* OrderCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFBB1EB05436004DF44D /* OrderCourseViewController.m */; };
+		5BC2AFBF1EB0547A004DF44D /* HomeReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFBE1EB0547A004DF44D /* HomeReservationViewController.m */; };
+		5BC2AFC21EB05493004DF44D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFC11EB05493004DF44D /* LoginViewController.m */; };
+		5BC2AFC51EB054A8004DF44D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFC41EB054A8004DF44D /* RegisterViewController.m */; };
+		5BED059F1EB07BDD00469368 /* NSArray+SafeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED059E1EB07BDD00469368 /* NSArray+SafeExtension.m */; };
+		5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05A11EB07C3400469368 /* UIColor+XCAdditions.m */; };
+		5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05A81EB07D3300469368 /* UIImage+Category.m */; };
+		5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05AB1EB07DA200469368 /* UIView+Layout.m */; };
+		5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05AE1EB07E4D00469368 /* UIButton+timer.m */; };
+		5BED05B11EB07EA200469368 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */; };
+		5BED05B41EB0841E00469368 /* NewFeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05B31EB0841E00469368 /* NewFeatherViewController.m */; };
+		D696AFD3BE34379B2D601BF6 /* libPods-GoGoTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BC2AF6E1EB0473D004DF44D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BC2AF4C1EB0473D004DF44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BC2AF531EB0473D004DF44D;
+			remoteInfo = GoGoTalk;
+		};
+		5BC2AF791EB0473E004DF44D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BC2AF4C1EB0473D004DF44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BC2AF531EB0473D004DF44D;
+			remoteInfo = GoGoTalk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGoTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		5B0B4F381EB065D100D81B8E /* Request_Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Request_Url.h; path = ../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/CommonClass/Request_Url.h; sourceTree = "<group>"; };
+		5B0B4F391EB065D100D81B8E /* Request_Url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Request_Url.m; path = ../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/CommonClass/Request_Url.m; sourceTree = "<group>"; };
+		5B0B4F3B1EB0665B00D81B8E /* GGTalkSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTalkSingleton.h; sourceTree = "<group>"; };
+		5B0B4F3C1EB0665B00D81B8E /* GGTalkSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTalkSingleton.m; sourceTree = "<group>"; };
+		5B0B4F3E1EB067AB00D81B8E /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		5B0B4F3F1EB067AB00D81B8E /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
+		5B0B4F461EB06D5400D81B8E /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
+		5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
+		5B0B4F4A1EB070F400D81B8E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/PrefixHeader.pch; sourceTree = "<group>"; };
+		5BC2AF541EB0473D004DF44D /* GoGoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC2AF581EB0473D004DF44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5BC2AF5A1EB0473D004DF44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5BC2AF631EB0473D004DF44D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BC2AF661EB0473D004DF44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BC2AF681EB0473D004DF44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BC2AF6D1EB0473D004DF44D /* GoGoTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoGoTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC2AF711EB0473E004DF44D /* GoGoTalkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoGoTalkTests.m; sourceTree = "<group>"; };
+		5BC2AF731EB0473E004DF44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BC2AF781EB0473E004DF44D /* GoGoTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoGoTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC2AF7C1EB0473E004DF44D /* GoGoTalkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoGoTalkUITests.m; sourceTree = "<group>"; };
+		5BC2AF7E1EB0473E004DF44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BC2AFA51EB0514B004DF44D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = ../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/CommonClass/BaseViewController.h; sourceTree = "<group>"; };
+		5BC2AFA61EB0514B004DF44D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = ../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/CommonClass/BaseViewController.m; sourceTree = "<group>"; };
+		5BC2AFA81EB05241004DF44D /* GGTalkTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTalkTabBarController.h; sourceTree = "<group>"; };
+		5BC2AFA91EB05241004DF44D /* GGTalkTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTalkTabBarController.m; sourceTree = "<group>"; };
+		5BC2AFAE1EB05320004DF44D /* GGTalkNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTalkNavigationController.h; sourceTree = "<group>"; };
+		5BC2AFAF1EB05320004DF44D /* GGTalkNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTalkNavigationController.m; sourceTree = "<group>"; };
+		5BC2AFB11EB053D1004DF44D /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineViewController.h; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/MySettings/Controller/MineViewController.h; sourceTree = "<group>"; };
+		5BC2AFB21EB053D1004DF44D /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineViewController.m; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/MySettings/Controller/MineViewController.m; sourceTree = "<group>"; };
+		5BC2AFB41EB053F6004DF44D /* DiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoveryViewController.h; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/Discovery/Controller/DiscoveryViewController.h; sourceTree = "<group>"; };
+		5BC2AFB51EB053F6004DF44D /* DiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoveryViewController.m; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/Discovery/Controller/DiscoveryViewController.m; sourceTree = "<group>"; };
+		5BC2AFB71EB05416004DF44D /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleViewController.h; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/Schedule/Controller/ScheduleViewController.h; sourceTree = "<group>"; };
+		5BC2AFB81EB05416004DF44D /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleViewController.m; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/Schedule/Controller/ScheduleViewController.m; sourceTree = "<group>"; };
+		5BC2AFBA1EB05436004DF44D /* OrderCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderCourseViewController.h; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/OrderTheCourse/Controller/OrderCourseViewController.h; sourceTree = "<group>"; };
+		5BC2AFBB1EB05436004DF44D /* OrderCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderCourseViewController.m; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/OrderTheCourse/Controller/OrderCourseViewController.m; sourceTree = "<group>"; };
+		5BC2AFBD1EB0547A004DF44D /* HomeReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeReservationViewController.h; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/HomeReservation/Controller/HomeReservationViewController.h; sourceTree = "<group>"; };
+		5BC2AFBE1EB0547A004DF44D /* HomeReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeReservationViewController.m; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/HomeReservation/Controller/HomeReservationViewController.m; sourceTree = "<group>"; };
+		5BC2AFC01EB05493004DF44D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/LogAndRegister/Controller/LoginViewController.h; sourceTree = "<group>"; };
+		5BC2AFC11EB05493004DF44D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/LogAndRegister/Controller/LoginViewController.m; sourceTree = "<group>"; };
+		5BC2AFC31EB054A8004DF44D /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		5BC2AFC41EB054A8004DF44D /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		5BED059D1EB07BDD00469368 /* NSArray+SafeExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+SafeExtension.h"; path = "../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/Extension/NSArray+SafeExtension.h"; sourceTree = "<group>"; };
+		5BED059E1EB07BDD00469368 /* NSArray+SafeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+SafeExtension.m"; path = "../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/Extension/NSArray+SafeExtension.m"; sourceTree = "<group>"; };
+		5BED05A01EB07C3400469368 /* UIColor+XCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XCAdditions.h"; sourceTree = "<group>"; };
+		5BED05A11EB07C3400469368 /* UIColor+XCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XCAdditions.m"; sourceTree = "<group>"; };
+		5BED05A71EB07D3300469368 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		5BED05A81EB07D3300469368 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
+		5BED05AA1EB07DA200469368 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		5BED05AB1EB07DA200469368 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		5BED05AD1EB07E4D00469368 /* UIButton+timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+timer.h"; sourceTree = "<group>"; };
+		5BED05AE1EB07E4D00469368 /* UIButton+timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+timer.m"; sourceTree = "<group>"; };
+		5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		5BED05B21EB0841E00469368 /* NewFeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewFeatherViewController.h; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/LogAndRegister/Controller/NewFeatherViewController.h; sourceTree = "<group>"; };
+		5BED05B31EB0841E00469368 /* NewFeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewFeatherViewController.m; path = ../../../../../../../xiehenry/Desktop/GoGoTalk/GoGoTalk/GoGoTalkProject/LogAndRegister/Controller/NewFeatherViewController.m; sourceTree = "<group>"; };
+		B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoGoTalk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDDE48A6BF0DF60B4B82782D /* Pods-GoGoTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGoTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BC2AF511EB0473D004DF44D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D696AFD3BE34379B2D601BF6 /* libPods-GoGoTalk.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC2AF6A1EB0473D004DF44D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC2AF751EB0473E004DF44D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B5CFEF708289DAD86D147C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B0B4F491EB070CA00D81B8E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5BC2AF4B1EB0473D004DF44D = {
+			isa = PBXGroup;
+			children = (
+				5BC2AF561EB0473D004DF44D /* GoGoTalk */,
+				5BC2AF701EB0473D004DF44D /* GoGoTalkTests */,
+				5BC2AF7B1EB0473E004DF44D /* GoGoTalkUITests */,
+				5BC2AF551EB0473D004DF44D /* Products */,
+				AEE4F84ABBEAD206ABB94FD8 /* Pods */,
+				4B5CFEF708289DAD86D147C6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5BC2AF551EB0473D004DF44D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AF541EB0473D004DF44D /* GoGoTalk.app */,
+				5BC2AF6D1EB0473D004DF44D /* GoGoTalkTests.xctest */,
+				5BC2AF781EB0473E004DF44D /* GoGoTalkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BC2AF561EB0473D004DF44D /* GoGoTalk */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AF5A1EB0473D004DF44D /* AppDelegate.h */,
+				5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */,
+				5BC2AF8A1EB04E31004DF44D /* GoGoTalkProject */,
+				5BC2AF571EB0473D004DF44D /* Supporting Files */,
+			);
+			path = GoGoTalk;
+			sourceTree = "<group>";
+		};
+		5BC2AF571EB0473D004DF44D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AF631EB0473D004DF44D /* Assets.xcassets */,
+				5BC2AF651EB0473D004DF44D /* LaunchScreen.storyboard */,
+				5BC2AF681EB0473D004DF44D /* Info.plist */,
+				5BC2AF581EB0473D004DF44D /* main.m */,
+				5B0B4F4A1EB070F400D81B8E /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BC2AF701EB0473D004DF44D /* GoGoTalkTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AF711EB0473E004DF44D /* GoGoTalkTests.m */,
+				5BC2AF731EB0473E004DF44D /* Info.plist */,
+			);
+			path = GoGoTalkTests;
+			sourceTree = "<group>";
+		};
+		5BC2AF7B1EB0473E004DF44D /* GoGoTalkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AF7C1EB0473E004DF44D /* GoGoTalkUITests.m */,
+				5BC2AF7E1EB0473E004DF44D /* Info.plist */,
+			);
+			path = GoGoTalkUITests;
+			sourceTree = "<group>";
+		};
+		5BC2AF8A1EB04E31004DF44D /* GoGoTalkProject */ = {
+			isa = PBXGroup;
+			children = (
+				5B0B4F491EB070CA00D81B8E /* Other */,
+				5BC2AFA41EB050B8004DF44D /* CommonClass */,
+				5BC2AFA31EB050A1004DF44D /* Extension */,
+				5BC2AF901EB0500A004DF44D /* MySettings */,
+				5BC2AF8F1EB04FD1004DF44D /* Discovery */,
+				5BC2AF8E1EB04F97004DF44D /* Schedule */,
+				5BC2AF8D1EB04F79004DF44D /* OrderTheCourse */,
+				5BC2AF8C1EB04F70004DF44D /* HomeReservation */,
+				5BC2AF8B1EB04E92004DF44D /* LogAndRegister */,
+			);
+			path = GoGoTalkProject;
+			sourceTree = "<group>";
+		};
+		5BC2AF8B1EB04E92004DF44D /* LogAndRegister */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AFA01EB05057004DF44D /* Controller */,
+				5BC2AFA11EB05057004DF44D /* View */,
+				5BC2AFA21EB05057004DF44D /* Model */,
+			);
+			path = LogAndRegister;
+			sourceTree = "<group>";
+		};
+		5BC2AF8C1EB04F70004DF44D /* HomeReservation */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AF9D1EB05051004DF44D /* Controller */,
+				5BC2AF9E1EB05051004DF44D /* View */,
+				5BC2AF9F1EB05051004DF44D /* Model */,
+			);
+			path = HomeReservation;
+			sourceTree = "<group>";
+		};
+		5BC2AF8D1EB04F79004DF44D /* OrderTheCourse */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AF9A1EB0504A004DF44D /* Controller */,
+				5BC2AF9B1EB0504A004DF44D /* View */,
+				5BC2AF9C1EB0504A004DF44D /* Model */,
+			);
+			path = OrderTheCourse;
+			sourceTree = "<group>";
+		};
+		5BC2AF8E1EB04F97004DF44D /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AF971EB05042004DF44D /* Controller */,
+				5BC2AF981EB05042004DF44D /* View */,
+				5BC2AF991EB05042004DF44D /* Model */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		5BC2AF8F1EB04FD1004DF44D /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AF941EB0503B004DF44D /* Controller */,
+				5BC2AF951EB0503B004DF44D /* View */,
+				5BC2AF961EB0503B004DF44D /* Model */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		5BC2AF901EB0500A004DF44D /* MySettings */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AF911EB05030004DF44D /* Controller */,
+				5BC2AF921EB05030004DF44D /* View */,
+				5BC2AF931EB05030004DF44D /* Model */,
+			);
+			path = MySettings;
+			sourceTree = "<group>";
+		};
+		5BC2AF911EB05030004DF44D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AFB11EB053D1004DF44D /* MineViewController.h */,
+				5BC2AFB21EB053D1004DF44D /* MineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BC2AF921EB05030004DF44D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BC2AF931EB05030004DF44D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BC2AF941EB0503B004DF44D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AFB41EB053F6004DF44D /* DiscoveryViewController.h */,
+				5BC2AFB51EB053F6004DF44D /* DiscoveryViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BC2AF951EB0503B004DF44D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BC2AF961EB0503B004DF44D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BC2AF971EB05042004DF44D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AFB71EB05416004DF44D /* ScheduleViewController.h */,
+				5BC2AFB81EB05416004DF44D /* ScheduleViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BC2AF981EB05042004DF44D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BC2AF991EB05042004DF44D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BC2AF9A1EB0504A004DF44D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AFBA1EB05436004DF44D /* OrderCourseViewController.h */,
+				5BC2AFBB1EB05436004DF44D /* OrderCourseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BC2AF9B1EB0504A004DF44D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BC2AF9C1EB0504A004DF44D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BC2AF9D1EB05051004DF44D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AFBD1EB0547A004DF44D /* HomeReservationViewController.h */,
+				5BC2AFBE1EB0547A004DF44D /* HomeReservationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BC2AF9E1EB05051004DF44D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BC2AF9F1EB05051004DF44D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BC2AFA01EB05057004DF44D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AFC01EB05493004DF44D /* LoginViewController.h */,
+				5BC2AFC11EB05493004DF44D /* LoginViewController.m */,
+				5BC2AFC31EB054A8004DF44D /* RegisterViewController.h */,
+				5BC2AFC41EB054A8004DF44D /* RegisterViewController.m */,
+				5BED05B21EB0841E00469368 /* NewFeatherViewController.h */,
+				5BED05B31EB0841E00469368 /* NewFeatherViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BC2AFA11EB05057004DF44D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BC2AFA21EB05057004DF44D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BC2AFA31EB050A1004DF44D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5BED059D1EB07BDD00469368 /* NSArray+SafeExtension.h */,
+				5BED059E1EB07BDD00469368 /* NSArray+SafeExtension.m */,
+				5BED05A01EB07C3400469368 /* UIColor+XCAdditions.h */,
+				5BED05A11EB07C3400469368 /* UIColor+XCAdditions.m */,
+				5BED05A71EB07D3300469368 /* UIImage+Category.h */,
+				5BED05A81EB07D3300469368 /* UIImage+Category.m */,
+				5BED05AA1EB07DA200469368 /* UIView+Layout.h */,
+				5BED05AB1EB07DA200469368 /* UIView+Layout.m */,
+				5BED05AD1EB07E4D00469368 /* UIButton+timer.h */,
+				5BED05AE1EB07E4D00469368 /* UIButton+timer.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5BC2AFA41EB050B8004DF44D /* CommonClass */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2AFA51EB0514B004DF44D /* BaseViewController.h */,
+				5BC2AFA61EB0514B004DF44D /* BaseViewController.m */,
+				5BC2AFA81EB05241004DF44D /* GGTalkTabBarController.h */,
+				5BC2AFA91EB05241004DF44D /* GGTalkTabBarController.m */,
+				5BC2AFAE1EB05320004DF44D /* GGTalkNavigationController.h */,
+				5BC2AFAF1EB05320004DF44D /* GGTalkNavigationController.m */,
+				5B0B4F381EB065D100D81B8E /* Request_Url.h */,
+				5B0B4F391EB065D100D81B8E /* Request_Url.m */,
+				5B0B4F3B1EB0665B00D81B8E /* GGTalkSingleton.h */,
+				5B0B4F3C1EB0665B00D81B8E /* GGTalkSingleton.m */,
+				5B0B4F3E1EB067AB00D81B8E /* NetManager.h */,
+				5B0B4F3F1EB067AB00D81B8E /* NetManager.m */,
+				5B0B4F461EB06D5400D81B8E /* MBProgressHUD+Extension.h */,
+				5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */,
+				5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */,
+			);
+			path = CommonClass;
+			sourceTree = "<group>";
+		};
+		AEE4F84ABBEAD206ABB94FD8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */,
+				BDDE48A6BF0DF60B4B82782D /* Pods-GoGoTalk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BC2AF531EB0473D004DF44D /* GoGoTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BC2AF811EB0473E004DF44D /* Build configuration list for PBXNativeTarget "GoGoTalk" */;
+			buildPhases = (
+				5F3AF42E8458FFBF1BF7CFCA /* [CP] Check Pods Manifest.lock */,
+				5BC2AF501EB0473D004DF44D /* Sources */,
+				5BC2AF511EB0473D004DF44D /* Frameworks */,
+				5BC2AF521EB0473D004DF44D /* Resources */,
+				C62BC737E55F69D6ABF4CD78 /* [CP] Embed Pods Frameworks */,
+				A14247F9C90CA6A5493AF65A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoGoTalk;
+			productName = GoGoTalk;
+			productReference = 5BC2AF541EB0473D004DF44D /* GoGoTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BC2AF6C1EB0473D004DF44D /* GoGoTalkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BC2AF841EB0473E004DF44D /* Build configuration list for PBXNativeTarget "GoGoTalkTests" */;
+			buildPhases = (
+				5BC2AF691EB0473D004DF44D /* Sources */,
+				5BC2AF6A1EB0473D004DF44D /* Frameworks */,
+				5BC2AF6B1EB0473D004DF44D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BC2AF6F1EB0473D004DF44D /* PBXTargetDependency */,
+			);
+			name = GoGoTalkTests;
+			productName = GoGoTalkTests;
+			productReference = 5BC2AF6D1EB0473D004DF44D /* GoGoTalkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5BC2AF771EB0473E004DF44D /* GoGoTalkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BC2AF871EB0473E004DF44D /* Build configuration list for PBXNativeTarget "GoGoTalkUITests" */;
+			buildPhases = (
+				5BC2AF741EB0473E004DF44D /* Sources */,
+				5BC2AF751EB0473E004DF44D /* Frameworks */,
+				5BC2AF761EB0473E004DF44D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BC2AF7A1EB0473E004DF44D /* PBXTargetDependency */,
+			);
+			name = GoGoTalkUITests;
+			productName = GoGoTalkUITests;
+			productReference = 5BC2AF781EB0473E004DF44D /* GoGoTalkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BC2AF4C1EB0473D004DF44D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = XieHenry;
+				TargetAttributes = {
+					5BC2AF531EB0473D004DF44D = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+					};
+					5BC2AF6C1EB0473D004DF44D = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5BC2AF531EB0473D004DF44D;
+					};
+					5BC2AF771EB0473E004DF44D = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5BC2AF531EB0473D004DF44D;
+					};
+				};
+			};
+			buildConfigurationList = 5BC2AF4F1EB0473D004DF44D /* Build configuration list for PBXProject "GoGoTalk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BC2AF4B1EB0473D004DF44D;
+			productRefGroup = 5BC2AF551EB0473D004DF44D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BC2AF531EB0473D004DF44D /* GoGoTalk */,
+				5BC2AF6C1EB0473D004DF44D /* GoGoTalkTests */,
+				5BC2AF771EB0473E004DF44D /* GoGoTalkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BC2AF521EB0473D004DF44D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC2AF671EB0473D004DF44D /* LaunchScreen.storyboard in Resources */,
+				5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */,
+				5BED05B11EB07EA200469368 /* MBProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC2AF6B1EB0473D004DF44D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC2AF761EB0473E004DF44D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F3AF42E8458FFBF1BF7CFCA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A14247F9C90CA6A5493AF65A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C62BC737E55F69D6ABF4CD78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BC2AF501EB0473D004DF44D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B0B4F3A1EB065D100D81B8E /* Request_Url.m in Sources */,
+				5BC2AFBF1EB0547A004DF44D /* HomeReservationViewController.m in Sources */,
+				5BC2AFB31EB053D1004DF44D /* MineViewController.m in Sources */,
+				5BC2AFB01EB05320004DF44D /* GGTalkNavigationController.m in Sources */,
+				5B0B4F3D1EB0665B00D81B8E /* GGTalkSingleton.m in Sources */,
+				5BC2AFB61EB053F6004DF44D /* DiscoveryViewController.m in Sources */,
+				5BED059F1EB07BDD00469368 /* NSArray+SafeExtension.m in Sources */,
+				5BC2AFA71EB0514B004DF44D /* BaseViewController.m in Sources */,
+				5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */,
+				5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */,
+				5B0B4F401EB067AB00D81B8E /* NetManager.m in Sources */,
+				5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */,
+				5BC2AFBC1EB05436004DF44D /* OrderCourseViewController.m in Sources */,
+				5BC2AFC21EB05493004DF44D /* LoginViewController.m in Sources */,
+				5BC2AFC51EB054A8004DF44D /* RegisterViewController.m in Sources */,
+				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
+				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
+				5BC2AFB91EB05416004DF44D /* ScheduleViewController.m in Sources */,
+				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
+				5BED05B41EB0841E00469368 /* NewFeatherViewController.m in Sources */,
+				5BC2AFAA1EB05241004DF44D /* GGTalkTabBarController.m in Sources */,
+				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC2AF691EB0473D004DF44D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC2AF721EB0473E004DF44D /* GoGoTalkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC2AF741EB0473E004DF44D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC2AF7D1EB0473E004DF44D /* GoGoTalkUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BC2AF6F1EB0473D004DF44D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BC2AF531EB0473D004DF44D /* GoGoTalk */;
+			targetProxy = 5BC2AF6E1EB0473D004DF44D /* PBXContainerItemProxy */;
+		};
+		5BC2AF7A1EB0473E004DF44D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BC2AF531EB0473D004DF44D /* GoGoTalk */;
+			targetProxy = 5BC2AF791EB0473E004DF44D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BC2AF651EB0473D004DF44D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BC2AF661EB0473D004DF44D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BC2AF7F1EB0473E004DF44D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BC2AF801EB0473E004DF44D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BC2AF821EB0473E004DF44D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GoGoTalk/PrefixHeader.pch";
+				INFOPLIST_FILE = GoGoTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoGoTalk.GoGoTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5BC2AF831EB0473E004DF44D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDE48A6BF0DF60B4B82782D /* Pods-GoGoTalk.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GoGoTalk/PrefixHeader.pch";
+				INFOPLIST_FILE = GoGoTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoGoTalk.GoGoTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5BC2AF851EB0473E004DF44D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoGoTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoGoTalk.GoGoTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoGoTalk.app/GoGoTalk";
+			};
+			name = Debug;
+		};
+		5BC2AF861EB0473E004DF44D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoGoTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoGoTalk.GoGoTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoGoTalk.app/GoGoTalk";
+			};
+			name = Release;
+		};
+		5BC2AF881EB0473E004DF44D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GoGoTalkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoGoTalk.GoGoTalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GoGoTalk;
+			};
+			name = Debug;
+		};
+		5BC2AF891EB0473E004DF44D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GoGoTalkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoGoTalk.GoGoTalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GoGoTalk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BC2AF4F1EB0473D004DF44D /* Build configuration list for PBXProject "GoGoTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BC2AF7F1EB0473E004DF44D /* Debug */,
+				5BC2AF801EB0473E004DF44D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BC2AF811EB0473E004DF44D /* Build configuration list for PBXNativeTarget "GoGoTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BC2AF821EB0473E004DF44D /* Debug */,
+				5BC2AF831EB0473E004DF44D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BC2AF841EB0473E004DF44D /* Build configuration list for PBXNativeTarget "GoGoTalkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BC2AF851EB0473E004DF44D /* Debug */,
+				5BC2AF861EB0473E004DF44D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BC2AF871EB0473E004DF44D /* Build configuration list for PBXNativeTarget "GoGoTalkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BC2AF881EB0473E004DF44D /* Debug */,
+				5BC2AF891EB0473E004DF44D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BC2AF4C1EB0473D004DF44D /* Project object */;
+}
