@@ -13,6 +13,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+#import "AppInformation.h"
+
 #import "BaseViewController.h"
 #import "Masonry.h"
 #import "UIView+Layout.h"
@@ -28,36 +30,7 @@
 
 
 
-//重写NSLog,Debug模式下打印日志和当前行数
-#if DEBUG
-#define NSLog(FORMAT, ...) fprintf(stderr,"😯😯😄😄\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
-#else
-#define NSLog(FORMAT, ...) nil
-#endif
 
-//屏幕尺寸
-#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
-#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
-
-//等比
-#define GGTFrom_X(value) (value*SCREEN_WIDTH)/375
-//字体等比
-#define GGT_font(font) [UIFont systemFontOfSize:SXFrom_X(font)]
-
-
-//字符串是否为空
-#define IsStrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref)isEqualToString:@""]))
-//数组是否为空
-#define IsArrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref) count] == 0))
-//字典是否为空
-#define IsDicEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref) count] == 0))
-
-
-//公司地址
-#define PrefixAddress @"http://www.gogo-talk.com"
-
-
-#define MainColor [UIColor colorWithHexString:@"#ea5514"]
 
 
 #endif /* PrefixHeader_pch */
