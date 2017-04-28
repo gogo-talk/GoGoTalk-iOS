@@ -7,9 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import <IQKeyboardManager.h>
+#import <Bugly/Bugly.h>
 #import "BaseTabBarController.h"
 #import "GGT_NewFeatherViewController.h"
 #import "GGT_LoginViewController.h"
+
+#define kBuglyAppId      @"ab92f40c75"
 
 @interface AppDelegate ()
 
@@ -19,15 +23,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self initKeyWindow];
+    
+    [Bugly startWithAppId:kBuglyAppId];
+    
+    [self initIQKeyboardManager];
+    
+    return YES;
+}
+
+- (void)initKeyWindow
+{
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    
-
     BaseTabBarController *tabVc = [[BaseTabBarController alloc] init];
     GGT_LoginViewController *loginVc = [[GGT_LoginViewController alloc]init];
     GGT_NewFeatherViewController *newVc = [[GGT_NewFeatherViewController alloc]init];
-    
-    
     
     NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     NSString *key = @"version";
@@ -35,7 +47,6 @@
     NSString *lastVersion = [userDefaults objectForKey:key];
     
     if ([currentVersion isEqualToString:lastVersion]) {
-        
         if ([[userDefaults objectForKey:@"login"] isEqualToString:@"yes"]){
             
             UINavigationController *mainVc = [[UINavigationController alloc]initWithRootViewController:tabVc];
@@ -45,20 +56,24 @@
             UINavigationController *mainVc = [[UINavigationController alloc]initWithRootViewController:loginVc];
             self.window.rootViewController = mainVc;
         }
-        
     }else{
-        
         // 卸载重装后或第一次进入应用
         [userDefaults setObject:currentVersion forKey:key];
         self.window.rootViewController = newVc;
     }
     
-   
-    
     [self.window makeKeyAndVisible];
+}
 
-    
-    return YES;
+// 初始化IQKeyboardManager
+- (void)initIQKeyboardManager
+{
+    IQKeyboardManager * manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.enableAutoToolbar = NO;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
 }
 
 

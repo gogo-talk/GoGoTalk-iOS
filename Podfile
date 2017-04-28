@@ -2,7 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/baijia/specs.git'
 
 platform :ios, '8.0'
-target "GoGoTalk" do
+target 'GoGoTalk' do
 
 
 pod 'BJLiveCore'
@@ -12,8 +12,12 @@ pod 'MJRefresh'
 pod 'MJExtension'
 pod 'MBProgressHUD'
 pod 'JPush'
-pod 'Bugly'
 pod 'FLEX', '~> 2.0', :configurations => ['Debug']
+
+pod 'Bugly'
+pod 'IQKeyboardManager'
+
+
 # 友盟 U-Share SDK UI模块（分享面板，建议添加）
 pod 'UMengUShare/UI'
 
