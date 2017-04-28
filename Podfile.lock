@@ -44,6 +44,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - FSCalendar (2.7.4)
   - IQKeyboardManager (4.0.9)
   - JCore (1.1.3)
   - JPush (3.0.5):
@@ -125,11 +126,14 @@ PODS:
   - UMengUShare/UI (6.4.3):
     - UMengUShare/Core
   - YYModel (1.0.4)
+  - ZFPlayer (2.1.3):
+    - Masonry
 
 DEPENDENCIES:
   - BJLiveCore
   - Bugly
   - FLEX (~> 2.0)
+  - FSCalendar
   - IQKeyboardManager
   - JPush
   - M9Dev
@@ -142,6 +146,7 @@ DEPENDENCIES:
   - UMengUShare/Social/ReducedSina
   - UMengUShare/Social/ReducedWeChat
   - UMengUShare/UI
+  - ZFPlayer
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -153,6 +158,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: aa9dcab71bdf9eaf2a63bbd9ddc87863efe45457
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  FSCalendar: e95995a746acae531c4a7dd636b8393233125ec5
   IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
   JCore: dff3c50e9a7522a508cd9096ca79165968e1aed3
   JPush: dd0b776998aa705a6242b947bf72e5a640387cfe
@@ -173,7 +179,8 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   UMengUShare: d39cb682598df87ebdd3c055d03d00eb0102d42c
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  ZFPlayer: 8dc82b4508fbba4ee59d0304c52e30f8b3390244
 
-PODFILE CHECKSUM: cc727b4af5b2461ed9c67815884d4ad68320d992
+PODFILE CHECKSUM: 457947ff0a91d0c82f429cba0d2edc5084ed4cf9
 
 COCOAPODS: 1.1.1
