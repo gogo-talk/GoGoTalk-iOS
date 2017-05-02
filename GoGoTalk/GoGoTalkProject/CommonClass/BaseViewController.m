@@ -8,7 +8,10 @@
 
 #import "BaseViewController.h"
 #import "GGT_MineViewController.h"
-
+#import "GGT_HomeReservationViewController.h"
+#import "GGT_OrderCourseViewController.h"
+#import "GGT_ScheduleViewController.h"
+#import "GGT_DiscoveryViewController.h"
 
 static BOOL isBackToHome;
 @interface BaseViewController ()
@@ -61,11 +64,17 @@ static BOOL isBackToHome;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    if ([self.navigationController.viewControllers isKindOfClass:[GGT_HomeReservationViewController class]] || [self.navigationController.viewControllers isKindOfClass:[GGT_OrderCourseViewController class]] || [self.navigationController.viewControllers isKindOfClass:[GGT_ScheduleViewController class]] || [self.navigationController.viewControllers isKindOfClass:[GGT_DiscoveryViewController class]]) {
+
     
-    isBackToHome = NO;
-    //导航左侧的个人中心
-    [self initMineController];
+        isBackToHome = NO;
+        //导航左侧的个人中心
+        [self initMineController];
+    }
     
+    
+    
+
 }
 
 
@@ -83,6 +92,13 @@ static BOOL isBackToHome;
     
     GGT_MineViewController *mineVc = [[GGT_MineViewController alloc]init];
     mineVc.hidesBottomBarWhenPushed = YES;
+    if ([BaseViewController isEqual:[GGT_HomeReservationViewController class]]) {
+        NSLog(@"111");
+    }
+    
+    
+    
+    
     if (isBackToHome == NO) {
         [self.navigationController pushViewController:mineVc animated:YES];
         isBackToHome = YES;
@@ -92,7 +108,6 @@ static BOOL isBackToHome;
         isBackToHome = NO;
     }
   
-
 }
 
 - (void)didReceiveMemoryWarning {
