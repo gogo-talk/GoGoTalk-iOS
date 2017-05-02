@@ -14,13 +14,13 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - BJHL-AVSDK-iOS (0.1.10)
-  - BJHL-Foundation-iOS (1.2.11):
-    - CocoaLumberjack (~> 2.0)
+  - BJHL-AVSDK-iOS (0.1.11)
+  - BJHL-Foundation-iOS (1.3.2):
+    - CocoaLumberjack (= 2.3.0)
   - BJHL-Websocket-iOS (0.3.2):
     - PocketSocket
-  - BJLiveCore (0.2.4):
-    - BJHL-AVSDK-iOS (>= 0.1.10)
+  - BJLiveCore (0.2.4.3):
+    - BJHL-AVSDK-iOS (>= 0.1.11)
     - BJHL-Foundation-iOS
     - BJHL-Websocket-iOS (>= 0.3.2)
     - JRSwizzle
@@ -32,13 +32,13 @@ PODS:
     - SDWebImage
     - YYModel
   - Bugly (2.4.8)
-  - CocoaLumberjack (2.4.0):
-    - CocoaLumberjack/Default (= 2.4.0)
-    - CocoaLumberjack/Extensions (= 2.4.0)
-  - CocoaLumberjack/Core (2.4.0)
-  - CocoaLumberjack/Default (2.4.0):
+  - CocoaLumberjack (2.3.0):
+    - CocoaLumberjack/Default (= 2.3.0)
+    - CocoaLumberjack/Extensions (= 2.3.0)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
     - CocoaLumberjack/Core
-  - CocoaLumberjack/Extensions (2.4.0):
+  - CocoaLumberjack/Extensions (2.3.0):
     - CocoaLumberjack/Default
   - FLEX (2.4.0)
   - FMDB (2.6.2):
@@ -53,7 +53,7 @@ PODS:
   - libextobjc/EXTScope (0.4.1):
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4.1)
-  - LKDBHelper (2.4.1):
+  - LKDBHelper (2.4.2):
     - FMDB
   - LogStat (0.6.0):
     - AFNetworking
@@ -150,12 +150,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  BJHL-AVSDK-iOS: 93c943b025561a9929ef5807cb2282bf407decc3
-  BJHL-Foundation-iOS: 2e7d9269405c036111c32b4ecd0a06e9ecb4e00e
+  BJHL-AVSDK-iOS: 7f47615bce905d8cec6d48ad23fec5c35f6c4769
+  BJHL-Foundation-iOS: 2dc339ded83d6c1fae1ce51f7ffcb315b19f8db2
   BJHL-Websocket-iOS: d268c2d08cb22d461a0b961781566e488c004c1d
-  BJLiveCore: 5619a176509d3e530198fe03162e8f4e5cde64f2
+  BJLiveCore: 6d4cc0636749231eb702dcb9b9da89aee2ffdd9c
   Bugly: da3c02408c14838d498429320545a8e439392978
-  CocoaLumberjack: aa9dcab71bdf9eaf2a63bbd9ddc87863efe45457
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FSCalendar: e95995a746acae531c4a7dd636b8393233125ec5
@@ -164,7 +164,7 @@ SPEC CHECKSUMS:
   JPush: dd0b776998aa705a6242b947bf72e5a640387cfe
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
-  LKDBHelper: 531581fa6a7d0f14236cc028ce0d277bca73436a
+  LKDBHelper: ab67373b32f47463bf5f838d730f225824f4492a
   LogStat: b3af561bbe5691bdd8df624a3e570419e5b30f9f
   LTInfiniteScrollView: 6ce2fcaf6d030a9e45a164ba9dcdb1b325a30d03
   M9Dev: 56d9ab1b80a96ae08325c168a9c4023674922993
@@ -181,6 +181,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZFPlayer: 8dc82b4508fbba4ee59d0304c52e30f8b3390244
 
-PODFILE CHECKSUM: 457947ff0a91d0c82f429cba0d2edc5084ed4cf9
+PODFILE CHECKSUM: cd739cecb56213cc5efae2c9f312b89b4f5b02aa
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

@@ -75,7 +75,7 @@
     
     GGT_LoginViewController *userLoginVc = [[GGT_LoginViewController alloc] init];
     UINavigationController *mainVc = [[UINavigationController alloc]initWithRootViewController:userLoginVc];
-    self.view.window.rootViewController = mainVc;
+    [self presentViewController:mainVc animated:YES completion:nil];
 
 }
 

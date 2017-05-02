@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //设置视图
     [self setupChildControllers];
 }
 
@@ -38,9 +39,11 @@
     [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"icon_message" rootViewControllerClass:[GGT_ScheduleViewController class] tabbarTitle:@"课表"];
     
     [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"icon_personal" rootViewControllerClass:[GGT_DiscoveryViewController class] tabbarTitle:@"发现"];
-
+    
 }
 
+
+#pragma mark 初始化子视图
 - (void)setupChildNavigationControllerWithClass:(Class)class tabbarImageName:(NSString *)name rootViewControllerClass:(Class)rootViewControllerClass tabbarTitle:(NSString *)title {
 
     UIViewController *rootVC = [[rootViewControllerClass alloc] init];
@@ -49,9 +52,11 @@
     navVc.tabBarItem.image = [[UIImage imageNamed:name] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     navVc.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_selected", name]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     navVc.tabBarItem.imageInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    navVc.navigationController.navigationBar.translucent = NO;
     [self addChildViewController:navVc];
-    
+
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

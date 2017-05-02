@@ -12,6 +12,7 @@
 #import "BaseTabBarController.h"
 #import "GGT_NewFeatherViewController.h"
 #import "GGT_LoginViewController.h"
+#import "BaseNavigationController.h"
 
 #define kBuglyAppId      @"ab92f40c75"
 
@@ -37,6 +38,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+    
     BaseTabBarController *tabVc = [[BaseTabBarController alloc] init];
     GGT_LoginViewController *loginVc = [[GGT_LoginViewController alloc]init];
     GGT_NewFeatherViewController *newVc = [[GGT_NewFeatherViewController alloc]init];
@@ -47,13 +49,13 @@
     NSString *lastVersion = [userDefaults objectForKey:key];
     
     if ([currentVersion isEqualToString:lastVersion]) {
-        if ([[userDefaults objectForKey:@"login"] isEqualToString:@"yes"]){
+        if ([[userDefaults objectForKey:@"login"] isEqualToString:@"yes"]) {
             
-            UINavigationController *mainVc = [[UINavigationController alloc]initWithRootViewController:tabVc];
-            self.window.rootViewController = mainVc;
+            self.window.rootViewController = tabVc;
             
-        }else{
-            UINavigationController *mainVc = [[UINavigationController alloc]initWithRootViewController:loginVc];
+        } else {
+            BaseNavigationController *mainVc = [[BaseNavigationController alloc]initWithRootViewController:loginVc];
+
             self.window.rootViewController = mainVc;
         }
     }else{

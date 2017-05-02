@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "GGT_MineViewController.h"
 
+
+static BOOL isBackToHome;
 @interface BaseViewController ()
 
 @end
@@ -57,7 +60,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    isBackToHome = NO;
+    //导航左侧的个人中心
+    [self initMineController];
+    
+}
+
+
+#pragma mark 进入到个人中心
+- (void)initMineController {
+    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"button_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(mineClick)];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil action:nil];
+    negativeSpacer.width = 0;
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
+}
+
+- (void)mineClick {
+    
+    GGT_MineViewController *mineVc = [[GGT_MineViewController alloc]init];
+    mineVc.hidesBottomBarWhenPushed = YES;
+    if (isBackToHome == NO) {
+        [self.navigationController pushViewController:mineVc animated:YES];
+        isBackToHome = YES;
+
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+        isBackToHome = NO;
+    }
+  
+
 }
 
 - (void)didReceiveMemoryWarning {

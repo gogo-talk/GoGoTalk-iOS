@@ -40,20 +40,19 @@
     self.view = self.loginView;
     
     [self.loginView.forgotPasswordButton xc_addClickBlock:^(UIButton *button) {
-        NSLog(@"likai");
-
         GGT_ForgotPasswordViewController *vc = [[GGT_ForgotPasswordViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }];
 
     
     [self.loginView.loginButton xc_addClickBlock:^(UIButton *button) {
-        BaseTabBarController *tabVc = [[BaseTabBarController alloc]init];
+        
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setObject:@"yes" forKey:@"login"];
-        self.view.window.rootViewController = tabVc;
-        
+        BaseTabBarController *tabVc = [[BaseTabBarController alloc]init];
+        [self.navigationController pushViewController:tabVc animated:YES];
     }];
+    
     
     
     [self.loginView.registerButton xc_addClickBlock:^(UIButton *button) {
