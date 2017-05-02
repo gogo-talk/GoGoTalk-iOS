@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = UICOLOR_RANDOM_COLOR();
     
-    
+    [self setLeftBackButton];
     
 }
 

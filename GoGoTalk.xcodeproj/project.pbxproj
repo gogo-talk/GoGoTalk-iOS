@@ -27,6 +27,8 @@
 		5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18EF1EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m */; };
 		5BEC18F31EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18F21EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m */; };
 		5BEC18F61EB85E7B009DF2F8 /* GGT_OrderForeignListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18F51EB85E7B009DF2F8 /* GGT_OrderForeignListCell.m */; };
+		5BEC18F91EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18F81EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m */; };
+		5BEC18FE1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18FD1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m */; };
 		5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05A11EB07C3400469368 /* UIColor+XCAdditions.m */; };
 		5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05A81EB07D3300469368 /* UIImage+Category.m */; };
 		5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05AB1EB07DA200469368 /* UIView+Layout.m */; };
@@ -108,6 +110,10 @@
 		5BEC18F21EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderCourseOfFocusViewController.m; sourceTree = "<group>"; };
 		5BEC18F41EB85E7B009DF2F8 /* GGT_OrderForeignListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_OrderForeignListCell.h; sourceTree = "<group>"; };
 		5BEC18F51EB85E7B009DF2F8 /* GGT_OrderForeignListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderForeignListCell.m; sourceTree = "<group>"; };
+		5BEC18F71EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_DetailsOfTeacherViewController.h; sourceTree = "<group>"; };
+		5BEC18F81EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_DetailsOfTeacherViewController.m; sourceTree = "<group>"; };
+		5BEC18FC1EB882C6009DF2F8 /* GGT_OrderTimeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_OrderTimeTableView.h; sourceTree = "<group>"; };
+		5BEC18FD1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderTimeTableView.m; sourceTree = "<group>"; };
 		5BED05A01EB07C3400469368 /* UIColor+XCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XCAdditions.h"; sourceTree = "<group>"; };
 		5BED05A11EB07C3400469368 /* UIColor+XCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XCAdditions.m"; sourceTree = "<group>"; };
 		5BED05A71EB07D3300469368 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
@@ -231,22 +237,6 @@
 			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/Schedule/View";
 			sourceTree = "<group>";
 		};
-		5BA10D2D1EB1D3A70091093C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/OrderTheCourse/Model";
-			sourceTree = "<group>";
-		};
-		5BA10D2E1EB1D3A70091093C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/OrderTheCourse/View";
-			sourceTree = "<group>";
-		};
 		5BC2AF4B1EB0473D004DF44D = {
 			isa = PBXGroup;
 			children = (
@@ -350,8 +340,8 @@
 		5BC2AF8D1EB04F79004DF44D /* OrderTheCourse */ = {
 			isa = PBXGroup;
 			children = (
-				5BA10D2D1EB1D3A70091093C /* Model */,
-				5BA10D2E1EB1D3A70091093C /* View */,
+				5BEC18FB1EB8824A009DF2F8 /* View */,
+				5BEC18FA1EB88244009DF2F8 /* Model */,
 				5BC2AF9A1EB0504A004DF44D /* Controller */,
 			);
 			path = OrderTheCourse;
@@ -423,6 +413,8 @@
 				5BEC18EF1EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m */,
 				5BEC18F11EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.h */,
 				5BEC18F21EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m */,
+				5BEC18F71EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.h */,
+				5BEC18F81EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -516,6 +508,22 @@
 				5BEC18EC1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m */,
 				5BEC18F41EB85E7B009DF2F8 /* GGT_OrderForeignListCell.h */,
 				5BEC18F51EB85E7B009DF2F8 /* GGT_OrderForeignListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BEC18FA1EB88244009DF2F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BEC18FB1EB8824A009DF2F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC18FC1EB882C6009DF2F8 /* GGT_OrderTimeTableView.h */,
+				5BEC18FD1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -738,6 +746,7 @@
 				D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */,
 				5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */,
 				D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */,
+				5BEC18FE1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m in Sources */,
 				5BEC18F31EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m in Sources */,
 				D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */,
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
@@ -757,6 +766,7 @@
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
 				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
+				5BEC18F91EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m in Sources */,
 				5BA10D441EB1E2490091093C /* GGT_RegisterView.m in Sources */,
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,

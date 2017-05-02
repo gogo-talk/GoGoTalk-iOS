@@ -8,6 +8,8 @@
 
 #import "GGT_HomeReservationViewController.h"
 #import "GGT_MineViewController.h"
+#import <SDWebImageManager.h>
+#import "UIImage+GIF.h"
 
 @interface GGT_HomeReservationViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -24,12 +26,15 @@
     self.view.backgroundColor = UICOLOR_RANDOM_COLOR();
     
     self.navigationItem.title = @"GoGoTalk";
-    
+    //左侧个人中心按钮
+    [self initMineController];
     
     [self setRightBarButtonItemTitle:@"客服"];
     
     [self initTableView];
+
 }
+
 
 
 

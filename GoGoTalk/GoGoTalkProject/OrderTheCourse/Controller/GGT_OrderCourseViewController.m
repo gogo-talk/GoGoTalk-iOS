@@ -14,16 +14,21 @@
 @property (nonatomic, strong) GGT_OrderCourseOfAllViewController *allVC;
 @property (nonatomic, strong) GGT_OrderCourseOfFocusViewController  *focusVc;
 @property (nonatomic, strong) UIViewController *currentVC;
-
 @end
 
 @implementation GGT_OrderCourseViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    //左侧个人中心按钮
+    [self initMineController];
+    
+    //创建导航上的2个切换按钮
     [self initSegmentedControl];
 
+    //添加2个子视图
     [self setUpNewController];
 
 }
@@ -74,18 +79,24 @@
 
 
 - (void)initSegmentedControl {
+   
+    //添加到视图
+    UIView *titleView = [[UIView alloc]init];
+    titleView.frame = CGRectMake((SCREEN_WIDTH()-100)/2, 10, 100, 30);
+    self.navigationItem.titleView = titleView ;
+
+    
     //先生成存放标题的数据
     NSArray *array = [NSArray arrayWithObjects:@"全部",@"关注", nil];
     //初始化UISegmentedControl
     UISegmentedControl *segment = [[UISegmentedControl alloc]initWithItems:array];
     //设置frame
-    segment.frame = CGRectMake((SCREEN_WIDTH()-100)/2, 10, 100, 30);
+    segment.frame = CGRectMake(0, 0, titleView.width,titleView.height);
     //控件渲染色(也就是外观字体颜色)
     segment.tintColor = [UIColor redColor];
     segment.layer.borderColor = [UIColor whiteColor].CGColor;
     [segment addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
-    //添加到视图
-    [self.navigationController.navigationBar addSubview:segment];
+    [titleView  addSubview:segment];
     
 }
 

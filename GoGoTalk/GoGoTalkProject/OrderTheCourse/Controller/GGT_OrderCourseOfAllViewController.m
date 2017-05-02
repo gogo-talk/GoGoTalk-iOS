@@ -8,6 +8,7 @@
 
 #import "GGT_OrderCourseOfAllViewController.h"
 #import "GGT_OrderForeignListCell.h"
+#import "GGT_DetailsOfTeacherViewController.h"
 
 @interface GGT_OrderCourseOfAllViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -74,6 +75,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 90;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GGT_DetailsOfTeacherViewController *vc = [[GGT_DetailsOfTeacherViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -18,4 +18,5 @@
 
 - (void)leftAction;
 
+- (void)initMineController;
 @end

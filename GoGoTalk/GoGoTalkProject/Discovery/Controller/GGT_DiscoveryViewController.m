@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
-    
+    //左侧个人中心按钮
+    [self initMineController];
 }
 
 - (void)didReceiveMemoryWarning {

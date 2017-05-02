@@ -11,8 +11,6 @@
 #import "GGT_OrderCourseViewController.h"
 #import "GGT_ScheduleViewController.h"
 #import "GGT_DiscoveryViewController.h"
-#import "GGT_MineViewController.h"
-
 #import "BaseNavigationController.h"
 
 
