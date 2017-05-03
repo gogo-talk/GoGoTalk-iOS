@@ -7,8 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GGT_OrderTimeCollectionViewCell.h"
+#import "GGT_OrderTimeHeaderCollectionViewCell.h"
 
 @interface GGT_OrderTimeTableView : UIView <UICollectionViewDelegate,UICollectionViewDataSource>
+
+@property (nonatomic, strong) UICollectionView *collectionView;
+//年月日
+@property (nonatomic, strong) NSMutableArray *yearsArray;
+//周几
+@property (nonatomic, strong) NSMutableArray *weeksArray;
+
+@property (nonatomic, strong) NSMutableArray *dateArray;
+
+
+
 
 
 @end
