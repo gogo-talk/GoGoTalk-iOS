@@ -61,13 +61,25 @@
 
 #pragma mark 进入到个人中心
 - (void)initMineController {
-    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"button_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(mineClick)];
-    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
-                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
-                                       target:nil action:nil];
-    negativeSpacer.width = 0;
-    self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
+//    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"wode_top"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(mineClick)];
+//    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+//                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+//                                       target:nil action:nil];
+//    negativeSpacer.width = 0;
+//    self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
+    
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, 18, 21);
+    [btn setImage:[UIImage imageNamed:@"wode_top"] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"wode_top"] forState:UIControlStateHighlighted];
+    [btn addTarget:self action:@selector(mineClick) forControlEvents:UIControlEventTouchUpInside];
+    btn.imageEdgeInsets = UIEdgeInsetsMake(0, -3, 0, 0);
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    self.navigationItem.leftBarButtonItem = backItem;
+    
 }
+
 
 - (void)mineClick {
     GGT_MineViewController *mineVc = [[GGT_MineViewController alloc]init];
