@@ -79,6 +79,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //设置导航颜色
+    self.navigationController.navigationBar.barTintColor = MainColor;
+    //设置导航不透明
+     self.navigationController.navigationBar.translucent = NO;
+    
 }
 
 

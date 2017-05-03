@@ -19,6 +19,7 @@
     [super viewDidLoad];
 
     [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:18],NSFontAttributeName,[UIColor colorWithHexString:@"#323232"],NSForegroundColorAttributeName, nil]];
+    
 
 }
 

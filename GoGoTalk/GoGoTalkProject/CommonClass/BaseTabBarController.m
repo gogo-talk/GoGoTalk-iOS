@@ -24,19 +24,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tabBar.tintColor = MainColor;
+
     //设置视图
     [self setupChildControllers];
 }
 
 - (void)setupChildControllers {
     
-    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"icon_activity" rootViewControllerClass:[GGT_HomeReservationViewController class] tabbarTitle:@"首页"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"home_tab" rootViewControllerClass:[GGT_HomeReservationViewController class] tabbarTitle:@"首页"];
     
-    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"icon_position" rootViewControllerClass:[GGT_OrderCourseViewController class] tabbarTitle:@"预约"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"yueke_tab" rootViewControllerClass:[GGT_OrderCourseViewController class] tabbarTitle:@"约课"];
     
-    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"icon_message" rootViewControllerClass:[GGT_ScheduleViewController class] tabbarTitle:@"课表"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"kebiao_tab" rootViewControllerClass:[GGT_ScheduleViewController class] tabbarTitle:@"课表"];
     
-    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"icon_personal" rootViewControllerClass:[GGT_DiscoveryViewController class] tabbarTitle:@"发现"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"faxian_tab" rootViewControllerClass:[GGT_DiscoveryViewController class] tabbarTitle:@"发现"];
     
 }
 
