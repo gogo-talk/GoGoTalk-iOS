@@ -11,8 +11,12 @@
 #import "GGT_CalendarCell.h"
 
 static NSString * const CalendarCellID = @"cell";
+static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 
-@interface GGT_ScheduleViewController ()<FSCalendarDataSource,FSCalendarDelegate,FSCalendarDelegateAppearance>
+@interface GGT_ScheduleViewController ()<FSCalendarDataSource,FSCalendarDelegate,FSCalendarDelegateAppearance,UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource>
+{
+    void * _KVOContext;
+}
 
 @property (weak, nonatomic) FSCalendar *calendar;
 @property (weak, nonatomic) UIButton *previousButton;
@@ -24,6 +28,9 @@ static NSString * const CalendarCellID = @"cell";
 @property (strong, nonatomic) NSDateFormatter *xc_dateFormatter;
 @property (strong, nonatomic) NSDateFormatter *xc_dateFormatter2;
 @property (strong, nonatomic) UIButton *xc_titleButton;
+
+@property (strong, nonatomic) UIPanGestureRecognizer *scopeGesture;
+@property (strong, nonatomic) UITableView *xc_tableView;
 
 @end
 
@@ -63,6 +70,8 @@ static NSString * const CalendarCellID = @"cell";
     
     calendar.appearance.subtitleFont = [UIFont systemFontOfSize:12];
     calendar.appearance.subtitleOffset = CGPointMake(0, 10);
+    calendar.appearance.weekdayTextColor = [UIColor lightGrayColor];
+    calendar.appearance.titleTodayColor = [UIColor redColor];
     
     // cell下面的横线
     calendar.appearance.separators = FSCalendarSeparatorInterRows;
@@ -79,12 +88,18 @@ static NSString * const CalendarCellID = @"cell";
     
     [calendar registerClass:[GGT_CalendarCell class] forCellReuseIdentifier:CalendarCellID];
     
+    
     // 隐藏顶部时间
     calendar.headerHeight = 0;
     
     // 更新数据源 刷新calendar
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self buttonAction];
+            // 更新数据
+            self.datesWithEvent = @[@"2017/05/03",
+                                    @"2017/05/06",
+                                    @"2017/05/12",
+                                    @"2017/05/25"];
+            [self.calendar reloadData];
     });
     
     // 定义titleView
@@ -126,9 +141,9 @@ static NSString * const CalendarCellID = @"cell";
          
          // 要刷新界面
          if (self.calendar.scope == FSCalendarScopeMonth) {
-             [self.calendar setScope:FSCalendarScopeWeek animated:NO];
+             [self.calendar setScope:FSCalendarScopeWeek animated:YES];
          } else {
-             [self.calendar setScope:FSCalendarScopeMonth animated:NO];
+             [self.calendar setScope:FSCalendarScopeMonth animated:YES];
          }
          
          if (flag) {
@@ -146,17 +161,12 @@ static NSString * const CalendarCellID = @"cell";
              }];
          }
          
+         // 当点击xc_titleButton的时候需要将xc_tableView滚动到顶部
+         [self.xc_tableView setContentOffset:CGPointZero animated:YES];
+         
      }];
 }
 
-- (void)buttonAction
-{
-    self.datesWithEvent = @[@"2017/05/03",
-                            @"2017/05/06",
-                            @"2017/05/12",
-                            @"2017/05/25"];
-    [self.calendar reloadData];
-}
 
 - (nullable NSString *)calendar:(FSCalendar *)calendar subtitleForDate:(NSDate *)date
 {
@@ -182,7 +192,7 @@ static NSString * const CalendarCellID = @"cell";
     
     NSDateFormatter* dateFormat = [[NSDateFormatter alloc] init];//实例化一个NSDateFormatter对象
     if (self.calendar.scope == FSCalendarScopeWeek) {
-        [dateFormat setDateFormat:@"MM/dd"];//设定时间格式,这里可以设置成自己需要的格式
+        [dateFormat setDateFormat:@"dd"];//设定时间格式,这里可以设置成自己需要的格式
     } else {
         [dateFormat setDateFormat:@"dd"];//设定时间格式,这里可以设置成自己需要的格式
     }
@@ -190,6 +200,7 @@ static NSString * const CalendarCellID = @"cell";
     
 }
 
+// 自定义cell
 - (FSCalendarCell *)calendar:(FSCalendar *)calendar cellForDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition
 {
     GGT_CalendarCell *cell = [calendar dequeueReusableCellWithIdentifier:CalendarCellID forDate:date atMonthPosition:monthPosition];
@@ -203,7 +214,7 @@ static NSString * const CalendarCellID = @"cell";
  */
 - (nullable UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance subtitleDefaultColorForDate:(NSDate *)date
 {
-    return [UIColor blackColor];
+    return [UIColor blueColor];
 }
 
 /**
@@ -211,36 +222,36 @@ static NSString * const CalendarCellID = @"cell";
  */
 - (nullable UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance subtitleSelectionColorForDate:(NSDate *)date
 {
-    return [UIColor orangeColor];
+    return [UIColor redColor];
 }
 
 // 默认的Border颜色
-- (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance borderDefaultColorForDate:(NSDate *)date
-{
-    if ([self.gregorian isDateInToday:date]) {
-        return [UIColor blackColor];
-    }
-    return [UIColor whiteColor];
-}
-
-// 选中的Borlder颜色
-- (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance borderSelectionColorForDate:(NSDate *)date
-{
-    return [UIColor orangeColor];
-}
+//- (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance borderDefaultColorForDate:(NSDate *)date
+//{
+//    if ([self.gregorian isDateInToday:date]) {
+//        return [UIColor blackColor];
+//    }
+//    return [UIColor whiteColor];
+//}
+//
+//// 选中的Borlder颜色
+//- (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance borderSelectionColorForDate:(NSDate *)date
+//{
+//    return [UIColor orangeColor];
+//}
 
 // 设置选中日期的选中颜色
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillSelectionColorForDate:(NSDate *)date
 {
-    return [UIColor purpleColor];
+    return [UIColor redColor];
 }
 
 // 设置今日的选中颜色
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillDefaultColorForDate:(NSDate *)date
 {
-    if ([self.gregorian isDateInToday:date]) {
-        return [UIColor blueColor];
-    }
+//    if ([self.gregorian isDateInToday:date]) {
+//        return [UIColor blueColor];
+//    }
     return [UIColor whiteColor];
 }
 
@@ -283,12 +294,135 @@ static NSString * const CalendarCellID = @"cell";
     NSLog(@"%@",(calendar.scope==FSCalendarScopeWeek?@"week":@"month"));
     [self.calendar mas_updateConstraints:^(MASConstraintMaker *make) {
         if (calendar.scope == FSCalendarScopeWeek) {
-            make.height.equalTo(@(CGRectGetHeight(bounds)-20));
+            
+            // make.height.equalTo(@(CGRectGetHeight(bounds)-20));
+            // -20后滑动会出现bug
+            make.height.equalTo(@(CGRectGetHeight(bounds)));
         } else {
             make.height.equalTo(@(CGRectGetHeight(bounds)));
         }
     }];
     [self.view layoutIfNeeded];
+}
+
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self.calendar selectDate:[NSDate date] scrollToDate:YES];
+    
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self.calendar action:@selector(handleScopeGesture:)];
+    panGesture.delegate = self;
+    panGesture.minimumNumberOfTouches = 1;
+    panGesture.maximumNumberOfTouches = 2;
+    [self.view addGestureRecognizer:panGesture];
+    self.scopeGesture = panGesture;
+    
+    
+    self.xc_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-450) style:UITableViewStylePlain];
+    
+    self.xc_tableView.delegate = self;
+    self.xc_tableView.dataSource = self;
+    [self.view addSubview:self.xc_tableView];
+    [self.xc_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.calendar.mas_bottom).offset(10);
+        make.right.left.bottom.equalTo(self.view);
+    }];
+    
+    // While the scope gesture begin, the pan gesture of tableView should cancel.
+    [self.xc_tableView.panGestureRecognizer requireGestureRecognizerToFail:panGesture];
+    
+    [self.calendar addObserver:self forKeyPath:@"scope" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:_KVOContext];
+    
+    self.calendar.scope = FSCalendarScopeMonth;
+    
+    // For UITest
+    self.calendar.accessibilityIdentifier = @"calendar";
+    
+    [self.xc_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:xc_TableViewCellID];
+    
+    
+    __unsafe_unretained UITableView *tableView = self.xc_tableView;
+    // 下拉刷新
+    tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [tableView.mj_header endRefreshing];
+        });
+    }];
+    // 设置自动切换透明度(在导航栏下面自动隐藏)
+    tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+}
+
+- (void)dealloc
+{
+    [self.calendar removeObserver:self forKeyPath:@"scope" context:_KVOContext];
+    NSLog(@"%s",__FUNCTION__);
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    if (context == _KVOContext) {
+        FSCalendarScope oldScope = [change[NSKeyValueChangeOldKey] unsignedIntegerValue];
+        FSCalendarScope newScope = [change[NSKeyValueChangeNewKey] unsignedIntegerValue];
+        NSLog(@"From %@ to %@",(oldScope==FSCalendarScopeWeek?@"week":@"month"),(newScope==FSCalendarScopeWeek?@"week":@"month"));
+        
+        // 当scope状态更改后 需要刷新界面 否则subtitle可能不会显示出来
+        // 若刷新后 又会出现闪烁的现象
+//        [self.calendar reloadData];
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:xc_TableViewCellID forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:xc_TableViewCellID];
+    }
+    cell.backgroundColor = UICOLOR_RANDOM_COLOR();
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    BOOL shouldBegin = self.xc_tableView.contentOffset.y <= -self.xc_tableView.contentInset.top;
+    if (self.calendar.scope == FSCalendarScopeWeek) {
+        return NO;
+    }
+    if (shouldBegin) {
+        CGPoint velocity = [self.scopeGesture velocityInView:self.view];
+        switch (self.calendar.scope) {
+            case FSCalendarScopeMonth:
+            {
+                return velocity.y < 0;
+            }
+            case FSCalendarScopeWeek:
+            {
+                if (velocity.y > 0) {
+                    [self.calendar setScope:FSCalendarScopeMonth animated:YES];
+                }
+                return velocity.y > 0;
+            }
+        }
+    }
+    return shouldBegin;
 }
 
 @end
