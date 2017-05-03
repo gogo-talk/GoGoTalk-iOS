@@ -60,7 +60,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     
     // 450 for iPad and 300 for iPhone
     CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 300;
-    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 64, view.frame.size.width, height)];
+    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 0, view.frame.size.width, height)];
     
     calendar.dataSource = self;
     calendar.delegate = self;
@@ -81,8 +81,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     
     // 添加约束
     [calendar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.view);
-        make.top.equalTo(@(64));
+        make.left.right.top.equalTo(self.view);
         make.height.equalTo(@(height));
     }];
     

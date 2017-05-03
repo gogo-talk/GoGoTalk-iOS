@@ -25,6 +25,8 @@
     [super viewDidLoad];
     
     self.tabBar.tintColor = MainColor;
+    
+    self.tabBar.translucent = NO;
 
     //设置视图
     [self setupChildControllers];
