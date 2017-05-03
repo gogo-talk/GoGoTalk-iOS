@@ -23,8 +23,8 @@
 - (void)setLeftBackButton{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 44, 44);
-    [btn setImage:[UIImage imageNamed:@"button_back"] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:@"button_back"] forState:UIControlStateHighlighted];
+    [btn setImage:[UIImage imageNamed:@"fanhui_top"] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"fanhui_top"] forState:UIControlStateHighlighted];
     [btn addTarget:self action:@selector(leftAction) forControlEvents:UIControlEventTouchUpInside];
     btn.imageEdgeInsets = UIEdgeInsetsMake(0, -28, 0, 0);
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
