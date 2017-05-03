@@ -16,13 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = UICOLOR_FROM_HEX(0xEA5851);
-    self.navigationController.navigationBar.translucent = NO;
+    [self setNavigationStyle];
     self.view.backgroundColor = UICOLOR_FROM_HEX(0xEA5851);
     NSLog(@"我的设置页面");
     [self setLeftBackButton];
     
 }
-
-
+-(void)setNavigationStyle
+{
+    self.navigationItem.title = @"我的";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"fanhui_top"] style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationController.navigationBar.barTintColor = UICOLOR_FROM_HEX(0xEA5851);
+    self.navigationController.navigationBar.translucent = NO;
+}
 @end
