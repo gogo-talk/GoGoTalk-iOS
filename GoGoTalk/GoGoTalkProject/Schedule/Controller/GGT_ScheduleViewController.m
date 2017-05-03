@@ -52,7 +52,7 @@ static NSString * const CalendarCellID = @"cell";
     self.view = view;
     
     // 450 for iPad and 300 for iPhone
-    CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 450;
+    CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 300;
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 64, view.frame.size.width, height)];
     
     calendar.dataSource = self;
@@ -62,7 +62,7 @@ static NSString * const CalendarCellID = @"cell";
     calendar.appearance.caseOptions = FSCalendarCaseOptionsHeaderUsesUpperCase;
     
     calendar.appearance.subtitleFont = [UIFont systemFontOfSize:12];
-    calendar.appearance.subtitleOffset = CGPointMake(0, 15);
+    calendar.appearance.subtitleOffset = CGPointMake(0, 10);
     
     // cell下面的横线
     calendar.appearance.separators = FSCalendarSeparatorInterRows;
@@ -91,15 +91,31 @@ static NSString * const CalendarCellID = @"cell";
     [self initTitleView];
 }
 
+// 初始化titleView
 - (void)initTitleView
 {
     UIButton *xc_titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
     NSString *titleString = [self.xc_dateFormatter2 stringFromDate:[NSDate date]];
     [xc_titleButton setTitle:titleString forState:UIControlStateNormal];
-    [xc_titleButton setFrame:CGRectMake(0, 0, 100, 30)];
+//    [xc_titleButton setFrame:CGRectMake(0, 0, 200, 30)];
     [xc_titleButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    
+    UIImage *image = UIIMAGE_FROM_NAME(@"button_back");
+    [xc_titleButton setImage:image forState:UIControlStateNormal];
+    
+    [xc_titleButton.titleLabel sizeToFit];
+    [xc_titleButton sizeToFit];
+    
+    // 设置button的insets
+    [xc_titleButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -image.size.width, 0, image.size.width)];
+    [xc_titleButton setImageEdgeInsets:UIEdgeInsetsMake(0, xc_titleButton.titleLabel.bounds.size.width, 0, -xc_titleButton.titleLabel.bounds.size.width)];
+    [xc_titleButton setFrame:CGRectMake(0, 0, 200, 30)];
+    
+    
     self.xc_titleButton = xc_titleButton;
     self.navigationItem.titleView = xc_titleButton;
+    
+    __block BOOL flag = YES;
     
     @weakify(self);
     [[xc_titleButton rac_signalForControlEvents:UIControlEventTouchUpInside]
@@ -113,6 +129,21 @@ static NSString * const CalendarCellID = @"cell";
              [self.calendar setScope:FSCalendarScopeWeek animated:NO];
          } else {
              [self.calendar setScope:FSCalendarScopeMonth animated:NO];
+         }
+         
+         if (flag) {
+             [UIView animateWithDuration:1.0f animations:^{
+                 self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(M_PI);
+             } completion:^(BOOL finished) {
+                 flag = NO;
+             }];
+         }
+         else {
+             [UIView animateWithDuration:1.0f animations:^{
+                 self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(0);
+             } completion:^(BOOL finished) {
+                 flag = YES;
+             }];
          }
          
      }];
@@ -131,7 +162,12 @@ static NSString * const CalendarCellID = @"cell";
 {
     NSString *dateString = [self.xc_dateFormatter stringFromDate:date];
     if ([self.datesWithEvent containsObject:dateString]) {
-        return @"222";
+        
+        if (self.calendar.scope == FSCalendarScopeWeek) {
+            return @"";     // 不能返回nil
+        } else {
+            return @"222";
+        }
     } else {
         return @"";
     }
@@ -235,5 +271,24 @@ static NSString * const CalendarCellID = @"cell";
     // 更新xc_titleButton上面的文字
     [self.xc_titleButton setTitle:[self.xc_dateFormatter2 stringFromDate:date] forState:UIControlStateNormal];
 }
-    
+
+// 日历左右翻动 调用
+- (void)calendarCurrentPageDidChange:(FSCalendar *)calendar
+{
+    [self.xc_titleButton setTitle:[self.xc_dateFormatter2 stringFromDate:calendar.currentPage] forState:UIControlStateNormal];
+}
+
+- (void)calendar:(FSCalendar *)calendar boundingRectWillChange:(CGRect)bounds animated:(BOOL)animated
+{
+    NSLog(@"%@",(calendar.scope==FSCalendarScopeWeek?@"week":@"month"));
+    [self.calendar mas_updateConstraints:^(MASConstraintMaker *make) {
+        if (calendar.scope == FSCalendarScopeWeek) {
+            make.height.equalTo(@(CGRectGetHeight(bounds)-20));
+        } else {
+            make.height.equalTo(@(CGRectGetHeight(bounds)));
+        }
+    }];
+    [self.view layoutIfNeeded];
+}
+
 @end

@@ -72,19 +72,30 @@
     
     // 设置选中圆的原点位置
 #warning 需要修改的地方
-    float margin = 4;
-    if (_isToggle) {
-        self.shapeLayer.frame = CGRectMake(margin,
-                                           self.titleLabel.center.y-CGRectGetHeight(self.titleLabel.frame)/2.0 - margin,
-                                           CGRectGetWidth(self.titleLabel.frame)-margin*2,
-                                           CGRectGetHeight(self.titleLabel.frame) + margin*2);
-    } else {
-        self.shapeLayer.frame = CGRectMake(self.titleLabel.center.x-CGRectGetHeight(self.titleLabel.frame)/2.0 - margin,
-                                           self.titleLabel.center.y-CGRectGetHeight(self.titleLabel.frame)/2.0 - margin,
-                                           CGRectGetHeight(self.titleLabel.frame) + margin*2,
-                                           CGRectGetHeight(self.titleLabel.frame) + margin*2);
-    }
+    /*------------------------------------------------------------------------------*/
+//    float margin = 4;
+//    if (_isToggle) {      椭圆
+//        self.shapeLayer.frame = CGRectMake(margin,
+//                                           self.titleLabel.center.y-CGRectGetHeight(self.titleLabel.frame)/2.0 - margin,
+//                                           CGRectGetWidth(self.titleLabel.frame)-margin*2,
+//                                           CGRectGetHeight(self.titleLabel.frame) + margin*2);
+//    } else {
+        // 圆
+//        self.shapeLayer.frame = CGRectMake(self.titleLabel.center.x-CGRectGetHeight(self.titleLabel.frame)/2.0 - margin,
+//                                           self.titleLabel.center.y-CGRectGetHeight(self.titleLabel.frame)/2.0 - margin,
+//                                           CGRectGetHeight(self.titleLabel.frame) + margin*2,
+//                                           CGRectGetHeight(self.titleLabel.frame) + margin*2);
+//    }
     
+    
+    /*------------------------------------------------------------------------------*/
+    float margin = 2;
+    self.shapeLayer.frame = CGRectMake(self.titleLabel.center.x-CGRectGetHeight(self.titleLabel.frame)/2.0 - margin,
+                                       self.titleLabel.center.y-CGRectGetHeight(self.titleLabel.frame)/2.0 - margin,
+                                       CGRectGetHeight(self.titleLabel.frame) + margin*2,
+                                       CGRectGetHeight(self.titleLabel.frame) + margin*2);
+
+    /*------------------------------------------------------------------------------*/
 
     
     CGPathRef path = [UIBezierPath bezierPathWithRoundedRect:self.shapeLayer.bounds

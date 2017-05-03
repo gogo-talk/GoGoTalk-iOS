@@ -633,6 +633,7 @@
 				TargetAttributes = {
 					5BC2AF531EB0473D004DF44D = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = YZK33WLG48;
 						ProvisioningStyle = Automatic;
 					};
 					5BC2AF6C1EB0473D004DF44D = {
@@ -927,11 +928,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				DEVELOPMENT_TEAM = YZK33WLG48;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GoGoTalk/PrefixHeader.pch";
 				INFOPLIST_FILE = GoGoTalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GoGoTalk.GoGoTalk;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gogo-talk.GoGoTalk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -942,11 +945,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				DEVELOPMENT_TEAM = YZK33WLG48;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GoGoTalk/PrefixHeader.pch";
 				INFOPLIST_FILE = GoGoTalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GoGoTalk.GoGoTalk;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gogo-talk.GoGoTalk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
