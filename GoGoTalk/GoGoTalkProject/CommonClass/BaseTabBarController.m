@@ -24,10 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tabBar.tintColor = MainColor;
-
+    //设置tabbar不透明
+    self.tabBar.translucent = NO;
     //设置视图
     [self setupChildControllers];
+    
 }
 
 - (void)setupChildControllers {
@@ -45,17 +46,32 @@
 
 #pragma mark 初始化子视图
 - (void)setupChildNavigationControllerWithClass:(Class)class tabbarImageName:(NSString *)name rootViewControllerClass:(Class)rootViewControllerClass tabbarTitle:(NSString *)title {
-
+    
     UIViewController *rootVC = [[rootViewControllerClass alloc] init];
     UINavigationController *navVc = [[class  alloc] initWithRootViewController:rootVC];
     navVc.tabBarItem.title = title;
     navVc.tabBarItem.image = [[UIImage imageNamed:name] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    navVc.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_selected", name]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    navVc.tabBarItem.imageInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-    navVc.navigationController.navigationBar.translucent = NO;
+    navVc.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_yi", name]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    navVc.tabBarItem.imageInsets = UIEdgeInsetsMake(-2, 0, 2, 0);
+    
+    //设置字体偏移量，防止字体偏下
+    [navVc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(-3, -3)];
+    
+    //设置tabbar的颜色以及字体大小
+    NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
+    normalAttrs[NSForegroundColorAttributeName] = UICOLOR_FROM_HEX(0x666666);
+    normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:10];
+    NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
+    selectedAttrs[NSForegroundColorAttributeName] = MainColor;
+    UITabBarItem *item = [UITabBarItem appearance];
+    [item setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
+    [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
+    
     [self addChildViewController:navVc];
-
+    
 }
+
+
 
 
 - (void)didReceiveMemoryWarning {
