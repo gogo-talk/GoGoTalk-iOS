@@ -7,6 +7,7 @@
 //
 
 #import "GGT_OrderCourseOfFocusViewController.h"
+#import "GGT_OrderTimeTableView.h"
 
 @interface GGT_OrderCourseOfFocusViewController ()
 
@@ -16,8 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UICOLOR_RANDOM_COLOR();
 
+    
+    GGT_OrderTimeTableView *View = [[GGT_OrderTimeTableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH(), SCREEN_HEIGHT()-64-49)];
+    View.backgroundColor = UICOLOR_RANDOM_COLOR();
+    self.view = View;
+    
 }
 
 

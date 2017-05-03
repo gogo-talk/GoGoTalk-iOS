@@ -36,7 +36,7 @@
 #define PrefixAddress @"http://www.gogo-talk.com"
 
 
-#define MainColor [UIColor colorWithHexString:@"#ea5514"]
+#define MainColor [UIColor colorWithHexString:@"#EA5851"]
 
 
 /**
