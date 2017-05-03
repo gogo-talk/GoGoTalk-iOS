@@ -44,11 +44,11 @@
         NSString *weekStr = [weekFormatter stringFromDate:curDate];
         
         //转换英文为中文
-        NSString *chinaWeekStr = [self cTransformFromE:weekStr];
+//        NSString *chinaWeekStr = [self cTransformFromE:weekStr];
     
         //组合时间
         [self.yearsArray addObject:dateStr];
-        [self.weeksArray addObject:chinaWeekStr];
+        [self.weeksArray addObject:weekStr];
     }
     
     
