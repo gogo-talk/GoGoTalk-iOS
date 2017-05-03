@@ -16,8 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UICOLOR_RANDOM_COLOR();
-    
+    self.navigationController.navigationBar.barTintColor = UICOLOR_FROM_HEX(0xEA5851);
+    self.navigationController.navigationBar.translucent = NO;
+    self.view.backgroundColor = UICOLOR_FROM_HEX(0xEA5851);
+    NSLog(@"我的设置页面");
     [self setLeftBackButton];
     
 }
