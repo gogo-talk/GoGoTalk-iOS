@@ -7,20 +7,24 @@
 //
 
 #import "GGT_MineViewController.h"
-
-@interface GGT_MineViewController ()
-
+#import "GGT_UserInfo.h"
+#import "GGT_SettingTableViewCell.h"
+@interface GGT_MineViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation GGT_MineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.isVIP = true;
+    
     [self setNavigationStyle];
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self setUserInfo];
-    NSLog(@"我的设置页面");
+    self.view.backgroundColor = UICOLOR_FROM_HEX(0xf2f2f2);
     [self setLeftBackButton];
+    [self setUserInfo];
+    //用户设置tableView
+    [self userSetting];
     
 }
 //设置导航栏样式
@@ -31,46 +35,87 @@
     self.navigationController.navigationBar.barTintColor = UICOLOR_FROM_HEX(0xEA5851);
     self.navigationController.navigationBar.translucent = NO;
 }
-//设置用户基本信息
+//设置用户信息
 -(void)setUserInfo
 {
-    UIImageView *userInfoView = [UIImageView new];
-    userInfoView.image = UIIMAGE_FROM_NAME(@"beijing_wode_top");
-    [self.view addSubview:userInfoView];
-    //头像
-    UIImageView *imageView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wudingdan_wode"]];
-    imageView1.layer.masksToBounds =YES;
-    imageView1.layer.cornerRadius =32;
-    [imageView1.layer setBorderWidth:5];
-    [imageView1.layer setBorderColor:[[UIColor colorWithRed:207/255.0 green:18/255.0 blue:28/255.0 alpha:1] CGColor]];
-    [userInfoView addSubview:imageView1];
-    //英文昵称
-    UILabel *name_en = [[UILabel alloc] init];
-    name_en.text = @"Ruihua";
-    name_en.textColor = [UIColor whiteColor];
-    name_en.font = Font(16);
-    [userInfoView addSubview:name_en];
-    //中文昵称
-    UILabel *name = [[UILabel alloc] init];
-    name.textColor = [UIColor whiteColor];
-    name.text = @"托尼";
-    
-    [userInfoView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).with.offset(0);
-        make.left.equalTo(self.view.mas_left).with.offset(0);
-        make.right.equalTo(self.view.mas_right).with.offset(0);
+    GGT_UserInfo *userInfo = [GGT_UserInfo new];
+    [self.view addSubview:userInfo];
+    [userInfo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(0);
+        make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(LineH(168));
     }];
-    [imageView1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(userInfoView.mas_top).with.offset(LineY(11));
-        make.left.equalTo(userInfoView.mas_left).with.offset(LineX(20));
-        make.width.mas_equalTo(LineW(65));
-        make.height.mas_equalTo(LineH(65));
+}
+//设置item
+-(void)userSetting
+{
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
+    
+    [self.tableView registerClass:[GGT_SettingTableViewCell class] forCellReuseIdentifier:@"settingCell"];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor clearColor];
+    [self.tableView setTableFooterView:view];
+    self.tableView.scrollEnabled = NO;
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).with.offset(LineY(98));
+        make.left.equalTo(self.view.mas_left).with.offset(LineX(10));
+        make.right.equalTo(self.view.mas_right).with.offset(LineX(-10));
+        make.height.mas_equalTo(LineH(304));
     }];
-    //英文昵称布局
-    [name_en mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(userInfoView.mas_top).with.offset(LineY(22));
-        make.left.equalTo(imageView1.mas_right).with.offset(LineX(10));
-    }];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+}
+#pragma mark - Table view data source
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if(section == 0){
+        return 4;
+    }else{
+        return 2;
+    }
+    
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    GGT_SettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"settingCell"forIndexPath:indexPath];
+//    if(cell == nil){
+//        cell = [[GGT_SettingTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"settingCell"];
+//    }
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    if(indexPath.row == 0){
+//        [cell xc_SetCornerWithSideType:XCSideTypeTopLine cornerRadius:5.0];
+//    }
+//    if((indexPath.section == 0 && indexPath.row == 3) || (indexPath.section == 1 && indexPath.row == 1)){
+//        [cell xc_SetCornerWithSideType:XCSideTypeBottomLine cornerRadius:5.0];
+//    }
+//    if((indexPath.section == 0 && indexPath.row==3) || (indexPath.section == 1 && indexPath.row==1)){
+//        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
+//    }
+//    
+//    
+//    cell.textLabel.text = [NSString stringWithFormat:@"测试CELL%ld",(long)indexPath.row];
+    // Configure the cell...
+    GGT_SettingTableViewCell *cell = [GGT_SettingTableViewCell cellWithTableView:tableView forIndexPath:indexPath];
+    return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if(section == 0){
+        return 0.01;
+    }else{
+        return 10;
+    }
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 49;
 }
 @end

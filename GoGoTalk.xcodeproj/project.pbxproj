@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F522C1EBB034D004A7692 /* GGT_UserInfo.m */; };
+		358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */; };
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B577CD21EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m */; };
@@ -74,6 +76,10 @@
 
 /* Begin PBXFileReference section */
 		1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGoTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		358F522B1EBB034D004A7692 /* GGT_UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_UserInfo.h; sourceTree = "<group>"; };
+		358F522C1EBB034D004A7692 /* GGT_UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserInfo.m; sourceTree = "<group>"; };
+		358F52311EBB2FF3004A7692 /* GGT_SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_SettingTableViewCell.h; sourceTree = "<group>"; };
+		358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_SettingTableViewCell.m; sourceTree = "<group>"; };
 		5B0B4F3B1EB0665B00D81B8E /* GGT_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Singleton.h; sourceTree = "<group>"; };
 		5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Singleton.m; sourceTree = "<group>"; };
 		5B0B4F461EB06D5400D81B8E /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
@@ -197,28 +203,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		358F52291EBB033C004A7692 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		358F522A1EBB0342004A7692 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				358F522B1EBB034D004A7692 /* GGT_UserInfo.h */,
+				358F522C1EBB034D004A7692 /* GGT_UserInfo.m */,
+				358F52311EBB2FF3004A7692 /* GGT_SettingTableViewCell.h */,
+				358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4B5CFEF708289DAD86D147C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5BA10D271EB1D32B0091093C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/MySettings/Model";
-			sourceTree = "<group>";
-		};
-		5BA10D281EB1D3310091093C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/MySettings/View";
 			sourceTree = "<group>";
 		};
 		5BA10D291EB1D35B0091093C /* Model */ = {
@@ -379,8 +387,8 @@
 		5BC2AF901EB0500A004DF44D /* MySettings */ = {
 			isa = PBXGroup;
 			children = (
-				5BA10D281EB1D3310091093C /* View */,
-				5BA10D271EB1D32B0091093C /* Model */,
+				358F522A1EBB0342004A7692 /* View */,
+				358F52291EBB033C004A7692 /* Model */,
 				5BC2AF911EB05030004DF44D /* Controller */,
 			);
 			path = MySettings;
@@ -785,8 +793,10 @@
 				5BEC18ED1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m in Sources */,
 				D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */,
 				5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */,
+				358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */,
 				5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */,
 				D6C7AAB71EB1876900EBF0D1 /* GGT_OrderCourseViewController.m in Sources */,
+				358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */,
 				D6C7AAAE1EB1873200EBF0D1 /* GGT_MineViewController.m in Sources */,
 				5BEC18F61EB85E7B009DF2F8 /* GGT_OrderForeignListCell.m in Sources */,
 				D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */,

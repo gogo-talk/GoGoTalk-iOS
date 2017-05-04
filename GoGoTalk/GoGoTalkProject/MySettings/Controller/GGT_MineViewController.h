@@ -9,5 +9,5 @@
 #import "BaseViewController.h"
 
 @interface GGT_MineViewController : BaseViewController
-
+@property(nonatomic, assign) BOOL isVIP;
 @end
