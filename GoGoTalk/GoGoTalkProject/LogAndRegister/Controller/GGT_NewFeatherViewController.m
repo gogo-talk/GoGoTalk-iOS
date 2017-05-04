@@ -60,7 +60,7 @@
                 btn.layer.borderColor = MainColor.CGColor;
                 [imageView addSubview:btn];
                 [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                    make.bottom.mas_equalTo(imageView.mas_bottom).with.offset(GGTFrom_X(-50));
+                    make.bottom.mas_equalTo(imageView.mas_bottom).with.offset(-LineX(50));
                     make.size.mas_equalTo(CGSizeMake(358/2, 40));
                     make.centerX.mas_equalTo(imageView.mas_centerX);
                 }];
