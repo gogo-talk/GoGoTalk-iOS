@@ -18,11 +18,6 @@
 #define NSLog(FORMAT, ...) nil
 #endif
 
-//等比
-#define GGTFrom_X(value) (value*SCREEN_WIDTH())/375
-//字体等比
-#define GGT_font(font) [UIFont systemFontOfSize:SXFrom_X(font)]
-
 
 //字符串是否为空
 #define IsStrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref)isEqualToString:@""]))

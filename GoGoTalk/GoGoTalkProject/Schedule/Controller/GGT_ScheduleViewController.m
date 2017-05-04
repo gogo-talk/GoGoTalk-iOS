@@ -32,6 +32,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 
 @property (strong, nonatomic) UIPanGestureRecognizer *scopeGesture;
 @property (strong, nonatomic) UITableView *xc_tableView;
+@property (strong, nonatomic) UIView *xc_lineView;
 
 @end
 
@@ -61,7 +62,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     self.view = view;
     
     // 450 for iPad and 300 for iPhone
-    CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 300;
+    CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 345;
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 0, view.frame.size.width, height)];
     
     calendar.dataSource = self;
@@ -69,14 +70,30 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     calendar.backgroundColor = [UIColor whiteColor];
     calendar.appearance.headerMinimumDissolvedAlpha = 0;
     calendar.appearance.caseOptions = FSCalendarCaseOptionsHeaderUsesUpperCase;
-    
-    calendar.appearance.subtitleFont = [UIFont systemFontOfSize:12];
-    calendar.appearance.subtitleOffset = CGPointMake(0, 10);
     calendar.appearance.weekdayTextColor = [UIColor lightGrayColor];
-    calendar.appearance.titleTodayColor = [UIColor redColor];
+    calendar.appearance.titleTodayColor = UICOLOR_FROM_HEX(kThemeColor);
+    calendar.appearance.subtitleDefaultColor = UICOLOR_FROM_HEX(kCalendar_EventColor);
+    calendar.appearance.subtitleTodayColor = UICOLOR_FROM_HEX(kThemeColor);
+    calendar.appearance.subtitleSelectionColor = UICOLOR_FROM_HEX(kThemeColor);
+    calendar.appearance.titlePlaceholderColor = UICOLOR_FROM_HEX(kCalendar_PlaceHolderColor);
+    calendar.appearance.subtitlePlaceholderColor = UICOLOR_FROM_HEX(kCalendar_PlaceHolderColor);
+    calendar.appearance.titleFont = Font(11);
+    calendar.appearance.subtitleFont = Font(10);
+    calendar.appearance.weekdayFont = Font(12);
+    
+    calendar.appearance.subtitleOffset = CGPointMake(0, 10);
+
+    // 隐藏顶部时间
+    calendar.headerHeight = 0;
+    calendar.weekdayHeight = LineH(44);
+    
+    [calendar xc_SetCornerWithSideType:XCSideTypeBottomLine cornerRadius:5.0f];
+    
+    
     
     // cell下面的横线
     calendar.appearance.separators = FSCalendarSeparatorInterRows;
+    
     
     [self.view addSubview:calendar];
     self.calendar = calendar;
@@ -84,22 +101,32 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     // 添加约束
     [calendar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
-        make.height.equalTo(@(height));
+        make.height.equalTo(@(LineH(345)));
     }];
-    
+
     [calendar registerClass:[GGT_CalendarCell class] forCellReuseIdentifier:CalendarCellID];
     
+    self.xc_lineView = ({
+        UIView *xc_lineView =[UIView new];
+        xc_lineView.backgroundColor = [UIColor lightGrayColor];
+        xc_lineView;
+    });
+    [calendar.calendarWeekdayView addSubview:self.xc_lineView];
+    [self.xc_lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(calendar.calendarWeekdayView);
+        make.height.equalTo(@0.5);
+    }];
     
-    // 隐藏顶部时间
-    calendar.headerHeight = 0;
     
     // 更新数据源 刷新calendar
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             // 更新数据
             self.datesWithEvent = @[@"2017/05/03",
+                                    @"2017/05/04",
                                     @"2017/05/06",
                                     @"2017/05/12",
-                                    @"2017/05/25"];
+                                    @"2017/05/25",
+                                    @"2017/06/01"];
             [self.calendar reloadData];
     });
     
@@ -118,8 +145,9 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     [xc_titleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [xc_titleButton setTintColor:[UIColor whiteColor]];
     
-    UIImage *image = UIIMAGE_FROM_NAME(@"fanhui_top");
+    UIImage *image = UIIMAGE_FROM_NAME(@"xialajiantou_top_zhankai");
     [xc_titleButton setImage:image forState:UIControlStateNormal];
+    [xc_titleButton setImage:UIIMAGE_FROM_NAME(@"xialajiantou_top_shouqi") forState:UIControlStateSelected];
     
     [xc_titleButton.titleLabel sizeToFit];
     [xc_titleButton sizeToFit];
@@ -151,14 +179,14 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
          
          if (flag) {
              [UIView animateWithDuration:0.3f animations:^{
-                 self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(M_PI);
+//                 self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(M_PI);
              } completion:^(BOOL finished) {
                  flag = NO;
              }];
          }
          else {
              [UIView animateWithDuration:0.3f animations:^{
-                 self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(0);
+//                 self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(0);
              } completion:^(BOOL finished) {
                  flag = YES;
              }];
@@ -215,18 +243,18 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 /**
  * Asks the delegate for subtitle text color in unselected state for the specific date.
  */
-- (nullable UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance subtitleDefaultColorForDate:(NSDate *)date
-{
-    return [UIColor blueColor];
-}
+//- (nullable UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance subtitleDefaultColorForDate:(NSDate *)date
+//{
+//    return [UIColor blueColor];
+//}
 
 /**
  * Asks the delegate for subtitle text color in selected state for the specific date.
  */
-- (nullable UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance subtitleSelectionColorForDate:(NSDate *)date
-{
-    return [UIColor redColor];
-}
+//- (nullable UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance subtitleSelectionColorForDate:(NSDate *)date
+//{
+//    return [UIColor redColor];
+//}
 
 // 默认的Border颜色
 //- (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance borderDefaultColorForDate:(NSDate *)date
@@ -243,10 +271,10 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 //    return [UIColor orangeColor];
 //}
 
-// 设置选中日期的选中颜色
+// 设置选中日期的选中颜色  圆的颜色
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillSelectionColorForDate:(NSDate *)date
 {
-    return [UIColor redColor];
+    return UICOLOR_FROM_HEX(kThemeColor);
 }
 
 // 设置今日的选中颜色
@@ -295,12 +323,18 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 - (void)calendar:(FSCalendar *)calendar boundingRectWillChange:(CGRect)bounds animated:(BOOL)animated
 {
     NSLog(@"%@",(calendar.scope==FSCalendarScopeWeek?@"week":@"month"));
+    if (calendar.scope == FSCalendarScopeWeek) {
+        self.xc_lineView.hidden = YES;
+        calendar.weekdayHeight = LineH(25);
+        calendar.appearance.titleOffset = CGPointMake(0, -(LineH(10)));
+    } else {
+        self.xc_lineView.hidden = NO;
+        calendar.weekdayHeight = LineH(44);
+        calendar.appearance.titleOffset = CGPointMake(0, 0);
+    }
     [self.calendar mas_updateConstraints:^(MASConstraintMaker *make) {
         if (calendar.scope == FSCalendarScopeWeek) {
-            
-            // make.height.equalTo(@(CGRectGetHeight(bounds)-20));
-            // -20后滑动会出现bug
-            make.height.equalTo(@(CGRectGetHeight(bounds)));
+            make.height.equalTo(@(LineH(49)));
         } else {
             make.height.equalTo(@(CGRectGetHeight(bounds)));
         }
