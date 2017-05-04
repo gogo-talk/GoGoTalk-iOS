@@ -10,6 +10,8 @@
 
 @interface GGT_LoginView : UIView
 
+@property (nonatomic, strong) UIImageView *iconImageView;
+
 @property (nonatomic, strong) UITextField *phoneAccountField;
 
 @property (nonatomic, strong) UITextField *passwordField;
@@ -19,6 +21,8 @@
 @property (nonatomic, strong) UIButton *loginButton;
 
 @property (nonatomic, strong) UIButton *registerButton;
+
+@property (nonatomic, strong) UIImageView *footerImageView;
 
 @end
 

@@ -20,6 +20,20 @@
 
 
 - (void)setUpContentView {
+    self.iconImageView = [[UIImageView alloc]init];
+    self.iconImageView.image = UIIMAGE_FROM_NAME(@"logo_login");
+    [self addSubview:self.iconImageView];
+    
+    [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.mas_left).with.offset(97);
+        make.right.equalTo(self.mas_right).with.offset(-117);
+        make.top.equalTo(self.mas_top).with.offset(100);
+        make.height.mas_offset(GGTFrom_X(47));
+    }];
+    
+    
+    
+    
     self.phoneAccountField = [[UITextField alloc]init];
     self.phoneAccountField.placeholder = @"请输入手机账号";
     self.phoneAccountField.layer.borderWidth = 0.5;
