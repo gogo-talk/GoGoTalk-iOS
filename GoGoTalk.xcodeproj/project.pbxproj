@@ -38,6 +38,7 @@
 		5BED05B11EB07EA200469368 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */; };
 		D65C74731EB9D8080060180F /* GGT_ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65C74721EB9D8080060180F /* GGT_ScheduleCell.m */; };
 		D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */; };
+		D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EE01EBB1D5E0058D12C /* XCStarView.m */; };
 		D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */; };
 		D696AFD3BE34379B2D601BF6 /* libPods-GoGoTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */; };
 		D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */; };
@@ -139,6 +140,8 @@
 		D66C6EDA1EBAD38A0058D12C /* AppColorInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppColorInfo.h; sourceTree = "<group>"; };
 		D66C6EDB1EBADD100058D12C /* UIView+XCCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCCornerRadius.h"; sourceTree = "<group>"; };
 		D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCCornerRadius.m"; sourceTree = "<group>"; };
+		D66C6EDF1EBB1D5E0058D12C /* XCStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCStarView.h; sourceTree = "<group>"; };
+		D66C6EE01EBB1D5E0058D12C /* XCStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCStarView.m; sourceTree = "<group>"; };
 		D66F8E721EB972CF0048B9C9 /* GGT_CalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_CalendarCell.h; sourceTree = "<group>"; };
 		D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_CalendarCell.m; sourceTree = "<group>"; };
 		D6C7AAA31EB186F800EBF0D1 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -313,7 +316,7 @@
 		5BC2AF8A1EB04E31004DF44D /* GoGoTalkProject */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7ABB61EB1D98600EBF0D1 /* Other */,
+				D66C6EDE1EBB1D560058D12C /* Others */,
 				5BC2AFA41EB050B8004DF44D /* CommonClass */,
 				5BC2AFA31EB050A1004DF44D /* Extension */,
 				5BC2AF901EB0500A004DF44D /* MySettings */,
@@ -552,6 +555,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D66C6EDE1EBB1D560058D12C /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D66C6EDF1EBB1D5E0058D12C /* XCStarView.h */,
+				D66C6EE01EBB1D5E0058D12C /* XCStarView.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		D66F8E711EB972CF0048B9C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -575,13 +587,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D6C7ABB61EB1D98600EBF0D1 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -792,6 +797,7 @@
 				D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */,
 				5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */,
 				D65C74731EB9D8080060180F /* GGT_ScheduleCell.m in Sources */,
+				D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */,
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
 				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
