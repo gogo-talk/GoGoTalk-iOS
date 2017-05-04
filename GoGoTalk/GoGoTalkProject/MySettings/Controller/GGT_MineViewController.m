@@ -39,15 +39,21 @@
     [self.view addSubview:userInfoView];
     //头像
     UIImageView *imageView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wudingdan_wode"]];
-//    imageView1.frame = CGRectMake(60,100, 100, 100);
     imageView1.layer.masksToBounds =YES;
     imageView1.layer.cornerRadius =32;
     [imageView1.layer setBorderWidth:5];
-    
     [imageView1.layer setBorderColor:[[UIColor colorWithRed:207/255.0 green:18/255.0 blue:28/255.0 alpha:1] CGColor]];
-                                      
     [userInfoView addSubview:imageView1];
-    
+    //英文昵称
+    UILabel *name_en = [[UILabel alloc] init];
+    name_en.text = @"Ruihua";
+    name_en.textColor = [UIColor whiteColor];
+    name_en.font = Font(16);
+    [userInfoView addSubview:name_en];
+    //中文昵称
+    UILabel *name = [[UILabel alloc] init];
+    name.textColor = [UIColor whiteColor];
+    name.text = @"托尼";
     
     [userInfoView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).with.offset(0);
@@ -56,10 +62,15 @@
         make.height.mas_equalTo(LineH(168));
     }];
     [imageView1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(userInfoView.mas_top);
+        make.top.equalTo(userInfoView.mas_top).with.offset(LineY(11));
         make.left.equalTo(userInfoView.mas_left).with.offset(LineX(20));
         make.width.mas_equalTo(LineW(65));
         make.height.mas_equalTo(LineH(65));
+    }];
+    //英文昵称布局
+    [name_en mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(userInfoView.mas_top).with.offset(LineY(22));
+        make.left.equalTo(imageView1.mas_right).with.offset(LineX(10));
     }];
 }
 @end

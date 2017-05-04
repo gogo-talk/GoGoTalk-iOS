@@ -25,7 +25,7 @@
     [super viewDidLoad];
     [self setLeftBackButton];
     
-    self.navigationItem.title = @"找回密码";
+    self.navigationItem.title = @"忘记密码";
     
     
     GGT_ForgotPasswordView *forgotPasswordView = [[GGT_ForgotPasswordView alloc]init];
