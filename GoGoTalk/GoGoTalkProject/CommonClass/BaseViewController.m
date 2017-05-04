@@ -27,7 +27,6 @@
                                        target:nil action:nil];
     negativeSpacer.width = -10;
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
-    
 }
 
 

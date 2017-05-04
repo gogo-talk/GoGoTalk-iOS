@@ -9,6 +9,7 @@
 #import "GGT_ScheduleViewController.h"
 #import "FSCalendar.h"
 #import "GGT_CalendarCell.h"
+#import "GGT_ScheduleCell.h"
 
 static NSString * const CalendarCellID = @"cell";
 static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
@@ -52,6 +53,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     return self;
 }
 
+// 加载view
 - (void)loadView
 {
     UIView *view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -60,7 +62,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     
     // 450 for iPad and 300 for iPhone
     CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 300;
-    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 64, view.frame.size.width, height)];
+    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 0, view.frame.size.width, height)];
     
     calendar.dataSource = self;
     calendar.delegate = self;
@@ -81,8 +83,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     
     // 添加约束
     [calendar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.view);
-        make.top.equalTo(@(64));
+        make.left.right.top.equalTo(self.view);
         make.height.equalTo(@(height));
     }];
     
@@ -114,8 +115,10 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     [xc_titleButton setTitle:titleString forState:UIControlStateNormal];
 //    [xc_titleButton setFrame:CGRectMake(0, 0, 200, 30)];
     [xc_titleButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [xc_titleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [xc_titleButton setTintColor:[UIColor whiteColor]];
     
-    UIImage *image = UIIMAGE_FROM_NAME(@"button_back");
+    UIImage *image = UIIMAGE_FROM_NAME(@"fanhui_top");
     [xc_titleButton setImage:image forState:UIControlStateNormal];
     
     [xc_titleButton.titleLabel sizeToFit];
@@ -147,14 +150,14 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
          }
          
          if (flag) {
-             [UIView animateWithDuration:1.0f animations:^{
+             [UIView animateWithDuration:0.3f animations:^{
                  self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(M_PI);
              } completion:^(BOOL finished) {
                  flag = NO;
              }];
          }
          else {
-             [UIView animateWithDuration:1.0f animations:^{
+             [UIView animateWithDuration:0.3f animations:^{
                  self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(0);
              } completion:^(BOOL finished) {
                  flag = YES;
@@ -341,7 +344,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     // For UITest
     self.calendar.accessibilityIdentifier = @"calendar";
     
-    [self.xc_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:xc_TableViewCellID];
+    [self.xc_tableView registerClass:[GGT_ScheduleCell class] forCellReuseIdentifier:NSStringFromClass([GGT_ScheduleCell class])];
     
     
     __unsafe_unretained UITableView *tableView = self.xc_tableView;
@@ -380,6 +383,8 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     }
 }
 
+
+#pragma mark - <UITableViewDelegate,UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 100;
@@ -387,10 +392,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:xc_TableViewCellID forIndexPath:indexPath];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:xc_TableViewCellID];
-    }
+    GGT_ScheduleCell *cell = [GGT_ScheduleCell cellWithTableView:tableView forIndexPath:indexPath];
     cell.backgroundColor = UICOLOR_RANDOM_COLOR();
     return cell;
 }
@@ -400,6 +402,9 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     return 50;
 }
 
+
+#pragma mark - <UIGestureRecognizerDelegate>
+// Whether scope gesture should begin
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
     BOOL shouldBegin = self.xc_tableView.contentOffset.y <= -self.xc_tableView.contentInset.top;

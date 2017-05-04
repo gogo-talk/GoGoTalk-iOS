@@ -23,7 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    self.tabBar.tintColor = MainColor;
     //设置tabbar不透明
     self.tabBar.translucent = NO;
     //设置视图
