@@ -19,20 +19,16 @@
 
 @implementation BaseViewController
 
-
+#pragma mark 左侧返回按钮
 - (void)setLeftBackButton{
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, 44, 44);
-    [btn setImage:[UIImage imageNamed:@"fanhui_top"] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:@"fanhui_top"] forState:UIControlStateHighlighted];
-    [btn addTarget:self action:@selector(leftAction) forControlEvents:UIControlEventTouchUpInside];
-    btn.imageEdgeInsets = UIEdgeInsetsMake(0, -28, 0, 0);
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
-    self.navigationItem.leftBarButtonItem = backItem;
-    //解决手势问题
-    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
-    
+    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"fanhui_top"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil action:nil];
+    negativeSpacer.width = -10;
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
 }
+
 
 - (void)setLeftItem:(NSString *)imageName
 {
@@ -43,6 +39,7 @@
     negativeSpacer.width = 0;
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
 }
+
 
 - (void)setRightBarButtonItemTitle:(NSString *)title{
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
@@ -59,24 +56,26 @@
     
 }
 
+- (void)setRightButton:(NSString *)imageName{
+    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
+    UIBarButtonItem *navSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    navSpace.width = - 15;
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:navSpace,imageItem, nil];
+  
+}
+
+#pragma mark 客服电话
+
+
+
 #pragma mark 进入到个人中心
 - (void)initMineController {
-//    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"wode_top"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(mineClick)];
-//    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
-//                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
-//                                       target:nil action:nil];
-//    negativeSpacer.width = 0;
-//    self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
-    
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, 18, 21);
-    [btn setImage:[UIImage imageNamed:@"wode_top"] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:@"wode_top"] forState:UIControlStateHighlighted];
-    [btn addTarget:self action:@selector(mineClick) forControlEvents:UIControlEventTouchUpInside];
-    btn.imageEdgeInsets = UIEdgeInsetsMake(0, -3, 0, 0);
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
-    self.navigationItem.leftBarButtonItem = backItem;
+    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"wode_top"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(mineClick)];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil action:nil];
+    negativeSpacer.width = -5;
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
     
 }
 

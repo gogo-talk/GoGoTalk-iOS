@@ -18,5 +18,9 @@
 
 - (void)leftAction;
 
+- (void)rightAction;
+//导航进入到个人中心
 - (void)initMineController;
+
+- (void)setRightButton:(NSString *)imageName;
 @end
