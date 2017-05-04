@@ -11,20 +11,40 @@
 #import "GGT_SettingTableViewCell.h"
 @interface GGT_MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong) UITableView *tableView;
+@property(nonatomic, strong) NSArray *infoArray;
+@property(nonatomic, strong) NSArray *infoArray2;
 @end
 
 @implementation GGT_MineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    /*--------------------虚拟数据start----------------------  */
     self.isVIP = true;
-    
+    NSMutableArray *mArray = [NSMutableArray array];
+    NSDictionary *dic1 = @{@"icon":@"keshi_wodeliebiao",@"title":@"我的课时",@"subtitle":@"剩余120课时，有效期至2019.03.12"};
+    NSDictionary *dic2 =@{@"icon":@"guanzhu_wode_liebiao",@"title":@"关注外教",@"subtitle":@"14位"};
+    NSDictionary *dic3 = @{@"icon":@"dingdan_wode_liebiao",@"title":@"我的订单",@"subtitle":@""};
+    NSDictionary *dic4 = @{@"icon":@"pingce_wode_liebiao",@"title":@"测评报告",@"subtitle":@""};
+    [mArray addObject:dic1];
+    [mArray addObject:dic2];
+    [mArray addObject:dic3];
+    [mArray addObject:dic4];
+    self.infoArray = mArray;
+    NSMutableArray *mArray2 = [NSMutableArray array];
+    NSDictionary *dic5 = @{@"icon":@"yijianfankv_wode_liebiao",@"title":@"意见反馈",@"subtitle":@""};
+    NSDictionary *dic6 =@{@"icon":@"shezhi_wode_biebiao",@"title":@"设置",@"subtitle":@""};
+    [mArray2 addObject:dic5];
+    [mArray2 addObject:dic6];
+    self.infoArray2 = mArray2;
+    /*--------------------虚拟数据end----------------------  */
     [self setNavigationStyle];
     self.view.backgroundColor = UICOLOR_FROM_HEX(0xf2f2f2);
     [self setLeftBackButton];
     [self setUserInfo];
     //用户设置tableView
     [self userSetting];
+    
     
 }
 //设置导航栏样式
@@ -85,25 +105,32 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    GGT_SettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"settingCell"forIndexPath:indexPath];
-//    if(cell == nil){
-//        cell = [[GGT_SettingTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"settingCell"];
-//    }
-//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//    if(indexPath.row == 0){
-//        [cell xc_SetCornerWithSideType:XCSideTypeTopLine cornerRadius:5.0];
-//    }
-//    if((indexPath.section == 0 && indexPath.row == 3) || (indexPath.section == 1 && indexPath.row == 1)){
-//        [cell xc_SetCornerWithSideType:XCSideTypeBottomLine cornerRadius:5.0];
-//    }
-//    if((indexPath.section == 0 && indexPath.row==3) || (indexPath.section == 1 && indexPath.row==1)){
-//        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
-//    }
-//    
-//    
-//    cell.textLabel.text = [NSString stringWithFormat:@"测试CELL%ld",(long)indexPath.row];
-    // Configure the cell...
     GGT_SettingTableViewCell *cell = [GGT_SettingTableViewCell cellWithTableView:tableView forIndexPath:indexPath];
+    if(cell == nil){
+        cell = [[GGT_SettingTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"settingCell"];
+    }
+    
+    if(indexPath.row == 0 && indexPath.section == 0){
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    if(indexPath.row == 0){
+        [cell xc_SetCornerWithSideType:XCSideTypeTopLine cornerRadius:5.0];
+        
+    }
+    if((indexPath.section == 0 && indexPath.row == 3) || (indexPath.section == 1 && indexPath.row == 1)){
+        [cell xc_SetCornerWithSideType:XCSideTypeBottomLine cornerRadius:5.0];
+    }
+    if((indexPath.section == 0 && indexPath.row==3) || (indexPath.section == 1 && indexPath.row==1)){
+        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
+    }
+    if(indexPath.section == 0){
+        cell.infoDic = self.infoArray[indexPath.row];
+    }
+    if(indexPath.section == 1){
+        cell.infoDic = self.infoArray2[indexPath.row];
+    }
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
