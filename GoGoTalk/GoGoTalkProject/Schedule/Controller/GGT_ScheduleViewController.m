@@ -49,7 +49,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
         self.xc_dateFormatter.dateFormat = @"yyyy/MM/dd";
         
         self.xc_dateFormatter2 = [[NSDateFormatter alloc] init];
-        self.xc_dateFormatter2.dateFormat = @"yyyy年MM月dd日";
+        self.xc_dateFormatter2.dateFormat = @"yyyy年MM月";
     }
     return self;
 }
@@ -359,6 +359,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     
     
     self.xc_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-450) style:UITableViewStylePlain];
+    self.xc_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.xc_tableView.delegate = self;
     self.xc_tableView.dataSource = self;
@@ -427,13 +428,14 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GGT_ScheduleCell *cell = [GGT_ScheduleCell cellWithTableView:tableView forIndexPath:indexPath];
-    cell.backgroundColor = UICOLOR_RANDOM_COLOR();
+//    cell.backgroundColor = UICOLOR_RANDOM_COLOR();
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
+//    return LineH(135);
+    return LineH(180);
 }
 
 
