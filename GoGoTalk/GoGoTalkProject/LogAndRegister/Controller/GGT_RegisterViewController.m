@@ -36,10 +36,7 @@
     }];
     
     
-    [registerView.backToLoginButton xc_addClickBlock:^(UIButton *button) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }];
-    
+
     
 }
 
