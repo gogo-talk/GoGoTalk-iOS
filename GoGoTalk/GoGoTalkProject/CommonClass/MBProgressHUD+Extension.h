@@ -18,8 +18,10 @@
 + (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view;
 
 
-//设置菊花 title 设为nil代表只有菊花，否则是下面带有文字提醒
+//设置菊花 带有文字提醒
 + (MBProgressHUD *)showLoading:(UIView *)view title:(NSString *)title;
+//设置菊花 不带文字提醒
++ (MBProgressHUD *)showLoading:(UIView *)view;
 
 
 //隐藏提醒框

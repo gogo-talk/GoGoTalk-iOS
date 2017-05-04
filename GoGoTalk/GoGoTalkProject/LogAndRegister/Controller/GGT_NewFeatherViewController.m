@@ -24,6 +24,7 @@
     
 }
 
+
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
@@ -47,24 +48,17 @@
         imageView.image = [UIImage imageNamed:imageName];
         [scrollView addSubview:imageView];
         if (i == NEWVIEWCOUNT - 1) {
-            if (i == 2) {
                 //添加button
                 UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-                
                 [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
-                [btn setTitle:@"立即体验" forState:UIControlStateNormal];
-                [btn setTitleColor:MainColor forState:UIControlStateNormal];
-                btn.layer.masksToBounds = YES;
-                btn.layer.cornerRadius = 4;
-                btn.layer.borderWidth = 0.5;
-                btn.layer.borderColor = MainColor.CGColor;
                 [imageView addSubview:btn];
+            
                 [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                    make.bottom.mas_equalTo(imageView.mas_bottom).with.offset(-LineX(50));
-                    make.size.mas_equalTo(CGSizeMake(358/2, 40));
                     make.centerX.mas_equalTo(imageView.mas_centerX);
+                    make.bottom.mas_equalTo(imageView.mas_bottom).with.offset(-LineX(30));
+                    make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH()/2, LineH(60)));
                 }];
-            }
+            
             [scrollView addSubview:imageView];
         }
     }

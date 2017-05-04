@@ -25,7 +25,7 @@
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
                                        initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                        target:nil action:nil];
-    negativeSpacer.width = -10;
+    negativeSpacer.width = - LineX(5);
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
 }
 
@@ -59,7 +59,7 @@
 - (void)setRightButton:(NSString *)imageName{
     UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
     UIBarButtonItem *navSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    navSpace.width = - 15;
+    navSpace.width = - LineX(15);
     self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:navSpace,imageItem, nil];
   
 }
@@ -74,7 +74,7 @@
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
                                        initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                        target:nil action:nil];
-    negativeSpacer.width = -5;
+    negativeSpacer.width = -LineX(5);
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
     
 }
@@ -94,7 +94,7 @@
     self.navigationController.navigationBar.barTintColor = MainColor;
     //设置导航不透明
      self.navigationController.navigationBar.translucent = NO;
-    
+     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:Font(19),NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
 }
 
 

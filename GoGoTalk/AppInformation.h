@@ -28,7 +28,7 @@
 
 
 //公司地址
-#define PrefixAddress @"http://www.gogo-talk.com"
+#define PrefixAddress @"http://learnapi.gogo-talk.com:9332"
 
 
 #define MainColor [UIColor colorWithHexString:@"#EA5851"]

@@ -20,7 +20,6 @@
 		5BC2AF591EB0473D004DF44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF581EB0473D004DF44D /* main.m */; };
 		5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */; };
 		5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF631EB0473D004DF44D /* Assets.xcassets */; };
-		5BC2AF671EB0473D004DF44D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF651EB0473D004DF44D /* LaunchScreen.storyboard */; };
 		5BC2AF721EB0473E004DF44D /* GoGoTalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF711EB0473E004DF44D /* GoGoTalkTests.m */; };
 		5BC2AF7D1EB0473E004DF44D /* GoGoTalkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF7C1EB0473E004DF44D /* GoGoTalkUITests.m */; };
 		5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFA91EB05241004DF44D /* BaseTabBarController.m */; };
@@ -40,6 +39,7 @@
 		5BED05B11EB07EA200469368 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */; };
 		D65C74731EB9D8080060180F /* GGT_ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65C74721EB9D8080060180F /* GGT_ScheduleCell.m */; };
 		D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */; };
+		D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EE01EBB1D5E0058D12C /* XCStarView.m */; };
 		D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */; };
 		D696AFD3BE34379B2D601BF6 /* libPods-GoGoTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */; };
 		D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */; };
@@ -101,7 +101,6 @@
 		5BC2AF5A1EB0473D004DF44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5BC2AF631EB0473D004DF44D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5BC2AF661EB0473D004DF44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BC2AF681EB0473D004DF44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC2AF6D1EB0473D004DF44D /* GoGoTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoGoTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC2AF711EB0473E004DF44D /* GoGoTalkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoGoTalkTests.m; sourceTree = "<group>"; };
@@ -145,6 +144,8 @@
 		D66C6EDA1EBAD38A0058D12C /* AppColorInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppColorInfo.h; sourceTree = "<group>"; };
 		D66C6EDB1EBADD100058D12C /* UIView+XCCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCCornerRadius.h"; sourceTree = "<group>"; };
 		D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCCornerRadius.m"; sourceTree = "<group>"; };
+		D66C6EDF1EBB1D5E0058D12C /* XCStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCStarView.h; sourceTree = "<group>"; };
+		D66C6EE01EBB1D5E0058D12C /* XCStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCStarView.m; sourceTree = "<group>"; };
 		D66F8E721EB972CF0048B9C9 /* GGT_CalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_CalendarCell.h; sourceTree = "<group>"; };
 		D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_CalendarCell.m; sourceTree = "<group>"; };
 		D6C7AAA31EB186F800EBF0D1 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -290,7 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				5BC2AF631EB0473D004DF44D /* Assets.xcassets */,
-				5BC2AF651EB0473D004DF44D /* LaunchScreen.storyboard */,
 				5BC2AF681EB0473D004DF44D /* Info.plist */,
 				5BC2AF581EB0473D004DF44D /* main.m */,
 				D6C7AAC11EB187AB00EBF0D1 /* PrefixHeader.pch */,
@@ -321,7 +321,7 @@
 		5BC2AF8A1EB04E31004DF44D /* GoGoTalkProject */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7ABB61EB1D98600EBF0D1 /* Other */,
+				D66C6EDE1EBB1D560058D12C /* Others */,
 				5BC2AFA41EB050B8004DF44D /* CommonClass */,
 				5BC2AFA31EB050A1004DF44D /* Extension */,
 				5BC2AF901EB0500A004DF44D /* MySettings */,
@@ -560,6 +560,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D66C6EDE1EBB1D560058D12C /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D66C6EDF1EBB1D5E0058D12C /* XCStarView.h */,
+				D66C6EE01EBB1D5E0058D12C /* XCStarView.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		D66F8E711EB972CF0048B9C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,13 +592,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D6C7ABB61EB1D98600EBF0D1 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -703,7 +705,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC2AF671EB0473D004DF44D /* LaunchScreen.storyboard in Resources */,
 				5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */,
 				5BED05B11EB07EA200469368 /* MBProgressHUD.bundle in Resources */,
 			);
@@ -802,6 +803,7 @@
 				D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */,
 				5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */,
 				D65C74731EB9D8080060180F /* GGT_ScheduleCell.m in Sources */,
+				D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */,
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
 				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
@@ -853,17 +855,6 @@
 			targetProxy = 5BC2AF791EB0473E004DF44D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5BC2AF651EB0473D004DF44D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BC2AF661EB0473D004DF44D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5BC2AF7F1EB0473E004DF44D /* Debug */ = {
@@ -963,6 +954,7 @@
 			baseConfigurationReference = 1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = YZK33WLG48;
 				ENABLE_BITCODE = NO;
@@ -980,6 +972,7 @@
 			baseConfigurationReference = BDDE48A6BF0DF60B4B82782D /* Pods-GoGoTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = YZK33WLG48;
 				ENABLE_BITCODE = NO;

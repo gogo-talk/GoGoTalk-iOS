@@ -12,9 +12,20 @@
 
 //注册
 + (NSString *)URL_Resigt {
-//    return [NSString stringWithFormat:@"%@/appregist",PrefixAddress];
-    return nil;
+    return [NSString stringWithFormat:@"%@/API/User/AddUser",PrefixAddress];
     
+}
+
+//登录
++ (NSString *)URL_Login {
+    return [NSString stringWithFormat:@"%@/API/User/AppLogin",PrefixAddress];
+    
+}
+
+//发送修改密码短信
++ (NSString *)URL_GetChangePasswordSMS {
+    return [NSString stringWithFormat:@"%@/API/User/SendChangePwdSMS",PrefixAddress];
+
 }
 
 @end

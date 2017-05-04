@@ -12,4 +12,9 @@
 //注册
 + (NSString *)URL_Resigt;
 
+//登录
++ (NSString *)URL_Login;
+
+//发送修改密码短信
++ (NSString *)URL_GetChangePasswordSMS;
 @end
