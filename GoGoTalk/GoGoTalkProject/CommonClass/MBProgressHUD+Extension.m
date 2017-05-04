@@ -39,7 +39,7 @@
     hud.removeFromSuperViewOnHide = YES;
     // 设置提醒框背景色
     hud.bezelView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
-    [hud hideAnimated:YES afterDelay:3.f];
+    [hud hideAnimated:YES afterDelay:1.f];
 }
 
 
@@ -56,12 +56,19 @@
     hud.removeFromSuperViewOnHide = YES;
     // 设置提醒框背景色
     hud.bezelView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
+    [hud hideAnimated:YES afterDelay:1.f];
+
     return hud;
 }
 
 
 #pragma mark 设置菊花
-+(MBProgressHUD *)showLoading:(UIView *)view title:(NSString *)title{
++ (MBProgressHUD *)showLoading:(UIView *)view {
+    return  [MBProgressHUD showLoading:view title:nil];
+}
+
+
++(MBProgressHUD *)showLoading:(UIView *)view title:(NSString *)title {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view==nil?[[UIApplication sharedApplication].windows lastObject]:view animated:YES];
     hud.label.text = title;
     hud.label.textColor = [UIColor whiteColor];
@@ -73,17 +80,15 @@
     // 设置提醒框背景色
     hud.bezelView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
     //设置菊花颜色
-    [UIActivityIndicatorView appearanceWhenContainedIn:[MBProgressHUD class], nil].color = [UIColor whiteColor];
-    
+//    [UIActivityIndicatorView appearanceWhenContainedIn:[MBProgressHUD class], nil].color = [UIColor whiteColor];
+    hud.activityIndicatorColor = [UIColor whiteColor];
     hud.removeFromSuperViewOnHide = YES;
     return hud;
 }
 
 
 #pragma mark 隐藏提醒框
-+ (void)hideHUDForView:(UIView *)view
-{
-    //    [MBProgressHUD hideHUDForView:view animated:YES];
++ (void)hideHUDForView:(UIView *)view {
     [self hideHUDForView:view==nil?[[UIApplication sharedApplication].windows lastObject]:view animated:YES];
 }
 

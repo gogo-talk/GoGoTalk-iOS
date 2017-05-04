@@ -24,6 +24,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+   
+    //设置启动页面时间
+     [NSThread sleepForTimeInterval:2.0];
     
     [self initKeyWindow];
     

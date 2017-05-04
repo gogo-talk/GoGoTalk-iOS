@@ -94,7 +94,7 @@
     self.navigationController.navigationBar.barTintColor = MainColor;
     //设置导航不透明
      self.navigationController.navigationBar.translucent = NO;
-    
+     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:Font(19),NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
 }
 
 

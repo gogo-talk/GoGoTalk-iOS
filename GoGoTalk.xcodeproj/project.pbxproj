@@ -18,7 +18,6 @@
 		5BC2AF591EB0473D004DF44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF581EB0473D004DF44D /* main.m */; };
 		5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */; };
 		5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF631EB0473D004DF44D /* Assets.xcassets */; };
-		5BC2AF671EB0473D004DF44D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF651EB0473D004DF44D /* LaunchScreen.storyboard */; };
 		5BC2AF721EB0473E004DF44D /* GoGoTalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF711EB0473E004DF44D /* GoGoTalkTests.m */; };
 		5BC2AF7D1EB0473E004DF44D /* GoGoTalkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF7C1EB0473E004DF44D /* GoGoTalkUITests.m */; };
 		5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFA91EB05241004DF44D /* BaseTabBarController.m */; };
@@ -95,7 +94,6 @@
 		5BC2AF5A1EB0473D004DF44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5BC2AF631EB0473D004DF44D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5BC2AF661EB0473D004DF44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BC2AF681EB0473D004DF44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC2AF6D1EB0473D004DF44D /* GoGoTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoGoTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC2AF711EB0473E004DF44D /* GoGoTalkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoGoTalkTests.m; sourceTree = "<group>"; };
@@ -282,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				5BC2AF631EB0473D004DF44D /* Assets.xcassets */,
-				5BC2AF651EB0473D004DF44D /* LaunchScreen.storyboard */,
 				5BC2AF681EB0473D004DF44D /* Info.plist */,
 				5BC2AF581EB0473D004DF44D /* main.m */,
 				D6C7AAC11EB187AB00EBF0D1 /* PrefixHeader.pch */,
@@ -695,7 +692,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC2AF671EB0473D004DF44D /* LaunchScreen.storyboard in Resources */,
 				5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */,
 				5BED05B11EB07EA200469368 /* MBProgressHUD.bundle in Resources */,
 			);
@@ -844,17 +840,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		5BC2AF651EB0473D004DF44D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BC2AF661EB0473D004DF44D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		5BC2AF7F1EB0473E004DF44D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -953,6 +938,7 @@
 			baseConfigurationReference = 1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = YZK33WLG48;
 				ENABLE_BITCODE = NO;
@@ -970,6 +956,7 @@
 			baseConfigurationReference = BDDE48A6BF0DF60B4B82782D /* Pods-GoGoTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = YZK33WLG48;
 				ENABLE_BITCODE = NO;
