@@ -39,6 +39,32 @@
 #define MainColor [UIColor colorWithHexString:@"#EA5851"]
 
 
+/*
+ 比例
+ */
+// 屏幕高度
+#define XMGHeight [UIScreen mainScreen].bounds.size.height
+// 屏幕宽度
+#define XMGWidth [UIScreen mainScreen].bounds.size.width
+// 以iPhone5为基准(UI妹纸给你的设计图是iPhone5的),当然你也可以改,但是出图是按照7P(6P)的图片出的,因为大图压缩还是清晰的,小图拉伸就不清晰了,所以只出一套最大的图片即可
+#define XMGiPhone6W 375.0
+#define XMGiPhone6H 667.0
+// 计算比例
+// x比例 1.293750 在iPhone7的屏幕上
+#define XMGScaleX XMGWidth / XMGiPhone6W
+// y比例 1.295775
+#define XMGScaleY XMGHeight / XMGiPhone6H
+// X坐标
+#define LineX(l) l*XMGScaleX
+// Y坐标
+#define LineY(l) l*XMGScaleY
+//width比例
+#define LineW(l) l*XMGScaleX
+//height比例
+#define LineH(l) l*XMGScaleY
+// 字体
+#define Font(x) [UIFont systemFontOfSize:x*XMGScaleX]
+
 /**
  @abstract UIAlterController弹框.
  **/
