@@ -14,7 +14,7 @@
 #import <Foundation/Foundation.h>
 
 #import "AppInformation.h"
-
+#import "AppColorInfo.h"
 #import "BaseViewController.h"
 #import "Masonry.h"
 #import "UIView+Layout.h"
@@ -28,6 +28,7 @@
 #import "UIImageView+WebCache.h"
 #import "UIButton+XCHelperBlock.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "UIView+XCCornerRadius.h"
 
 
 

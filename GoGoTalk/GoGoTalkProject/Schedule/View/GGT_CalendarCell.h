@@ -9,5 +9,5 @@
 #import <FSCalendar/FSCalendar.h>
 
 @interface GGT_CalendarCell : FSCalendarCell
-@property (nonatomic, assign) BOOL isToggle;
+@property (nonatomic, assign) BOOL isToggle;    // 选中椭圆的状态
 @end

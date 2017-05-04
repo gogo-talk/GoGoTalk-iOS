@@ -16,6 +16,8 @@
 {
     [super layoutSubviews];
     
+    self.imageView.backgroundColor = [UIColor orangeColor];
+    
     self.titleLabel.text = self.title;
     if (self.subtitle) {
         self.subtitleLabel.text = self.subtitle;
