@@ -9,8 +9,6 @@
 #import "GGT_ScheduleFinishedCanPlayCell.h"
 #import "XCStarView.h"
 
-static CGFloat const margin = 15.0f;
-
 @interface GGT_ScheduleFinishedCanPlayCell ()
 @property (nonatomic, strong) UIView *xc_contentView;
 @property (nonatomic, strong) UIView *xc_topView;
@@ -168,10 +166,10 @@ static CGFloat const margin = 15.0f;
 {
 #pragma mark - 整体
     [self.xc_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(LineW(margin));
-        make.right.equalTo(self).offset(-LineW(margin));
-        make.top.equalTo(self).offset(LineH(margin/2.0));
-        make.bottom.equalTo(self).offset(-LineH(margin/2.0));
+        make.left.equalTo(self).offset(LineW(margin15));
+        make.right.equalTo(self).offset(-LineW(margin15));
+        make.top.equalTo(self).offset(LineH(margin15/2.0));
+        make.bottom.equalTo(self).offset(-LineH(margin15/2.0));
     }];
     
     [self.xc_topView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -193,7 +191,7 @@ static CGFloat const margin = 15.0f;
     
 #pragma mark - xc_topView
     [self.xc_classTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.xc_topView).offset(LineW(margin));
+        make.left.equalTo(self.xc_topView).offset(LineW(margin15));
         make.centerY.equalTo(self.xc_topView.mas_centerY);
     }];
     
@@ -206,24 +204,24 @@ static CGFloat const margin = 15.0f;
     
 #pragma mark - xc_bodyView
     [self.xc_headPortraitImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.xc_bodyView).offset(LineW(margin));
+        make.left.equalTo(self.xc_bodyView).offset(LineW(margin15));
         make.width.height.equalTo(@(LineW(60)));
         make.centerY.equalTo(self.xc_bodyView.mas_centerY);
     }];
     
     [self.xc_courseNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.xc_headPortraitImgView.mas_right).offset(LineW(margin));
-        make.top.equalTo(self.xc_headPortraitImgView.mas_top).offset(LineH(margin/2.0));
+        make.left.equalTo(self.xc_headPortraitImgView.mas_right).offset(LineW(margin15));
+        make.top.equalTo(self.xc_headPortraitImgView.mas_top).offset(LineH(margin15/2.0));
     }];
     
     [self.xc_teachNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.xc_headPortraitImgView.mas_bottom).offset(-LineH(margin/2.0));
+        make.bottom.equalTo(self.xc_headPortraitImgView.mas_bottom).offset(-LineH(margin15/2.0));
         make.left.equalTo(self.xc_courseNameLabel.mas_left);
     }];
     
     
     [self.xc_playButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.xc_bodyView).offset(-LineW(margin));
+        make.right.equalTo(self.xc_bodyView).offset(-LineW(margin15));
         make.width.height.equalTo(@(LineW(19)));//38 × 38
         make.centerY.equalTo(self.xc_bodyView.mas_centerY);
     }];
@@ -231,12 +229,12 @@ static CGFloat const margin = 15.0f;
 #pragma mark - xc_bottomView
     
     [self.xc_starNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.xc_bottomView).offset(LineW(margin));
+        make.left.equalTo(self.xc_bottomView).offset(LineW(margin15));
         make.centerY.equalTo(self.xc_bottomView);
     }];
     
     [self.xc_starView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.xc_starNameLabel.mas_right).offset(LineW(margin));
+        make.left.equalTo(self.xc_starNameLabel.mas_right).offset(LineW(margin15));
         make.centerY.equalTo(self.xc_bottomView);
         make.height.equalTo(@(self.xc_starView.height));
         make.width.equalTo(@(self.xc_starView.width));
