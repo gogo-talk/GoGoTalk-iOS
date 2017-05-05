@@ -12,7 +12,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-//#import <WebKit/WebKit.h>
+#import <WebKit/WebKit.h>
 
 #import "AppInformation.h"
 #import "AppColorInfo.h"
@@ -29,10 +29,12 @@
 #import "UIImageView+WebCache.h"
 #import "UIButton+XCHelperBlock.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+
 #import "UIView+XCCornerRadius.h"
 #import "GGT_Request_Url.h"
 #import "NSString+XCHelper.h"
 #import "BaseBackViewController.h"
+#import "UIView+XCHelper.h"
 
 
 
