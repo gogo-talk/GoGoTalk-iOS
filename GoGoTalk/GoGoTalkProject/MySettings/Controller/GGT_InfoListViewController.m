@@ -8,6 +8,7 @@
 
 #import "GGT_InfoListViewController.h"
 #import "GGT_InfoListCell.h"
+#import "GGT_EditUserInfoController.h"
 @interface GGT_InfoListViewController()
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray *cellArray1;
@@ -116,7 +117,16 @@
     if(indexPath.section == 2){
         cell.infoDic = self.cellArray3[indexPath.row];
     }
+    
     return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GGT_EditUserInfoController *evc = [GGT_EditUserInfoController new];
+    if(indexPath.section == 0){
+        evc.titleName = self.cellArray1[indexPath.row][@"title"];
+    }
+    [self.navigationController pushViewController:evc animated:YES];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

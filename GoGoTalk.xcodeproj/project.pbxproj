@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355210441EBC40920057EA59 /* GGT_InfoListViewController.m */; };
 		355210481EBC49BE0057EA59 /* GGT_InfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355210471EBC49BE0057EA59 /* GGT_InfoListCell.m */; };
+		3552104B1EBC766C0057EA59 /* GGT_EditUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */; };
 		358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F522C1EBB034D004A7692 /* GGT_UserInfo.m */; };
 		358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */; };
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
@@ -87,6 +88,8 @@
 		355210441EBC40920057EA59 /* GGT_InfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_InfoListViewController.m; sourceTree = "<group>"; };
 		355210461EBC49BE0057EA59 /* GGT_InfoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_InfoListCell.h; sourceTree = "<group>"; };
 		355210471EBC49BE0057EA59 /* GGT_InfoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_InfoListCell.m; sourceTree = "<group>"; };
+		355210491EBC766C0057EA59 /* GGT_EditUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_EditUserInfoController.h; sourceTree = "<group>"; };
+		3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_EditUserInfoController.m; sourceTree = "<group>"; };
 		358F522B1EBB034D004A7692 /* GGT_UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_UserInfo.h; sourceTree = "<group>"; };
 		358F522C1EBB034D004A7692 /* GGT_UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserInfo.m; sourceTree = "<group>"; };
 		358F52311EBB2FF3004A7692 /* GGT_SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_SettingTableViewCell.h; sourceTree = "<group>"; };
@@ -424,6 +427,8 @@
 				D6C7AAAD1EB1873200EBF0D1 /* GGT_MineViewController.m */,
 				355210431EBC40920057EA59 /* GGT_InfoListViewController.h */,
 				355210441EBC40920057EA59 /* GGT_InfoListViewController.m */,
+				355210491EBC766C0057EA59 /* GGT_EditUserInfoController.h */,
+				3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -821,6 +826,7 @@
 				5BEC18FE1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m in Sources */,
 				5BEC18F31EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m in Sources */,
 				D6B5916A1EBC716700086648 /* BaseBackViewController.m in Sources */,
+				3552104B1EBC766C0057EA59 /* GGT_EditUserInfoController.m in Sources */,
 				D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */,
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
 				5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */,
