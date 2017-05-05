@@ -12,6 +12,8 @@
 #import "GGT_ScheduleStudyingCell.h"
 #import "GGT_ScheduleNormalCell.h"
 #import "GGT_ScheduleFinishedCanPlayCell.h"
+#import "OYCountDownManager.h"
+#import "GGT_ PreviewCoursewareVC.h"
 
 static NSString * const CalendarCellID = @"cell";
 static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
@@ -428,6 +430,19 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     
     // 配置tableView
     [self configTableView];
+    
+    // 启动倒计时管理
+    [kCountDownManager start];
+}
+
+#pragma mark - 刷新数据
+- (void)reloadData {
+    // 网络加载数据
+    
+    // 调用[kCountDownManager reload]
+    [kCountDownManager reload];
+    // 刷新
+    [self.xc_tableView reloadData];
 }
 
 // 配置tableView
@@ -459,6 +474,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 {
     if (indexPath.row % 3 == 0) {
         GGT_ScheduleStudyingCell *cell = [GGT_ScheduleStudyingCell cellWithTableView:tableView forIndexPath:indexPath];
+        cell.xc_timeCount = @"10";
         return cell;
     }
     if (indexPath.row % 3 == 1) {
@@ -486,7 +502,11 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     return 0;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GGT__PreviewCoursewareVC *vc = [GGT__PreviewCoursewareVC new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 @end

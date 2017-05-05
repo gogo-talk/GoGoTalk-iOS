@@ -7,8 +7,9 @@
 //
 
 #import "GGT_ScheduleStudyingCell.h"
+#import "OYCountDownManager.h"
 
-static CGFloat const margin = 15.0f;
+static NSString * const xc_CountDownTitleName = @"正在上课";
 
 @interface GGT_ScheduleStudyingCell ()
 @property (nonatomic, strong) UIView *xc_contentView;
@@ -22,19 +23,19 @@ static CGFloat const margin = 15.0f;
 @property (nonatomic, strong) UILabel *xc_courseNameLabel;
 @property (nonatomic, strong) UILabel *xc_teachNameLabel;
 @property (nonatomic, strong) UIButton *xc_enterRoomButton;
+
 @end
 
 @implementation GGT_ScheduleStudyingCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
++ (instancetype)cellWithTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *GGT_ScheduleCellID = NSStringFromClass([self class]);
+    GGT_ScheduleStudyingCell *cell = [tableView dequeueReusableCellWithIdentifier:GGT_ScheduleCellID forIndexPath:indexPath];
+    if (cell==nil) {
+        cell=[[GGT_ScheduleStudyingCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:GGT_ScheduleCellID];
+    }
+    return cell;
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -43,6 +44,9 @@ static CGFloat const margin = 15.0f;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.backgroundColor = [UIColor groupTableViewBackgroundColor];
         [self configView];
+        
+        // 监听通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(countDownNotification) name:kCountDownNotification object:nil];
     }
     return self;
 }
@@ -142,15 +146,17 @@ static CGFloat const margin = 15.0f;
     });
     [self.xc_bodyView addSubview:self.xc_enterRoomButton];
     
+#pragma mark - 倒计时
+    
 }
 
 - (void)mas_View
 {
     [self.xc_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(LineW(margin));
-        make.right.equalTo(self).offset(-LineW(margin));
-        make.top.equalTo(self).offset(LineH(margin/2.0));
-        make.bottom.equalTo(self).offset(-LineH(margin/2.0));
+        make.left.equalTo(self).offset(LineW(margin15));
+        make.right.equalTo(self).offset(-LineW(margin15));
+        make.top.equalTo(self).offset(LineH(margin15/2.0));
+        make.bottom.equalTo(self).offset(-LineH(margin15/2.0));
     }];
     
     [self.xc_topView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -166,42 +172,42 @@ static CGFloat const margin = 15.0f;
     
     // xc_topView
     [self.xc_classTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.xc_topView).offset(LineW(margin));
+        make.left.equalTo(self.xc_topView).offset(LineW(margin15));
         make.centerY.equalTo(self.xc_topView.mas_centerY);
     }];
     
     [self.xc_markImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.xc_topView).offset(-LineW(margin));
+        make.right.equalTo(self.xc_topView).offset(-LineW(margin15));
         make.centerY.equalTo(self.xc_topView.mas_centerY);
         make.width.height.equalTo(@(LineW(18)));
     }];
     
     [self.xc_countDownLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.xc_markImageView.mas_left).offset(-LineW(margin));
+        make.right.equalTo(self.xc_markImageView.mas_left).offset(-LineW(margin15));
         make.centerY.equalTo(self.xc_topView.mas_centerY);
     }];
     
     
     // xc_bodyView
     [self.xc_headPortraitImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.xc_bodyView).offset(LineW(margin));
+        make.left.equalTo(self.xc_bodyView).offset(LineW(margin15));
         make.width.height.equalTo(@(LineW(60)));
         make.centerY.equalTo(self.xc_bodyView.mas_centerY);
     }];
     
     [self.xc_courseNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.xc_headPortraitImgView.mas_right).offset(LineW(margin));
-        make.top.equalTo(self.xc_headPortraitImgView.mas_top).offset(LineH(margin/2.0));
+        make.left.equalTo(self.xc_headPortraitImgView.mas_right).offset(LineW(margin15));
+        make.top.equalTo(self.xc_headPortraitImgView.mas_top).offset(LineH(margin15/2.0));
     }];
     
     [self.xc_teachNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.xc_headPortraitImgView.mas_bottom).offset(-LineH(margin/2.0));
+        make.bottom.equalTo(self.xc_headPortraitImgView.mas_bottom).offset(-LineH(margin15/2.0));
         make.left.equalTo(self.xc_courseNameLabel.mas_left);
     }];
     
 
     [self.xc_enterRoomButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.xc_bodyView).offset(-LineW(margin));
+        make.right.equalTo(self.xc_bodyView).offset(-LineW(margin15));
         make.bottom.equalTo(self.xc_headPortraitImgView);
         make.width.equalTo(@(LineW(71)));//142 × 62
         make.height.equalTo(@(31));
@@ -217,16 +223,37 @@ static CGFloat const margin = 15.0f;
     [self.xc_headPortraitImgView xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:self.xc_headPortraitImgView.width];
 }
 
-+ (instancetype)cellWithTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath
-{
-    NSString *GGT_ScheduleCellID = NSStringFromClass([self class]);
-    GGT_ScheduleStudyingCell *cell = [tableView dequeueReusableCellWithIdentifier:GGT_ScheduleCellID forIndexPath:indexPath];
-    if (cell==nil) {
-        cell=[[GGT_ScheduleStudyingCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:GGT_ScheduleCellID];
+
+
+#pragma mark - 倒计时通知回调
+- (void)countDownNotification {
+    /// 判断是否需要倒计时 -- 可能有的cell不需要倒计时,根据真实需求来进行判断
+    if (0) {
+        return;
     }
-    return cell;
+    /// 计算倒计时
+    NSInteger countDown = [self.xc_timeCount integerValue] - kCountDownManager.timeInterval;
+    if (countDown < 0) return;
+    /// 重新赋值
+    self.xc_countDownLabel.text = [NSString stringWithFormat:@"%02zd分%02zd秒", (countDown/60)%60, countDown%60];
+    /// 当倒计时到了进行回调
+    if (countDown == 0) {
+        self.xc_countDownLabel.text = xc_CountDownTitleName;
+        if (self.countDownZero) {
+            self.countDownZero();
+        }
+    }
 }
 
+- (void)setXc_timeCount:(NSString *)xc_timeCount
+{
+    _xc_timeCount = xc_timeCount;
+    // 手动调用通知的回调
+    [self countDownNotification];
+}
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
 
 @end
