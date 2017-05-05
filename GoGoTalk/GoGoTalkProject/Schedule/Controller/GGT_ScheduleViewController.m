@@ -9,7 +9,11 @@
 #import "GGT_ScheduleViewController.h"
 #import "FSCalendar.h"
 #import "GGT_CalendarCell.h"
-#import "GGT_ScheduleCell.h"
+#import "GGT_ScheduleStudyingCell.h"
+#import "GGT_ScheduleNormalCell.h"
+#import "GGT_ScheduleFinishedCanPlayCell.h"
+#import "OYCountDownManager.h"
+#import "GGT_ PreviewCoursewareVC.h"
 
 static NSString * const CalendarCellID = @"cell";
 static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
@@ -18,21 +22,18 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 {
     void * _KVOContext;
 }
-
 @property (weak, nonatomic) FSCalendar *calendar;
-@property (weak, nonatomic) UIButton *previousButton;
-@property (weak, nonatomic) UIButton *nextButton;
-
 @property (strong, nonatomic) NSCalendar *gregorian;
-
 @property (strong, nonatomic) NSArray *datesWithEvent;
 @property (strong, nonatomic) NSDateFormatter *xc_dateFormatter;
 @property (strong, nonatomic) NSDateFormatter *xc_dateFormatter2;
 @property (strong, nonatomic) UIButton *xc_titleButton;
-
 @property (strong, nonatomic) UIPanGestureRecognizer *scopeGesture;
-@property (strong, nonatomic) UITableView *xc_tableView;
 @property (strong, nonatomic) UIView *xc_lineView;
+
+
+@property (strong, nonatomic) UITableView *xc_tableView;
+
 
 @end
 
@@ -88,8 +89,6 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     calendar.weekdayHeight = LineH(44);
     
     [calendar xc_SetCornerWithSideType:XCSideTypeBottomLine cornerRadius:5.0f];
-    
-    
     
     // cell下面的横线
     calendar.appearance.separators = FSCalendarSeparatorInterRows;
@@ -199,6 +198,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 }
 
 
+// 设置calendar的subtitle上面的文字
 - (nullable NSString *)calendar:(FSCalendar *)calendar subtitleForDate:(NSDate *)date
 {
     NSString *dateString = [self.xc_dateFormatter stringFromDate:date];
@@ -342,59 +342,6 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     [self.view layoutIfNeeded];
 }
 
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    [self.calendar selectDate:[NSDate date] scrollToDate:YES];
-    
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self.calendar action:@selector(handleScopeGesture:)];
-    panGesture.delegate = self;
-    panGesture.minimumNumberOfTouches = 1;
-    panGesture.maximumNumberOfTouches = 2;
-    [self.view addGestureRecognizer:panGesture];
-    self.scopeGesture = panGesture;
-    
-    
-    self.xc_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-450) style:UITableViewStylePlain];
-    self.xc_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    self.xc_tableView.delegate = self;
-    self.xc_tableView.dataSource = self;
-    [self.view addSubview:self.xc_tableView];
-    [self.xc_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.calendar.mas_bottom).offset(10);
-        make.right.left.bottom.equalTo(self.view);
-    }];
-    
-    // While the scope gesture begin, the pan gesture of tableView should cancel.
-    [self.xc_tableView.panGestureRecognizer requireGestureRecognizerToFail:panGesture];
-    
-    [self.calendar addObserver:self forKeyPath:@"scope" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:_KVOContext];
-    
-    self.calendar.scope = FSCalendarScopeMonth;
-    
-    // For UITest
-    self.calendar.accessibilityIdentifier = @"calendar";
-    
-    [self.xc_tableView registerClass:[GGT_ScheduleCell class] forCellReuseIdentifier:NSStringFromClass([GGT_ScheduleCell class])];
-    
-    
-    __unsafe_unretained UITableView *tableView = self.xc_tableView;
-    // 下拉刷新
-    tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [tableView.mj_header endRefreshing];
-        });
-    }];
-    // 设置自动切换透明度(在导航栏下面自动隐藏)
-    tableView.mj_header.automaticallyChangeAlpha = YES;
-    
-}
-
 - (void)dealloc
 {
     [self.calendar removeObserver:self forKeyPath:@"scope" context:_KVOContext];
@@ -412,32 +359,11 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
         
         // 当scope状态更改后 需要刷新界面 否则subtitle可能不会显示出来
         // 若刷新后 又会出现闪烁的现象
-//        [self.calendar reloadData];
+        //        [self.calendar reloadData];
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
-
-
-#pragma mark - <UITableViewDelegate,UITableViewDataSource>
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 100;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    GGT_ScheduleCell *cell = [GGT_ScheduleCell cellWithTableView:tableView forIndexPath:indexPath];
-//    cell.backgroundColor = UICOLOR_RANDOM_COLOR();
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-//    return LineH(135);
-    return LineH(180);
-}
-
 
 #pragma mark - <UIGestureRecognizerDelegate>
 // Whether scope gesture should begin
@@ -465,5 +391,122 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     }
     return shouldBegin;
 }
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self.calendar selectDate:[NSDate date] scrollToDate:YES];
+    
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self.calendar action:@selector(handleScopeGesture:)];
+    panGesture.delegate = self;
+    panGesture.minimumNumberOfTouches = 1;
+    panGesture.maximumNumberOfTouches = 2;
+    [self.view addGestureRecognizer:panGesture];
+    self.scopeGesture = panGesture;
+    
+    
+    self.xc_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-450) style:UITableViewStylePlain];
+    self.xc_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    self.xc_tableView.delegate = self;
+    self.xc_tableView.dataSource = self;
+    [self.view addSubview:self.xc_tableView];
+    [self.xc_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.calendar.mas_bottom);
+        make.right.left.bottom.equalTo(self.view);
+    }];
+    
+    // While the scope gesture begin, the pan gesture of tableView should cancel.
+    [self.xc_tableView.panGestureRecognizer requireGestureRecognizerToFail:panGesture];
+    
+    [self.calendar addObserver:self forKeyPath:@"scope" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:_KVOContext];
+    
+    self.calendar.scope = FSCalendarScopeMonth;
+    
+    // For UITest
+    self.calendar.accessibilityIdentifier = @"calendar";
+    
+    // 配置tableView
+    [self configTableView];
+    
+    // 启动倒计时管理
+    [kCountDownManager start];
+}
+
+#pragma mark - 刷新数据
+- (void)reloadData {
+    // 网络加载数据
+    
+    // 调用[kCountDownManager reload]
+    [kCountDownManager reload];
+    // 刷新
+    [self.xc_tableView reloadData];
+}
+
+// 配置tableView
+- (void)configTableView
+{
+    [self.xc_tableView registerClass:[GGT_ScheduleStudyingCell class] forCellReuseIdentifier:NSStringFromClass([GGT_ScheduleStudyingCell class])];
+    [self.xc_tableView registerClass:[GGT_ScheduleNormalCell class] forCellReuseIdentifier:NSStringFromClass([GGT_ScheduleNormalCell class])];
+    [self.xc_tableView registerClass:[GGT_ScheduleFinishedCanPlayCell class] forCellReuseIdentifier:NSStringFromClass([GGT_ScheduleFinishedCanPlayCell class])];
+    
+    __unsafe_unretained UITableView *tableView = self.xc_tableView;
+    // 下拉刷新
+    tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [tableView.mj_header endRefreshing];
+        });
+    }];
+    // 设置自动切换透明度(在导航栏下面自动隐藏)
+    tableView.mj_header.automaticallyChangeAlpha = YES;
+}
+
+#pragma mark - <UITableViewDelegate,UITableViewDataSource>
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row % 3 == 0) {
+        GGT_ScheduleStudyingCell *cell = [GGT_ScheduleStudyingCell cellWithTableView:tableView forIndexPath:indexPath];
+        cell.xc_timeCount = @"10";
+        return cell;
+    }
+    if (indexPath.row % 3 == 1) {
+        GGT_ScheduleNormalCell *cell = [GGT_ScheduleNormalCell cellWithTableView:tableView forIndexPath:indexPath];
+        return cell;
+    }
+    if (indexPath.row % 3 == 2) {
+        GGT_ScheduleFinishedCanPlayCell *cell = [GGT_ScheduleFinishedCanPlayCell cellWithTableView:tableView forIndexPath:indexPath];
+        return cell;
+    }
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row % 3 == 0) {
+        return LineH(135);
+    }
+    if (indexPath.row % 3 == 1) {
+        return LineH(135);
+    }
+    if (indexPath.row % 3 == 2) {
+        return LineH(180);
+    }
+    return 0;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GGT__PreviewCoursewareVC *vc = [GGT__PreviewCoursewareVC new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end

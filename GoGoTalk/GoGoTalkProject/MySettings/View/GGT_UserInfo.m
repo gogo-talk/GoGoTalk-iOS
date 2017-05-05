@@ -14,16 +14,26 @@
 {
     if(self == [super initWithFrame:frame]){
         UIImageView *userInfoView = [UIImageView new];
-        userInfoView.image = UIIMAGE_FROM_NAME(@"beijing_wode_top");
         
+        userInfoView.image = UIIMAGE_FROM_NAME(@"beijing_wode_top");
+        userInfoView.userInteractionEnabled = YES;
         [self addSubview:userInfoView];
         //头像
-        UIImageView *imageView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wudingdan_wode"]];
+        /*UIImageView *imageView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wudingdan_wode"]];
         imageView1.layer.masksToBounds =YES;
-        imageView1.layer.cornerRadius =32;
+        imageView1.layer.cornerRadius =LineX(32);
         [imageView1.layer setBorderWidth:2.5];
         [imageView1.layer setBorderColor:[[UIColor colorWithRed:207/255.0 green:18/255.0 blue:28/255.0 alpha:1] CGColor]];
-        [userInfoView addSubview:imageView1];
+        [userInfoView addSubview:imageView1];*/
+        UIButton *headerBtn = [[UIButton alloc] init];
+        [headerBtn setImage:[UIImage imageNamed:@"wudingdan_wode"] forState:UIControlStateNormal];
+        [headerBtn setImage:[UIImage imageNamed:@"wudingdan_wode"] forState:UIControlStateHighlighted];
+        headerBtn.layer.masksToBounds = YES;
+        headerBtn.layer.cornerRadius = LineX(32);
+        [headerBtn.layer setBorderWidth:2.5];
+        [headerBtn.layer setBorderColor:[[UIColor colorWithRed:207/255.0 green:18/255.0 blue:28/255.0 alpha:1] CGColor]];
+        [userInfoView addSubview:headerBtn];
+        
         //英文昵称
         UILabel *name_en = [[UILabel alloc] init];
         name_en.text = @"Ruihua";
@@ -61,7 +71,7 @@
             make.right.equalTo(self.mas_right).with.offset(0);
             make.height.mas_equalTo(LineH(168));
         }];
-        [imageView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        [headerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(userInfoView.mas_top).with.offset(LineY(13));
             make.left.equalTo(userInfoView.mas_left).with.offset(LineX(20));
             make.width.mas_equalTo(LineW(65));
@@ -70,7 +80,7 @@
         //英文昵称布局
         [name_en mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(userInfoView.mas_top).with.offset(LineY(22));
-            make.left.equalTo(imageView1.mas_right).with.offset(LineX(10));
+            make.left.equalTo(headerBtn.mas_right).with.offset(LineX(10));
             make.height.mas_equalTo(LineH(12));
         }];
         //中文昵称布局
@@ -85,6 +95,7 @@
             make.left.mas_equalTo(name_en.mas_left);
             make.height.mas_equalTo(LineH(10));
         }];
+        self.headerButton = headerBtn;
     }
     
     return self;
