@@ -22,5 +22,9 @@
 //导航进入到个人中心
 - (void)initMineController;
 
-- (void)setRightButton:(NSString *)imageName;
+//客服电话
+- (void)initServiceTelephone;
+    
+    
+- (void)setRightButtonWithImg:(NSString *)imageName;
 @end

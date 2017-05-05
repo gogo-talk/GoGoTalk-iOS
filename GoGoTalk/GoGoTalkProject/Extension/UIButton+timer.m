@@ -13,7 +13,7 @@
 //获取验证码倒计时
 -(void)addTimer
 {
-    __block int timeout= 120;//倒计时时间
+    __block int timeout= 60;//倒计时时间
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
     dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC, 0);//没秒执行
@@ -25,8 +25,9 @@
                 ;
                 self.userInteractionEnabled=YES;
                 //设置界面的按钮显示 根据自己需求设置;
-                [self setTitle:[NSString stringWithFormat:@"再次发送"] forState:UIControlStateNormal];
-                
+                [self setTitle:@"获取验证码" forState:(UIControlStateNormal)];
+                [self setTitleColor:UICOLOR_FROM_HEX(ColorCF121C) forState:(UIControlStateNormal)];
+                self.titleLabel.font = Font(13);
             });
         }else{
             NSString *strTime = [NSString stringWithFormat:@"%d %@",timeout,@"s"];
@@ -34,6 +35,8 @@
                 //设置按钮显示;
                 self.userInteractionEnabled=NO;
                 [self setTitle:strTime forState:UIControlStateNormal];
+                [self setTitleColor:UICOLOR_FROM_HEX(ColorCCCCCC) forState:(UIControlStateNormal)];
+                self.titleLabel.font = Font(13);
                 
             });
             timeout--;

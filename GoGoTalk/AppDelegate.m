@@ -25,7 +25,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
-    //设置启动页面时间
+    //设置启动页面时间 ------上线的时候打开，平时启动太慢
      [NSThread sleepForTimeInterval:2.0];
     
     [self initKeyWindow];

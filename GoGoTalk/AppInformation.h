@@ -33,6 +33,7 @@
 
 #define MainColor [UIColor colorWithHexString:@"#EA5851"]
 
+#define phoneNumber @"4008787276"
 
 /*
  比例

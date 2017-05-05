@@ -1,5 +1,5 @@
 //
-//  GGT_ PreviewCoursewareVC.h
+//  GGT_PreviewCoursewareVC.h
 //  GoGoTalk
 //
 //  Created by 辰 on 2017/5/5.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GGT__PreviewCoursewareVC : BaseBackViewController
+@interface GGT_PreviewCoursewareVC : BaseBackViewController
 
 @end
