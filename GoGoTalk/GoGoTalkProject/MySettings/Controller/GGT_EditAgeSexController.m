@@ -1,0 +1,114 @@
+//
+//  GGT_EditAgeSexController.m
+//  GoGoTalk
+//
+//  Created by 何建新 on 2017/5/5.
+//  Copyright © 2017年 XieHenry. All rights reserved.
+//
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+#import "GGT_EditAgeSexController.h"
+#import "GGT_AgeSexPickerView.h"
+@interface GGT_EditAgeSexController ()
+@property(nonatomic, strong) GGT_AgeSexPickerView *pickerView;
+@property(nonatomic, strong) UIButton *ageSexBtn;
+@end
+
+@implementation GGT_EditAgeSexController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = UICOLOR_FROM_HEX(0xf2f2f2);
+    [self setNavigationItems];
+    [self createAgeSexButton];
+}
+-(void)setNavigationItems
+{
+    //导航栏标题
+    self.navigationItem.title = self.titleName;
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rightBtn setTitle:@"提交" forState:UIControlStateNormal];
+    
+    rightBtn.frame = CGRectMake(0, 0, 100, 30);
+    [rightBtn sizeToFit];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    
+    //创建FixedSpace。用来控制上面按钮位置
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    //设置negativeSpacer的宽度
+    negativeSpacer.width = -5;
+    self.navigationItem.rightBarButtonItems = @[negativeSpacer,rightItem];
+    
+}
+-(void)createAgeSexButton
+{
+    UIView *bgView = [UIView new];
+    bgView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:bgView];
+    UIButton *ageSexBtn = [UIButton new];
+    
+    [ageSexBtn setTitle:self.prompt forState:UIControlStateNormal];
+    [ageSexBtn setTitleColor:UICOLOR_FROM_HEX(0x999999) forState:UIControlStateNormal];
+    ageSexBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [ageSexBtn setFont:Font(16)];
+    [ageSexBtn addTarget:self action:@selector(ageSexBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    ageSexBtn.backgroundColor = [UIColor whiteColor];
+    [bgView addSubview:ageSexBtn];
+    
+    [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(LineH(44));
+        make.top.mas_equalTo(LineY(10));
+        make.left.mas_equalTo(0);
+        make.right.mas_equalTo(0);
+    }];
+    
+    
+    [ageSexBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(bgView.mas_left).with.offset(LineX(20));
+        make.top.mas_equalTo(bgView.mas_top);
+        make.bottom.mas_equalTo(bgView.mas_bottom);
+        make.right.mas_equalTo(bgView.mas_right);
+    }];
+    self.ageSexBtn = ageSexBtn;
+}
+-(void)ageSexBtnClick:(UIButton *)sender
+{
+    NSArray *array = @[@"男",@"女"];
+    self.pickerView = [[GGT_AgeSexPickerView alloc] initWithFrame:CGRectMake(0, ScreenH-256, ScreenW, 256)];
+    self.pickerView.pickerDataArray = array;
+    [self.pickerView.pickerView selectRow:0 inComponent:0 animated:YES];
+    [self.pickerView popPickerView];
+    [self.view addSubview:self.pickerView];
+//    [self.pickerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(0);
+//        make.right.mas_equalTo(0);
+//        make.height.mas_equalTo(LineH(141));
+//        make.bottom.equalTo(self.view.mas_bottom);
+//    }];
+    __weak typeof (self) weakself = self;
+    self.pickerView.selectBlock = ^(NSString *str) {
+        [weakself currentSource:str];
+    };
+}
+//选中的数据
+-(void)currentSource:(NSString *)str
+{
+    [self.ageSexBtn setTitle:str forState:UIControlStateNormal];
+    [self.ageSexBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

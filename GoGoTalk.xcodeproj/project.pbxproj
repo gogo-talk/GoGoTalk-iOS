@@ -12,6 +12,8 @@
 		3552104B1EBC766C0057EA59 /* GGT_EditUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */; };
 		358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F522C1EBB034D004A7692 /* GGT_UserInfo.m */; };
 		358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */; };
+		35DE2CD01EBCC08600E41B34 /* GGT_EditAgeSexController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DE2CCF1EBCC08600E41B34 /* GGT_EditAgeSexController.m */; };
+		35DE2CD91EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DE2CD81EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m */; };
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B577CD21EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m */; };
@@ -99,6 +101,10 @@
 		358F522C1EBB034D004A7692 /* GGT_UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserInfo.m; sourceTree = "<group>"; };
 		358F52311EBB2FF3004A7692 /* GGT_SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_SettingTableViewCell.h; sourceTree = "<group>"; };
 		358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_SettingTableViewCell.m; sourceTree = "<group>"; };
+		35DE2CCE1EBCC08600E41B34 /* GGT_EditAgeSexController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_EditAgeSexController.h; sourceTree = "<group>"; };
+		35DE2CCF1EBCC08600E41B34 /* GGT_EditAgeSexController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_EditAgeSexController.m; sourceTree = "<group>"; };
+		35DE2CD71EBCCEEB00E41B34 /* GGT_AgeSexPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AgeSexPickerView.h; sourceTree = "<group>"; };
+		35DE2CD81EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_AgeSexPickerView.m; sourceTree = "<group>"; };
 		5B0B4F3B1EB0665B00D81B8E /* GGT_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Singleton.h; sourceTree = "<group>"; };
 		5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Singleton.m; sourceTree = "<group>"; };
 		5B0B4F461EB06D5400D81B8E /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
@@ -259,6 +265,8 @@
 				358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */,
 				355210461EBC49BE0057EA59 /* GGT_InfoListCell.h */,
 				355210471EBC49BE0057EA59 /* GGT_InfoListCell.m */,
+				35DE2CD71EBCCEEB00E41B34 /* GGT_AgeSexPickerView.h */,
+				35DE2CD81EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -444,6 +452,8 @@
 				355210441EBC40920057EA59 /* GGT_InfoListViewController.m */,
 				355210491EBC766C0057EA59 /* GGT_EditUserInfoController.h */,
 				3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */,
+				35DE2CCE1EBCC08600E41B34 /* GGT_EditAgeSexController.h */,
+				35DE2CCF1EBCC08600E41B34 /* GGT_EditAgeSexController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -844,6 +854,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DE2CD91EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m in Sources */,
 				D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */,
 				D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */,
 				D604309C1EBC7CDB00F53437 /* GGT_PreviewTopView.m in Sources */,
@@ -886,6 +897,7 @@
 				5BEC18F91EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m in Sources */,
 				5B695B2C1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m in Sources */,
 				D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */,
+				35DE2CD01EBCC08600E41B34 /* GGT_EditAgeSexController.m in Sources */,
 				5BA10D441EB1E2490091093C /* GGT_RegisterView.m in Sources */,
 				5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */,
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,

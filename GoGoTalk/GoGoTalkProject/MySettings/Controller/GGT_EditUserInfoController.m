@@ -19,6 +19,7 @@
     self.view.backgroundColor = UICOLOR_FROM_HEX(0xf2f2f2);
     [self setNavigationItems];
     [self createEditTextField];
+    
 }
 -(void)setNavigationItems
 {
