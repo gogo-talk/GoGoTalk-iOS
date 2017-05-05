@@ -17,4 +17,10 @@
 
 //发送修改密码短信
 + (NSString *)URL_GetChangePasswordSMS;
+
+//通过手机验证吗修改密码
++ (NSString *)URL_ChangePwdByCode;
+
+
+
 @end
