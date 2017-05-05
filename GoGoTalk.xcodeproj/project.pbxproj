@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355210441EBC40920057EA59 /* GGT_InfoListViewController.m */; };
+		355210481EBC49BE0057EA59 /* GGT_InfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355210471EBC49BE0057EA59 /* GGT_InfoListCell.m */; };
 		358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F522C1EBB034D004A7692 /* GGT_UserInfo.m */; };
 		358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */; };
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
@@ -81,6 +82,8 @@
 		1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGoTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		355210431EBC40920057EA59 /* GGT_InfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_InfoListViewController.h; sourceTree = "<group>"; };
 		355210441EBC40920057EA59 /* GGT_InfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_InfoListViewController.m; sourceTree = "<group>"; };
+		355210461EBC49BE0057EA59 /* GGT_InfoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_InfoListCell.h; sourceTree = "<group>"; };
+		355210471EBC49BE0057EA59 /* GGT_InfoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_InfoListCell.m; sourceTree = "<group>"; };
 		358F522B1EBB034D004A7692 /* GGT_UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_UserInfo.h; sourceTree = "<group>"; };
 		358F522C1EBB034D004A7692 /* GGT_UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserInfo.m; sourceTree = "<group>"; };
 		358F52311EBB2FF3004A7692 /* GGT_SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_SettingTableViewCell.h; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 				358F522C1EBB034D004A7692 /* GGT_UserInfo.m */,
 				358F52311EBB2FF3004A7692 /* GGT_SettingTableViewCell.h */,
 				358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */,
+				355210461EBC49BE0057EA59 /* GGT_InfoListCell.h */,
+				355210471EBC49BE0057EA59 /* GGT_InfoListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -808,6 +813,7 @@
 				D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */,
 				5BEC18ED1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m in Sources */,
 				D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */,
+				355210481EBC49BE0057EA59 /* GGT_InfoListCell.m in Sources */,
 				5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */,
 				358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */,
 				5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */,

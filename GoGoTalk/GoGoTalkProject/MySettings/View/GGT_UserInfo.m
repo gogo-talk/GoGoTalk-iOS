@@ -14,6 +14,7 @@
 {
     if(self == [super initWithFrame:frame]){
         UIImageView *userInfoView = [UIImageView new];
+        
         userInfoView.image = UIIMAGE_FROM_NAME(@"beijing_wode_top");
         userInfoView.userInteractionEnabled = YES;
         [self addSubview:userInfoView];
@@ -26,6 +27,7 @@
         [userInfoView addSubview:imageView1];*/
         UIButton *headerBtn = [[UIButton alloc] init];
         [headerBtn setImage:[UIImage imageNamed:@"wudingdan_wode"] forState:UIControlStateNormal];
+        [headerBtn setImage:[UIImage imageNamed:@"wudingdan_wode"] forState:UIControlStateHighlighted];
         headerBtn.layer.masksToBounds = YES;
         headerBtn.layer.cornerRadius = LineX(32);
         [headerBtn.layer setBorderWidth:2.5];
