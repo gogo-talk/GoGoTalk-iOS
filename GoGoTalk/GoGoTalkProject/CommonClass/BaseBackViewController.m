@@ -19,4 +19,9 @@
     [self setLeftBackButton];
 }
 
+- (BOOL)hidesBottomBarWhenPushed
+{
+    return YES;
+}
+
 @end

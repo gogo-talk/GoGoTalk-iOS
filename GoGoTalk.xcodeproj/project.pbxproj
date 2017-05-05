@@ -45,9 +45,10 @@
 		D696AFD3BE34379B2D601BF6 /* libPods-GoGoTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */; };
 		D6B590801EBC0AED00086648 /* GGT_ScheduleNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */; };
 		D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */; };
-		D6B590861EBC3F1E00086648 /* GGT_ PreviewCoursewareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B590851EBC3F1E00086648 /* GGT_ PreviewCoursewareVC.m */; };
 		D6B591671EBC676800086648 /* OYCountDownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B591661EBC676800086648 /* OYCountDownManager.m */; };
 		D6B5916A1EBC716700086648 /* BaseBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B591691EBC716600086648 /* BaseBackViewController.m */; };
+		D6B5916D1EBC73F700086648 /* GGT_PreviewTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B5916C1EBC73F700086648 /* GGT_PreviewTopView.m */; };
+		D6B591701EBC768300086648 /* GGT_PreviewCoursewareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B5916F1EBC768300086648 /* GGT_PreviewCoursewareVC.m */; };
 		D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */; };
 		D6C7AAA81EB1870900EBF0D1 /* GGT_Request_Url.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA71EB1870900EBF0D1 /* GGT_Request_Url.m */; };
 		D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAAA1EB1872000EBF0D1 /* NSArray+SafeExtension.m */; };
@@ -160,12 +161,14 @@
 		D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleNormalCell.m; sourceTree = "<group>"; };
 		D6B590811EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleFinishedCanPlayCell.h; sourceTree = "<group>"; };
 		D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleFinishedCanPlayCell.m; sourceTree = "<group>"; };
-		D6B590841EBC3F1E00086648 /* GGT_ PreviewCoursewareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGT_ PreviewCoursewareVC.h"; sourceTree = "<group>"; };
-		D6B590851EBC3F1E00086648 /* GGT_ PreviewCoursewareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GGT_ PreviewCoursewareVC.m"; sourceTree = "<group>"; };
 		D6B591651EBC676800086648 /* OYCountDownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYCountDownManager.h; sourceTree = "<group>"; };
 		D6B591661EBC676800086648 /* OYCountDownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYCountDownManager.m; sourceTree = "<group>"; };
 		D6B591681EBC716600086648 /* BaseBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseBackViewController.h; sourceTree = "<group>"; };
 		D6B591691EBC716600086648 /* BaseBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseBackViewController.m; sourceTree = "<group>"; };
+		D6B5916B1EBC73F700086648 /* GGT_PreviewTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_PreviewTopView.h; sourceTree = "<group>"; };
+		D6B5916C1EBC73F700086648 /* GGT_PreviewTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_PreviewTopView.m; sourceTree = "<group>"; };
+		D6B5916E1EBC768300086648 /* GGT_PreviewCoursewareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_PreviewCoursewareVC.h; sourceTree = "<group>"; };
+		D6B5916F1EBC768300086648 /* GGT_PreviewCoursewareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_PreviewCoursewareVC.m; sourceTree = "<group>"; };
 		D6C7AAA31EB186F800EBF0D1 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D6C7AAA61EB1870900EBF0D1 /* GGT_Request_Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Request_Url.h; sourceTree = "<group>"; };
@@ -437,8 +440,8 @@
 			children = (
 				D6C7AAB21EB1875800EBF0D1 /* GGT_ScheduleViewController.h */,
 				D6C7AAB31EB1875800EBF0D1 /* GGT_ScheduleViewController.m */,
-				D6B590841EBC3F1E00086648 /* GGT_ PreviewCoursewareVC.h */,
-				D6B590851EBC3F1E00086648 /* GGT_ PreviewCoursewareVC.m */,
+				D6B5916E1EBC768300086648 /* GGT_PreviewCoursewareVC.h */,
+				D6B5916F1EBC768300086648 /* GGT_PreviewCoursewareVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -606,6 +609,8 @@
 				D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */,
 				D6B590811EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.h */,
 				D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */,
+				D6B5916B1EBC73F700086648 /* GGT_PreviewTopView.h */,
+				D6B5916C1EBC73F700086648 /* GGT_PreviewTopView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -829,6 +834,7 @@
 				D6B591671EBC676800086648 /* OYCountDownManager.m in Sources */,
 				5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */,
 				D6C7AAB71EB1876900EBF0D1 /* GGT_OrderCourseViewController.m in Sources */,
+				D6B5916D1EBC73F700086648 /* GGT_PreviewTopView.m in Sources */,
 				358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */,
 				D6C7AAAE1EB1873200EBF0D1 /* GGT_MineViewController.m in Sources */,
 				5BEC18F61EB85E7B009DF2F8 /* GGT_OrderForeignListCell.m in Sources */,
@@ -850,8 +856,8 @@
 				5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */,
 				355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */,
 				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
+				D6B591701EBC768300086648 /* GGT_PreviewCoursewareVC.m in Sources */,
 				5B577CD61EB983E3005F009F /* GGT_OrderTimeHeaderCollectionViewCell.m in Sources */,
-				D6B590861EBC3F1E00086648 /* GGT_ PreviewCoursewareVC.m in Sources */,
 				D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */,
 				D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */,
 				5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */,
