@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F522C1EBB034D004A7692 /* GGT_UserInfo.m */; };
 		358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */; };
+		39744E351EBC0EF800B1BA93 /* GGT_InfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39744E341EBC0EF800B1BA93 /* GGT_InfoListViewController.m */; };
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B577CD21EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m */; };
@@ -82,6 +83,8 @@
 		358F522C1EBB034D004A7692 /* GGT_UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserInfo.m; sourceTree = "<group>"; };
 		358F52311EBB2FF3004A7692 /* GGT_SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_SettingTableViewCell.h; sourceTree = "<group>"; };
 		358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_SettingTableViewCell.m; sourceTree = "<group>"; };
+		39744E331EBC0EF800B1BA93 /* GGT_InfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_InfoListViewController.h; sourceTree = "<group>"; };
+		39744E341EBC0EF800B1BA93 /* GGT_InfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_InfoListViewController.m; sourceTree = "<group>"; };
 		5B0B4F3B1EB0665B00D81B8E /* GGT_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Singleton.h; sourceTree = "<group>"; };
 		5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Singleton.m; sourceTree = "<group>"; };
 		5B0B4F461EB06D5400D81B8E /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 			children = (
 				D6C7AAAC1EB1873200EBF0D1 /* GGT_MineViewController.h */,
 				D6C7AAAD1EB1873200EBF0D1 /* GGT_MineViewController.m */,
+				39744E331EBC0EF800B1BA93 /* GGT_InfoListViewController.h */,
+				39744E341EBC0EF800B1BA93 /* GGT_InfoListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -826,6 +831,7 @@
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
 				5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */,
+				39744E351EBC0EF800B1BA93 /* GGT_InfoListViewController.m in Sources */,
 				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
 				5B577CD61EB983E3005F009F /* GGT_OrderTimeHeaderCollectionViewCell.m in Sources */,
 				D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */,

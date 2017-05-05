@@ -9,10 +9,12 @@
 #import "GGT_MineViewController.h"
 #import "GGT_UserInfo.h"
 #import "GGT_SettingTableViewCell.h"
+#import "GGT_InfoListViewController.h"
 @interface GGT_MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray *infoArray;
 @property(nonatomic, strong) NSArray *infoArray2;
+@property(nonatomic, strong) GGT_UserInfo *userIfnoView;
 @end
 
 @implementation GGT_MineViewController
@@ -46,6 +48,7 @@
     [self userSetting];
     
     
+    
 }
 //设置导航栏样式
 -(void)setNavigationStyle
@@ -64,6 +67,13 @@
         make.top.mas_equalTo(0);
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(LineH(168));
+    }];
+    self.userIfnoView = userInfo;
+    @weakify(self);
+    [[self.userIfnoView.headerButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        GGT_InfoListViewController *infoController = [GGT_InfoListViewController new];
+        [self.navigationController pushViewController:infoController animated:YES];
     }];
 }
 //设置item
