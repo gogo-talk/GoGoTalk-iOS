@@ -1,22 +1,22 @@
 //
-//  GGT_ PreviewCoursewareVC.m
+//  BaseBackViewController.m
 //  GoGoTalk
 //
 //  Created by 辰 on 2017/5/5.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#import "GGT_ PreviewCoursewareVC.h"
+#import "BaseBackViewController.h"
 
-@interface GGT__PreviewCoursewareVC ()
+@interface BaseBackViewController ()
 
 @end
 
-@implementation GGT__PreviewCoursewareVC
+@implementation BaseBackViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setLeftBackButton];
 }
 
 @end

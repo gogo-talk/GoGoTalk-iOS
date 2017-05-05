@@ -47,6 +47,7 @@
 		D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */; };
 		D6B590861EBC3F1E00086648 /* GGT_ PreviewCoursewareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B590851EBC3F1E00086648 /* GGT_ PreviewCoursewareVC.m */; };
 		D6B591671EBC676800086648 /* OYCountDownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B591661EBC676800086648 /* OYCountDownManager.m */; };
+		D6B5916A1EBC716700086648 /* BaseBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B591691EBC716600086648 /* BaseBackViewController.m */; };
 		D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */; };
 		D6C7AAA81EB1870900EBF0D1 /* GGT_Request_Url.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA71EB1870900EBF0D1 /* GGT_Request_Url.m */; };
 		D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAAA1EB1872000EBF0D1 /* NSArray+SafeExtension.m */; };
@@ -163,6 +164,8 @@
 		D6B590851EBC3F1E00086648 /* GGT_ PreviewCoursewareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GGT_ PreviewCoursewareVC.m"; sourceTree = "<group>"; };
 		D6B591651EBC676800086648 /* OYCountDownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYCountDownManager.h; sourceTree = "<group>"; };
 		D6B591661EBC676800086648 /* OYCountDownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYCountDownManager.m; sourceTree = "<group>"; };
+		D6B591681EBC716600086648 /* BaseBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseBackViewController.h; sourceTree = "<group>"; };
+		D6B591691EBC716600086648 /* BaseBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseBackViewController.m; sourceTree = "<group>"; };
 		D6C7AAA31EB186F800EBF0D1 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D6C7AAA61EB1870900EBF0D1 /* GGT_Request_Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Request_Url.h; sourceTree = "<group>"; };
@@ -522,6 +525,8 @@
 			children = (
 				D6C7AAA31EB186F800EBF0D1 /* BaseViewController.h */,
 				D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */,
+				D6B591681EBC716600086648 /* BaseBackViewController.h */,
+				D6B591691EBC716600086648 /* BaseBackViewController.m */,
 				5BC2AFA81EB05241004DF44D /* BaseTabBarController.h */,
 				5BC2AFA91EB05241004DF44D /* BaseTabBarController.m */,
 				5BC2AFAE1EB05320004DF44D /* BaseNavigationController.h */,
@@ -810,6 +815,7 @@
 				D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */,
 				5BEC18FE1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m in Sources */,
 				5BEC18F31EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m in Sources */,
+				D6B5916A1EBC716700086648 /* BaseBackViewController.m in Sources */,
 				D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */,
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
 				5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */,
