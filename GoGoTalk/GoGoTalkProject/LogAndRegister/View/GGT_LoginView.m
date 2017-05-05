@@ -256,6 +256,19 @@
 }
 
 
+#pragma mark 检测输入框的字数限制
+- (void)textFieldDidChange:(UITextField *)textField {
+    if (textField == self.phoneAccountField) {
+        if (textField.text.length > 11) {
+            textField.text = [textField.text substringToIndex:11];
+        }
+    } else {
+        
+        if (textField.text.length > 12) {
+            textField.text = [textField.text substringToIndex:12];
+        }
+    }
+}
 
 
 

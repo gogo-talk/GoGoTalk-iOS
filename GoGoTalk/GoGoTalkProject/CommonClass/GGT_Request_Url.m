@@ -28,4 +28,11 @@
 
 }
 
+//通过手机验证吗修改密码
++ (NSString *)URL_ChangePwdByCode {
+    return [NSString stringWithFormat:@"%@/API/User/ChangePwdByCode",PrefixAddress];
+    
+}
+
+
 @end

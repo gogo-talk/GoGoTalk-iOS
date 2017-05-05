@@ -85,9 +85,9 @@
     [BaseNetManager afPostRequest:[GGT_Request_Url URL_Resigt] parms:postDic finished:^(id responseObj) {
         [MBProgressHUD hideHUDForView:self.view];
 
-//        NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
-//        NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-//        NSLog(@"注册成功~~~%@",jsonStr);
+        NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
+        NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"注册成功url=%@~~~%@",[GGT_Request_Url URL_Resigt],jsonStr);
         
         
         if ([responseObj[@"result"] isEqual:@1]) {
@@ -122,7 +122,8 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:@"yes" forKey:@"login"];
     BaseTabBarController *tabVc = [[BaseTabBarController alloc]init];
-    [self.navigationController pushViewController:tabVc animated:YES];}
+    [self.navigationController pushViewController:tabVc animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {

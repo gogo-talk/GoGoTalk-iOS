@@ -13,6 +13,9 @@
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B577CD21EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m */; };
 		5B577CD61EB983E3005F009F /* GGT_OrderTimeHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B577CD51EB983E3005F009F /* GGT_OrderTimeHeaderCollectionViewCell.m */; };
+		5B695B291EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B281EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m */; };
+		5B695B2C1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */; };
+		5B695B2F1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B2E1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m */; };
 		5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D1A1EB1D19F0091093C /* GGT_ForgotPasswordView.m */; };
 		5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D1C1EB1D19F0091093C /* GGT_LoginView.m */; };
 		5BA10D411EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D401EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m */; };
@@ -88,6 +91,12 @@
 		5B577CD21EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderTimeCollectionViewCell.m; sourceTree = "<group>"; };
 		5B577CD41EB983E3005F009F /* GGT_OrderTimeHeaderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_OrderTimeHeaderCollectionViewCell.h; sourceTree = "<group>"; };
 		5B577CD51EB983E3005F009F /* GGT_OrderTimeHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderTimeHeaderCollectionViewCell.m; sourceTree = "<group>"; };
+		5B695B271EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_HomeBannerTableViewCell.h; sourceTree = "<group>"; };
+		5B695B281EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_HomeBannerTableViewCell.m; sourceTree = "<group>"; };
+		5B695B2A1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_HomeCommonCenterCell.h; sourceTree = "<group>"; };
+		5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_HomeCommonCenterCell.m; sourceTree = "<group>"; };
+		5B695B2D1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_HomeBedtimeStoryCell.h; sourceTree = "<group>"; };
+		5B695B2E1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_HomeBedtimeStoryCell.m; sourceTree = "<group>"; };
 		5BA10D1A1EB1D19F0091093C /* GGT_ForgotPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ForgotPasswordView.m; sourceTree = "<group>"; };
 		5BA10D1B1EB1D19F0091093C /* GGT_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_LoginView.h; sourceTree = "<group>"; };
 		5BA10D1C1EB1D19F0091093C /* GGT_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_LoginView.m; sourceTree = "<group>"; };
@@ -527,6 +536,12 @@
 				5BEC18EC1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m */,
 				5BEC18F41EB85E7B009DF2F8 /* GGT_OrderForeignListCell.h */,
 				5BEC18F51EB85E7B009DF2F8 /* GGT_OrderForeignListCell.m */,
+				5B695B271EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.h */,
+				5B695B281EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m */,
+				5B695B2A1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.h */,
+				5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */,
+				5B695B2D1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.h */,
+				5B695B2E1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -790,6 +805,7 @@
 				5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */,
 				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
 				D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */,
+				5B695B291EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m in Sources */,
 				D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */,
 				5BEC18ED1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m in Sources */,
 				D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */,
@@ -802,12 +818,14 @@
 				5BEC18F61EB85E7B009DF2F8 /* GGT_OrderForeignListCell.m in Sources */,
 				D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */,
 				5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */,
+				5B695B2F1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m in Sources */,
 				D65C74731EB9D8080060180F /* GGT_ScheduleCell.m in Sources */,
 				D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */,
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
 				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
 				5BEC18F91EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m in Sources */,
+				5B695B2C1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m in Sources */,
 				D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */,
 				5BA10D441EB1E2490091093C /* GGT_RegisterView.m in Sources */,
 				5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */,
