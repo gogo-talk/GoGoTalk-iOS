@@ -13,6 +13,7 @@
 #import "GGT_ScheduleNormalCell.h"
 #import "GGT_ScheduleFinishedCanPlayCell.h"
 #import "OYCountDownManager.h"
+#import "GGT_PreviewCoursewareVC.h"
 
 static NSString * const CalendarCellID = @"cell";
 static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
@@ -501,6 +502,10 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     return 0;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GGT_PreviewCoursewareVC *vc = [GGT_PreviewCoursewareVC new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
