@@ -2,15 +2,13 @@
 //  GGT_InfoListViewController.m
 //  GoGoTalk
 //
-//  Created by GoGoTalk on 2017/5/5.
+//  Created by 何建新 on 2017/5/5.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
 #import "GGT_InfoListViewController.h"
-@interface GGT_InfoListViewController()
-@property(nonatomic, strong) UITableView *tableView;
-@end
-@interface GGT_InfoListViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@interface GGT_InfoListViewController ()
 
 @end
 
@@ -18,33 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //[self setNavigationStyle];
-    
+    // Do any additional setup after loading the view.
+    self.navigationItem.title = @"个人信息";
 }
-//-(void)setNavigationStyle
-//{
-////    self.navigationItem.title = @"个人信息";
-////    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"fanhui_top"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
-////    
-////    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
-////                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
-////                                       target:nil action:nil];
-////    negativeSpacer.width = - LineX(5);
-////    self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
-//    
-//    
-////    self.navigationController.navigationBar.barTintColor = UICOLOR_FROM_HEX(0xEA5851);
-////    self.navigationController.navigationBar.translucent = NO;
-//}
--(void)leftAction
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+/*
+#pragma mark - Navigation
 
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
