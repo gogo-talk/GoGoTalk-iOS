@@ -10,4 +10,5 @@
 
 @interface GGT_UserInfo : UIView
 @property(nonatomic, strong) NSDictionary *infoDic;
+@property(nonatomic, strong) UIButton *headerButton;
 @end
