@@ -38,11 +38,13 @@
 		5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05AB1EB07DA200469368 /* UIView+Layout.m */; };
 		5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05AE1EB07E4D00469368 /* UIButton+timer.m */; };
 		5BED05B11EB07EA200469368 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */; };
-		D65C74731EB9D8080060180F /* GGT_ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65C74721EB9D8080060180F /* GGT_ScheduleCell.m */; };
+		D65C74731EB9D8080060180F /* GGT_ScheduleStudyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65C74721EB9D8080060180F /* GGT_ScheduleStudyingCell.m */; };
 		D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */; };
 		D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EE01EBB1D5E0058D12C /* XCStarView.m */; };
 		D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */; };
 		D696AFD3BE34379B2D601BF6 /* libPods-GoGoTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */; };
+		D6B590801EBC0AED00086648 /* GGT_ScheduleNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */; };
+		D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */; };
 		D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */; };
 		D6C7AAA81EB1870900EBF0D1 /* GGT_Request_Url.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA71EB1870900EBF0D1 /* GGT_Request_Url.m */; };
 		D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAAA1EB1872000EBF0D1 /* NSArray+SafeExtension.m */; };
@@ -142,8 +144,8 @@
 		5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoGoTalk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDE48A6BF0DF60B4B82782D /* Pods-GoGoTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGoTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk.release.xcconfig"; sourceTree = "<group>"; };
-		D65C74711EB9D8080060180F /* GGT_ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleCell.h; sourceTree = "<group>"; };
-		D65C74721EB9D8080060180F /* GGT_ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleCell.m; sourceTree = "<group>"; };
+		D65C74711EB9D8080060180F /* GGT_ScheduleStudyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleStudyingCell.h; sourceTree = "<group>"; };
+		D65C74721EB9D8080060180F /* GGT_ScheduleStudyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleStudyingCell.m; sourceTree = "<group>"; };
 		D66C6EDA1EBAD38A0058D12C /* AppColorInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppColorInfo.h; sourceTree = "<group>"; };
 		D66C6EDB1EBADD100058D12C /* UIView+XCCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCCornerRadius.h"; sourceTree = "<group>"; };
 		D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCCornerRadius.m"; sourceTree = "<group>"; };
@@ -151,6 +153,10 @@
 		D66C6EE01EBB1D5E0058D12C /* XCStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCStarView.m; sourceTree = "<group>"; };
 		D66F8E721EB972CF0048B9C9 /* GGT_CalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_CalendarCell.h; sourceTree = "<group>"; };
 		D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_CalendarCell.m; sourceTree = "<group>"; };
+		D6B5907E1EBC0AED00086648 /* GGT_ScheduleNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleNormalCell.h; sourceTree = "<group>"; };
+		D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleNormalCell.m; sourceTree = "<group>"; };
+		D6B590811EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleFinishedCanPlayCell.h; sourceTree = "<group>"; };
+		D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleFinishedCanPlayCell.m; sourceTree = "<group>"; };
 		D6C7AAA31EB186F800EBF0D1 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D6C7AAA61EB1870900EBF0D1 /* GGT_Request_Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Request_Url.h; sourceTree = "<group>"; };
@@ -579,8 +585,12 @@
 			children = (
 				D66F8E721EB972CF0048B9C9 /* GGT_CalendarCell.h */,
 				D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */,
-				D65C74711EB9D8080060180F /* GGT_ScheduleCell.h */,
-				D65C74721EB9D8080060180F /* GGT_ScheduleCell.m */,
+				D65C74711EB9D8080060180F /* GGT_ScheduleStudyingCell.h */,
+				D65C74721EB9D8080060180F /* GGT_ScheduleStudyingCell.m */,
+				D6B5907E1EBC0AED00086648 /* GGT_ScheduleNormalCell.h */,
+				D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */,
+				D6B590811EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.h */,
+				D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -807,11 +817,13 @@
 				5BEC18F61EB85E7B009DF2F8 /* GGT_OrderForeignListCell.m in Sources */,
 				D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */,
 				5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */,
-				D65C74731EB9D8080060180F /* GGT_ScheduleCell.m in Sources */,
+				D65C74731EB9D8080060180F /* GGT_ScheduleStudyingCell.m in Sources */,
 				D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */,
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
+				D6B590801EBC0AED00086648 /* GGT_ScheduleNormalCell.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
 				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
+				D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */,
 				5BEC18F91EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m in Sources */,
 				D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */,
 				5BA10D441EB1E2490091093C /* GGT_RegisterView.m in Sources */,
