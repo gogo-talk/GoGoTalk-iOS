@@ -73,11 +73,24 @@
 }
 -(void)ageSexBtnClick:(UIButton *)sender
 {
-    NSArray *array = @[@"男",@"女"];
+    NSArray *array = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14"];
+    NSArray *array2 = @[@"男",@"女"];
+    
     self.pickerView = [[GGT_AgeSexPickerView alloc] initWithFrame:CGRectMake(0, ScreenH-256, ScreenW, 256)];
-    self.pickerView.pickerDataArray = array;
-    [self.pickerView.pickerView selectRow:0 inComponent:0 animated:YES];
-    [self.pickerView popPickerView];
+    self.pickerView.backgroundColor = [UIColor whiteColor];
+    int selectRow = 0;
+    int inComponent = 0;
+    if([self.prompt isEqualToString:@"请选择年龄"]){
+        self.pickerView.pickerDataArray = array;
+        selectRow = 6;
+    }else{
+        self.pickerView.pickerDataArray = array2;
+        
+        
+    }
+    
+    [self.pickerView.pickerView selectRow:selectRow inComponent:inComponent animated:YES];
+    
     [self.view addSubview:self.pickerView];
 //    [self.pickerView mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.left.mas_equalTo(0);
@@ -89,6 +102,7 @@
     self.pickerView.selectBlock = ^(NSString *str) {
         [weakself currentSource:str];
     };
+    [self.pickerView popPickerView];
 }
 //选中的数据
 -(void)currentSource:(NSString *)str

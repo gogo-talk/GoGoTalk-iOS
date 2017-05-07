@@ -16,30 +16,41 @@
 }
 //承载view
 @property(nonatomic, retain)UIView *baseView;
+@property(nonatomic, strong) NSArray *info;
 @end
 @implementation GGT_AgeSexPickerView
 -(instancetype)initWithFrame:(CGRect)frame
 {
     if(self = [super initWithFrame:frame]){
-        
+        //self.info = @[@"男",@"女"];
+        //NSLog(@"%@",self.info);
         
     }
     return self;
 }
 -(void)setPickerDataArray:(NSArray *)pickerDataArray
 {
+    
     [self createPickerView:pickerDataArray];
+    
 }
 //绘制选择器
 -(void)createPickerView:(NSArray *)pickerDataArray
 {
-    NSLog(@"进入了选择器，数据也有了%@",pickerDataArray);
-    _baseView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenH-PICKERVIEW_HEIGHT, ScreenW, PICKERVIEW_HEIGHT)];
-    //_baseView.backgroundColor = UICOLOR_FROM_HEX(0xf3f3f3);
-    self.baseView.backgroundColor = [UIColor redColor];
-    [self addSubview:_baseView];
+    self.info = pickerDataArray;
+    self.baseView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    self.baseView.backgroundColor = UICOLOR_FROM_HEX(0xf3f3f3);
+    //self.baseView.backgroundColor = [UIColor blackColor];
+    [self addSubview:self.baseView];
+    [self.baseView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.mas_top);
+        make.right.mas_equalTo(self.mas_right);
+        make.bottom.mas_equalTo(self.mas_bottom);
+        make.left.mas_equalTo(self.mas_left);
+    }];
     //创建确定和取消按钮
-    UIButton *btnOK = [[UIButton alloc] initWithFrame:CGRectMake(ScreenW-50, 0, 40, 40)];
+    //UIButton *btnOK = [[UIButton alloc] initWithFrame:CGRectMake(ScreenW-50, 0, 40, 40)];
+    UIButton *btnOK = [UIButton new];
     [btnOK setTitle:@"确定" forState:UIControlStateNormal];
     [btnOK setTitleColor:UICOLOR_FROM_HEX(0xea5851) forState:UIControlStateNormal];
     [btnOK addTarget:self action:@selector(pickerBtnOK:) forControlEvents:UIControlEventTouchUpInside];
@@ -47,7 +58,7 @@
     [btnOK mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.baseView.mas_top);
         make.right.equalTo(self.baseView.mas_right).with.offset(-LineX(10));
-        make.bottom.mas_equalTo(self.baseView.mas_bottom);
+        make.height.mas_equalTo(LineH(40));
         make.width.mas_equalTo(LineW(40));
     }];
     
@@ -59,7 +70,7 @@
     [btnCancel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.baseView.mas_top);
         make.left.equalTo(self.baseView.mas_left).with.offset(LineX(10));
-        make.bottom.mas_equalTo(self.baseView.mas_bottom);
+        make.height.mas_equalTo(LineH(40));
         make.width.mas_equalTo(LineW(40));
     }];
     //创建选择器
@@ -68,19 +79,13 @@
     self.pickerView.dataSource = self;
     self.pickerView.backgroundColor = [UIColor whiteColor];
     [self.baseView addSubview:self.pickerView];
-//    [self.pickerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.baseView.mas_top).with.offset(LineX(40));
-//        make.bottom.equalTo(self.baseView.mas_bottom);
-//        make.left.equalTo(self.baseView.mas_left);
-//        make.right.equalTo(self.baseView.mas_right);
-//    }];
     
 }
 //点击确定按钮
 -(void)pickerBtnOK:(UIButton *)sender
 {
     if(self.selectBlock){
-        self.selectBlock(self.pickerDataArray[selectRow]);
+        self.selectBlock(self.info[selectRow]);
     }
     [self dismissPickerView];
 }
@@ -113,11 +118,11 @@
 }
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return self.pickerDataArray.count;
+    return self.info.count;
 }
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return self.pickerDataArray[row];
+    return self.info[row];
 }
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
