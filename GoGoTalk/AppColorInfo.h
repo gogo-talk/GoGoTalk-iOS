@@ -13,6 +13,7 @@ static CGFloat const margin5  = 5.0f;
 static CGFloat const margin10 = 10.0f;
 static CGFloat const margin15 = 15.0f;
 static CGFloat const margin20 = 20.0f;
+static CGFloat const margin44 = 44.0f;
 
 #define kThemeColor                     0xea5851
 #define kCalendar_EventColor            0x88c5fb

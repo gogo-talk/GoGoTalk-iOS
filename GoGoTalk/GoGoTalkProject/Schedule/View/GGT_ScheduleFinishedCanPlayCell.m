@@ -156,7 +156,7 @@
     [self.xc_bottomView addSubview:self.xc_starNameLabel];
     
     self.xc_starView = ({
-        XCStarView *xc_starView = [[XCStarView alloc] initWithEmptyImage:@"dianping_kebiao_da_wei" StarImage:@"dianping_kebiao_da_yi" totalStarCount:3 selectedStatCount:2 starMargin:10 starWidth:11];
+        XCStarView *xc_starView = [[XCStarView alloc] initWithEmptyImage:@"dianping_kebiao_da_wei" StarImage:@"dianping_kebiao_da_yi" totalStarCount:3 selectedStatCount:2 starMargin:LineW(10) starWidth:LineW(11)];
         xc_starView;
     });
     [self.xc_bottomView addSubview:self.xc_starView];
