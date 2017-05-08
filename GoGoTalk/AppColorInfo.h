@@ -22,6 +22,8 @@ static CGFloat const margin20 = 20.0f;
 #define ColorCF121C 0xCF121C
 #define Color666666 0x666666
 #define ColorFFFFFF 0xFFFFFF
+#define Color999999 0x999999
+
 
 //灰色界面背景
 #define ColorF2F2F2 0xF2F2F2

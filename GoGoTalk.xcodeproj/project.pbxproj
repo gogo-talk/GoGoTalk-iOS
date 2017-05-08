@@ -25,6 +25,9 @@
 		5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D1C1EB1D19F0091093C /* GGT_LoginView.m */; };
 		5BA10D411EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D401EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m */; };
 		5BA10D441EB1E2490091093C /* GGT_RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D431EB1E2490091093C /* GGT_RegisterView.m */; };
+		5BA575F11EC0495B00C7512A /* GGT_VipInfoHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA575F01EC0495B00C7512A /* GGT_VipInfoHeaderCell.m */; };
+		5BA575F41EC049A900C7512A /* GGT_VipCurrentStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA575F31EC049A900C7512A /* GGT_VipCurrentStatusCell.m */; };
+		5BA575F71EC049FA00C7512A /* GGT_VipPastStateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA575F61EC049FA00C7512A /* GGT_VipPastStateCell.m */; };
 		5BC2AF591EB0473D004DF44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF581EB0473D004DF44D /* main.m */; };
 		5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */; };
 		5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2AF631EB0473D004DF44D /* Assets.xcassets */; };
@@ -127,6 +130,12 @@
 		5BA10D401EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		5BA10D421EB1E2490091093C /* GGT_RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_RegisterView.h; sourceTree = "<group>"; };
 		5BA10D431EB1E2490091093C /* GGT_RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_RegisterView.m; sourceTree = "<group>"; };
+		5BA575EF1EC0495B00C7512A /* GGT_VipInfoHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_VipInfoHeaderCell.h; sourceTree = "<group>"; };
+		5BA575F01EC0495B00C7512A /* GGT_VipInfoHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_VipInfoHeaderCell.m; sourceTree = "<group>"; };
+		5BA575F21EC049A900C7512A /* GGT_VipCurrentStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_VipCurrentStatusCell.h; sourceTree = "<group>"; };
+		5BA575F31EC049A900C7512A /* GGT_VipCurrentStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_VipCurrentStatusCell.m; sourceTree = "<group>"; };
+		5BA575F51EC049FA00C7512A /* GGT_VipPastStateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_VipPastStateCell.h; sourceTree = "<group>"; };
+		5BA575F61EC049FA00C7512A /* GGT_VipPastStateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_VipPastStateCell.m; sourceTree = "<group>"; };
 		5BC2AF541EB0473D004DF44D /* GoGoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC2AF581EB0473D004DF44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BC2AF5A1EB0473D004DF44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -594,6 +603,12 @@
 				5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */,
 				5B695B2D1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.h */,
 				5B695B2E1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m */,
+				5BA575EF1EC0495B00C7512A /* GGT_VipInfoHeaderCell.h */,
+				5BA575F01EC0495B00C7512A /* GGT_VipInfoHeaderCell.m */,
+				5BA575F21EC049A900C7512A /* GGT_VipCurrentStatusCell.h */,
+				5BA575F31EC049A900C7512A /* GGT_VipCurrentStatusCell.m */,
+				5BA575F51EC049FA00C7512A /* GGT_VipPastStateCell.h */,
+				5BA575F61EC049FA00C7512A /* GGT_VipPastStateCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -904,11 +919,14 @@
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
 				5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */,
 				355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */,
+				5BA575F11EC0495B00C7512A /* GGT_VipInfoHeaderCell.m in Sources */,
+				5BA575F71EC049FA00C7512A /* GGT_VipPastStateCell.m in Sources */,
 				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
 				5B577CD61EB983E3005F009F /* GGT_OrderTimeHeaderCollectionViewCell.m in Sources */,
 				D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */,
 				D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */,
 				5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */,
+				5BA575F41EC049A900C7512A /* GGT_VipCurrentStatusCell.m in Sources */,
 				D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */,
 				D6C7AAA81EB1870900EBF0D1 /* GGT_Request_Url.m in Sources */,
 				5BA10D411EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m in Sources */,
