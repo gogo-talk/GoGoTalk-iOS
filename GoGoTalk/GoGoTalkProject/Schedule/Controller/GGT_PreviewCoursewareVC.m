@@ -10,6 +10,8 @@
 #import "GGT_PreviewTopView.h"
 #import "GGT_PreviewCourseAlertView.h"
 
+#import "GGT_CourseEvaluateVC.h"    // 测试
+
 @interface GGT_PreviewCoursewareVC ()<WKNavigationDelegate>
 @property (nonatomic, strong) GGT_PreviewTopView *xc_topView;
 @property (nonatomic, strong) WKWebView *xc_webView;
@@ -136,6 +138,12 @@
 // 页面加载失败时调用
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation{
  
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    GGT_CourseEvaluateVC *vc = [GGT_CourseEvaluateVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

@@ -54,6 +54,10 @@
 		D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */; };
 		D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EE01EBB1D5E0058D12C /* XCStarView.m */; };
 		D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */; };
+		D67E18D91EC077060046497E /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67E18D81EC077060046497E /* PlaceholderTextView.m */; };
+		D68205421EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D68205411EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m */; };
+		D68205461EC04D5D00CA312B /* GGT_CourseEvaluateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D68205451EC04D5D00CA312B /* GGT_CourseEvaluateVC.m */; };
+		D682054D1EC05B0500CA312B /* GGT_EvaluateView.m in Sources */ = {isa = PBXBuildFile; fileRef = D682054C1EC05B0500CA312B /* GGT_EvaluateView.m */; };
 		D696AFD3BE34379B2D601BF6 /* libPods-GoGoTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */; };
 		D6B590801EBC0AED00086648 /* GGT_ScheduleNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */; };
 		D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */; };
@@ -191,6 +195,14 @@
 		D66C6EE01EBB1D5E0058D12C /* XCStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCStarView.m; sourceTree = "<group>"; };
 		D66F8E721EB972CF0048B9C9 /* GGT_CalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_CalendarCell.h; sourceTree = "<group>"; };
 		D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_CalendarCell.m; sourceTree = "<group>"; };
+		D67E18D71EC077060046497E /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		D67E18D81EC077060046497E /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
+		D68205401EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_CourseVideoPlaybackVC.h; sourceTree = "<group>"; };
+		D68205411EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_CourseVideoPlaybackVC.m; sourceTree = "<group>"; };
+		D68205441EC04D5D00CA312B /* GGT_CourseEvaluateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_CourseEvaluateVC.h; sourceTree = "<group>"; };
+		D68205451EC04D5D00CA312B /* GGT_CourseEvaluateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_CourseEvaluateVC.m; sourceTree = "<group>"; };
+		D682054B1EC05B0500CA312B /* GGT_EvaluateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_EvaluateView.h; sourceTree = "<group>"; };
+		D682054C1EC05B0500CA312B /* GGT_EvaluateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_EvaluateView.m; sourceTree = "<group>"; };
 		D6B5907E1EBC0AED00086648 /* GGT_ScheduleNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleNormalCell.h; sourceTree = "<group>"; };
 		D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleNormalCell.m; sourceTree = "<group>"; };
 		D6B590811EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleFinishedCanPlayCell.h; sourceTree = "<group>"; };
@@ -476,10 +488,10 @@
 		5BC2AF971EB05042004DF44D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7AAB21EB1875800EBF0D1 /* GGT_ScheduleViewController.h */,
-				D6C7AAB31EB1875800EBF0D1 /* GGT_ScheduleViewController.m */,
-				D604309D1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.h */,
-				D604309E1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m */,
+				D682053C1EC04AC700CA312B /* 课表 */,
+				D682053D1EC04AD300CA312B /* 课前预习 */,
+				D68205431EC04CC800CA312B /* 录播课程回放 */,
+				D68205471EC0503200CA312B /* 课后评价 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -638,6 +650,8 @@
 		D66C6EDE1EBB1D560058D12C /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				D67E18D71EC077060046497E /* PlaceholderTextView.h */,
+				D67E18D81EC077060046497E /* PlaceholderTextView.m */,
 				D66C6EDF1EBB1D5E0058D12C /* XCStarView.h */,
 				D66C6EE01EBB1D5E0058D12C /* XCStarView.m */,
 				D6B591651EBC676800086648 /* OYCountDownManager.h */,
@@ -649,6 +663,35 @@
 		D66F8E711EB972CF0048B9C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D682053E1EC04B3E00CA312B /* 课表 */,
+				D682053F1EC04B4E00CA312B /* 课前预习 */,
+				D682054B1EC05B0500CA312B /* GGT_EvaluateView.h */,
+				D682054C1EC05B0500CA312B /* GGT_EvaluateView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D682053C1EC04AC700CA312B /* 课表 */ = {
+			isa = PBXGroup;
+			children = (
+				D6C7AAB21EB1875800EBF0D1 /* GGT_ScheduleViewController.h */,
+				D6C7AAB31EB1875800EBF0D1 /* GGT_ScheduleViewController.m */,
+			);
+			name = "课表";
+			sourceTree = "<group>";
+		};
+		D682053D1EC04AD300CA312B /* 课前预习 */ = {
+			isa = PBXGroup;
+			children = (
+				D604309D1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.h */,
+				D604309E1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m */,
+			);
+			name = "课前预习";
+			sourceTree = "<group>";
+		};
+		D682053E1EC04B3E00CA312B /* 课表 */ = {
+			isa = PBXGroup;
+			children = (
 				D66F8E721EB972CF0048B9C9 /* GGT_CalendarCell.h */,
 				D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */,
 				D60430971EBC7CA000F53437 /* GGT_ScheduleStudyingCell.h */,
@@ -657,12 +700,37 @@
 				D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */,
 				D6B590811EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.h */,
 				D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */,
+			);
+			name = "课表";
+			sourceTree = "<group>";
+		};
+		D682053F1EC04B4E00CA312B /* 课前预习 */ = {
+			isa = PBXGroup;
+			children = (
 				D604309A1EBC7CDB00F53437 /* GGT_PreviewTopView.h */,
 				D604309B1EBC7CDB00F53437 /* GGT_PreviewTopView.m */,
 				D606076B1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.h */,
 				D606076C1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m */,
 			);
-			path = View;
+			name = "课前预习";
+			sourceTree = "<group>";
+		};
+		D68205431EC04CC800CA312B /* 录播课程回放 */ = {
+			isa = PBXGroup;
+			children = (
+				D68205401EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.h */,
+				D68205411EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m */,
+			);
+			name = "录播课程回放";
+			sourceTree = "<group>";
+		};
+		D68205471EC0503200CA312B /* 课后评价 */ = {
+			isa = PBXGroup;
+			children = (
+				D68205441EC04D5D00CA312B /* GGT_CourseEvaluateVC.h */,
+				D68205451EC04D5D00CA312B /* GGT_CourseEvaluateVC.m */,
+			);
+			name = "课后评价";
 			sourceTree = "<group>";
 		};
 		D6C7ABA41EB1D50900EBF0D1 /* Model */ = {
@@ -865,6 +933,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35DE2CD91EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m in Sources */,
+				D68205461EC04D5D00CA312B /* GGT_CourseEvaluateVC.m in Sources */,
 				D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */,
 				D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */,
 				D604309C1EBC7CDB00F53437 /* GGT_PreviewTopView.m in Sources */,
@@ -882,6 +951,7 @@
 				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
 				D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */,
 				5B695B291EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m in Sources */,
+				D67E18D91EC077060046497E /* PlaceholderTextView.m in Sources */,
 				D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */,
 				5BEC18ED1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m in Sources */,
 				D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */,
@@ -911,8 +981,10 @@
 				D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */,
 				35DE2CD01EBCC08600E41B34 /* GGT_EditAgeSexController.m in Sources */,
 				5BA10D441EB1E2490091093C /* GGT_RegisterView.m in Sources */,
+				D682054D1EC05B0500CA312B /* GGT_EvaluateView.m in Sources */,
 				5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */,
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
+				D68205421EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m in Sources */,
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
 				5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */,
 				355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */,

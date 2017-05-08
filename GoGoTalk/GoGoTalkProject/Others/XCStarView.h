@@ -8,14 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^XCSelectBlock)(NSInteger count);
+
 @interface XCStarView : UIView
 
-@property (nonatomic, assign) int selectedStatCount;
+@property (nonatomic, assign) NSInteger selectedStatCount;
 
-- (instancetype)initWithEmptyImage:(NSString *)Empty StarImage:(NSString *)Star totalStarCount:(int)totalStarCount starMargin:(CGFloat)starMargin starWidth:(CGFloat)starWidth;
+@property (nonatomic, copy) XCSelectBlock selectBlock;
+
+// 
+- (instancetype)initWithEmptyImage:(NSString *)Empty StarImage:(NSString *)Star totalStarCount:(NSInteger)totalStarCount starMargin:(CGFloat)starMargin starWidth:(CGFloat)starWidth selectBlock:(XCSelectBlock)selectBlock;
 
 
-- (instancetype)initWithEmptyImage:(NSString *)Empty StarImage:(NSString *)Star totalStarCount:(int)totalStarCount selectedStatCount:(int)selectedStatCount starMargin:(CGFloat)starMargin starWidth:(CGFloat)starWidth;
+// 选中星星的个数
+- (instancetype)initWithEmptyImage:(NSString *)Empty StarImage:(NSString *)Star totalStarCount:(NSInteger)totalStarCount selectedStatCount:(NSInteger)selectedStatCount starMargin:(CGFloat)starMargin starWidth:(CGFloat)starWidth;
 
 
 @end
