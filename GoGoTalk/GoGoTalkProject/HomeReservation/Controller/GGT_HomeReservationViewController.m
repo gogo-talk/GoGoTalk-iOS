@@ -73,7 +73,10 @@
             commonCell= [[GGT_HomeCommonCenterCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"homeCommonCenter"];
         }
         commonCell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+       
+        //获取不同的状态
+        [commonCell getStasus:@"1"];
+        
         return commonCell;
         
     } else if (indexPath.section == 2){

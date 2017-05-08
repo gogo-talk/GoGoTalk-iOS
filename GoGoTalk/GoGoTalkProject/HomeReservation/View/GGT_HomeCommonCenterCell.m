@@ -45,6 +45,7 @@
         make.size.mas_offset(CGSizeMake(LineW(54), LineH(43)));
     }];
     
+
     //预约试听
     self.yuyueshitingLabel = [[UILabel alloc]init];
     self.yuyueshitingLabel.text = @"预约试听";
@@ -55,7 +56,7 @@
     [self.yuyueshitingLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.yuyueshitingImageView.mas_bottom).with.offset(LineY(20));
         make.centerX.mas_offset(self.backgroundImageView.centerX);
-        make.height.mas_offset(LineH(43));
+        make.height.mas_offset(LineH(31));
     }];
     
     
@@ -63,21 +64,41 @@
 //    self.yuyueshitingButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
 //    [self.yuyueshitingButton setTitle:@"立即预约" forState:(UIControlStateNormal)];
 //    [self.yuyueshitingButton setTitleColor:UICOLOR_FROM_HEX(ColorFFFFFF) forState:(UIControlStateNormal)];
-//    [self.yuyueshitingButton setImage:UIIMAGE_FROM_NAME(@"圆角矩形-2") forState:(UIControlStateNormal)];
 //    self.yuyueshitingButton.titleLabel.font = Font(16);
+//    self.yuyueshitingButton.backgroundColor = MainColor;
+//    self.yuyueshitingButton.layer.cornerRadius = LineW(20);
+//    self.yuyueshitingButton.layer.shadowOffset =  CGSizeMake(LineX(1), LineY(1));
+//    self.yuyueshitingButton.layer.shadowOpacity = LineW(0.8);
+//    self.yuyueshitingButton.layer.shadowColor =  MainColor.CGColor;
 //    [self.backgroundImageView addSubview:self.yuyueshitingButton];
 //    
 //    [self.yuyueshitingButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.yuyueshitingLabel.mas_bottom).with.offset(LineY(20));
-//        make.bottom.equalTo(self.backgroundImageView.mas_bottom).with.offset(-LineY(20));
+//        make.top.equalTo(self.yuyueshitingLabel.mas_bottom).with.offset(LineH(20));
+//        make.bottom.equalTo(self.backgroundImageView.mas_bottom).with.offset(-LineH(20));
+//        make.centerX.mas_equalTo(self.backgroundImageView.mas_centerX);
+//        make.width.mas_offset(LineW(150));
 //    }];
 
     
+    //预约试听
+    self.yuyueSuccessedLabel = [[UILabel alloc]init];
+    self.yuyueSuccessedLabel.text = @"马上会有老师联系您，请保持电话畅通\n或拨打 400-8787-286";
+    self.yuyueSuccessedLabel.numberOfLines = 0;
+    self.yuyueSuccessedLabel.font = Font(16);
+    [self.backgroundImageView addSubview:self.yuyueSuccessedLabel];
     
-    
+    [self.yuyueSuccessedLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.yuyueshitingLabel.mas_bottom).with.offset(LineY(20));
+        make.bottom.equalTo(self.backgroundImageView.mas_bottom).with.offset(-LineY(20));
+        make.left.equalTo(self.backgroundImageView.mas_left).with.offset(LineX(37));
+        make.right.equalTo(self.backgroundImageView.mas_right).with.offset(-LineX(37));
+
+    }];
     
 }
 
-
+- (void)getStasus:(NSString *)statusStr {
+    
+}
 
 @end
