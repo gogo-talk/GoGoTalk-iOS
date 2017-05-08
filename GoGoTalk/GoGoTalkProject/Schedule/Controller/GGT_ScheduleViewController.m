@@ -64,7 +64,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     
     // 450 for iPad and 300 for iPhone
     CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 345;
-    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 0, view.frame.size.width, height)];
+    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 0, view.frame.size.width, LineH(height))];
     
     calendar.dataSource = self;
     calendar.delegate = self;
@@ -82,7 +82,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     calendar.appearance.subtitleFont = Font(10);
     calendar.appearance.weekdayFont = Font(12);
     
-    calendar.appearance.subtitleOffset = CGPointMake(0, 10);
+    calendar.appearance.subtitleOffset = CGPointMake(0, LineH(10));
 
     // 隐藏顶部时间
     calendar.headerHeight = 0;
@@ -92,18 +92,16 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     
     // cell下面的横线
     calendar.appearance.separators = FSCalendarSeparatorInterRows;
-    
-    
     [self.view addSubview:calendar];
-    self.calendar = calendar;
     
     // 添加约束
     [calendar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
         make.height.equalTo(@(LineH(345)));
     }];
-
     [calendar registerClass:[GGT_CalendarCell class] forCellReuseIdentifier:CalendarCellID];
+    
+    self.calendar = calendar;
     
     self.xc_lineView = ({
         UIView *xc_lineView =[UIView new];

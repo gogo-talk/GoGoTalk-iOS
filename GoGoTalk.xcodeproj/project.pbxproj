@@ -49,6 +49,8 @@
 		D604309C1EBC7CDB00F53437 /* GGT_PreviewTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D604309B1EBC7CDB00F53437 /* GGT_PreviewTopView.m */; };
 		D604309F1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D604309E1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m */; };
 		D60430A21EBC864300F53437 /* UIView+XCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D60430A11EBC864300F53437 /* UIView+XCHelper.m */; };
+		D606076A1EC006B200A31E8B /* UIAlertController+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D60607691EC006B200A31E8B /* UIAlertController+Color.m */; };
+		D606076D1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D606076C1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m */; };
 		D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */; };
 		D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EE01EBB1D5E0058D12C /* XCStarView.m */; };
 		D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */; };
@@ -178,6 +180,10 @@
 		D604309E1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_PreviewCoursewareVC.m; sourceTree = "<group>"; };
 		D60430A01EBC864300F53437 /* UIView+XCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCHelper.h"; sourceTree = "<group>"; };
 		D60430A11EBC864300F53437 /* UIView+XCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCHelper.m"; sourceTree = "<group>"; };
+		D60607681EC006B200A31E8B /* UIAlertController+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Color.h"; sourceTree = "<group>"; };
+		D60607691EC006B200A31E8B /* UIAlertController+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Color.m"; sourceTree = "<group>"; };
+		D606076B1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_PreviewCourseAlertView.h; sourceTree = "<group>"; };
+		D606076C1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_PreviewCourseAlertView.m; sourceTree = "<group>"; };
 		D66C6EDA1EBAD38A0058D12C /* AppColorInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppColorInfo.h; sourceTree = "<group>"; };
 		D66C6EDB1EBADD100058D12C /* UIView+XCCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCCornerRadius.h"; sourceTree = "<group>"; };
 		D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCCornerRadius.m"; sourceTree = "<group>"; };
@@ -553,6 +559,8 @@
 				D6C7AAC61EB1903900EBF0D1 /* UIButton+XCHelperBlock.m */,
 				D6C7AAC81EB190DA00EBF0D1 /* NSString+XCHelper.h */,
 				D6C7AAC91EB190DA00EBF0D1 /* NSString+XCHelper.m */,
+				D60607681EC006B200A31E8B /* UIAlertController+Color.h */,
+				D60607691EC006B200A31E8B /* UIAlertController+Color.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -651,6 +659,8 @@
 				D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */,
 				D604309A1EBC7CDB00F53437 /* GGT_PreviewTopView.h */,
 				D604309B1EBC7CDB00F53437 /* GGT_PreviewTopView.m */,
+				D606076B1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.h */,
+				D606076C1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -858,6 +868,7 @@
 				D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */,
 				D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */,
 				D604309C1EBC7CDB00F53437 /* GGT_PreviewTopView.m in Sources */,
+				D606076A1EC006B200A31E8B /* UIAlertController+Color.m in Sources */,
 				5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */,
 				D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */,
 				5BEC18FE1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m in Sources */,
@@ -879,6 +890,7 @@
 				358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */,
 				D6B591671EBC676800086648 /* OYCountDownManager.m in Sources */,
 				5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */,
+				D606076D1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m in Sources */,
 				D6C7AAB71EB1876900EBF0D1 /* GGT_OrderCourseViewController.m in Sources */,
 				358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */,
 				D6C7AAAE1EB1873200EBF0D1 /* GGT_MineViewController.m in Sources */,

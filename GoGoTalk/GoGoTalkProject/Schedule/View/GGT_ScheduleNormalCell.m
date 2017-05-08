@@ -204,7 +204,7 @@
         make.right.equalTo(self.xc_bodyView).offset(-LineW(margin15));
         make.bottom.equalTo(self.xc_headPortraitImgView);
         make.width.equalTo(@(LineW(71)));//142 × 62
-        make.height.equalTo(@(31));
+        make.height.equalTo(@(LineH(31)));
     }];
 }
 
