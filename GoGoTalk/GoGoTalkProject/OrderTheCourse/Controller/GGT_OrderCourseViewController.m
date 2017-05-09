@@ -35,11 +35,11 @@
 
 - (void)setUpNewController {
     self.allVC = [[GGT_OrderCourseOfAllViewController alloc] init];
-    [self.allVC.view setFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-49)];
+    [self.allVC.view setFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT())];
     [self addChildViewController:self.allVC];
     
     self.focusVc = [[GGT_OrderCourseOfFocusViewController alloc] init];
-    [self.focusVc.view setFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-49)];
+    [self.focusVc.view setFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT())];
     
     //  默认,第一个视图(你会发现,全程就这一个用了addSubview)
     [self.view addSubview:self.allVC.view];
@@ -82,7 +82,7 @@
    
     //添加到视图
     UIView *titleView = [[UIView alloc]init];
-    titleView.frame = CGRectMake((SCREEN_WIDTH()-100)/2, 10, 100, 30);
+    titleView.frame = CGRectMake((SCREEN_WIDTH()-LineW(150))/2, LineY(17), LineW(150), LineH(30));
     self.navigationItem.titleView = titleView ;
 
     
@@ -93,7 +93,7 @@
     //设置frame
     segment.frame = CGRectMake(0, 0, titleView.width,titleView.height);
     //控件渲染色(也就是外观字体颜色)
-    segment.tintColor = [UIColor redColor];
+    segment.tintColor = [UIColor whiteColor];
     segment.layer.borderColor = [UIColor whiteColor].CGColor;
     [segment addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
     [titleView  addSubview:segment];

@@ -25,6 +25,6 @@
 //客服电话
 - (void)initServiceTelephone;
     
-    
+
 - (void)setRightButtonWithImg:(NSString *)imageName;
 @end
