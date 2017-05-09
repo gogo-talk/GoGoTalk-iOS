@@ -14,5 +14,7 @@
 + (UIImage *)imageWithColor:(UIColor *)color;
 //对图片尺寸进行压缩--
 -(UIImage*)imageScaledToSize:(CGSize)newSize;
+//虚线
++(UIImage *)imageWithLineWithImageView:(UIImageView *)imageView;
 
 @end

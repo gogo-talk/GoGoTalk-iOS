@@ -13,30 +13,57 @@
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 
 
+/******未预约成功的view********/
+@property (nonatomic, strong) UIView *notOrderView;
+
 /******普通用户未预约体验课********/
-//预约试听icon
+//预约试听-----预约成功---icon
 @property (nonatomic, strong) UIImageView *yuyueshitingImageView;
-//预约试听label
+//预约试听-----预约成功---label
 @property (nonatomic, strong) UILabel *yuyueshitingLabel;
-//预约试听按钮--立即预约
+//立即预约
 @property (nonatomic, strong) UIButton *yuyueshitingButton;
-//预约成功label
-@property (nonatomic, strong) UILabel *yuyueSuccessedLabel;
+//预约成功后的电话提醒
+@property (nonatomic, strong) UILabel *contactTeacherCallsLabel;
+//测评报告---label
+@property (nonatomic, strong) UILabel *testReportLabel;
+//测评报告
+@property (nonatomic, strong) UIButton *testReportButton;
+//咨询客服
+@property (nonatomic, strong) UIButton *consultingServiceButton;
+//当前英语水平----view
+@property (nonatomic, strong) UIView *leverView;
+//当前英语水平----label
+@property (nonatomic, strong) UILabel *leverLabel;
 
-/******普通用户已预约，等待排课********/
-/******上课结束，上课成功（测评报告未生成）********/
-/******上课结束，上课成功********/
+
+
+
+/******已预约之后的view********/
+@property (nonatomic, strong) UIView *orderView;
+//课程日期
+@property (nonatomic, strong) UILabel *courseTimeLabel;
+//头像
+@property (nonatomic, strong) UIImageView *teacherIconImgView;
+//课程的第几节
+@property (nonatomic, strong) UILabel *lessonsLabel;
+//教师名称
+@property (nonatomic, strong) UILabel *teacherNameLabel;
+//官网地址
+@property (nonatomic, strong) UILabel *webAddressLabel;
+//进入教室
+@property (nonatomic, strong) UIButton *enterRoomButton;
+//重新预约
+@property (nonatomic, strong) UIButton *rescheduleButton;
+//状态
+@property (nonatomic, strong) UILabel *statusLabel;
+//状态
+@property (nonatomic, strong) UIImageView *statusImgView;
 
 
 
 
 
-
-
-/******已排课，等待上课（距离开课时间大于10分钟）********/
-/******即将开课，距离上课小于等于10分钟********/
-/******已开始上课********/
-/******上课结束，学生缺席********/
 
 
 - (void)getStasus:(NSString *)statusStr;

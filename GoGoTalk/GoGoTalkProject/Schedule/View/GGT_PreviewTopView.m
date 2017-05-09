@@ -20,7 +20,7 @@ static NSString * const xc_cancleButtonTitle = @"取消预约";
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    if (self == [super initWithFrame:frame]) {
+    if (self = [super initWithFrame:frame]) {
         [self initView];
         [self mas_View];
     }
