@@ -10,6 +10,7 @@
 #import "GGT_UserInfo.h"
 #import "GGT_SettingTableViewCell.h"
 #import "GGT_InfoListViewController.h"
+#import "GGT_UserSettingController.h"
 @interface GGT_MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray *infoArray;
@@ -120,12 +121,14 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     GGT_SettingTableViewCell *cell = [GGT_SettingTableViewCell cellWithTableView:tableView forIndexPath:indexPath];
     if(cell == nil){
         cell = [[GGT_SettingTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"settingCell"];
     }
     
     if(indexPath.row == 0 && indexPath.section == 0){
+        cell.selectionStyle =UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryNone;
     }else{
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -159,5 +162,18 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 49;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //返回后cell不选中
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+    //进入设置页面
+    if(indexPath.section == 1 && indexPath.row == 1){
+        GGT_UserSettingController *vc = [GGT_UserSettingController new];
+        vc.title = @"设置";
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 @end

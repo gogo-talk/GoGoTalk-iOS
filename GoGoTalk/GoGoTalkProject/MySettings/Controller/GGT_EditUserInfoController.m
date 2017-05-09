@@ -4,7 +4,7 @@
 //
 //  Created by 何建新 on 2017/5/5.
 //  Copyright © 2017年 XieHenry. All rights reserved.
-//
+//  修改信息通用控制器
 
 #import "GGT_EditUserInfoController.h"
 
@@ -47,6 +47,7 @@
     UITextField *editTextField = [UITextField new];
     editTextField.placeholder = @"请输入信息";
     editTextField.font = Font(16);
+    editTextField.text = self.info;
     editTextField.backgroundColor = [UIColor whiteColor];
     [bgView addSubview:editTextField];
     

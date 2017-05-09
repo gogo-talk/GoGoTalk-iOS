@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3520D06D1EC012C800A0B80A /* GGT_EditPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3520D06C1EC012C800A0B80A /* GGT_EditPasswordController.m */; };
+		3520D0731EC0592500A0B80A /* GGT_UserSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3520D0721EC0592500A0B80A /* GGT_UserSettingController.m */; };
+		3520D0761EC0593D00A0B80A /* GGT_UserSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3520D0751EC0593D00A0B80A /* GGT_UserSettingCell.m */; };
 		355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355210441EBC40920057EA59 /* GGT_InfoListViewController.m */; };
 		355210481EBC49BE0057EA59 /* GGT_InfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355210471EBC49BE0057EA59 /* GGT_InfoListCell.m */; };
 		3552104B1EBC766C0057EA59 /* GGT_EditUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */; };
@@ -105,6 +108,12 @@
 
 /* Begin PBXFileReference section */
 		1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGoTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		3520D06B1EC012C800A0B80A /* GGT_EditPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_EditPasswordController.h; sourceTree = "<group>"; };
+		3520D06C1EC012C800A0B80A /* GGT_EditPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_EditPasswordController.m; sourceTree = "<group>"; };
+		3520D0711EC0592500A0B80A /* GGT_UserSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_UserSettingController.h; sourceTree = "<group>"; };
+		3520D0721EC0592500A0B80A /* GGT_UserSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserSettingController.m; sourceTree = "<group>"; };
+		3520D0741EC0593D00A0B80A /* GGT_UserSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_UserSettingCell.h; sourceTree = "<group>"; };
+		3520D0751EC0593D00A0B80A /* GGT_UserSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserSettingCell.m; sourceTree = "<group>"; };
 		355210431EBC40920057EA59 /* GGT_InfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_InfoListViewController.h; sourceTree = "<group>"; };
 		355210441EBC40920057EA59 /* GGT_InfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_InfoListViewController.m; sourceTree = "<group>"; };
 		355210461EBC49BE0057EA59 /* GGT_InfoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_InfoListCell.h; sourceTree = "<group>"; };
@@ -309,6 +318,8 @@
 				355210471EBC49BE0057EA59 /* GGT_InfoListCell.m */,
 				35DE2CD71EBCCEEB00E41B34 /* GGT_AgeSexPickerView.h */,
 				35DE2CD81EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m */,
+				3520D0741EC0593D00A0B80A /* GGT_UserSettingCell.h */,
+				3520D0751EC0593D00A0B80A /* GGT_UserSettingCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -497,6 +508,10 @@
 				3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */,
 				35DE2CCE1EBCC08600E41B34 /* GGT_EditAgeSexController.h */,
 				35DE2CCF1EBCC08600E41B34 /* GGT_EditAgeSexController.m */,
+				3520D06B1EC012C800A0B80A /* GGT_EditPasswordController.h */,
+				3520D06C1EC012C800A0B80A /* GGT_EditPasswordController.m */,
+				3520D0711EC0592500A0B80A /* GGT_UserSettingController.h */,
+				3520D0721EC0592500A0B80A /* GGT_UserSettingController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1005,6 +1020,7 @@
 				D654AEF81EC1685F00A21DD9 /* GGT_CeShiVC.m in Sources */,
 				D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */,
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
+				3520D06D1EC012C800A0B80A /* GGT_EditPasswordController.m in Sources */,
 				5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */,
 				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
 				D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */,
@@ -1034,7 +1050,11 @@
 				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
 				D604309F1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m in Sources */,
 				D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */,
+
 				D654AEF21EC15F2A00A21DD9 /* BJConsoleViewController.m in Sources */,
+
+				3520D0731EC0592500A0B80A /* GGT_UserSettingController.m in Sources */,
+
 				D60430991EBC7CA000F53437 /* GGT_ScheduleStudyingCell.m in Sources */,
 				5BEC18F91EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m in Sources */,
 				5B695B2C1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m in Sources */,
@@ -1047,6 +1067,7 @@
 				D68205421EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m in Sources */,
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
 				5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */,
+				3520D0761EC0593D00A0B80A /* GGT_UserSettingCell.m in Sources */,
 				355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */,
 				D654AEEF1EC15EF600A21DD9 /* BJRoomViewController+users.m in Sources */,
 				5BA575F11EC0495B00C7512A /* GGT_VipInfoHeaderCell.m in Sources */,
