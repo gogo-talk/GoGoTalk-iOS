@@ -10,7 +10,6 @@
 #import "GGT_PreviewTopView.h"
 #import "GGT_PreviewCourseAlertView.h"
 
-#import "GGT_CourseEvaluateVC.h"    // 测试
 
 @interface GGT_PreviewCoursewareVC ()<WKNavigationDelegate>
 @property (nonatomic, strong) GGT_PreviewTopView *xc_topView;
@@ -26,8 +25,6 @@
     [self configWebView];
     
     [self initEvent];
-    
-    
 }
 
 - (void)initAndMASView
@@ -81,6 +78,13 @@
 //         [self showSystemAlert];
          [self showCustomAlert];
      }];
+    
+    UITapGestureRecognizer *tap = [UITapGestureRecognizer new];
+    [self.xc_topView.xc_headPortraitImgView addGestureRecognizer:tap];
+    [tap.rac_gestureSignal subscribeNext:^(id x) {
+        @strongify(self);
+        
+    }];
 }
 
 - (void)showSystemAlert
@@ -116,12 +120,6 @@
         @strongify(self);
         NSLog(@"---进入教室---消失了---%@", self);
     }];
-    
-}
-
-- (void)dealloc
-{
-    NSLog(@"%s", __func__);
 }
 
 
@@ -140,10 +138,5 @@
  
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    GGT_CourseEvaluateVC *vc = [GGT_CourseEvaluateVC new];
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 @end

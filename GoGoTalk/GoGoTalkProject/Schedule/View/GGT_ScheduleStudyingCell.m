@@ -146,8 +146,6 @@ static NSString * const xc_CountDownTitleName = @"正在上课";
     });
     [self.xc_bodyView addSubview:self.xc_enterRoomButton];
     
-#pragma mark - 倒计时
-    
 }
 
 - (void)mas_View
@@ -170,7 +168,7 @@ static NSString * const xc_CountDownTitleName = @"正在上课";
     }];
     
     
-    // xc_topView
+#pragma mark - xc_topView
     [self.xc_classTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.xc_topView).offset(LineW(margin15));
         make.centerY.equalTo(self.xc_topView.mas_centerY);
@@ -188,11 +186,14 @@ static NSString * const xc_CountDownTitleName = @"正在上课";
     }];
     
     
-    // xc_bodyView
+#pragma mark - xc_bodyView
     [self.xc_headPortraitImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.xc_bodyView).offset(LineW(margin15));
-        make.width.height.equalTo(@(LineW(60)));
-        make.centerY.equalTo(self.xc_bodyView.mas_centerY);
+//        make.width.height.equalTo(@(LineW(60)));
+        make.top.equalTo(self.xc_bodyView).offset(LineH(margin10));
+        make.bottom.equalTo(self.xc_bodyView).offset(-LineH(margin10));
+        make.width.equalTo(self.xc_headPortraitImgView.mas_height);
+//        make.centerY.equalTo(self.xc_bodyView.mas_centerY);
     }];
     
     [self.xc_courseNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -212,6 +213,8 @@ static NSString * const xc_CountDownTitleName = @"正在上课";
         make.width.equalTo(@(LineW(71)));//142 × 62
         make.height.equalTo(@(LineH(31)));
     }];
+    
+    
 }
 
 - (void)layoutSubviews

@@ -10,6 +10,7 @@
 #import "GGT_InfoListCell.h"
 #import "GGT_EditUserInfoController.h"
 #import "GGT_EditAgeSexController.h"
+#import "GGT_EditPasswordController.h"
 @interface GGT_InfoListViewController()
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray *cellArray1;
@@ -123,7 +124,8 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    //返回后cell不选中
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     if(indexPath.section == 0 && (indexPath.row == 0 || indexPath.row == 1)){
         GGT_EditUserInfoController *evc = [GGT_EditUserInfoController new];
         evc.titleName = self.cellArray1[indexPath.row][@"title"];
@@ -140,7 +142,17 @@
         }
         [self.navigationController pushViewController:evc animated:YES];
     }
-    
+    if(indexPath.section == 1 && indexPath.row == 1){
+        GGT_EditUserInfoController *evc = [GGT_EditUserInfoController new];
+        evc.titleName = self.cellArray2[indexPath.row][@"title"];
+        evc.info = self.cellArray2[indexPath.row][@"subtitle"];
+        [self.navigationController pushViewController:evc animated:YES];
+    }
+    if(indexPath.section == 2 && indexPath.row == 0){
+        GGT_EditPasswordController *evc = [GGT_EditPasswordController new];
+        evc.titleName = self.cellArray3[indexPath.row][@"title"];
+        [self.navigationController pushViewController:evc animated:YES];
+    }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

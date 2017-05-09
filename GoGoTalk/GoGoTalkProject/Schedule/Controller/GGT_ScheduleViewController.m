@@ -15,6 +15,11 @@
 #import "OYCountDownManager.h"
 #import "GGT_PreviewCoursewareVC.h"
 
+#import "BJRoomViewController.h"    // 百家云
+
+#import "GGT_CeShiVC.h"
+
+
 static NSString * const CalendarCellID = @"cell";
 static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 
@@ -63,7 +68,8 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     self.view = view;
     
     // 450 for iPad and 300 for iPhone
-    CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 345;
+    //    CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 345;
+    CGFloat height = 345;
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 0, view.frame.size.width, LineH(height))];
     
     calendar.dataSource = self;
@@ -83,7 +89,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     calendar.appearance.weekdayFont = Font(12);
     
     calendar.appearance.subtitleOffset = CGPointMake(0, LineH(10));
-
+    
     // 隐藏顶部时间
     calendar.headerHeight = 0;
     calendar.weekdayHeight = LineH(44);
@@ -95,10 +101,11 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     [self.view addSubview:calendar];
     
     // 添加约束
-    [calendar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.equalTo(self.view);
-        make.height.equalTo(@(LineH(345)));
-    }];
+    //    [calendar mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.left.right.top.equalTo(self.view);
+    //        make.height.equalTo(@(LineH(345)));
+    //    }];
+    
     [calendar registerClass:[GGT_CalendarCell class] forCellReuseIdentifier:CalendarCellID];
     
     self.calendar = calendar;
@@ -117,14 +124,14 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     
     // 更新数据源 刷新calendar
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 更新数据
-            self.datesWithEvent = @[@"2017/05/03",
-                                    @"2017/05/04",
-                                    @"2017/05/06",
-                                    @"2017/05/12",
-                                    @"2017/05/25",
-                                    @"2017/06/01"];
-            [self.calendar reloadData];
+        // 更新数据
+        self.datesWithEvent = @[@"2017/05/03",
+                                @"2017/05/04",
+                                @"2017/05/06",
+                                @"2017/05/12",
+                                @"2017/05/25",
+                                @"2017/06/01"];
+        [self.calendar reloadData];
     });
     
     // 定义titleView
@@ -137,7 +144,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     UIButton *xc_titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
     NSString *titleString = [self.xc_dateFormatter2 stringFromDate:[NSDate date]];
     [xc_titleButton setTitle:titleString forState:UIControlStateNormal];
-//    [xc_titleButton setFrame:CGRectMake(0, 0, 200, 30)];
+    //    [xc_titleButton setFrame:CGRectMake(0, 0, 200, 30)];
     [xc_titleButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [xc_titleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [xc_titleButton setTintColor:[UIColor whiteColor]];
@@ -176,14 +183,14 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
          
          if (flag) {
              [UIView animateWithDuration:0.3f animations:^{
-//                 self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(M_PI);
+                 //                 self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(M_PI);
              } completion:^(BOOL finished) {
                  flag = NO;
              }];
          }
          else {
              [UIView animateWithDuration:0.3f animations:^{
-//                 self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(0);
+                 //                 self.xc_titleButton.imageView.transform = CGAffineTransformMakeRotation(0);
              } completion:^(BOOL finished) {
                  flag = YES;
              }];
@@ -278,9 +285,9 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 // 设置今日的选中颜色
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillDefaultColorForDate:(NSDate *)date
 {
-//    if ([self.gregorian isDateInToday:date]) {
-//        return [UIColor blueColor];
-//    }
+    //    if ([self.gregorian isDateInToday:date]) {
+    //        return [UIColor blueColor];
+    //    }
     return [UIColor whiteColor];
 }
 
@@ -330,13 +337,19 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
         calendar.weekdayHeight = LineH(44);
         calendar.appearance.titleOffset = CGPointMake(0, 0);
     }
-    [self.calendar mas_updateConstraints:^(MASConstraintMaker *make) {
-        if (calendar.scope == FSCalendarScopeWeek) {
-            make.height.equalTo(@(LineH(49)));
-        } else {
-            make.height.equalTo(@(CGRectGetHeight(bounds)));
-        }
-    }];
+    //    [self.calendar mas_updateConstraints:^(MASConstraintMaker *make) {
+    //        if (calendar.scope == FSCalendarScopeWeek) {
+    //            make.height.equalTo(@(LineH(49)));
+    //        } else {
+    //            make.height.equalTo(@(CGRectGetHeight(bounds)));
+    //        }
+    //    }];
+    if (calendar.scope == FSCalendarScopeWeek) {
+        self.calendar.frame = CGRectMake(0, 0, SCREEN_WIDTH(), LineH(49));
+    } else {
+        self.calendar.frame = CGRectMake(0, 0, SCREEN_WIDTH(), CGRectGetHeight(bounds));
+    }
+    
     [self.view layoutIfNeeded];
 }
 
@@ -450,6 +463,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     [self.xc_tableView registerClass:[GGT_ScheduleNormalCell class] forCellReuseIdentifier:NSStringFromClass([GGT_ScheduleNormalCell class])];
     [self.xc_tableView registerClass:[GGT_ScheduleFinishedCanPlayCell class] forCellReuseIdentifier:NSStringFromClass([GGT_ScheduleFinishedCanPlayCell class])];
     
+    
     __unsafe_unretained UITableView *tableView = self.xc_tableView;
     // 下拉刷新
     tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -502,8 +516,49 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GGT_PreviewCoursewareVC *vc = [GGT_PreviewCoursewareVC new];
-    [self.navigationController pushViewController:vc animated:YES];
+    //    GGT_PreviewCoursewareVC *vc = [GGT_PreviewCoursewareVC new];
+    //    [self.navigationController pushViewController:vc animated:YES];
+    
+    // 进入百家云房间
+    //    [self enterRoomWithJoinCode:@"asd0i5" userName:@"cc"];
+    
+    [self presentViewController:[GGT_CeShiVC new] animated:YES completion:nil];
+    
+    //    [self.navigationController pushViewController:[GGT_CeShiVC new] animated:YES];
 }
+
+#pragma mark - 百家云
+- (void)enterRoomWithJoinCode:(NSString *)joinCode userName:(NSString *)userName {
+    
+    BJRoomViewController *roomViewController = [BJRoomViewController new];
+    [self presentViewController:roomViewController
+                       animated:YES
+                     completion:^{
+                         [roomViewController enterRoomWithSecret:joinCode userName:userName];
+                     }];
+}
+
+//- (BOOL)prefersStatusBarHidden
+//{
+//    return NO;
+//}
+//
+//- (void)viewWillLayoutSubviews
+//{
+//    [super viewWillLayoutSubviews];
+//    [self _shouldRotateToOrientation:(UIDeviceOrientation)[UIApplication sharedApplication].statusBarOrientation];
+//    NSLog(@"%s", __func__);
+//}
+//
+//-(void)_shouldRotateToOrientation:(UIDeviceOrientation)orientation {
+//    if (orientation == UIDeviceOrientationPortrait ||orientation ==
+//        UIDeviceOrientationPortraitUpsideDown) {
+//        NSLog(@"竖屏");
+//    }
+//    else {
+//        NSLog(@"横屏");
+//        
+//    }
+//}
 
 @end
