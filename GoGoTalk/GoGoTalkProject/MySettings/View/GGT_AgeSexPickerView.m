@@ -74,7 +74,7 @@
         make.width.mas_equalTo(LineW(40));
     }];
     //创建选择器
-    self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 40, ScreenW, PICKERVIEW_HEIGHT-40)];
+    self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, LineY(40), ScreenW, PICKERVIEW_HEIGHT-LineH(40))];
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
     self.pickerView.backgroundColor = [UIColor whiteColor];
@@ -101,7 +101,7 @@
 -(void)popPickerView
 {
     [UIView animateWithDuration:0.5 animations:^{
-        self.frame = CGRectMake(0, ScreenH-256, ScreenW, 256);
+        self.frame = CGRectMake(0, ScreenH-LineH(256), ScreenW, LineH(256));
     }];
 }
 //隐藏

@@ -4,7 +4,7 @@
 //
 //  Created by 何建新 on 2017/5/5.
 //  Copyright © 2017年 XieHenry. All rights reserved.
-//
+//  修改年龄和性别专用控制器
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 #define ScreenH [UIScreen mainScreen].bounds.size.height
 #import "GGT_EditAgeSexController.h"
@@ -12,15 +12,19 @@
 @interface GGT_EditAgeSexController ()
 @property(nonatomic, strong) GGT_AgeSexPickerView *pickerView;
 @property(nonatomic, strong) UIButton *ageSexBtn;
+@property(nonatomic, strong) UIView *bgview;
 @end
 
 @implementation GGT_EditAgeSexController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = UICOLOR_FROM_HEX(0xf2f2f2);
     [self setNavigationItems];
+    
     [self createAgeSexButton];
+    
 }
 -(void)setNavigationItems
 {
@@ -76,7 +80,7 @@
     NSArray *array = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14"];
     NSArray *array2 = @[@"男",@"女"];
     
-    self.pickerView = [[GGT_AgeSexPickerView alloc] initWithFrame:CGRectMake(0, ScreenH-256, ScreenW, 256)];
+    self.pickerView = [[GGT_AgeSexPickerView alloc] initWithFrame:CGRectMake(0, ScreenH-LineH(256), ScreenW, LineH(256))];
     self.pickerView.backgroundColor = [UIColor whiteColor];
     int selectRow = 0;
     int inComponent = 0;
@@ -102,11 +106,30 @@
     self.pickerView.selectBlock = ^(NSString *str) {
         [weakself currentSource:str];
     };
+    [self bgView];
+    [self.view bringSubviewToFront:self.pickerView];
     [self.pickerView popPickerView];
+    
+}
+//弹出选择器时透明黑色背景
+-(void)bgView{
+    UIView *bgview = [[UIView alloc] initWithFrame:self.view.bounds];
+    bgview.backgroundColor = [UIColor blackColor];
+    bgview.alpha = 0.3;
+    self.bgview = bgview;
+    self.bgview.tag = 1000;
+    [self.view addSubview:bgview];
+}
+//收起选择器时移除背景
+-(void)removebgView{
+    UIView *subviews  = [self.view viewWithTag:1000];
+    [subviews removeFromSuperview];
 }
 //选中的数据
 -(void)currentSource:(NSString *)str
 {
+    NSLog(@"选中数据了");
+    [self removebgView];
     [self.ageSexBtn setTitle:str forState:UIControlStateNormal];
     [self.ageSexBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 }
