@@ -82,12 +82,12 @@
     
     [MBProgressHUD hideHUDForView:self.view];
     [MBProgressHUD showLoading:self.view];
-    [BaseNetManager afPostRequest:[GGT_Request_Url URL_Resigt] parms:postDic finished:^(id responseObj) {
+    [BaseNetManager afPostRequest:URL_Resigt parms:postDic finished:^(id responseObj) {
         [MBProgressHUD hideHUDForView:self.view];
 
         NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
         NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"注册成功url=%@~~~%@",[GGT_Request_Url URL_Resigt],jsonStr);
+        NSLog(@"注册成功url=%@~~~%@",URL_Resigt,jsonStr);
         
         
         if ([responseObj[@"result"] isEqual:@1]) {

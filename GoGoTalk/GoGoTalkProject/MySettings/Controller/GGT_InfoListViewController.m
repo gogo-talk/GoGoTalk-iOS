@@ -53,17 +53,21 @@
 {
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
     [self.tableView registerClass:[GGT_InfoListCell class] forCellReuseIdentifier:@"listCell"];
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor clearColor];
+    [self.tableView setTableFooterView:view];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.scrollEnabled = NO;
+    self.tableView.backgroundColor = [UIColor clearColor];
     //self.tableView.separatorColor = [UIColor clearColor];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).with.offset(LineY(10));
         make.left.equalTo(self.view.mas_left).with.offset(0);
         make.right.equalTo(self.view.mas_right).with.offset(0);
-        //make.bottom.mas_equalTo(self.view.mas_bottom);
-        make.height.mas_equalTo(LineH(328));
+        make.bottom.mas_equalTo(self.view.mas_bottom);
+        //make.height.mas_equalTo(LineH(328));
     }];
 }
 - (void)didReceiveMemoryWarning {
