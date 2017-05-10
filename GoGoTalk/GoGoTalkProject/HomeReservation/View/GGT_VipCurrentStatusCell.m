@@ -42,16 +42,16 @@
     
 //    724 × 284 beijing_zuijkecheng
     //待约课
-    self.waitingOrderImgView = [[UIImageView alloc]init];
-    self.waitingOrderImgView.image = UIIMAGE_FROM_NAME(@"wuyueke_kecheng_kong");
-    [self.bgView addSubview:self.waitingOrderImgView];
+//    self.waitingOrderImgView = [[UIImageView alloc]init];
+//    self.waitingOrderImgView.image = UIIMAGE_FROM_NAME(@"wuyueke_kecheng_kong");
+//    [self.bgView addSubview:self.waitingOrderImgView];
+//    
+//    [self.waitingOrderImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.bgView);
+//    }];
     
-    [self.waitingOrderImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.bgView);
-    }];
     
-    
- /*
+
     //课程日期
     self.courseTimeLabel = [[UILabel alloc]init];
     self.courseTimeLabel.font = Font(16);
@@ -76,7 +76,7 @@
 
     /******************************正在上课******************************/
     
-    /*
+    
         [self.courseTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.bgView.mas_top).with.offset(LineH(15));
             make.left.equalTo(self.bgView.mas_left).with.offset(LineX(10));
@@ -170,7 +170,7 @@
         make.right.equalTo(self.bgView.mas_right).with.offset(-LineW(10));
         make.size.mas_offset(CGSizeMake(LineW(65), LineH(25)));
     }];
-    */
+    
     
 }
 

@@ -73,11 +73,10 @@
     }
     
     
-    /*
+    
     NSArray *iconImgArray = @[@"chidao_xuexishuju",@"yixue_xuexishuju",@"quexi_xuexishuju"];
     NSArray *unitArray = @[@"次",@"分",@"次"];
     NSArray *desArray = @[@"迟到",@"已学",@"缺席"];
-    NSArray *numArray = @[@"3",@"60",@"5"];
     for (int i = 0; i < 3; i ++) {
         //迟到次数
         UIImageView *laterImgView = [[UIImageView alloc]init];
@@ -88,7 +87,6 @@
         //迟到次数
         UILabel *numLabel  = [[UILabel alloc]init];
         numLabel.font = Font(24);
-        numLabel.text = numArray[i];
         numLabel.tag = 200 + i;
         numLabel.textColor = UICOLOR_FROM_HEX(Color333333);
         [self.bgView addSubview:numLabel];
@@ -102,55 +100,53 @@
         
         
         [numLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(laterImgView.mas_right).with.offset(LineX(5)+LineW(118)*i);
+            make.left.equalTo(laterImgView.mas_right).with.offset(LineX(5));
             make.top.equalTo(self.bgView.mas_top).with.offset(LineY(20));
             make.height.mas_equalTo(LineH(24));
         }];
         
         
+        UILabel *ciLabel  = [[UILabel alloc]init];
+        ciLabel.text = unitArray[i];
+        ciLabel.font = Font(10);
+        ciLabel.textColor = UICOLOR_FROM_HEX(Color999999);
+        [self.bgView addSubview:ciLabel];
         
-//        UILabel *ciLabel  = [[UILabel alloc]init];
-//        ciLabel.text = unitArray[i];
-//        ciLabel.font = Font(10);
-//        ciLabel.textColor = UICOLOR_FROM_HEX(Color999999);
-//        [self.bgView addSubview:ciLabel];
-//        
-//        
-//        [ciLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.equalTo(numLabel.mas_right).with.offset(LineX(5)+LineW(118)*i);
-//            make.top.equalTo(self.bgView.mas_top).with.offset(LineY(27));
-//            make.height.mas_equalTo(LineH(10));
-//        }];
-//        
-//        
-//        UILabel *chidaoLabel  = [[UILabel alloc]init];
-//        chidaoLabel.text = desArray[i];
-//        chidaoLabel.font = Font(10);
-//        chidaoLabel.textColor = UICOLOR_FROM_HEX(Color999999);
-//        [self.bgView addSubview:chidaoLabel];
-//        
-//        
-//        [chidaoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.equalTo(numLabel.mas_left).with.offset(LineX(5)+LineW(118)*i);
-//            make.top.equalTo(numLabel.mas_bottom).with.offset(LineY(5));
-//            make.height.mas_equalTo(LineH(10));
-//        }];
-    }
-   */
-    
-    
- 
-    
-    
- 
+        
+        [ciLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(numLabel.mas_right).with.offset(LineX(5));
+            make.top.equalTo(self.bgView.mas_top).with.offset(LineY(27));
+            make.height.mas_equalTo(LineH(10));
+        }];
 
+        
+        UILabel *chidaoLabel  = [[UILabel alloc]init];
+        chidaoLabel.text = desArray[i];
+        chidaoLabel.font = Font(10);
+        chidaoLabel.textColor = UICOLOR_FROM_HEX(Color999999);
+        [self.bgView addSubview:chidaoLabel];
+        
+        
+        [chidaoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(numLabel.mas_left);
+            make.top.equalTo(numLabel.mas_bottom).with.offset(LineY(5));
+            make.height.mas_equalTo(LineH(10));
+        }];
+    }
+   
+    
+    //迟到次数
+    UILabel *label1 = (UILabel *)[self viewWithTag:200];
+    self.lateCountLabel = label1;
     
     
-//    //已学时长
-//    @property (nonatomic, strong) UILabel *learnTimeLabel;
-//    //缺席次数
-//    @property (nonatomic, strong) UILabel *missCountLabel;
+    //已学时长
+    UILabel *label2 = (UILabel *)[self viewWithTag:201];
+    self.learnTimeLabel = label2;
     
+    //缺席次数
+    UILabel *label3 = (UILabel *)[self viewWithTag:202];
+    self.missCountLabel = label3;
     
 }
 

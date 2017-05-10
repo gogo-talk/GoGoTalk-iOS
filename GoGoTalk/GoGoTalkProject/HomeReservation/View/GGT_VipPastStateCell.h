@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XCStarView.h"
 
 @interface GGT_VipPastStateCell : UITableViewCell
 
@@ -26,7 +27,10 @@
 @property (nonatomic, strong) UILabel *statusLabel;
 //状态
 @property (nonatomic, strong) UIImageView *statusImgView;
-
 //重播
 @property (nonatomic, strong) UIButton *enterRoomButton;
+//星星
+@property (nonatomic, strong) XCStarView *xc_starView;
+
+
 @end

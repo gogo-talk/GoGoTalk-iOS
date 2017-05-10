@@ -73,8 +73,18 @@
 }
 
 
+//暂时解决横竖屏问题----不过如果是横屏启动的话，会出现bug
+/*
+//支持旋转
+-(BOOL)shouldAutorotate{
+    return YES;
+}
 
-
+//支持的方向
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+*/
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GGT_BookExperienceClassView : UIView
+@interface GGT_BookExperienceClassView : UIView <UITextFieldDelegate>
 
 @property (nonatomic, strong) UITextField *nameField;
 

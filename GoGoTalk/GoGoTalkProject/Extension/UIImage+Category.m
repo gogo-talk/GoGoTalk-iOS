@@ -47,23 +47,5 @@
     return newImage;
 }
 
-+ (UIImage *)imageWithLineWithImageView:(UIImageView *)imageView {
-    CGFloat width = imageView.frame.size.width;
-    CGFloat height = imageView.frame.size.height;
-    UIGraphicsBeginImageContext(imageView.frame.size);
-    [imageView.image drawInRect:CGRectMake(0, 0, width, height)];
-    CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-    CGFloat lengths[] = {10,5};
-    CGContextRef line = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(line, UICOLOR_FROM_HEX(ColorCCCCCC).CGColor);
-    CGContextSetLineDash(line, 0, lengths, 1);
-    CGContextMoveToPoint(line, 0, 1);
-    CGContextAddLineToPoint(line, width - 10, 1);
-    CGContextStrokePath(line);
-    return  UIGraphicsGetImageFromCurrentImageContext();
-    
 
-    
-    
-}
 @end

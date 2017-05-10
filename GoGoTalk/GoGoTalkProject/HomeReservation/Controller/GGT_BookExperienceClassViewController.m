@@ -22,9 +22,9 @@
     self.navigationItem.title = @"预约体验课";
     
     GGT_BookExperienceClassView *bookView = [[GGT_BookExperienceClassView alloc]init];
-    bookView.backgroundColor = UICOLOR_RANDOM_COLOR();
+    bookView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     self.view = bookView;
-    
+
 
 }
 
