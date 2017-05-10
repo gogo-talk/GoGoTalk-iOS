@@ -5,7 +5,7 @@
 //  Created by 何建新 on 2017/5/5.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
-#define PICKERVIEW_HEIGHT 256
+#define PICKERVIEW_HEIGHT 140
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 #define ScreenH [UIScreen mainScreen].bounds.size.height
 #import "GGT_AgeSexPickerView.h"
@@ -45,7 +45,8 @@
     [self.baseView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.mas_top);
         make.right.mas_equalTo(self.mas_right);
-        make.bottom.mas_equalTo(self.mas_bottom);
+        //make.bottom.mas_equalTo(self.mas_bottom);
+        make.height.mas_equalTo(140);
         make.left.mas_equalTo(self.mas_left);
     }];
     //创建确定和取消按钮
@@ -73,11 +74,11 @@
     [btnCancel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.baseView.mas_top);
         make.left.equalTo(self.baseView.mas_left).with.offset(LineX(10));
-        make.height.mas_equalTo(LineH(40));
-        make.width.mas_equalTo(LineW(40));
+        make.height.mas_equalTo(40);
+        make.width.mas_equalTo(40);
     }];
     //创建选择器
-    self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, LineY(40), ScreenW, PICKERVIEW_HEIGHT-LineH(40))];
+    self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 40, ScreenW, PICKERVIEW_HEIGHT-40)];
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
     self.pickerView.backgroundColor = [UIColor whiteColor];
@@ -104,7 +105,7 @@
 -(void)popPickerView
 {
     [UIView animateWithDuration:0.5 animations:^{
-        self.frame = CGRectMake(0, ScreenH-LineH(256), ScreenW, LineH(256));
+        self.frame = CGRectMake(0, ScreenH-205, ScreenW, 140);
     }];
 }
 //隐藏
