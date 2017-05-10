@@ -1,6 +1,6 @@
 //
 //  GGT_Request_URL.h
-//  GoGoTalkHD
+//  GoGoTalk
 //
 //  Created by 辰 on 2017/5/10.
 //  Copyright © 2017年 Chn. All rights reserved.

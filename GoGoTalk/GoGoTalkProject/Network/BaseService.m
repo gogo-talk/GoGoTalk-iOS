@@ -1,6 +1,6 @@
 //
 //  BaseService.m
-//  Clap
+//  GoGoTalk
 //
 //  Created by 辰 on 16/7/29.
 //  Copyright © 2016年 Chn. All rights reserved.
@@ -11,6 +11,7 @@
 static NSString * const xc_returnCode = @"result";
 static NSString * const xc_returnMsg = @"msg";
 static NSString * const xc_message = @"message";
+static NSString * const xc_alert_message = @"网络不给力，请稍后再试";
 
 @interface BaseService()
 
@@ -102,14 +103,18 @@ static NSString * const xc_message = @"message";
             [self.manager GET:urlStr parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
                 [MBProgressHUD hideHUDForView:viewController.view];
-                
                 NSDictionary *dic = responseObject;
                 if ([[dic objectForKey:xc_returnCode]integerValue] == 1)
                 {
                     success(responseObject);
                 }
                 else {
-                    NSError *error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:[dic objectForKey:xc_returnMsg]}];
+                    NSError *error;
+                    if ([dic objectForKey:xc_returnMsg] && [dic objectForKey:xc_returnCode]) {
+                        error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:[dic objectForKey:xc_returnMsg], xc_returnCode:[dic objectForKey:xc_returnCode]}];
+                    } else {
+                        error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1002 userInfo:@{xc_message:xc_alert_message}];
+                    }
                     failure(error);
                     [self alertErrorMessage:error];
                 }
@@ -121,7 +126,7 @@ static NSString * const xc_message = @"message";
 #ifdef DEBUG
                 [self alertErrorMessage:error];
 #else
-                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:@"网络异常"}];
+                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:xc_alert_message}];
                 [self alertErrorMessage:newError];
 #endif
             }];
@@ -143,14 +148,20 @@ static NSString * const xc_message = @"message";
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
                 [MBProgressHUD hideHUDForView:viewController.view];
-                
+
                 NSDictionary *dic = responseObject;
                 if ([[dic objectForKey:xc_returnCode]integerValue] == 1)
                 {
                     success(responseObject);
                 }
                 else {
-                    NSError *error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:[dic objectForKey:xc_returnMsg], xc_returnCode:[dic objectForKey:xc_returnCode]}];
+                    NSError *error;
+                    if ([dic objectForKey:xc_returnMsg] && [dic objectForKey:xc_returnCode]) {
+                        error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:[dic objectForKey:xc_returnMsg], xc_returnCode:[dic objectForKey:xc_returnCode]}];
+                    } else {
+                        error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1002 userInfo:@{xc_message:xc_alert_message}];
+                    }
+                    
                     failure(error);
                     [self alertErrorMessage:error];
                 }
@@ -163,7 +174,7 @@ static NSString * const xc_message = @"message";
 #ifdef DEBUG
                 [self alertErrorMessage:error];
 #else
-                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:@"网络异常"}];
+                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:xc_alert_message}];
                 [self alertErrorMessage:newError];
 #endif
             }];
@@ -181,7 +192,7 @@ static NSString * const xc_message = @"message";
 #ifdef DEBUG
                 [self alertErrorMessage:error];
 #else
-                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:@"网络异常"}];
+                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:xc_alert_message}];
                 [self alertErrorMessage:newError];
 #endif
             }];
@@ -199,7 +210,7 @@ static NSString * const xc_message = @"message";
 #ifdef DEBUG
                 [self alertErrorMessage:error];
 #else
-                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:@"网络异常"}];
+                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:xc_alert_message}];
                 [self alertErrorMessage:newError];
 #endif
             }];
