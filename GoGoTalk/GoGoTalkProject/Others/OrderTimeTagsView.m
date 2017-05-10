@@ -15,8 +15,7 @@
 @implementation OrderTimeTagsView
 @synthesize view, textArray;
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.userInteractionEnabled = YES;
@@ -25,25 +24,25 @@
     return self;
 }
 
-- (void)setTags:(NSArray *)array
-{
+- (void)setTags:(NSArray *)array {
     textArray = [[NSArray alloc] initWithArray:array];
     sizeFit = CGSizeZero;
     [self display];
 }
 
-- (void)setLabelBackgroundColor:(UIColor *)color
-{
+- (void)setLabelBackgroundColor:(UIColor *)color {
     lblBackgroundColor = color;
     [self display];
 }
 
-- (void)display
-{
+- (void)display {
     for (UILabel *subview in [self subviews]) {
         [subview removeFromSuperview];
     }
     float totalHeight = 0;
+//    float totalWidth = 0;
+
+    
     CGRect previousFrame = CGRectZero;
     BOOL gotPreviousFrame = NO;
     for (NSString *text in textArray) {
@@ -53,6 +52,7 @@
             label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, LineW(54), LineH(24))];
 
             totalHeight = LineH(24);
+//            totalWidth = LineW(54);
         } else {
             CGRect newRect = CGRectZero;
             if (previousFrame.origin.x + previousFrame.size.width + LineW(54) + LABEL_MARGIN > self.frame.size.width) {
@@ -80,7 +80,8 @@
         [label.layer setBorderWidth:LineW(0.5)];
         label.userInteractionEnabled = self.allowClick;
         
-        
+//        NSLog(@"----%@",NSStringFromCGRect(label.frame));
+
         UIControl *control = [[UIControl alloc] initWithFrame:CGRectMake(0, 0, label.width, label.height)];
         control.tag = [textArray indexOfObject:text];
         [control addTarget:self action:@selector(clickTagWithControl:) forControlEvents:UIControlEventTouchUpInside];
@@ -89,14 +90,15 @@
         
     }
     sizeFit = CGSizeMake(self.frame.size.width, totalHeight + 1.0f);
+//    sizeFit = CGSizeMake(totalWidth, totalHeight + 1.0f);
+
 }
 
-- (CGSize)fittedSize
-{
+- (CGSize)fittedSize {
     return sizeFit;
 }
 
-- (void)clickTagWithControl:(UIControl *)control{
+- (void)clickTagWithControl:(UIControl *)control {
     self.tagClickedBlock([self.textArray safe_objectAtIndex:control.tag]);
 }
 @end
