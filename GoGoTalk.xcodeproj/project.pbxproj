@@ -17,6 +17,7 @@
 		3552104B1EBC766C0057EA59 /* GGT_EditUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */; };
 		358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F522C1EBB034D004A7692 /* GGT_UserInfo.m */; };
 		358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */; };
+		35A3F6021EC2FAF300C88A18 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A3F6011EC2FAF300C88A18 /* Reveal.framework */; };
 		35DE2CD01EBCC08600E41B34 /* GGT_EditAgeSexController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DE2CCF1EBCC08600E41B34 /* GGT_EditAgeSexController.m */; };
 		35DE2CD91EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DE2CD81EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m */; };
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
@@ -131,6 +132,7 @@
 		358F522C1EBB034D004A7692 /* GGT_UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserInfo.m; sourceTree = "<group>"; };
 		358F52311EBB2FF3004A7692 /* GGT_SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_SettingTableViewCell.h; sourceTree = "<group>"; };
 		358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_SettingTableViewCell.m; sourceTree = "<group>"; };
+		35A3F6011EC2FAF300C88A18 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		35DE2CCE1EBCC08600E41B34 /* GGT_EditAgeSexController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_EditAgeSexController.h; sourceTree = "<group>"; };
 		35DE2CCF1EBCC08600E41B34 /* GGT_EditAgeSexController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_EditAgeSexController.m; sourceTree = "<group>"; };
 		35DE2CD71EBCCEEB00E41B34 /* GGT_AgeSexPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AgeSexPickerView.h; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D696AFD3BE34379B2D601BF6 /* libPods-GoGoTalk.a in Frameworks */,
+				35A3F6021EC2FAF300C88A18 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +339,7 @@
 		4B5CFEF708289DAD86D147C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35A3F6011EC2FAF300C88A18 /* Reveal.framework */,
 				B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */,
 			);
 			name = Frameworks;
@@ -1232,10 +1236,103 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = YZK33WLG48;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GoGoTalk/PrefixHeader.pch";
 				INFOPLIST_FILE = GoGoTalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"BJHL-Foundation-iOS\"",
+					"-l\"BJHL-Websocket-iOS\"",
+					"-l\"BJLiveCore\"",
+					"-l\"CocoaLumberjack\"",
+					"-l\"FLEX\"",
+					"-l\"FMDB\"",
+					"-l\"FSCalendar\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"JRSwizzle\"",
+					"-l\"LKDBHelper\"",
+					"-l\"LTInfiniteScrollView\"",
+					"-l\"M9Dev\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"NSString-UrlEncode\"",
+					"-l\"PocketSocket\"",
+					"-l\"Reachability\"",
+					"-l\"ReactiveCocoa\"",
+					"-l\"SDWebImage\"",
+					"-l\"SocialQQ\"",
+					"-l\"SocialSina\"",
+					"-l\"SocialUniqueId\"",
+					"-l\"SocialWeChat\"",
+					"-l\"UMSocialLog\"",
+					"-l\"YYModel\"",
+					"-l\"ZFPlayer\"",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"jcore-ios-1.1.3\"",
+					"-l\"jpush-ios-3.0.5\"",
+					"-l\"libextobjc\"",
+					"-l\"mediaplayer\"",
+					"-l\"resolv\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"stdc++.6\"",
+					"-l\"system\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Bugly\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"LogStat\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UMSocialCore\"",
+					"-framework",
+					"\"UMSocialNetwork\"",
+					"-framework",
+					"\"UShareUI\"",
+					"-framework",
+					"\"VideoToolbox\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gogo-talk.GoGoTalk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1251,6 +1348,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = YZK33WLG48;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GoGoTalk/PrefixHeader.pch";
 				INFOPLIST_FILE = GoGoTalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
