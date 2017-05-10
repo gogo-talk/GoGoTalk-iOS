@@ -1,6 +1,6 @@
 //
 //  BaseService.m
-//  Clap
+//  GoGoTalk
 //
 //  Created by 辰 on 16/7/29.
 //  Copyright © 2016年 Chn. All rights reserved.
@@ -8,9 +8,10 @@
 
 #import "BaseService.h"
 
-static NSString * const xc_returnCode = @"returnCode";
-static NSString * const xc_returnMsg = @"returnMsg";
+static NSString * const xc_returnCode = @"result";
+static NSString * const xc_returnMsg = @"msg";
 static NSString * const xc_message = @"message";
+static NSString * const xc_alert_message = @"网络不给力，请稍后再试";
 
 @interface BaseService()
 
@@ -88,34 +89,44 @@ static NSString * const xc_message = @"message";
                 success:(AFNSuccessResponse)success
                 failure:(AFNFailureResponse)failure
 {
+    self.manager = [AFHTTPSessionManager manager];
+    urlStr = [BASE_REQUEST_URL stringByAppendingPathComponent:urlStr];
     
-    urlStr = [urlStr stringByAppendingPathComponent:PrefixAddress];
+    [MBProgressHUD hideHUDForView:viewController.view];
+    [MBProgressHUD showLoading:viewController.view];
     
     switch (method) {
         case XCHttpRequestGet:
         {
-            self.manager = [AFHTTPSessionManager manager];
-            //            self.manager.requestSerializer.timeoutInterval = 5;
+//            self.manager = [AFHTTPSessionManager manager];
+//            self.manager.requestSerializer.timeoutInterval = 5;
             [self.manager GET:urlStr parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
+                [MBProgressHUD hideHUDForView:viewController.view];
                 NSDictionary *dic = responseObject;
-                if ([[dic objectForKey:xc_returnCode]integerValue] == 0)
+                if ([[dic objectForKey:xc_returnCode]integerValue] == 1)
                 {
                     success(responseObject);
                 }
                 else {
-                    NSError *error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:[dic objectForKey:xc_returnMsg]}];
+                    NSError *error;
+                    if ([dic objectForKey:xc_returnMsg] && [dic objectForKey:xc_returnCode]) {
+                        error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:[dic objectForKey:xc_returnMsg], xc_returnCode:[dic objectForKey:xc_returnCode]}];
+                    } else {
+                        error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1002 userInfo:@{xc_message:xc_alert_message}];
+                    }
                     failure(error);
                     [self alertErrorMessage:error];
                 }
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [MBProgressHUD hideHUDForView:viewController.view];
                 failure(error);
                 //                [self alertErrorMessage:error];
 #ifdef DEBUG
                 [self alertErrorMessage:error];
 #else
-                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:@"网络异常"}];
+                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:xc_alert_message}];
                 [self alertErrorMessage:newError];
 #endif
             }];
@@ -135,23 +146,35 @@ static NSString * const xc_message = @"message";
             [self.manager POST:urlStr parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                
+                [MBProgressHUD hideHUDForView:viewController.view];
+
                 NSDictionary *dic = responseObject;
                 if ([[dic objectForKey:xc_returnCode]integerValue] == 1)
                 {
                     success(responseObject);
                 }
                 else {
-                    NSError *error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:[dic objectForKey:xc_returnMsg], xc_returnCode:[dic objectForKey:xc_returnCode]}];
+                    NSError *error;
+                    if ([dic objectForKey:xc_returnMsg] && [dic objectForKey:xc_returnCode]) {
+                        error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:[dic objectForKey:xc_returnMsg], xc_returnCode:[dic objectForKey:xc_returnCode]}];
+                    } else {
+                        error = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1002 userInfo:@{xc_message:xc_alert_message}];
+                    }
+                    
                     failure(error);
                     [self alertErrorMessage:error];
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                
+                [MBProgressHUD hideHUDForView:viewController.view];
+                
                 failure(error);
                 //                [self alertErrorMessage:error];
 #ifdef DEBUG
                 [self alertErrorMessage:error];
 #else
-                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:@"网络异常"}];
+                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:xc_alert_message}];
                 [self alertErrorMessage:newError];
 #endif
             }];
@@ -160,14 +183,16 @@ static NSString * const xc_message = @"message";
         case XCHttpRequestDelete:
         {
             [self.manager DELETE:urlStr parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                [MBProgressHUD hideHUDForView:viewController.view];
                 success(responseObject);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [MBProgressHUD hideHUDForView:viewController.view];
                 failure(error);
                 //                [self alertErrorMessage:error];
 #ifdef DEBUG
                 [self alertErrorMessage:error];
 #else
-                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:@"网络异常"}];
+                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:xc_alert_message}];
                 [self alertErrorMessage:newError];
 #endif
             }];
@@ -176,14 +201,16 @@ static NSString * const xc_message = @"message";
         case XCHttpRequestPut:
         {
             [self.manager PUT:urlStr parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                [MBProgressHUD hideHUDForView:viewController.view];
                 success(responseObject);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [MBProgressHUD hideHUDForView:viewController.view];
                 failure(error);
                 //                [self alertErrorMessage:error];
 #ifdef DEBUG
                 [self alertErrorMessage:error];
 #else
-                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk.HD" code:1001 userInfo:@{xc_message:@"网络异常"}];
+                NSError *newError = [[NSError alloc]initWithDomain:@"com.gogo-talk.GoGoTalk" code:1001 userInfo:@{xc_message:xc_alert_message}];
                 [self alertErrorMessage:newError];
 #endif
             }];

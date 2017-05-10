@@ -1,6 +1,6 @@
 //
 //  BaseService.h
-//  Clap
+//  GoGoTalk
 //
 //  Created by 辰 on 16/7/29.
 //  Copyright © 2016年 Chn. All rights reserved.
