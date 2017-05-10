@@ -29,8 +29,8 @@ UITextFieldDelegate> {
 
 @property (nonatomic) BJLRoom *room;
 
-@property (nonatomic) UIButton *recordingView, *playingView;    // 录屏、播放
-@property (nonatomic) UIView *slideshowAndWhiteboardView;       // 白板
+@property (nonatomic) UIButton *xc_recordingView, *xc_playingView;    // 录屏、播放
+@property (nonatomic) UIView *xc_slideshowAndWhiteboardView;       // 白板
 
 @property (nonatomic) BJConsoleViewController *console;         // 聊天界面
 

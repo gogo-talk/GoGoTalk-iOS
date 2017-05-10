@@ -97,9 +97,9 @@
     weakdef(self);
     
     self.room.recordingView.userInteractionEnabled = NO;
-    [self.recordingView addSubview:self.room.recordingView];
+    [self.xc_recordingView addSubview:self.room.recordingView];
     [self.room.recordingView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.recordingView);
+        make.edges.equalTo(self.xc_recordingView);
     }];
     
     
@@ -107,7 +107,7 @@
     [self.room.recordingVM setRecordingAudio:YES
                               recordingVideo:YES];
     
-    [[self.recordingView rac_signalForControlEvents:UIControlEventTouchUpInside]
+    [[self.xc_recordingView rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          strongdef(self);
          
@@ -122,7 +122,7 @@
              && !self.room.speakingRequestVM.speakingEnabled) {
              BOOL hasTeacher = !!self.room.onlineUsersVM.onlineTeacher;
              UIAlertController *actionSheet = [UIAlertController
-                                               alertControllerWithTitle:self.recordingView.currentTitle
+                                               alertControllerWithTitle:self.xc_recordingView.currentTitle
                                                message:hasTeacher ? @"要发言先举手" : @"老师没在教室，不能举手"
                                                preferredStyle:UIAlertControllerStyleActionSheet];
              // 老师在线
@@ -157,7 +157,7 @@
          BOOL recordingAudio = recordingVM.recordingAudio, recordingVideo = recordingVM.recordingVideo;
          
          UIAlertController *actionSheet = [UIAlertController
-                                           alertControllerWithTitle:self.recordingView.currentTitle
+                                           alertControllerWithTitle:self.xc_recordingView.currentTitle
                                            message:nil
                                            preferredStyle:UIAlertControllerStyleActionSheet];
          
@@ -263,9 +263,9 @@
 // 播放视频的事件
 - (void)makePlayingEvents {
     self.room.playingView.userInteractionEnabled = NO;
-    [self.playingView addSubview:self.room.playingView];
+    [self.xc_playingView addSubview:self.room.playingView];
     [self.room.playingView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.playingView);
+        make.edges.equalTo(self.xc_playingView);
     }];
     
     
@@ -331,7 +331,7 @@
 #pragma mark - 下面暂时没有用
 
     // 点击播放视频的信号  弹出ActionSheet事件
-    [[self.playingView rac_signalForControlEvents:UIControlEventTouchUpInside]
+    [[self.xc_playingView rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          strongdef(self);
          
@@ -345,7 +345,7 @@
          BOOL noBody = !videoPlayingUser && !playingUsers.count;
          
          UIAlertController *actionSheet = [UIAlertController
-                                           alertControllerWithTitle:self.playingView.currentTitle
+                                           alertControllerWithTitle:self.xc_playingView.currentTitle
                                            message:noBody ? @"现在没有人在发言" : nil
                                            preferredStyle:UIAlertControllerStyleActionSheet];
          
@@ -446,16 +446,16 @@
     self.room.slideshowViewController.placeholderImage = [UIImage imageWithColor:[UIColor lightGrayColor]];
     
     [self addChildViewController:self.room.slideshowViewController
-                       superview:self.slideshowAndWhiteboardView];
+                       superview:self.xc_slideshowAndWhiteboardView];
     [self.room.slideshowViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.slideshowAndWhiteboardView);
+        make.edges.equalTo(self.xc_slideshowAndWhiteboardView);
     }];
     
     
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    [self.slideshowAndWhiteboardView addSubview:infoButton];
+    [self.xc_slideshowAndWhiteboardView addSubview:infoButton];
     [infoButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.bottom.equalTo(self.slideshowAndWhiteboardView).offset(- 5);
+        make.right.bottom.equalTo(self.xc_slideshowAndWhiteboardView).offset(- 5);
     }];
     
     /*----*/

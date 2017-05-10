@@ -17,7 +17,6 @@
 
 #import "BJRoomViewController.h"    // 百家云
 
-#import "GGT_CeShiVC.h"
 
 
 static NSString * const CalendarCellID = @"cell";
@@ -520,9 +519,9 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     //    [self.navigationController pushViewController:vc animated:YES];
     
     // 进入百家云房间
-    //    [self enterRoomWithJoinCode:@"asd0i5" userName:@"cc"];
+        [self enterRoomWithJoinCode:@"asd0i5" userName:@"cc"];
     
-    [self presentViewController:[GGT_CeShiVC new] animated:YES completion:nil];
+//    [self presentViewController:[GGT_CeShiVC new] animated:YES completion:nil];
     
     //    [self.navigationController pushViewController:[GGT_CeShiVC new] animated:YES];
 }
@@ -538,27 +537,5 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
                      }];
 }
 
-//- (BOOL)prefersStatusBarHidden
-//{
-//    return NO;
-//}
-//
-//- (void)viewWillLayoutSubviews
-//{
-//    [super viewWillLayoutSubviews];
-//    [self _shouldRotateToOrientation:(UIDeviceOrientation)[UIApplication sharedApplication].statusBarOrientation];
-//    NSLog(@"%s", __func__);
-//}
-//
-//-(void)_shouldRotateToOrientation:(UIDeviceOrientation)orientation {
-//    if (orientation == UIDeviceOrientationPortrait ||orientation ==
-//        UIDeviceOrientationPortraitUpsideDown) {
-//        NSLog(@"竖屏");
-//    }
-//    else {
-//        NSLog(@"横屏");
-//        
-//    }
-//}
 
 @end
