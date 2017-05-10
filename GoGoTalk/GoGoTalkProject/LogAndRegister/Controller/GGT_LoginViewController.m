@@ -99,12 +99,12 @@
     
     [MBProgressHUD hideHUDForView:self.view];
     [MBProgressHUD showLoading:self.view];
-    [BaseNetManager afPostRequest:[GGT_Request_Url URL_Login] parms:postDic finished:^(id responseObj) {
+    [BaseNetManager afPostRequest:URL_Login parms:postDic finished:^(id responseObj) {
         [MBProgressHUD hideHUDForView:self.view];
         
         NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
         NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"登录url=%@~~~%@",[GGT_Request_Url URL_Login],jsonStr);
+        NSLog(@"登录url=%@~~~%@",URL_Login,jsonStr);
         
         
         if ([responseObj[@"result"] isEqual:@1]) {

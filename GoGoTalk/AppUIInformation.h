@@ -1,13 +1,13 @@
 //
-//  AppColorInfo.h
+//  AppUIInformation.h
 //  GoGoTalk
 //
-//  Created by 辰 on 2017/5/4.
+//  Created by 辰 on 2017/5/10.
 //  Copyright © 2017年 XieHenry. All rights reserved.
 //
 
-#ifndef AppColorInfo_h
-#define AppColorInfo_h
+#ifndef AppUIInformation_h
+#define AppUIInformation_h
 
 static CGFloat const margin5  = 5.0f;
 static CGFloat const margin10 = 10.0f;
@@ -29,5 +29,4 @@ static CGFloat const margin44 = 44.0f;
 //灰色界面背景
 #define ColorF2F2F2 0xF2F2F2
 
-
-#endif /* AppColorInfo_h */
+#endif /* AppUIInformation_h */

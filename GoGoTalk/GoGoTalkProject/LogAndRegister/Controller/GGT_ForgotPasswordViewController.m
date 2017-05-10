@@ -86,12 +86,12 @@
     
     [MBProgressHUD hideHUDForView:self.view];
     [MBProgressHUD showLoading:self.view];
-    [BaseNetManager afPostRequest:[GGT_Request_Url URL_ChangePwdByCode] parms:postDic finished:^(id responseObj) {
+    [BaseNetManager afPostRequest:URL_ChangePwdByCode parms:postDic finished:^(id responseObj) {
         [MBProgressHUD hideHUDForView:self.view];
         
         NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
         NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"修改密码url=%@~~~%@",[GGT_Request_Url URL_ChangePwdByCode],jsonStr);
+        NSLog(@"修改密码url=%@~~~%@",URL_ChangePwdByCode,jsonStr);
         
         
         if ([responseObj[@"result"] isEqual:@1]) {
@@ -143,7 +143,7 @@
     
     //拼接地址,使用？拼接
     NSString *cellStr = [NSString stringWithFormat:@"cell=%@",self.forgotPasswordView.phoneAccountField.text];
-    NSString *urlStr = [NSString stringWithFormat:@"%@?%@",[GGT_Request_Url URL_GetChangePasswordSMS],cellStr];
+    NSString *urlStr = [NSString stringWithFormat:@"%@?%@",URL_GetChangePasswordSMS,cellStr];
     
     
     [MBProgressHUD hideHUDForView:self.view];

@@ -11,6 +11,9 @@
 @implementation BaseNetManager
 
 + (void)afGetRequest:(NSString *)urlString contentType:(NSString *)type finished:(RequestFinishedBlock)finishedBlock failed:(RequestFailedBlock)failedBlock{
+    
+    urlString = [PrefixAddress stringByAppendingPathComponent:urlString];
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     if (type.length) {
         //jason
@@ -29,6 +32,8 @@
 }
 
 + (void)afPostRequest:(NSString *)urlString parms:(NSDictionary *)dic finished:(RequestFinishedBlock)finishedBlock failed:(RequestFailedBlock)failedBlock{
+    
+    urlString = [PrefixAddress stringByAppendingPathComponent:urlString];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
