@@ -21,6 +21,10 @@
     [self createEditTextField];
     
 }
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 -(void)setNavigationItems
 {
     //导航栏标题
@@ -29,6 +33,7 @@
     [rightBtn setTitle:@"提交" forState:UIControlStateNormal];
     
     rightBtn.frame = CGRectMake(0, 0, 100, 30);
+    [rightBtn setFont:[UIFont systemFontOfSize:16]];
     [rightBtn sizeToFit];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     

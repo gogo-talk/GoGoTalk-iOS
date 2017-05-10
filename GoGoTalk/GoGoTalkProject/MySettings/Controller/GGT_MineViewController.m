@@ -11,6 +11,7 @@
 #import "GGT_SettingTableViewCell.h"
 #import "GGT_InfoListViewController.h"
 #import "GGT_UserSettingController.h"
+#import "GGT_FeedbackController.h"
 @interface GGT_MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray *infoArray;
@@ -93,7 +94,7 @@
         make.top.equalTo(self.view.mas_top).with.offset(LineY(98));
         make.left.equalTo(self.view.mas_left).with.offset(LineX(10));
         make.right.equalTo(self.view.mas_right).with.offset(LineX(-10));
-        make.height.mas_equalTo(LineH(304));
+        make.bottom.mas_equalTo(self.view.mas_bottom);
     }];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -173,6 +174,12 @@
     if(indexPath.section == 1 && indexPath.row == 1){
         GGT_UserSettingController *vc = [GGT_UserSettingController new];
         vc.title = @"设置";
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    //意见反馈
+    if(indexPath.section == 1 && indexPath.row == 0){
+        GGT_FeedbackController *vc = [GGT_FeedbackController new];
+        vc.title = @"意见反馈";
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
