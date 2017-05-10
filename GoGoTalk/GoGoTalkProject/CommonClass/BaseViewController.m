@@ -48,7 +48,7 @@
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
                                        initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                        target:nil action:nil];
-    negativeSpacer.width = 0;
+    negativeSpacer.width = - LineX(5);
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
 }
 

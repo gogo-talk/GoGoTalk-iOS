@@ -17,12 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     
-    GGT_OrderTimeTableView *View = [[GGT_OrderTimeTableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH(), SCREEN_HEIGHT()-64-49)];
-    View.backgroundColor = UICOLOR_RANDOM_COLOR();
-    self.view = View;
     
+    GGT_OrderTimeTableView *View = [[GGT_OrderTimeTableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-64-49)];
+    View.backgroundColor = [UIColor redColor];
+    [self.view addSubview:View];
 }
 
 

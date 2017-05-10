@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GGT_OrderTimeCollectionViewCell.h"
 #import "GGT_OrderTimeHeaderCollectionViewCell.h"
+#import "TimeCollectionViewCell.h"
 
 @interface GGT_OrderTimeTableView : UIView <UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -19,6 +20,11 @@
 @property (nonatomic, strong) NSMutableArray *weeksArray;
 
 @property (nonatomic, strong) NSMutableArray *dateArray;
+
+
+
+
+@property (nonatomic, strong) NSArray *alltimeArray;
 
 
 

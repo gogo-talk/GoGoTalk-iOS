@@ -26,6 +26,6 @@
 @property (nonatomic, strong) UILabel *orderNumLabel;
 //预约按钮
 @property (nonatomic, strong) UIButton *orderButton;
-
-@property (nonatomic, strong) OrderTimeTagsView *skillTagsView;
+//预约时间的小标签
+@property (nonatomic, strong) OrderTimeTagsView *tagsView;
 @end
