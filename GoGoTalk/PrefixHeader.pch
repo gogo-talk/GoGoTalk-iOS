@@ -14,26 +14,32 @@
 #import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>
 
-#import "AppInformation.h"
-#import "AppColorInfo.h"
-#import "BaseViewController.h"
+/*第三方*/
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "Masonry.h"
-#import "UIView+Layout.h"
-#import "UIColor+XCAdditions.h"
-#import "BaseNetManager.h"
-#import "MBProgressHUD+Extension.h"
 #import <MJRefresh.h>
-#import "NSArray+SafeExtension.h"
-#import "GGT_Singleton.h"
+#import "MBProgressHUD+Extension.h"
 #import "NSObject+YYModel.h"
 #import "UIImageView+WebCache.h"
-#import "UIButton+XCHelperBlock.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
 
-#import "UIView+XCCornerRadius.h"
-#import "GGT_Request_Url.h"
-#import "NSString+XCHelper.h"
+/*BASE*/
+#import "AppInformation.h"
+#import "AppUIInformation.h"
+#import "BaseViewController.h"
+#import "BaseNetManager.h"
 #import "BaseBackViewController.h"
+#import "BaseService.h"
+#import "GGT_Singleton.h"
+#import "GGT_Request_Url.h"
+
+
+/*分类*/
+#import "UIView+Layout.h"
+#import "UIColor+XCAdditions.h"
+#import "NSArray+SafeExtension.h"
+#import "UIButton+XCHelperBlock.h"
+#import "UIView+XCCornerRadius.h"
+#import "NSString+XCHelper.h"
 #import "UIView+XCHelper.h"
 #import "UIAlertController+Color.h"
 

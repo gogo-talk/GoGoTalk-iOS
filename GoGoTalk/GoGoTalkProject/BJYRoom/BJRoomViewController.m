@@ -22,6 +22,7 @@ static CGFloat const buttonWidth = 64.0;
 @property (nonatomic) UIView *xc_dashboardGroupView;
 @property (nonatomic) UIButton *xc_consoleSmallScreenButton, *xc_teachFullScreenButton;   // 输入按钮 下来按钮
 @property (nonatomic) BOOL hidenStatus;
+@property (nonatomic) UIImageView *xc_friendlyImgView;
 @end
 
 @implementation BJRoomViewController
@@ -39,6 +40,28 @@ static CGFloat const buttonWidth = 64.0;
     
     _hidenStatus = YES;
     [self prefersStatusBarHidden];
+    
+    [self initFriendlyImgView];
+}
+
+- (void)initFriendlyImgView
+{
+    self.xc_friendlyImgView = ({
+        UIImageView *xc_friendlyImgView = [UIImageView new];
+        xc_friendlyImgView.image = UIIMAGE_FROM_NAME(@"引导页2");
+//        xc_friendlyImgView.transform = CGAffineTransformMakeRotation(M_PI);
+        xc_friendlyImgView.contentMode = UIViewContentModeScaleAspectFit;
+        xc_friendlyImgView;
+    });
+    [self.view addSubview:self.xc_friendlyImgView];
+    
+//    self.xc_friendlyImgView.transform = CGAffineTransformMakeRotation(M_PI/2.0);
+    [self.xc_friendlyImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.bottom.equalTo(self.view);
+    }];
+    
+//    self.xc_friendlyImgView.frame = CGRectMake(0, 0, SCREEN_HEIGHT(), SCREEN_WIDTH());
+    
 }
 
 // self.view旋转后状态栏还在显示 不好看
@@ -788,6 +811,7 @@ static CGFloat const buttonWidth = 64.0;
     // 发送(打印)聊天消息
     [self makeChatEvents];
 }
+
 
 // 设置屏幕选装  需要在xcode中开启支持屏幕旋转
 -(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation

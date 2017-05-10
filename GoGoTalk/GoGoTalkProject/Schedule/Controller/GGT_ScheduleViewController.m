@@ -519,7 +519,7 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     //    [self.navigationController pushViewController:vc animated:YES];
     
     // 进入百家云房间
-        [self enterRoomWithJoinCode:@"asd0i5" userName:@"cc"];
+    [self enterRoomWithJoinCode:@"asd0i5" userName:@"cc"];
     
 //    [self presentViewController:[GGT_CeShiVC new] animated:YES completion:nil];
     
