@@ -85,7 +85,7 @@
     NSArray *array = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14"];
     NSArray *array2 = @[@"男",@"女"];
     
-    self.pickerView = [[GGT_AgeSexPickerView alloc] initWithFrame:CGRectMake(0, ScreenH-LineH(256), ScreenW, LineH(256))];
+    self.pickerView = [[GGT_AgeSexPickerView alloc] initWithFrame:CGRectMake(0, ScreenH-LineH(140), ScreenW, 140)];
     self.pickerView.backgroundColor = [UIColor whiteColor];
     int selectRow = 0;
     int inComponent = 0;
