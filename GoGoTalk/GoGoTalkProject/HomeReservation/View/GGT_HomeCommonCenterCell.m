@@ -24,6 +24,7 @@
 - (void)initCellView {
     self.backgroundImageView = [[UIImageView alloc]init];
     self.backgroundImageView.image = UIIMAGE_FROM_NAME(@"yuyuekecheng");
+    self.backgroundImageView.userInteractionEnabled = YES;
     [self.contentView addSubview:self.backgroundImageView];
     
     [self.backgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -35,7 +36,7 @@
     
     
     //未预约的view
-    /*
+    
     self.notOrderView = [[UIView alloc]init];
     [self.backgroundImageView addSubview:self.notOrderView];
     
@@ -99,7 +100,7 @@
         make.centerX.mas_equalTo(self.notOrderView.mas_centerX);
         make.width.mas_offset(LineW(150));
     }];
-   */
+   
     
     //预约试听
     /*
@@ -291,6 +292,7 @@
 */
     
     /***************************已预约view***************************************************/
+    /*
     self.orderView = [[UIView alloc]init];
     [self.backgroundImageView addSubview:self.orderView];
     
@@ -324,7 +326,7 @@
     //课程状态的img  未开始:weikaishi_kebiao 91 89
     self.statusImgView = [[UIImageView alloc]init];
     [self.orderView addSubview:self.statusImgView];
-
+*/
     
     /******************************未开始******************************/
 //    [self.courseTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -401,7 +403,7 @@
     
     
     /******************************未出席******************************/
-  
+  /*
         [self.courseTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.orderView.mas_top).with.offset(LineH(30));
             make.left.equalTo(self.orderView.mas_left).with.offset(LineX(15));
@@ -512,7 +514,7 @@
         make.centerX.mas_equalTo(self.orderView.mas_centerX);
         make.height.mas_offset(LineH(13));
     }];
-
+*/
     
     
     

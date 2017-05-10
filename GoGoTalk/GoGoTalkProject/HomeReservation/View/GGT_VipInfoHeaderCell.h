@@ -12,11 +12,11 @@
 
 @property (nonatomic, strong) UIView *bgView;
 
-////迟到次数
-//@property (nonatomic, strong) UILabel *lateCountLabel;
-////已学时长
-//@property (nonatomic, strong) UILabel *learnTimeLabel;
-////缺席次数
-//@property (nonatomic, strong) UILabel *missCountLabel;
+//迟到次数
+@property (nonatomic, strong) UILabel *lateCountLabel;
+//已学时长
+@property (nonatomic, strong) UILabel *learnTimeLabel;
+//缺席次数
+@property (nonatomic, strong) UILabel *missCountLabel;
 
 @end

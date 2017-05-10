@@ -38,10 +38,10 @@
 /*
  比例
  */
-// 屏幕高度
-#define XMGHeight [UIScreen mainScreen].bounds.size.height
-// 屏幕宽度
-#define XMGWidth [UIScreen mainScreen].bounds.size.width
+// 屏幕高度 考虑到横屏的宽高比
+#define XMGHeight SCREEN_HEIGHT()
+// 屏幕宽度 考虑到横屏的宽高比
+#define XMGWidth SCREEN_WIDTH()
 // 以iPhone5为基准(UI妹纸给你的设计图是iPhone5的),当然你也可以改,但是出图是按照7P(6P)的图片出的,因为大图压缩还是清晰的,小图拉伸就不清晰了,所以只出一套最大的图片即可
 #define XMGiPhone6W 375.0
 #define XMGiPhone6H 667.0
@@ -77,18 +77,19 @@
 //}
 
 /**
- @abstract 获取本机屏幕的宽度.
+ @abstract 获取本机屏幕的宽度.   考虑到横屏的宽高比
  **/
 static inline CGFloat SCREEN_WIDTH()
 {
-    return [UIScreen mainScreen].bounds.size.width;
+    return [UIScreen mainScreen].bounds.size.width > [UIScreen mainScreen].bounds.size.height ? [UIScreen mainScreen].bounds.size.height : [UIScreen mainScreen].bounds.size.width;
 }
 /**
- @abstract 获取本机屏幕的高度.
+ @abstract 获取本机屏幕的高度.   考虑到横屏的宽高比
  **/
 static inline CGFloat SCREEN_HEIGHT()
 {
-    return [UIScreen mainScreen].bounds.size.height;
+    return [UIScreen mainScreen].bounds.size.height > [UIScreen mainScreen].bounds.size.width ?
+    [UIScreen mainScreen].bounds.size.height : [UIScreen mainScreen].bounds.size.width;
 }
 /**
  @abstract 打印CGRECT.

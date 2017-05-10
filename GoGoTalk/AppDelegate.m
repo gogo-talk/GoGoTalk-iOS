@@ -27,7 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
     //设置启动页面时间 ------上线的时候打开，平时启动太慢
-     [NSThread sleepForTimeInterval:2.0];
+//     [NSThread sleepForTimeInterval:2.0];
     
     [self initKeyWindow];
     
@@ -73,6 +73,7 @@
     [self.window makeKeyAndVisible];
 }
 
+
 // 初始化IQKeyboardManager
 - (void)initIQKeyboardManager
 {
@@ -117,7 +118,6 @@
         });
     });
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

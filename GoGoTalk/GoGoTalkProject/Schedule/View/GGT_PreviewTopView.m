@@ -32,6 +32,7 @@ static NSString * const xc_cancleButtonTitle = @"取消预约";
     self.xc_headPortraitImgView = ({
         UIImageView *xc_headPortraitImgView = [UIImageView new];
         xc_headPortraitImgView.image = UIIMAGE_FROM_NAME(@"huabi_zhibo_wei");
+        xc_headPortraitImgView.userInteractionEnabled = YES;
         xc_headPortraitImgView;
     });
     [self addSubview:self.xc_headPortraitImgView];
@@ -108,7 +109,6 @@ static NSString * const xc_cancleButtonTitle = @"取消预约";
 {
     [super layoutSubviews];
     [self.xc_cancleButton addBorderForViewWithBorderWidth:1.0f BorderColor:UICOLOR_FROM_HEX(kThemeColor) CornerRadius:self.xc_cancleButton.height/2.0];
-    
 }
 
 @end

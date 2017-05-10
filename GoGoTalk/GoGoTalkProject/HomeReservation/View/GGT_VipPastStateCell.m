@@ -71,7 +71,7 @@
     
     self.statusLabel.text = @"缺席";
     [self.statusLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.bgView.mas_top).with.offset(LineH(13));
+        make.top.equalTo(self.bgView.mas_top).with.offset(LineH(15));
         make.left.equalTo(self.courseTimeLabel.mas_right).with.offset(0);
         make.right.equalTo(self.statusImgView.mas_left).with.offset(-0);
         make.height.mas_offset(LineH(12));
@@ -97,8 +97,8 @@
     [self.bgView addSubview:self.teacherIconImgView];
     
     [self.teacherIconImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.bgView.mas_left).with.offset(LineX(10));
         make.top.equalTo(self.courseTimeLabel.mas_bottom).with.offset(LineH(25));
+        make.left.equalTo(self.bgView.mas_left).with.offset(LineX(10));
         make.size.mas_offset(CGSizeMake(LineW(60), LineW(60)));
     }];
     
@@ -134,6 +134,8 @@
     }];
     
     
+    
+    
     //进入教室
     self.enterRoomButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [self.enterRoomButton setImage:UIIMAGE_FROM_NAME(@"huifang_kecheng") forState:UIControlStateNormal];
@@ -148,7 +150,33 @@
     
  
     //外教点评
+    UILabel *teachersReviewLabel = [[UILabel alloc]init];
+    teachersReviewLabel.font = Font(11);
+    teachersReviewLabel.textColor = UICOLOR_FROM_HEX(Color666666);
+    teachersReviewLabel.textAlignment = NSTextAlignmentCenter;
+    teachersReviewLabel.text = @"外教点评";
+    [self.bgView addSubview:teachersReviewLabel];
     
+
+    
+    
+    //星星评价
+    self.xc_starView  = [[XCStarView alloc] initWithEmptyImage:@"dianping_kebiao_da_wei" StarImage:@"dianping_kebiao_da_yi" totalStarCount:3 selectedStatCount:2 starMargin:LineW(10) starWidth:LineW(11)];
+    [self.bgView addSubview:self.xc_starView];
+
+    [teachersReviewLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.bgView.mas_bottom).with.offset(-LineH(15));
+        make.left.equalTo(self.bgView.mas_left).with.offset(LineX(10));
+        make.right.equalTo(self.xc_starView.mas_right).with.offset(-LineW(10));
+        make.height.mas_offset(LineH(12));
+    }];
+    
+    [self.xc_starView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(teachersReviewLabel.mas_right).offset(LineW(10));
+        make.bottom.equalTo(self.bgView.mas_bottom).with.offset(-LineH(15));
+        make.height.equalTo(@(self.xc_starView.height));
+        make.width.equalTo(@(self.xc_starView.width));
+    }];
     
     
 }
