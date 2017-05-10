@@ -82,37 +82,68 @@
     
     [MBProgressHUD hideHUDForView:self.view];
     [MBProgressHUD showLoading:self.view];
-    [BaseNetManager afPostRequest:URL_Resigt parms:postDic finished:^(id responseObj) {
+//    [BaseNetManager afPostRequest:URL_Resigt parms:postDic finished:^(id responseObj) {
+//        [MBProgressHUD hideHUDForView:self.view];
+//
+//        NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
+//        NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+//        NSLog(@"注册成功url=%@~~~%@",URL_Resigt,jsonStr);
+//        
+//        
+//        if ([responseObj[@"result"] isEqual:@1]) {
+//            [MBProgressHUD showMessage:responseObj[@"msg"] toView:self.view];
+//            
+//            if (IsStrEmpty(responseObj[@"msg"])) {
+//                [MBProgressHUD showMessage:@"注册成功" toView:self.view];
+//            }
+//            
+//            
+//            [self performSelector:@selector(turnToHomeClick) withObject:nil afterDelay:1.5f];
+//          
+//        } else {
+//            
+//            [MBProgressHUD showMessage:responseObj[@"msg"] toView:self.view];
+//            
+//            if (IsStrEmpty(responseObj[@"msg"])) {
+//                [MBProgressHUD showMessage:@"注册失败" toView:self.view];
+//            }
+//            
+//        }
+//        
+//        
+//        
+//    } failed:^(NSString *errorMsg) {
+//        
+//    }];
+    
+    [[BaseService share] sendPostRequestWithPath:URL_Resigt parameters:postDic token:NO viewController:self success:^(id responseObject) {
         [MBProgressHUD hideHUDForView:self.view];
-
-        NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
+        
+        NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
         NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
         NSLog(@"注册成功url=%@~~~%@",URL_Resigt,jsonStr);
         
         
-        if ([responseObj[@"result"] isEqual:@1]) {
-            [MBProgressHUD showMessage:responseObj[@"msg"] toView:self.view];
+        if ([responseObject[@"result"] isEqual:@1]) {
+            [MBProgressHUD showMessage:responseObject[@"msg"] toView:self.view];
             
-            if (IsStrEmpty(responseObj[@"msg"])) {
+            if (IsStrEmpty(responseObject[@"msg"])) {
                 [MBProgressHUD showMessage:@"注册成功" toView:self.view];
             }
             
             
             [self performSelector:@selector(turnToHomeClick) withObject:nil afterDelay:1.5f];
-          
+            
         } else {
             
-            [MBProgressHUD showMessage:responseObj[@"msg"] toView:self.view];
+            [MBProgressHUD showMessage:responseObject[@"msg"] toView:self.view];
             
-            if (IsStrEmpty(responseObj[@"msg"])) {
+            if (IsStrEmpty(responseObject[@"msg"])) {
                 [MBProgressHUD showMessage:@"注册失败" toView:self.view];
             }
             
         }
-        
-        
-        
-    } failed:^(NSString *errorMsg) {
+    } failure:^(NSError *error) {
         
     }];
 }

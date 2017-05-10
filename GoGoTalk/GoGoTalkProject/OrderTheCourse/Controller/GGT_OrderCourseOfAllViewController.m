@@ -9,6 +9,8 @@
 #import "GGT_OrderCourseOfAllViewController.h"
 #import "GGT_OrderForeignListCell.h"
 #import "GGT_DetailsOfTeacherViewController.h"
+#import "GGT_ConfirmBookingAlertView.h"
+#import "GGT_SelectCoursewareViewController.h"
 
 @interface GGT_OrderCourseOfAllViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -44,6 +46,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     [self.view addSubview:self.tableView];
 }
 
@@ -65,25 +68,42 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.dataArray.count;
-    return 1;
+    return self.dataArray.count;
+//    return 1;
 
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return LineH(70);
+    return LineH(70);
     //如果没有数据，就展示这个高度
-    return self.tableView.height;
+//    return self.tableView.height;
 }
 
 
 
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+ 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    GGT_DetailsOfTeacherViewController *vc = [[GGT_DetailsOfTeacherViewController alloc]init];
 //    [self.navigationController pushViewController:vc animated:YES];
-//}
+    
+
+    GGT_SelectCoursewareViewController *vc = [[GGT_SelectCoursewareViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+//    UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT())];
+//    bgView.backgroundColor = [UIColor blackColor];
+//    bgView.alpha = 0.5;
+//    [self.view addSubview:bgView];
+//    
+//
+//    GGT_ConfirmBookingAlertView *alertView = [[GGT_ConfirmBookingAlertView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH()-LineW(277))/2, (SCREEN_HEIGHT()-LineH(327))/2, LineW(277), LineH(327))];
+//    alertView.backgroundColor = [UIColor blackColor];
+//    [self.view addSubview:alertView];
+    
+
+    
+}
 
 
 #pragma headerView

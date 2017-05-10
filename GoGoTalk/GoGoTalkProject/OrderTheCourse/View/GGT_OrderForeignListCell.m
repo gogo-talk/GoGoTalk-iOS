@@ -25,7 +25,7 @@
 }
 
 - (void)initCellView {
-    /*
+    
     //头像
     self.iconImageView = [[UIImageView alloc]init];
 //    self.iconImageView.image = [UIImage imageNamed:@""];
@@ -133,8 +133,11 @@
         make.bottom.equalTo(self.contentView.mas_bottom).with.offset(-0);;
         make.height.mas_offset(LineW(0.5));
     }];
-    */
     
+    
+    /*
+    self.contentView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
+
     
     GGT_NoMoreDateAlertView *nodataView = [[GGT_NoMoreDateAlertView alloc]initWithFrame:CGRectMake(0, LineY(80), SCREEN_WIDTH(), LineW(180)) andImageString:@"wudingdan_wode" andAlertString:@"此时间段没有老师"];
     [self.contentView addSubview:nodataView];
@@ -151,45 +154,37 @@
 
     
     
-    self.skillTagsView = [[OrderTimeTagsView alloc] init];
-    self.skillTagsView.frame = CGRectMake(20,tuijianLabel.y+tuijianLabel.height+LineY(20),SCREEN_WIDTH()-40,LineH(100));
-    self.skillTagsView.textColor = MainColor;
-    self.skillTagsView.textSize = LineW(12);
-    self.skillTagsView.bordColor = MainColor;
-    self.skillTagsView.textbackgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
-    self.skillTagsView.allowClick = YES;
-    self.skillTagsView.cornerRadius = LineH(12);
-    [self.skillTagsView setTags:@[@"15:30",@"17:00",@"19:30"]];
+    self.tagsView = [[OrderTimeTagsView alloc] init];
+    self.tagsView.frame = CGRectMake(20,tuijianLabel.y+tuijianLabel.height+LineY(20),SCREEN_WIDTH()-40,LineH(100));
+    self.tagsView.textColor = MainColor;
+    self.tagsView.textSize = LineW(12);
+    self.tagsView.bordColor = MainColor;
+    self.tagsView.textbackgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
+    self.tagsView.allowClick = YES;
+    self.tagsView.cornerRadius = LineH(12);
+    [self.tagsView setTags:@[@"15:30",@"17:00",@"19:30"]];
     
-    
-    self.skillTagsView.tagClickedBlock = ^(NSString *tagString){
+    self.tagsView.tagClickedBlock = ^(NSString *tagString){
         NSLog(@"tagString---%@",tagString);
     };
 
   
-    [self.contentView addSubview:self.skillTagsView];
+    [self.contentView addSubview:self.tagsView];
 
     //刷新标签UI高度
-    [self.skillTagsView display];
-}
-
-- (void)setTagsWithArray:(NSArray *)array{
-    
-    [self.skillTagsView setTags:array];
-    
-    self.skillTagsView.frame = CGRectMake(self.skillTagsView.frame.origin.x, self.skillTagsView.frame.origin.y, self.skillTagsView.frame.size.width, [self.skillTagsView fittedSize].height);
+    [self.tagsView display];
+     */
 }
 
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
+//- (void)setTagsWithArray:(NSArray *)array{
+//    
+//    [self.tagsView setTags:array];
+//    
+//    self.tagsView.frame = CGRectMake(self.tagsView.frame.origin.x, self.tagsView.frame.origin.y, [self.tagsView fittedSize].width, [self.tagsView fittedSize].height);
+//}
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
-}
+
 
 @end

@@ -20,6 +20,9 @@
 		35A3F6021EC2FAF300C88A18 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A3F6011EC2FAF300C88A18 /* Reveal.framework */; };
 		35DE2CD01EBCC08600E41B34 /* GGT_EditAgeSexController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DE2CCF1EBCC08600E41B34 /* GGT_EditAgeSexController.m */; };
 		35DE2CD91EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DE2CD81EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m */; };
+		5B0881601EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08815F1EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m */; };
+		5B0881661EC2C77400BED063 /* GGT_SelectCoursewareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0881651EC2C77400BED063 /* GGT_SelectCoursewareViewController.m */; };
+		5B0881A81EC2FB8800BED063 /* TimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0881A71EC2FB8800BED063 /* TimeCollectionViewCell.m */; };
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D2D1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m */; };
@@ -137,6 +140,12 @@
 		35DE2CCF1EBCC08600E41B34 /* GGT_EditAgeSexController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_EditAgeSexController.m; sourceTree = "<group>"; };
 		35DE2CD71EBCCEEB00E41B34 /* GGT_AgeSexPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AgeSexPickerView.h; sourceTree = "<group>"; };
 		35DE2CD81EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_AgeSexPickerView.m; sourceTree = "<group>"; };
+		5B08815E1EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ConfirmBookingAlertView.h; sourceTree = "<group>"; };
+		5B08815F1EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ConfirmBookingAlertView.m; sourceTree = "<group>"; };
+		5B0881641EC2C77400BED063 /* GGT_SelectCoursewareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_SelectCoursewareViewController.h; sourceTree = "<group>"; };
+		5B0881651EC2C77400BED063 /* GGT_SelectCoursewareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_SelectCoursewareViewController.m; sourceTree = "<group>"; };
+		5B0881A61EC2FB8800BED063 /* TimeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeCollectionViewCell.h; sourceTree = "<group>"; };
+		5B0881A71EC2FB8800BED063 /* TimeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeCollectionViewCell.m; sourceTree = "<group>"; };
 		5B0B4F3B1EB0665B00D81B8E /* GGT_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Singleton.h; sourceTree = "<group>"; };
 		5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Singleton.m; sourceTree = "<group>"; };
 		5B0B4F461EB06D5400D81B8E /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
@@ -566,6 +575,8 @@
 				5BEC18F21EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m */,
 				5BEC18F71EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.h */,
 				5BEC18F81EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m */,
+				5B0881641EC2C77400BED063 /* GGT_SelectCoursewareViewController.h */,
+				5B0881651EC2C77400BED063 /* GGT_SelectCoursewareViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -697,6 +708,10 @@
 				5B577CD21EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m */,
 				5B577CD41EB983E3005F009F /* GGT_OrderTimeHeaderCollectionViewCell.h */,
 				5B577CD51EB983E3005F009F /* GGT_OrderTimeHeaderCollectionViewCell.m */,
+				5B08815E1EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.h */,
+				5B08815F1EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m */,
+				5B0881A61EC2FB8800BED063 /* TimeCollectionViewCell.h */,
+				5B0881A71EC2FB8800BED063 /* TimeCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1050,6 +1065,7 @@
 				D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */,
 				5B348D341EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m in Sources */,
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
+				5B0881661EC2C77400BED063 /* GGT_SelectCoursewareViewController.m in Sources */,
 				3520D06D1EC012C800A0B80A /* GGT_EditPasswordController.m in Sources */,
 				5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */,
 				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
@@ -1062,6 +1078,7 @@
 				355210481EBC49BE0057EA59 /* GGT_InfoListCell.m in Sources */,
 				5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */,
 				D654AEED1EC15EF600A21DD9 /* BJRoomViewController.m in Sources */,
+				5B0881601EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m in Sources */,
 				358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */,
 				D6B591671EBC676800086648 /* OYCountDownManager.m in Sources */,
 				5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */,
@@ -1108,6 +1125,8 @@
 				5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */,
 				5BA575F41EC049A900C7512A /* GGT_VipCurrentStatusCell.m in Sources */,
 				D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */,
+				D6C7AAA81EB1870900EBF0D1 /* GGT_Request_Url.m in Sources */,
+				5B0881A81EC2FB8800BED063 /* TimeCollectionViewCell.m in Sources */,
 				5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */,
 				5BA10D411EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m in Sources */,
 			);
