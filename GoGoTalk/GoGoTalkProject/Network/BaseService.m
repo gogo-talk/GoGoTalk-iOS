@@ -8,8 +8,8 @@
 
 #import "BaseService.h"
 
-static NSString * const xc_returnCode = @"returnCode";
-static NSString * const xc_returnMsg = @"returnMsg";
+static NSString * const xc_returnCode = @"result";
+static NSString * const xc_returnMsg = @"msg";
 static NSString * const xc_message = @"message";
 
 @interface BaseService()
@@ -88,18 +88,23 @@ static NSString * const xc_message = @"message";
                 success:(AFNSuccessResponse)success
                 failure:(AFNFailureResponse)failure
 {
+    self.manager = [AFHTTPSessionManager manager];
+    urlStr = [BASE_REQUEST_URL stringByAppendingPathComponent:urlStr];
     
-    urlStr = [urlStr stringByAppendingPathComponent:PrefixAddress];
+    [MBProgressHUD hideHUDForView:viewController.view];
+    [MBProgressHUD showLoading:viewController.view];
     
     switch (method) {
         case XCHttpRequestGet:
         {
-            self.manager = [AFHTTPSessionManager manager];
-            //            self.manager.requestSerializer.timeoutInterval = 5;
+//            self.manager = [AFHTTPSessionManager manager];
+//            self.manager.requestSerializer.timeoutInterval = 5;
             [self.manager GET:urlStr parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
+                [MBProgressHUD hideHUDForView:viewController.view];
+                
                 NSDictionary *dic = responseObject;
-                if ([[dic objectForKey:xc_returnCode]integerValue] == 0)
+                if ([[dic objectForKey:xc_returnCode]integerValue] == 1)
                 {
                     success(responseObject);
                 }
@@ -110,6 +115,7 @@ static NSString * const xc_message = @"message";
                 }
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [MBProgressHUD hideHUDForView:viewController.view];
                 failure(error);
                 //                [self alertErrorMessage:error];
 #ifdef DEBUG
@@ -135,6 +141,9 @@ static NSString * const xc_message = @"message";
             [self.manager POST:urlStr parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                
+                [MBProgressHUD hideHUDForView:viewController.view];
+                
                 NSDictionary *dic = responseObject;
                 if ([[dic objectForKey:xc_returnCode]integerValue] == 1)
                 {
@@ -146,6 +155,9 @@ static NSString * const xc_message = @"message";
                     [self alertErrorMessage:error];
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                
+                [MBProgressHUD hideHUDForView:viewController.view];
+                
                 failure(error);
                 //                [self alertErrorMessage:error];
 #ifdef DEBUG
@@ -160,8 +172,10 @@ static NSString * const xc_message = @"message";
         case XCHttpRequestDelete:
         {
             [self.manager DELETE:urlStr parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                [MBProgressHUD hideHUDForView:viewController.view];
                 success(responseObject);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [MBProgressHUD hideHUDForView:viewController.view];
                 failure(error);
                 //                [self alertErrorMessage:error];
 #ifdef DEBUG
@@ -176,8 +190,10 @@ static NSString * const xc_message = @"message";
         case XCHttpRequestPut:
         {
             [self.manager PUT:urlStr parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                [MBProgressHUD hideHUDForView:viewController.view];
                 success(responseObject);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [MBProgressHUD hideHUDForView:viewController.view];
                 failure(error);
                 //                [self alertErrorMessage:error];
 #ifdef DEBUG
