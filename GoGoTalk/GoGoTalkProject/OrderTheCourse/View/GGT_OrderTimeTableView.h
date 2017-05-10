@@ -11,7 +11,7 @@
 #import "GGT_OrderTimeHeaderCollectionViewCell.h"
 #import "TimeCollectionViewCell.h"
 
-@interface GGT_OrderTimeTableView : UIView <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface GGT_OrderTimeTableView : UIView <UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 //年月日
@@ -22,11 +22,13 @@
 @property (nonatomic, strong) NSMutableArray *dateArray;
 
 
+@property (nonatomic, strong) UIScrollView *bgScrollerView;
 
 
 @property (nonatomic, strong) NSArray *alltimeArray;
 
 
+@property (nonatomic, strong) UIView *headerView;
 
 
 

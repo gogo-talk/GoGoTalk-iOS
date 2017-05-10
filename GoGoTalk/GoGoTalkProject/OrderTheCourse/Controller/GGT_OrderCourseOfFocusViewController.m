@@ -21,7 +21,7 @@
     
     
     GGT_OrderTimeTableView *View = [[GGT_OrderTimeTableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-64-49)];
-    View.backgroundColor = [UIColor redColor];
+//    View.backgroundColor = [UIColor redColor];
     [self.view addSubview:View];
 }
 
