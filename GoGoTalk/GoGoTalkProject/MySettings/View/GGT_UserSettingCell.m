@@ -31,6 +31,7 @@
         UILabel *titleLabel = [UILabel new];
         titleLabel.text = self.dic[@"title"];
         titleLabel.textColor = UICOLOR_FROM_HEX(0x333333);
+        titleLabel.font = Font(16);
         [self addSubview:titleLabel];
         [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).with.offset(LineX(20));
@@ -53,6 +54,7 @@
         UILabel *titleLabel = [UILabel new];
         titleLabel.text = self.dic[@"title"];
         titleLabel.textColor = UICOLOR_FROM_HEX(0x333333);
+        titleLabel.font = Font(16);
         //titleLabel.sizeToFit;
         [self addSubview:titleLabel];
         [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -73,6 +75,7 @@
         //NSString *subStr = [NSString stringWithFormat:@"%@",self.dic[@"subtitle"]];
         subLabel.text = str;
         subLabel.textColor = UICOLOR_FROM_HEX(0x666666);
+        subLabel.font = Font(16);
         [self addSubview:subLabel];
         [subLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             if(self.indexPath.section == 0 && self.indexPath.row == 1){
