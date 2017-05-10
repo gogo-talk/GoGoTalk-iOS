@@ -21,6 +21,10 @@
     [self createEditTextField];
     
 }
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 -(void)setNavigationItems
 {
     //导航栏标题

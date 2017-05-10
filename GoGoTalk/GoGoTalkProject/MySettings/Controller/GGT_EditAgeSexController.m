@@ -44,6 +44,10 @@
     self.navigationItem.rightBarButtonItems = @[negativeSpacer,rightItem];
     
 }
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+};
 -(void)createAgeSexButton
 {
     UIView *bgView = [UIView new];

@@ -10,6 +10,8 @@
 		3520D06D1EC012C800A0B80A /* GGT_EditPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3520D06C1EC012C800A0B80A /* GGT_EditPasswordController.m */; };
 		3520D0731EC0592500A0B80A /* GGT_UserSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3520D0721EC0592500A0B80A /* GGT_UserSettingController.m */; };
 		3520D0761EC0593D00A0B80A /* GGT_UserSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3520D0751EC0593D00A0B80A /* GGT_UserSettingCell.m */; };
+		3542B8E11EC1A49100EA4D4B /* GGT_AboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3542B8E01EC1A49100EA4D4B /* GGT_AboutUsController.m */; };
+		3542B8E41EC1BE4A00EA4D4B /* GGT_FeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3542B8E31EC1BE4A00EA4D4B /* GGT_FeedbackController.m */; };
 		355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355210441EBC40920057EA59 /* GGT_InfoListViewController.m */; };
 		355210481EBC49BE0057EA59 /* GGT_InfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355210471EBC49BE0057EA59 /* GGT_InfoListCell.m */; };
 		3552104B1EBC766C0057EA59 /* GGT_EditUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */; };
@@ -109,6 +111,10 @@
 		3520D0721EC0592500A0B80A /* GGT_UserSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserSettingController.m; sourceTree = "<group>"; };
 		3520D0741EC0593D00A0B80A /* GGT_UserSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_UserSettingCell.h; sourceTree = "<group>"; };
 		3520D0751EC0593D00A0B80A /* GGT_UserSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserSettingCell.m; sourceTree = "<group>"; };
+		3542B8DF1EC1A49100EA4D4B /* GGT_AboutUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AboutUsController.h; sourceTree = "<group>"; };
+		3542B8E01EC1A49100EA4D4B /* GGT_AboutUsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_AboutUsController.m; sourceTree = "<group>"; };
+		3542B8E21EC1BE4A00EA4D4B /* GGT_FeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_FeedbackController.h; sourceTree = "<group>"; };
+		3542B8E31EC1BE4A00EA4D4B /* GGT_FeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_FeedbackController.m; sourceTree = "<group>"; };
 		355210431EBC40920057EA59 /* GGT_InfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_InfoListViewController.h; sourceTree = "<group>"; };
 		355210441EBC40920057EA59 /* GGT_InfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_InfoListViewController.m; sourceTree = "<group>"; };
 		355210461EBC49BE0057EA59 /* GGT_InfoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_InfoListCell.h; sourceTree = "<group>"; };
@@ -496,6 +502,10 @@
 				3520D06C1EC012C800A0B80A /* GGT_EditPasswordController.m */,
 				3520D0711EC0592500A0B80A /* GGT_UserSettingController.h */,
 				3520D0721EC0592500A0B80A /* GGT_UserSettingController.m */,
+				3542B8DF1EC1A49100EA4D4B /* GGT_AboutUsController.h */,
+				3542B8E01EC1A49100EA4D4B /* GGT_AboutUsController.m */,
+				3542B8E21EC1BE4A00EA4D4B /* GGT_FeedbackController.h */,
+				3542B8E31EC1BE4A00EA4D4B /* GGT_FeedbackController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -999,6 +1009,7 @@
 				D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */,
 				5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */,
 				5B695B2F1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m in Sources */,
+				3542B8E41EC1BE4A00EA4D4B /* GGT_FeedbackController.m in Sources */,
 				D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */,
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
 				D6B590801EBC0AED00086648 /* GGT_ScheduleNormalCell.m in Sources */,
@@ -1014,6 +1025,7 @@
 				35DE2CD01EBCC08600E41B34 /* GGT_EditAgeSexController.m in Sources */,
 				5BA10D441EB1E2490091093C /* GGT_RegisterView.m in Sources */,
 				D682054D1EC05B0500CA312B /* GGT_EvaluateView.m in Sources */,
+				3542B8E11EC1A49100EA4D4B /* GGT_AboutUsController.m in Sources */,
 				5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */,
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
 				D68205421EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m in Sources */,

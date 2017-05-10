@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GGT_UserSettingCell : UITableViewCell
-
+@property(nonatomic, strong) NSDictionary *dic;
++ (instancetype)cellWithTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath;
 @end
