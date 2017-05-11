@@ -95,6 +95,7 @@
     //控件渲染色(也就是外观字体颜色)
     segment.tintColor = [UIColor whiteColor];
     segment.layer.borderColor = [UIColor whiteColor].CGColor;
+    segment.selectedSegmentIndex = 0;//设置默认选择项索引
     [segment addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
     [titleView  addSubview:segment];
     

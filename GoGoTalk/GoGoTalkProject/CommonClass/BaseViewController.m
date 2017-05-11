@@ -8,10 +8,7 @@
 
 #import "BaseViewController.h"
 #import "GGT_MineViewController.h"
-#import "GGT_HomeReservationViewController.h"
-#import "GGT_OrderCourseViewController.h"
-#import "GGT_ScheduleViewController.h"
-#import "GGT_DiscoveryViewController.h"
+
 
 @interface BaseViewController ()
 
@@ -41,7 +38,7 @@
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
 }
 
-
+#pragma mark 左侧返回按钮---带图片
 - (void)setLeftItem:(NSString *)imageName
 {
     UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
@@ -52,11 +49,27 @@
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
 }
 
-
+#pragma mark 右侧按钮---文字
 - (void)setRightBarButtonItemTitle:(NSString *)title{
-    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
-    self.navigationItem.rightBarButtonItem = right;
-    self.navigationItem.rightBarButtonItem.tintColor = MainColor;
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rightBtn setTitle:title forState:UIControlStateNormal];
+    [rightBtn setTitleColor:UICOLOR_FROM_HEX(ColorFFFFFF) forState:UIControlStateNormal];
+    rightBtn.frame = CGRectMake(0, 0, LineW(44), LineH(44));
+    rightBtn.titleLabel.font = Font(16);
+    rightBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    [rightBtn addTarget:self action:@selector(rightAction) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    spacer.width = - LineX(5);
+    self.navigationItem.rightBarButtonItems = @[spacer,rightItem];
+}
+
+#pragma mark 右侧按钮---图片
+- (void)setRightButtonWithImg:(NSString *)imageName{
+    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
+    UIBarButtonItem *navSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    navSpace.width = - LineX(5);
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:navSpace,imageItem, nil];
     
 }
 
@@ -65,18 +78,7 @@
 }
 
 - (void)rightAction{
-    
 }
-
-- (void)setRightButtonWithImg:(NSString *)imageName{
-    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
-    UIBarButtonItem *navSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    navSpace.width = - LineX(5);
-    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:navSpace,imageItem, nil];
-  
-}
-
-
 
 
 
@@ -97,34 +99,6 @@
     mineVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:mineVc animated:YES];
     
-}
-
-
-#pragma mark 客服电话
-- (void)initServiceTelephone {
-
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"400-8787-276" preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-    
-    [cancelAction setValue:UICOLOR_FROM_HEX(kThemeColor) forKey:@"_titleTextColor"];
-    
-    __weak typeof(self) weakSelf = self;
-    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"呼叫" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [weakSelf CallPhoneWithNum:phoneNumber];
-    }];
-    [defaultAction setValue:UICOLOR_FROM_HEX(0x666666) forKey:@"_titleTextColor"];
-    
-    
-    [alert addAction:cancelAction];
-    [alert addAction:defaultAction];
-    [self presentViewController:alert animated:YES completion:nil];
-}
-
-- (void)CallPhoneWithNum:(NSString *)phoneNum {
-    NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",phoneNum]];
-    UIWebView *phoneCallWebView = [[UIWebView alloc]initWithFrame:CGRectZero];
-    [phoneCallWebView loadRequest:[NSURLRequest requestWithURL:phoneURL]];
 }
 
 

@@ -84,12 +84,16 @@
 
  
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    GGT_DetailsOfTeacherViewController *vc = [[GGT_DetailsOfTeacherViewController alloc]init];
-//    [self.navigationController pushViewController:vc animated:YES];
+    GGT_DetailsOfTeacherViewController *vc = [[GGT_DetailsOfTeacherViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
     
 
-    GGT_SelectCoursewareViewController *vc = [[GGT_SelectCoursewareViewController alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    GGT_SelectCoursewareViewController *vc = [[GGT_SelectCoursewareViewController alloc]init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+    
     
 //    UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT())];
 //    bgView.backgroundColor = [UIColor blackColor];
