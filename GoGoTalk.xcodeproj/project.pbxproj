@@ -10,6 +10,7 @@
 		3520D06D1EC012C800A0B80A /* GGT_EditPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3520D06C1EC012C800A0B80A /* GGT_EditPasswordController.m */; };
 		3520D0731EC0592500A0B80A /* GGT_UserSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3520D0721EC0592500A0B80A /* GGT_UserSettingController.m */; };
 		3520D0761EC0593D00A0B80A /* GGT_UserSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3520D0751EC0593D00A0B80A /* GGT_UserSettingCell.m */; };
+		3541E2411EC43C0200A175CC /* GGT_FeedbackMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3541E2401EC43C0200A175CC /* GGT_FeedbackMessageController.m */; };
 		3542B8E11EC1A49100EA4D4B /* GGT_AboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3542B8E01EC1A49100EA4D4B /* GGT_AboutUsController.m */; };
 		3542B8E41EC1BE4A00EA4D4B /* GGT_FeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3542B8E31EC1BE4A00EA4D4B /* GGT_FeedbackController.m */; };
 		355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355210441EBC40920057EA59 /* GGT_InfoListViewController.m */; };
@@ -121,6 +122,8 @@
 		3520D0721EC0592500A0B80A /* GGT_UserSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserSettingController.m; sourceTree = "<group>"; };
 		3520D0741EC0593D00A0B80A /* GGT_UserSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_UserSettingCell.h; sourceTree = "<group>"; };
 		3520D0751EC0593D00A0B80A /* GGT_UserSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserSettingCell.m; sourceTree = "<group>"; };
+		3541E23F1EC43C0200A175CC /* GGT_FeedbackMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_FeedbackMessageController.h; sourceTree = "<group>"; };
+		3541E2401EC43C0200A175CC /* GGT_FeedbackMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_FeedbackMessageController.m; sourceTree = "<group>"; };
 		3542B8DF1EC1A49100EA4D4B /* GGT_AboutUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AboutUsController.h; sourceTree = "<group>"; };
 		3542B8E01EC1A49100EA4D4B /* GGT_AboutUsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_AboutUsController.m; sourceTree = "<group>"; };
 		3542B8E21EC1BE4A00EA4D4B /* GGT_FeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_FeedbackController.h; sourceTree = "<group>"; };
@@ -540,6 +543,8 @@
 				3542B8E01EC1A49100EA4D4B /* GGT_AboutUsController.m */,
 				3542B8E21EC1BE4A00EA4D4B /* GGT_FeedbackController.h */,
 				3542B8E31EC1BE4A00EA4D4B /* GGT_FeedbackController.m */,
+				3541E23F1EC43C0200A175CC /* GGT_FeedbackMessageController.h */,
+				3541E2401EC43C0200A175CC /* GGT_FeedbackMessageController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1052,6 +1057,7 @@
 				D6E0A5A21EC2FCE7006A003D /* BaseService.m in Sources */,
 				D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */,
 				D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */,
+				3541E2411EC43C0200A175CC /* GGT_FeedbackMessageController.m in Sources */,
 				D604309C1EBC7CDB00F53437 /* GGT_PreviewTopView.m in Sources */,
 				D606076A1EC006B200A31E8B /* UIAlertController+Color.m in Sources */,
 				5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */,
@@ -1125,7 +1131,6 @@
 				5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */,
 				5BA575F41EC049A900C7512A /* GGT_VipCurrentStatusCell.m in Sources */,
 				D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */,
-				D6C7AAA81EB1870900EBF0D1 /* GGT_Request_Url.m in Sources */,
 				5B0881A81EC2FB8800BED063 /* TimeCollectionViewCell.m in Sources */,
 				5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */,
 				5BA10D411EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m in Sources */,

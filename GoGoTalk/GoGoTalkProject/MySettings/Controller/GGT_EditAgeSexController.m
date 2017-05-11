@@ -48,7 +48,7 @@
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
-};
+}
 -(void)createAgeSexButton
 {
     UIView *bgView = [UIView new];
