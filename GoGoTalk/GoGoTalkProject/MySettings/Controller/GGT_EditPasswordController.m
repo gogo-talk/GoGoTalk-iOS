@@ -66,6 +66,9 @@
     UITextField *oldTextField = [UITextField new];
     oldTextField.leftViewMode = UITextFieldViewModeAlways;
     oldTextField.placeholder = @"请输入原始登录密码";
+    //oldTextField.placeholder
+    [oldTextField setValue:[UIFont systemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
+    //[oldTextField setValue:Font(11) forKey:@"placeholderLabel.font"];
     oldTextField.secureTextEntry = YES;
     oldTextField.leftView = paddingView;
     oldTextField.backgroundColor = [UIColor whiteColor];
@@ -76,6 +79,7 @@
     newTextField.placeholder = @"请设置新密码";
     newTextField.secureTextEntry = YES;
     newTextField.leftView = paddingView2;
+    [newTextField setValue:[UIFont systemFontOfSize:16] forKey:@"_placeholderLabel.fon"];
     newTextField.backgroundColor = [UIColor whiteColor];
     [baseView addSubview:newTextField];
     

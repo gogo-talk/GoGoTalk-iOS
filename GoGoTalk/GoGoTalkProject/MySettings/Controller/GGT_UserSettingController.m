@@ -38,6 +38,7 @@
     self.array2 = infoArray2;
     self.view.backgroundColor = UICOLOR_FROM_HEX(0xf2f2f2);
     [self createTableView];
+    
 }
 -(void)createTableView
 {
@@ -58,6 +59,7 @@
         make.bottom.mas_equalTo(self.view.mas_bottom);
     }];
 }
+
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
@@ -104,7 +106,11 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 0.01;
+    if(section == 0){
+        return 0.01;
+    }else{
+        return 88;
+    }
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -116,4 +122,26 @@
     }
     
 }
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    if(section == 1){
+        UIView *footView = [[UIView alloc] init];
+        footView.backgroundColor = [UIColor clearColor];
+        UIButton *btn = [[UIButton alloc] init];
+        [btn setTitle:@"退出登录" forState:UIControlStateNormal];
+        [btn setTitleColor:UICOLOR_FROM_HEX(0xea5851) forState:UIControlStateNormal];
+        [footView addSubview:btn];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(footView.mas_top).with.offset(30);
+            make.centerX.equalTo(footView.mas_centerX);
+            make.width.mas_equalTo(LineW(313));
+            make.height.mas_equalTo(LineH(44));
+        }];
+        [self.view layoutIfNeeded];
+        [btn addBorderForViewWithBorderWidth:1.0 BorderColor:UICOLOR_FROM_HEX(kThemeColor) CornerRadius:LineH(44)/2.0];
+        return footView;
+    }
+    return nil;
+}
+
 @end
