@@ -49,19 +49,24 @@ static CGFloat const buttonWidth = 64.0;
     self.xc_friendlyImgView = ({
         UIImageView *xc_friendlyImgView = [UIImageView new];
         xc_friendlyImgView.image = UIIMAGE_FROM_NAME(@"引导页2");
-//        xc_friendlyImgView.transform = CGAffineTransformMakeRotation(M_PI);
-        xc_friendlyImgView.contentMode = UIViewContentModeScaleAspectFit;
+        xc_friendlyImgView.transform = CGAffineTransformMakeRotation(M_PI/2.0);
         xc_friendlyImgView;
     });
     [self.view addSubview:self.xc_friendlyImgView];
     
-//    self.xc_friendlyImgView.transform = CGAffineTransformMakeRotation(M_PI/2.0);
-    [self.xc_friendlyImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.bottom.equalTo(self.view);
-    }];
-    
-//    self.xc_friendlyImgView.frame = CGRectMake(0, 0, SCREEN_HEIGHT(), SCREEN_WIDTH());
-    
+    self.xc_friendlyImgView.frame = CGRectMake(0, 0, SCREEN_HEIGHT(), SCREEN_WIDTH());
+}
+
+
+// 设置屏幕选装  需要在xcode中开启支持屏幕旋转
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationLandscapeRight;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 // self.view旋转后状态栏还在显示 不好看
@@ -213,7 +218,7 @@ static CGFloat const buttonWidth = 64.0;
     [self.xc_slideshowAndWhiteboardView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.bottom.equalTo(self.xc_dashboardGroupView);
         make.right.equalTo(self.xc_playingView.mas_left);
-        make.height.equalTo(self.xc_slideshowAndWhiteboardView.mas_width).multipliedBy(3.0 / 4.0);
+        make.width.equalTo(self.xc_slideshowAndWhiteboardView.mas_height).multipliedBy(4.0 / 3.0);
     }];
     
     // 设置顶部的view(发送消息)
@@ -755,6 +760,9 @@ static CGFloat const buttonWidth = 64.0;
              observer:(BJLMethodObserver)^BOOL(CGFloat progress) {
                  strongdef(self/* , loadingVM */);
                  [self.console printFormat:@"loading progress: %f", progress];
+                 if (progress == 1.0) {
+                     [self.xc_friendlyImgView removeFromSuperview];
+                 }
                  return YES;
              }];
     
@@ -813,16 +821,16 @@ static CGFloat const buttonWidth = 64.0;
 }
 
 
-// 设置屏幕选装  需要在xcode中开启支持屏幕旋转
--(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
-{
-    return UIInterfaceOrientationLandscapeLeft;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskLandscape;
-}
+//// 设置屏幕选装  需要在xcode中开启支持屏幕旋转
+//-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+//{
+//    return UIInterfaceOrientationLandscapeLeft;
+//}
+//
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskLandscape;
+//}
 
 
 
