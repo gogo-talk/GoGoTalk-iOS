@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GGT_OrderTimeCollectionViewCell : UICollectionViewCell
-@property (nonatomic,strong) UILabel *nameLabel;
 
-@property float cellWidth;
+@property (nonatomic, strong) UILabel *timeLabel;
 
--(void)getCellStr:(NSString *)str;
 @end

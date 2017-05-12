@@ -7,7 +7,7 @@
 //  意见反馈
 
 #import "GGT_FeedbackController.h"
-
+#import "GGT_FeedbackMessageController.h"
 @interface GGT_FeedbackController ()<UITextViewDelegate>
 @property(nonatomic, strong)UITextView *textView;
 @property(nonatomic, strong) UILabel *pLabel;
@@ -29,6 +29,7 @@
     rightBtn.frame = CGRectMake(0, 0, 0, 0);
     [rightBtn setFont:[UIFont systemFontOfSize:16]];
     [rightBtn sizeToFit];
+    [rightBtn addTarget:self action:@selector(submitFeedback:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     spacer.width = -5;
@@ -37,6 +38,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
+}
+-(void)submitFeedback:(UIButton *)sender
+{
+    GGT_FeedbackMessageController *vc = [GGT_FeedbackMessageController new];
+    vc.title = @"意见反馈";
+    [self.navigationController pushViewController:vc animated:YES];
 }
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
@@ -83,6 +90,17 @@
         make.left.mas_equalTo(self.view.mas_left);
         make.right.mas_equalTo(self.view.mas_right);
         make.height.mas_equalTo(LineH(242));
+    }];
+    //底部400电话
+    UILabel *telLabel = [UILabel new];
+    telLabel.text = @"客服电话：400-8787-276";
+    telLabel.font = Font(12);
+    telLabel.textColor = UICOLOR_FROM_HEX(0xea5851);
+    [telLabel sizeToFit];
+    [self.view addSubview:telLabel];
+    [telLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-20);
     }];
 }
 #pragma mark - UITextViewDelegate

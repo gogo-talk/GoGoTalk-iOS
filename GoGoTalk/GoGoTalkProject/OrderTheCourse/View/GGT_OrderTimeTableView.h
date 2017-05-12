@@ -8,27 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "GGT_OrderTimeCollectionViewCell.h"
-#import "GGT_OrderTimeHeaderCollectionViewCell.h"
-#import "TimeCollectionViewCell.h"
 
 @interface GGT_OrderTimeTableView : UIView <UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate>
 
+
+//UICollectionView----选择时间的控件
 @property (nonatomic, strong) UICollectionView *collectionView;
-//年月日
-@property (nonatomic, strong) NSMutableArray *yearsArray;
-//周几
-@property (nonatomic, strong) NSMutableArray *weeksArray;
-
-@property (nonatomic, strong) NSMutableArray *dateArray;
-
-
+//承载日期和周几的UIScrollView
+@property (nonatomic, strong) UIScrollView *headerScrollerView;
+//承载UICollectionView的UIScrollView
 @property (nonatomic, strong) UIScrollView *bgScrollerView;
-
-
+//日期的数据
+@property (nonatomic, strong) NSMutableArray *yearsArray;
+//周几的数据
+@property (nonatomic, strong) NSMutableArray *weeksArray;
+//自定义时间
 @property (nonatomic, strong) NSArray *alltimeArray;
-
-
-@property (nonatomic, strong) UIView *headerView;
 
 
 
