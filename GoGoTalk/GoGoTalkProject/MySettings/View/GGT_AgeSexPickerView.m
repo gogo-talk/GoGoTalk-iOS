@@ -34,6 +34,11 @@
     [self createPickerView:pickerDataArray];
     
 }
+-(void)setDefaultRow:(NSInteger)defaultRow
+{
+    _defaultRow = defaultRow;
+    selectRow = self.defaultRow;
+}
 //绘制选择器
 -(void)createPickerView:(NSArray *)pickerDataArray
 {
