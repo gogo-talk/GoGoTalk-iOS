@@ -19,12 +19,7 @@
         userInfoView.userInteractionEnabled = YES;
         [self addSubview:userInfoView];
         //头像
-        /*UIImageView *imageView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wudingdan_wode"]];
-        imageView1.layer.masksToBounds =YES;
-        imageView1.layer.cornerRadius =LineX(32);
-        [imageView1.layer setBorderWidth:2.5];
-        [imageView1.layer setBorderColor:[[UIColor colorWithRed:207/255.0 green:18/255.0 blue:28/255.0 alpha:1] CGColor]];
-        [userInfoView addSubview:imageView1];*/
+        
         UIButton *headerBtn = [[UIButton alloc] init];
         [headerBtn setImage:[UIImage imageNamed:@"wudingdan_wode"] forState:UIControlStateNormal];
         [headerBtn setImage:[UIImage imageNamed:@"wudingdan_wode"] forState:UIControlStateHighlighted];
