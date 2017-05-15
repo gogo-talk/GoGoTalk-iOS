@@ -86,7 +86,6 @@
         return;
     }
     
-    
     //密码验证
     if(IsStrEmpty(self.loginView.passwordField.text) || self.loginView.passwordField.text.length <6 || self.loginView.passwordField.text.length >12) {
         [MBProgressHUD showMessage:@"请输入正确的登录密码（6~12位）" toView:self.view];
