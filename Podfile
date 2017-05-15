@@ -17,6 +17,7 @@ pod 'Bugly'
 pod 'IQKeyboardManager'
 pod 'FSCalendar'
 pod 'ZFPlayer'
+pod 'FLAnimatedImage'
 
 # 友盟 U-Share SDK UI模块（分享面板，建议添加）
 pod 'UMengUShare/UI'

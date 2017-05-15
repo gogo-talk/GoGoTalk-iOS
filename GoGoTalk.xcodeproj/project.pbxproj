@@ -66,6 +66,7 @@
 		D60430A21EBC864300F53437 /* UIView+XCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D60430A11EBC864300F53437 /* UIView+XCHelper.m */; };
 		D606076A1EC006B200A31E8B /* UIAlertController+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D60607691EC006B200A31E8B /* UIAlertController+Color.m */; };
 		D606076D1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D606076C1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m */; };
+		D60FA5161EC9872000838DE4 /* FLAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D60FA5151EC9872000838DE4 /* FLAnimatedImageView+WebCache.m */; };
 		D654AEED1EC15EF600A21DD9 /* BJRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D654AEE81EC15EF600A21DD9 /* BJRoomViewController.m */; };
 		D654AEEE1EC15EF600A21DD9 /* BJRoomViewController+media.m in Sources */ = {isa = PBXBuildFile; fileRef = D654AEEA1EC15EF600A21DD9 /* BJRoomViewController+media.m */; };
 		D654AEEF1EC15EF600A21DD9 /* BJRoomViewController+users.m in Sources */ = {isa = PBXBuildFile; fileRef = D654AEEC1EC15EF600A21DD9 /* BJRoomViewController+users.m */; };
@@ -236,6 +237,8 @@
 		D60607691EC006B200A31E8B /* UIAlertController+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Color.m"; sourceTree = "<group>"; };
 		D606076B1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_PreviewCourseAlertView.h; sourceTree = "<group>"; };
 		D606076C1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_PreviewCourseAlertView.m; sourceTree = "<group>"; };
+		D60FA5141EC9872000838DE4 /* FLAnimatedImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImageView+WebCache.h"; sourceTree = "<group>"; };
+		D60FA5151EC9872000838DE4 /* FLAnimatedImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImageView+WebCache.m"; sourceTree = "<group>"; };
 		D654AEE71EC15EF600A21DD9 /* BJRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJRoomViewController.h; sourceTree = "<group>"; };
 		D654AEE81EC15EF600A21DD9 /* BJRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJRoomViewController.m; sourceTree = "<group>"; };
 		D654AEE91EC15EF600A21DD9 /* BJRoomViewController+media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BJRoomViewController+media.h"; sourceTree = "<group>"; };
@@ -648,6 +651,8 @@
 				D6C7AAC91EB190DA00EBF0D1 /* NSString+XCHelper.m */,
 				D60607681EC006B200A31E8B /* UIAlertController+Color.h */,
 				D60607691EC006B200A31E8B /* UIAlertController+Color.m */,
+				D60FA5141EC9872000838DE4 /* FLAnimatedImageView+WebCache.h */,
+				D60FA5151EC9872000838DE4 /* FLAnimatedImageView+WebCache.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1132,9 +1137,9 @@
 				5BA575F41EC049A900C7512A /* GGT_VipCurrentStatusCell.m in Sources */,
 				D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */,
 				5BB689391EC450150095CE58 /* GGT_SelectCoursewareViewCell.m in Sources */,
-				5B0881A81EC2FB8800BED063 /* TimeCollectionViewCell.m in Sources */,
 				5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */,
 				5BA10D411EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m in Sources */,
+				D60FA5161EC9872000838DE4 /* FLAnimatedImageView+WebCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

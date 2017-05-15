@@ -40,6 +40,7 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.3.0):
     - CocoaLumberjack/Default
+  - FLAnimatedImage (1.0.12)
   - FLEX (2.4.0)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
@@ -132,6 +133,7 @@ PODS:
 DEPENDENCIES:
   - BJLiveCore
   - Bugly
+  - FLAnimatedImage
   - FLEX (~> 2.0)
   - FSCalendar
   - IQKeyboardManager
@@ -156,6 +158,7 @@ SPEC CHECKSUMS:
   BJLiveCore: 6d4cc0636749231eb702dcb9b9da89aee2ffdd9c
   Bugly: da3c02408c14838d498429320545a8e439392978
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FSCalendar: feef792968ca0166bafc93e02fcd840b07d256e5
@@ -181,6 +184,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZFPlayer: 8dc82b4508fbba4ee59d0304c52e30f8b3390244
 
-PODFILE CHECKSUM: cd739cecb56213cc5efae2c9f312b89b4f5b02aa
+PODFILE CHECKSUM: af1b4245dc7b5ffeeee1035c1a761a31f1818f3c
 
 COCOAPODS: 1.2.1
