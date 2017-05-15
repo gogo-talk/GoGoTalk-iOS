@@ -82,6 +82,7 @@
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
     self.pickerView.backgroundColor = [UIColor whiteColor];
+    
     [self.baseView addSubview:self.pickerView];
     
 }

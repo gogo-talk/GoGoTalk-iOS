@@ -8,8 +8,10 @@
 
 #import "GGT_EditUserInfoController.h"
 
-@interface GGT_EditUserInfoController ()
+@interface GGT_EditUserInfoController ()<UITextFieldDelegate>
+@property(nonatomic, weak)UITextField *editTextField;
 
+@property(nonatomic, weak) UIBarButtonItem *rightItem;
 @end
 
 @implementation GGT_EditUserInfoController
@@ -35,14 +37,22 @@
     rightBtn.frame = CGRectMake(0, 0, 100, 30);
     [rightBtn setFont:[UIFont systemFontOfSize:16]];
     [rightBtn sizeToFit];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    [rightBtn addTarget:self action:@selector(updateInfo:) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    [rightItem setEnabled:NO];
+    self.rightItem = rightItem;
     //创建FixedSpace。用来控制上面按钮位置
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     //设置negativeSpacer的宽度
     negativeSpacer.width = -5;
     self.navigationItem.rightBarButtonItems = @[negativeSpacer,rightItem];
     
+}
+-(void)updateInfo:(UIButton *)sender
+{
+    NSLog(@"提交了信息");
 }
 -(void)createEditTextField
 {
@@ -54,6 +64,8 @@
     editTextField.font = Font(16);
     editTextField.text = self.info;
     editTextField.backgroundColor = [UIColor whiteColor];
+    self.editTextField = editTextField;
+    self.editTextField.delegate = self;
     [bgView addSubview:editTextField];
     
     [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -85,5 +97,16 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark -- UITextFieldDelegate
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if([textField.text isEqualToString:self.info]){
+        [self.rightItem setEnabled:NO];
+        [self.rightItem setTintColor:[UIColor redColor]];
+        NSLog(@"输入的内容相同，不可提交。输入的:%@!!原内容:%@",self.info,textField.text);
+    }else{
+        [self.rightItem setEnabled:YES];
+    }
+    NSLog(@"输入的:%@!!原内容:%@",self.info,textField.text);
+}
 @end

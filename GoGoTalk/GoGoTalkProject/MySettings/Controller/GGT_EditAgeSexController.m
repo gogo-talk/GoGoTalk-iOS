@@ -91,6 +91,7 @@
     int inComponent = 0;
     if([self.prompt isEqualToString:@"请选择年龄"]){
         self.pickerView.pickerDataArray = array;
+        self.pickerView.defaultRow = 6;
         selectRow = 6;
     }else{
         self.pickerView.pickerDataArray = array2;

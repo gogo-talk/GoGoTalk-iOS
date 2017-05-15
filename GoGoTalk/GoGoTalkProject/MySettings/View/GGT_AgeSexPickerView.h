@@ -13,6 +13,8 @@ typedef void (^MyBasicBlock)(id result);
 @property(nonatomic, strong) NSArray *pickerDataArray;
 //选择器
 @property(nonatomic, retain) UIPickerView *pickerView;
+//默认行号
+@property(nonatomic, assign) NSInteger defaultRow;
 //弹出选择器方法
 -(void)popPickerView;
 @property(nonatomic, strong)MyBasicBlock selectBlock;

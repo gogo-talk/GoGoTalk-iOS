@@ -133,6 +133,7 @@
     if(indexPath.section == 0 && (indexPath.row == 0 || indexPath.row == 1)){
         GGT_EditUserInfoController *evc = [GGT_EditUserInfoController new];
         evc.titleName = self.cellArray1[indexPath.row][@"title"];
+        evc.info = self.cellArray1[indexPath.row][@"subtitle"];
         [self.navigationController pushViewController:evc animated:YES];
     }
     if(indexPath.section==0 && (indexPath.row == 2 || indexPath.row == 3)){
