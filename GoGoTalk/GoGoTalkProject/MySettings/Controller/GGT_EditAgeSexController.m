@@ -34,7 +34,7 @@
     [rightBtn setTitle:@"提交" forState:UIControlStateNormal];
     
     rightBtn.frame = CGRectMake(0, 0, 100, 30);
-    [rightBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];
+    rightBtn.titleLabel.font = Font(16);
     [rightBtn sizeToFit];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     
@@ -59,7 +59,7 @@
     [ageSexBtn setTitle:self.prompt forState:UIControlStateNormal];
     [ageSexBtn setTitleColor:UICOLOR_FROM_HEX(0x999999) forState:UIControlStateNormal];
     ageSexBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    [ageSexBtn.titleLabel setFont:Font(16)];
+    ageSexBtn.titleLabel.font = Font(16);
     [ageSexBtn addTarget:self action:@selector(ageSexBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     ageSexBtn.backgroundColor = [UIColor whiteColor];
     [bgView addSubview:ageSexBtn];

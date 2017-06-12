@@ -32,7 +32,7 @@
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightBtn setTitle:@"提交" forState:UIControlStateNormal];
     rightBtn.frame = CGRectMake(0, 0, 100, 30);
-    [rightBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];
+    rightBtn.titleLabel.font = Font(16);
     [rightBtn sizeToFit];
     self.rightBtn = rightBtn;
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
