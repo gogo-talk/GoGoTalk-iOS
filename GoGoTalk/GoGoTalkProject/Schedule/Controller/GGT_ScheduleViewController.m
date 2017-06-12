@@ -17,6 +17,8 @@
 
 #import "BJRoomViewController.h"    // 百家云
 
+#import "GGT_CourseEvaluateVC.h"
+
 
 
 static NSString * const CalendarCellID = @"cell";
@@ -520,11 +522,14 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
     //    [self.navigationController pushViewController:vc animated:YES];
     
     // 进入百家云房间
-    [self enterRoomWithJoinCode:@"asd0i5" userName:@"cc"];
+//    [self enterRoomWithJoinCode:@"asd0i5" userName:@"cc"];
     
 //    [self presentViewController:[GGT_CeShiVC new] animated:YES completion:nil];
     
     //    [self.navigationController pushViewController:[GGT_CeShiVC new] animated:YES];
+    
+    GGT_CourseEvaluateVC *vc = [GGT_CourseEvaluateVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - 百家云
