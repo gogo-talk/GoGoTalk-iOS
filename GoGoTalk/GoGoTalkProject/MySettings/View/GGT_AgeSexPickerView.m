@@ -60,7 +60,7 @@
     [btnOK setTitle:@"确定" forState:UIControlStateNormal];
     [btnOK setTitleColor:UICOLOR_FROM_HEX(0xea5851) forState:UIControlStateNormal];
     [btnOK addTarget:self action:@selector(pickerBtnOK:) forControlEvents:UIControlEventTouchUpInside];
-    [btnOK setFont:[UIFont systemFontOfSize:16]];
+    btnOK.titleLabel.font = Font(16);
     [btnOK sizeToFit];
     [_baseView addSubview:btnOK];
     [btnOK mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -74,7 +74,7 @@
     [btnCancel setTitle:@"取消" forState:UIControlStateNormal];
     [btnCancel setTitleColor:UICOLOR_FROM_HEX(0xc6c6c6) forState:UIControlStateNormal];
     [btnCancel addTarget:self action:@selector(pickerBtnCancel:) forControlEvents:UIControlEventTouchUpInside];
-    [btnCancel setFont:[UIFont systemFontOfSize:16]];
+    btnCancel.titleLabel.font = Font(16);
     [_baseView addSubview:btnCancel];
     [btnCancel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.baseView.mas_top);

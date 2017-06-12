@@ -27,7 +27,7 @@
     [rightBtn setTitle:@"提交" forState:UIControlStateNormal];
     [rightBtn setTintColor:[UIColor whiteColor]];
     rightBtn.frame = CGRectMake(0, 0, 0, 0);
-    [rightBtn setFont:[UIFont systemFontOfSize:16]];
+    rightBtn.titleLabel.font = Font(16);
     [rightBtn sizeToFit];
     [rightBtn addTarget:self action:@selector(submitFeedback:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
