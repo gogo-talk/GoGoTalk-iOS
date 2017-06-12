@@ -487,9 +487,9 @@
 		5BC2AF8E1EB04F97004DF44D /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				5BC2AF971EB05042004DF44D /* Controller */,
 				5BA10D2B1EB1D3820091093C /* Model */,
 				D66F8E711EB972CF0048B9C9 /* View */,
-				5BC2AF971EB05042004DF44D /* Controller */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -1255,7 +1255,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gogo-talk.GoGoTalk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1279,7 +1279,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gogo-talk.GoGoTalk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -35,7 +35,7 @@
     [rightBtn setTitle:@"提交" forState:UIControlStateNormal];
     
     rightBtn.frame = CGRectMake(0, 0, 100, 30);
-    [rightBtn setFont:[UIFont systemFontOfSize:16]];
+    [rightBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];
     [rightBtn sizeToFit];
     [rightBtn addTarget:self action:@selector(updateInfo:) forControlEvents:UIControlEventTouchUpInside];
     
