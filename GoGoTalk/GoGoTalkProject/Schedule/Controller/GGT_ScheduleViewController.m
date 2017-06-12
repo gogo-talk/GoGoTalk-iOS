@@ -7,15 +7,13 @@
 //
 
 #import "GGT_ScheduleViewController.h"
-#import "FSCalendar.h"
+#import <FSCalendar/FSCalendar.h>
 #import "GGT_CalendarCell.h"
 #import "GGT_ScheduleStudyingCell.h"
 #import "GGT_ScheduleNormalCell.h"
 #import "GGT_ScheduleFinishedCanPlayCell.h"
 #import "OYCountDownManager.h"
 #import "GGT_PreviewCoursewareVC.h"
-
-#import "BJRoomViewController.h"    // 百家云
 
 #import "GGT_CourseEvaluateVC.h"
 
@@ -533,15 +531,15 @@ static NSString * const xc_TableViewCellID = @"xc_TableViewCellID";
 }
 
 #pragma mark - 百家云
-- (void)enterRoomWithJoinCode:(NSString *)joinCode userName:(NSString *)userName {
-    
-    BJRoomViewController *roomViewController = [BJRoomViewController new];
-    [self presentViewController:roomViewController
-                       animated:YES
-                     completion:^{
-                         [roomViewController enterRoomWithSecret:joinCode userName:userName];
-                     }];
-}
+//- (void)enterRoomWithJoinCode:(NSString *)joinCode userName:(NSString *)userName {
+//    
+//    BJRoomViewController *roomViewController = [BJRoomViewController new];
+//    [self presentViewController:roomViewController
+//                       animated:YES
+//                     completion:^{
+//                         [roomViewController enterRoomWithSecret:joinCode userName:userName];
+//                     }];
+//}
 
 
 @end

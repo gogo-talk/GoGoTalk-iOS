@@ -60,6 +60,7 @@
 		5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05AB1EB07DA200469368 /* UIView+Layout.m */; };
 		5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05AE1EB07E4D00469368 /* UIButton+timer.m */; };
 		5BED05B11EB07EA200469368 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */; };
+		D2AAA160595C68A78E962B45 /* Pods_GoGoTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A1D3B82B2C52C65F92C3DB /* Pods_GoGoTalk.framework */; };
 		D60430991EBC7CA000F53437 /* GGT_ScheduleStudyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D60430981EBC7CA000F53437 /* GGT_ScheduleStudyingCell.m */; };
 		D604309C1EBC7CDB00F53437 /* GGT_PreviewTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D604309B1EBC7CDB00F53437 /* GGT_PreviewTopView.m */; };
 		D604309F1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D604309E1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m */; };
@@ -67,10 +68,6 @@
 		D606076A1EC006B200A31E8B /* UIAlertController+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D60607691EC006B200A31E8B /* UIAlertController+Color.m */; };
 		D606076D1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D606076C1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m */; };
 		D60FA5161EC9872000838DE4 /* FLAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D60FA5151EC9872000838DE4 /* FLAnimatedImageView+WebCache.m */; };
-		D654AEED1EC15EF600A21DD9 /* BJRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D654AEE81EC15EF600A21DD9 /* BJRoomViewController.m */; };
-		D654AEEE1EC15EF600A21DD9 /* BJRoomViewController+media.m in Sources */ = {isa = PBXBuildFile; fileRef = D654AEEA1EC15EF600A21DD9 /* BJRoomViewController+media.m */; };
-		D654AEEF1EC15EF600A21DD9 /* BJRoomViewController+users.m in Sources */ = {isa = PBXBuildFile; fileRef = D654AEEC1EC15EF600A21DD9 /* BJRoomViewController+users.m */; };
-		D654AEF21EC15F2A00A21DD9 /* BJConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D654AEF11EC15F2A00A21DD9 /* BJConsoleViewController.m */; };
 		D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */; };
 		D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EE01EBB1D5E0058D12C /* XCStarView.m */; };
 		D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */; };
@@ -78,7 +75,6 @@
 		D68205421EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D68205411EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m */; };
 		D68205461EC04D5D00CA312B /* GGT_CourseEvaluateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D68205451EC04D5D00CA312B /* GGT_CourseEvaluateVC.m */; };
 		D682054D1EC05B0500CA312B /* GGT_EvaluateView.m in Sources */ = {isa = PBXBuildFile; fileRef = D682054C1EC05B0500CA312B /* GGT_EvaluateView.m */; };
-		D696AFD3BE34379B2D601BF6 /* libPods-GoGoTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */; };
 		D6B590801EBC0AED00086648 /* GGT_ScheduleNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */; };
 		D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */; };
 		D6B591671EBC676800086648 /* OYCountDownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B591661EBC676800086648 /* OYCountDownManager.m */; };
@@ -117,6 +113,7 @@
 
 /* Begin PBXFileReference section */
 		1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGoTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		22A1D3B82B2C52C65F92C3DB /* Pods_GoGoTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoGoTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3520D06B1EC012C800A0B80A /* GGT_EditPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_EditPasswordController.h; sourceTree = "<group>"; };
 		3520D06C1EC012C800A0B80A /* GGT_EditPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_EditPasswordController.m; sourceTree = "<group>"; };
 		3520D0711EC0592500A0B80A /* GGT_UserSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_UserSettingController.h; sourceTree = "<group>"; };
@@ -223,7 +220,6 @@
 		5BED05AD1EB07E4D00469368 /* UIButton+timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+timer.h"; sourceTree = "<group>"; };
 		5BED05AE1EB07E4D00469368 /* UIButton+timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+timer.m"; sourceTree = "<group>"; };
 		5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
-		B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoGoTalk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDE48A6BF0DF60B4B82782D /* Pods-GoGoTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGoTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk.release.xcconfig"; sourceTree = "<group>"; };
 		D60430971EBC7CA000F53437 /* GGT_ScheduleStudyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleStudyingCell.h; sourceTree = "<group>"; };
 		D60430981EBC7CA000F53437 /* GGT_ScheduleStudyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleStudyingCell.m; sourceTree = "<group>"; };
@@ -239,14 +235,6 @@
 		D606076C1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_PreviewCourseAlertView.m; sourceTree = "<group>"; };
 		D60FA5141EC9872000838DE4 /* FLAnimatedImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImageView+WebCache.h"; sourceTree = "<group>"; };
 		D60FA5151EC9872000838DE4 /* FLAnimatedImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImageView+WebCache.m"; sourceTree = "<group>"; };
-		D654AEE71EC15EF600A21DD9 /* BJRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJRoomViewController.h; sourceTree = "<group>"; };
-		D654AEE81EC15EF600A21DD9 /* BJRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJRoomViewController.m; sourceTree = "<group>"; };
-		D654AEE91EC15EF600A21DD9 /* BJRoomViewController+media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BJRoomViewController+media.h"; sourceTree = "<group>"; };
-		D654AEEA1EC15EF600A21DD9 /* BJRoomViewController+media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BJRoomViewController+media.m"; sourceTree = "<group>"; };
-		D654AEEB1EC15EF600A21DD9 /* BJRoomViewController+users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BJRoomViewController+users.h"; sourceTree = "<group>"; };
-		D654AEEC1EC15EF600A21DD9 /* BJRoomViewController+users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BJRoomViewController+users.m"; sourceTree = "<group>"; };
-		D654AEF01EC15F2A00A21DD9 /* BJConsoleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJConsoleViewController.h; sourceTree = "<group>"; };
-		D654AEF11EC15F2A00A21DD9 /* BJConsoleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJConsoleViewController.m; sourceTree = "<group>"; };
 		D66C6EDB1EBADD100058D12C /* UIView+XCCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCCornerRadius.h"; sourceTree = "<group>"; };
 		D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCCornerRadius.m"; sourceTree = "<group>"; };
 		D66C6EDF1EBB1D5E0058D12C /* XCStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCStarView.h; sourceTree = "<group>"; };
@@ -306,8 +294,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D696AFD3BE34379B2D601BF6 /* libPods-GoGoTalk.a in Frameworks */,
 				35A3F6021EC2FAF300C88A18 /* Reveal.framework in Frameworks */,
+				D2AAA160595C68A78E962B45 /* Pods_GoGoTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				35A3F6011EC2FAF300C88A18 /* Reveal.framework */,
-				B9D1B92509B69564CE5FC275 /* libPods-GoGoTalk.a */,
+				22A1D3B82B2C52C65F92C3DB /* Pods_GoGoTalk.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -459,7 +447,6 @@
 				5BC2AF901EB0500A004DF44D /* MySettings */,
 				5BC2AF8F1EB04FD1004DF44D /* Discovery */,
 				5BC2AF8E1EB04F97004DF44D /* Schedule */,
-				D654AEE61EC15E4400A21DD9 /* BJYRoom */,
 				5BC2AF8D1EB04F79004DF44D /* OrderTheCourse */,
 				5BC2AF8C1EB04F70004DF44D /* HomeReservation */,
 				5BC2AF8B1EB04E92004DF44D /* LogAndRegister */,
@@ -742,21 +729,6 @@
 				D682054C1EC05B0500CA312B /* GGT_EvaluateView.m */,
 			);
 			name = "课后评价";
-			sourceTree = "<group>";
-		};
-		D654AEE61EC15E4400A21DD9 /* BJYRoom */ = {
-			isa = PBXGroup;
-			children = (
-				D654AEF01EC15F2A00A21DD9 /* BJConsoleViewController.h */,
-				D654AEF11EC15F2A00A21DD9 /* BJConsoleViewController.m */,
-				D654AEE71EC15EF600A21DD9 /* BJRoomViewController.h */,
-				D654AEE81EC15EF600A21DD9 /* BJRoomViewController.m */,
-				D654AEE91EC15EF600A21DD9 /* BJRoomViewController+media.h */,
-				D654AEEA1EC15EF600A21DD9 /* BJRoomViewController+media.m */,
-				D654AEEB1EC15EF600A21DD9 /* BJRoomViewController+users.h */,
-				D654AEEC1EC15EF600A21DD9 /* BJRoomViewController+users.m */,
-			);
-			path = BJYRoom;
 			sourceTree = "<group>";
 		};
 		D66C6EDE1EBB1D560058D12C /* Others */ = {
@@ -1068,7 +1040,6 @@
 				5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */,
 				D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */,
 				5BEC18FE1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m in Sources */,
-				D654AEEE1EC15EF600A21DD9 /* BJRoomViewController+media.m in Sources */,
 				D60430A21EBC864300F53437 /* UIView+XCHelper.m in Sources */,
 				5BEC18F31EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m in Sources */,
 				D6B5916A1EBC716700086648 /* BaseBackViewController.m in Sources */,
@@ -1088,7 +1059,6 @@
 				D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */,
 				355210481EBC49BE0057EA59 /* GGT_InfoListCell.m in Sources */,
 				5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */,
-				D654AEED1EC15EF600A21DD9 /* BJRoomViewController.m in Sources */,
 				5B0881601EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m in Sources */,
 				358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */,
 				D6B591671EBC676800086648 /* OYCountDownManager.m in Sources */,
@@ -1109,7 +1079,6 @@
 				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
 				D604309F1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m in Sources */,
 				D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */,
-				D654AEF21EC15F2A00A21DD9 /* BJConsoleViewController.m in Sources */,
 				3520D0731EC0592500A0B80A /* GGT_UserSettingController.m in Sources */,
 				D60430991EBC7CA000F53437 /* GGT_ScheduleStudyingCell.m in Sources */,
 				5BEC18F91EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m in Sources */,
@@ -1127,7 +1096,6 @@
 				3520D0761EC0593D00A0B80A /* GGT_UserSettingCell.m in Sources */,
 				355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */,
 				5B01DEFD1EC3FA2C006D39A3 /* GGT_DetailsOfTeacherView.m in Sources */,
-				D654AEEF1EC15EF600A21DD9 /* BJRoomViewController+users.m in Sources */,
 				5BA575F11EC0495B00C7512A /* GGT_VipInfoHeaderCell.m in Sources */,
 				5BA575F71EC049FA00C7512A /* GGT_VipPastStateCell.m in Sources */,
 				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
@@ -1284,95 +1252,7 @@
 				INFOPLIST_FILE = GoGoTalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"AFNetworking\"",
-					"-l\"BJHL-Foundation-iOS\"",
-					"-l\"BJHL-Websocket-iOS\"",
-					"-l\"BJLiveCore\"",
-					"-l\"CocoaLumberjack\"",
-					"-l\"FLEX\"",
-					"-l\"FMDB\"",
-					"-l\"FSCalendar\"",
-					"-l\"IQKeyboardManager\"",
-					"-l\"JRSwizzle\"",
-					"-l\"LKDBHelper\"",
-					"-l\"LTInfiniteScrollView\"",
-					"-l\"M9Dev\"",
-					"-l\"MBProgressHUD\"",
-					"-l\"MJExtension\"",
-					"-l\"MJRefresh\"",
-					"-l\"Masonry\"",
-					"-l\"NSString-UrlEncode\"",
-					"-l\"PocketSocket\"",
-					"-l\"Reachability\"",
-					"-l\"ReactiveCocoa\"",
-					"-l\"SDWebImage\"",
-					"-l\"SocialQQ\"",
-					"-l\"SocialSina\"",
-					"-l\"SocialUniqueId\"",
-					"-l\"SocialWeChat\"",
-					"-l\"UMSocialLog\"",
-					"-l\"YYModel\"",
-					"-l\"ZFPlayer\"",
-					"-l\"c++\"",
-					"-l\"icucore\"",
-					"-l\"jcore-ios-1.1.3\"",
-					"-l\"jpush-ios-3.0.5\"",
-					"-l\"libextobjc\"",
-					"-l\"mediaplayer\"",
-					"-l\"resolv\"",
-					"-l\"sqlite3\"",
-					"-l\"stdc++\"",
-					"-l\"stdc++.6\"",
-					"-l\"system\"",
-					"-l\"z\"",
-					"-framework",
-					"\"Accelerate\"",
-					"-framework",
-					"\"Bugly\"",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"CoreFoundation\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreTelephony\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"GLKit\"",
-					"-framework",
-					"\"ImageIO\"",
-					"-framework",
-					"\"LogStat\"",
-					"-framework",
-					"\"MediaPlayer\"",
-					"-framework",
-					"\"MobileCoreServices\"",
-					"-framework",
-					"\"QuartzCore\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-framework",
-					"\"UIKit\"",
-					"-framework",
-					"\"UMSocialCore\"",
-					"-framework",
-					"\"UMSocialNetwork\"",
-					"-framework",
-					"\"UShareUI\"",
-					"-framework",
-					"\"VideoToolbox\"",
-					"-weak_framework",
-					"\"UserNotifications\"",
-					"-framework",
-					Reveal,
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gogo-talk.GoGoTalk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1396,6 +1276,7 @@
 				INFOPLIST_FILE = GoGoTalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gogo-talk.GoGoTalk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

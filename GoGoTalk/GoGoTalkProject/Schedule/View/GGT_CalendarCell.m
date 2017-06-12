@@ -61,7 +61,7 @@
     
     
     
-    CGFloat titleHeight = self.bounds.size.height*5.0/6.0;
+//    CGFloat titleHeight = self.bounds.size.height*5.0/6.0;
     CGFloat diameter = MIN(self.bounds.size.height*5.0/6.0,self.bounds.size.width);
     diameter = diameter > FSCalendarStandardCellDiameter ? (diameter - (diameter-FSCalendarStandardCellDiameter)*0.5) : diameter;
     
@@ -73,7 +73,7 @@
     
     
     // 设置选中圆的原点位置
-#warning 需要修改的地方
+#pragma mark - 需要修改的地方
     /*------------------------------------------------------------------------------*/
 //    float margin = 4;
 //    if (_isToggle) {      椭圆

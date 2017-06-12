@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <IQKeyboardManager.h>
+#import "IQKeyboardManager.h"
 #import <Bugly/Bugly.h>
 #import "BaseTabBarController.h"
 #import "GGT_NewFeatherViewController.h"
