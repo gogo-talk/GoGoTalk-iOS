@@ -12,7 +12,7 @@
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
-    if(self == [super initWithFrame:frame]){
+    if(self = [super initWithFrame:frame]){
         UIImageView *userInfoView = [UIImageView new];
         
         userInfoView.image = UIIMAGE_FROM_NAME(@"beijing_wode_top");
