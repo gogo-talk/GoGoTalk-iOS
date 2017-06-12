@@ -84,9 +84,9 @@
 
  
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    GGT_DetailsOfTeacherViewController *vc = [[GGT_DetailsOfTeacherViewController alloc]init];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+//    GGT_DetailsOfTeacherViewController *vc = [[GGT_DetailsOfTeacherViewController alloc]init];
+//    vc.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:vc animated:YES];
     
 
 //    GGT_SelectCoursewareViewController *vc = [[GGT_SelectCoursewareViewController alloc]init];
@@ -100,10 +100,13 @@
 //    bgView.alpha = 0.5;
 //    [self.view addSubview:bgView];
 //    
-//
-//    GGT_ConfirmBookingAlertView *alertView = [[GGT_ConfirmBookingAlertView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH()-LineW(277))/2, (SCREEN_HEIGHT()-LineH(327))/2, LineW(277), LineH(327))];
-//    alertView.backgroundColor = [UIColor blackColor];
-//    [self.view addSubview:alertView];
+
+    
+    [MBProgressHUD showLoading:_tableView];
+    
+    GGT_ConfirmBookingAlertView *alertView = [[GGT_ConfirmBookingAlertView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH()-LineW(277))/2, (SCREEN_HEIGHT()-LineH(327))/2, LineW(277), LineH(327))];
+    alertView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:alertView];
     
 
     

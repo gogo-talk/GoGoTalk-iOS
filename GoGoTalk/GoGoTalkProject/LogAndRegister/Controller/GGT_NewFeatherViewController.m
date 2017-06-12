@@ -25,10 +25,6 @@
 }
 
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
 - (void)addScrollView {
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
     scrollView.delegate = self;
@@ -66,7 +62,7 @@
 }
 
 - (void)btnAction:(UIButton *)btn {
-    
+
     GGT_LoginViewController *userLoginVc = [[GGT_LoginViewController alloc] init];
     UINavigationController *mainVc = [[UINavigationController alloc]initWithRootViewController:userLoginVc];
     [self presentViewController:mainVc animated:YES completion:nil];

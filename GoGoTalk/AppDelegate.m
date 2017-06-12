@@ -57,18 +57,25 @@
     if ([currentVersion isEqualToString:lastVersion]) {
         if ([[userDefaults objectForKey:@"login"] isEqualToString:@"yes"]) {
             
+
             self.window.rootViewController = tabVc;
             
         } else {
-            BaseNavigationController *mainVc = [[BaseNavigationController alloc]initWithRootViewController:loginVc];
 
+            BaseNavigationController *mainVc = [[BaseNavigationController alloc]initWithRootViewController:loginVc];
             self.window.rootViewController = mainVc;
         }
+        
+        //启动图和引导图没有状态栏，之后都加载状态栏---并修改为白色
+        [[UIApplication sharedApplication] setStatusBarHidden:NO];
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+        
     }else{
         // 卸载重装后或第一次进入应用
         [userDefaults setObject:currentVersion forKey:key];
         self.window.rootViewController = newVc;
     }
+    
     
     [self.window makeKeyAndVisible];
 }
