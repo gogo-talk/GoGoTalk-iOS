@@ -82,7 +82,7 @@
     UITapGestureRecognizer *tap = [UITapGestureRecognizer new];
     [self.xc_topView.xc_headPortraitImgView addGestureRecognizer:tap];
     [tap.rac_gestureSignal subscribeNext:^(id x) {
-        @strongify(self);
+//        @strongify(self);
         
     }];
 }
