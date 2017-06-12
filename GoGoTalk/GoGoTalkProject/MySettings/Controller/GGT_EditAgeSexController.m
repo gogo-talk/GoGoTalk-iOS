@@ -91,15 +91,18 @@
     int inComponent = 0;
     if([self.prompt isEqualToString:@"请选择年龄"]){
         self.pickerView.pickerDataArray = array;
-        self.pickerView.defaultRow = 6;
+        
         selectRow = 6;
+        self.pickerView.defaultRow = selectRow;
     }else{
         self.pickerView.pickerDataArray = array2;
-        
+        selectRow = 1;
+        self.pickerView.defaultRow = selectRow;
         
     }
     
     [self.pickerView.pickerView selectRow:selectRow inComponent:inComponent animated:YES];
+    
     
     [self.view addSubview:self.pickerView];
 //    [self.pickerView mas_makeConstraints:^(MASConstraintMaker *make) {

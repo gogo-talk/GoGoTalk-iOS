@@ -100,13 +100,13 @@
 #pragma mark -- UITextFieldDelegate
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
-    if([textField.text isEqualToString:self.info]){
+    if([textField.text isEqualToString:self.info] || textField.text.length <= 6){
         [self.rightItem setEnabled:NO];
         [self.rightItem setTintColor:[UIColor redColor]];
-        NSLog(@"输入的内容相同，不可提交。输入的:%@!!原内容:%@",self.info,textField.text);
+        NSLog(@"输入的内容相同或内容为空，不可提交。输入的:%@!!原内容:%@",self.info,textField.text);
     }else{
         [self.rightItem setEnabled:YES];
     }
-    NSLog(@"输入的:%@!!原内容:%@",self.info,textField.text);
+    
 }
 @end
