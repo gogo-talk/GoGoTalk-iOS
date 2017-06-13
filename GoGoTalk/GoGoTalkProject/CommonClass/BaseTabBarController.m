@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.tabBar.tintColor = MainColor;
+    self.tabBar.tintColor = UICOLOR_FROM_HEX(kThemeColor);
     //设置tabbar不透明
     self.tabBar.translucent = NO;
     //设置视图
@@ -63,7 +63,7 @@
     normalAttrs[NSForegroundColorAttributeName] = UICOLOR_FROM_HEX(0x666666);
     normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:10];
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-    selectedAttrs[NSForegroundColorAttributeName] = MainColor;
+    selectedAttrs[NSForegroundColorAttributeName] = UICOLOR_FROM_HEX(kThemeColor);
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];

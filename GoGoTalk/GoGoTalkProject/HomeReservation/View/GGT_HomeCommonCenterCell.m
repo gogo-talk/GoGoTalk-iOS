@@ -81,14 +81,14 @@
     [self.yuyueshitingButton setTitle:@"立即预约" forState:(UIControlStateNormal)];
     [self.yuyueshitingButton setTitleColor:UICOLOR_FROM_HEX(ColorFFFFFF) forState:(UIControlStateNormal)];
     self.yuyueshitingButton.titleLabel.font = Font(16);
-    self.yuyueshitingButton.backgroundColor = MainColor;
+    self.yuyueshitingButton.backgroundColor = UICOLOR_FROM_HEX(kThemeColor);
     
     //0 0 代表是4个边都是阴影
     self.yuyueshitingButton.layer.shadowOffset = CGSizeMake(0, 0);
     self.yuyueshitingButton.layer.shadowOpacity = LineW(0.8);
     self.yuyueshitingButton.layer.shadowRadius = LineW(3);
     self.yuyueshitingButton.layer.cornerRadius = LineW(20);
-    self.yuyueshitingButton.layer.shadowColor =  MainColor.CGColor;
+    self.yuyueshitingButton.layer.shadowColor =  UICOLOR_FROM_HEX(kThemeColor).CGColor;
     self.yuyueshitingButton.clipsToBounds = NO;
     [self.notOrderView addSubview:self.yuyueshitingButton];
     
@@ -111,7 +111,7 @@
     //富文本对象
     NSMutableAttributedString *succeedString = [[NSMutableAttributedString alloc]initWithString:string];
     [succeedString addAttribute:NSForegroundColorAttributeName
-                             value:MainColor
+                             value:UICOLOR_FROM_HEX(kThemeColor)
                              range:NSMakeRange(22, 12)];
     self.contactTeacherCallsLabel.font = Font(16);
     self.contactTeacherCallsLabel.textColor = UICOLOR_FROM_HEX(Color666666);

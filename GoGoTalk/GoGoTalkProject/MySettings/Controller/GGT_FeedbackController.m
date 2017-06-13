@@ -45,10 +45,8 @@
     vc.title = @"意见反馈";
     [self.navigationController pushViewController:vc animated:YES];
 }
--(UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
+
+
 -(void)initViews
 {
     UILabel *titleLabel = [UILabel new];

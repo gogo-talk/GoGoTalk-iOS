@@ -15,4 +15,6 @@
 //对图片尺寸进行压缩--
 -(UIImage*)imageScaledToSize:(CGSize)newSize;
 
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
+
 @end

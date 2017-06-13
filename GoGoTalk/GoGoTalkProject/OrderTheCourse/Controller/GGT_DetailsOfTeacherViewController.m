@@ -17,15 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.navigationItem.title = @"老师详情";
     
     [self setLeftBackButton];
     
     self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
-
-        GGT_DetailsOfTeacherView *View = [[GGT_DetailsOfTeacherView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-64)];
-        [self.view addSubview:View];
+    
+    GGT_DetailsOfTeacherView *View = [[GGT_DetailsOfTeacherView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-64)];
+    [self.view addSubview:View];
     
     
 }

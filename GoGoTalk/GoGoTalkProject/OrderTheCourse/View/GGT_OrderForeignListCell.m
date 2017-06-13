@@ -156,9 +156,9 @@
     
     self.tagsView = [[OrderTimeTagsView alloc] init];
     self.tagsView.frame = CGRectMake(20,tuijianLabel.y+tuijianLabel.height+LineY(20),SCREEN_WIDTH()-40,LineH(100));
-    self.tagsView.textColor = MainColor;
+    self.tagsView.textColor = UICOLOR_FROM_HEX(kThemeColor);
     self.tagsView.textSize = LineW(12);
-    self.tagsView.bordColor = MainColor;
+    self.tagsView.bordColor = UICOLOR_FROM_HEX(kThemeColor);
     self.tagsView.textbackgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     self.tagsView.allowClick = YES;
     self.tagsView.cornerRadius = LineH(12);

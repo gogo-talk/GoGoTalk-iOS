@@ -19,10 +19,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self initLogo];
 }
--(UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     

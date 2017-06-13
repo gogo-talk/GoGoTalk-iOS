@@ -71,10 +71,9 @@
          @strongify(self);
          
 //         [self loginLoadData];
-         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-         [userDefaults setObject:@"yes" forKey:@"login"];
-         BaseTabBarController *tabVc = [[BaseTabBarController alloc]init];
-         [self.navigationController pushViewController:tabVc animated:YES];
+         
+         //假数据，直接跳转到登录
+         [self turnToHomeClick];
          
 
      }];

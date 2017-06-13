@@ -74,10 +74,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
+
+
 -(void)setNavigationStyle
 {
     self.navigationItem.title = @"个人信息";

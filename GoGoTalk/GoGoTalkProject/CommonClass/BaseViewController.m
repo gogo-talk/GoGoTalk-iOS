@@ -20,7 +20,7 @@
     [super viewDidLoad];
     
     //设置导航颜色
-    self.navigationController.navigationBar.barTintColor = MainColor;
+    self.navigationController.navigationBar.barTintColor = UICOLOR_FROM_HEX(kThemeColor);
     //设置导航不透明
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:Font(19),NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
@@ -36,6 +36,8 @@
                                        target:nil action:nil];
     negativeSpacer.width = - LineX(5);
     self.navigationItem.leftBarButtonItems = @[negativeSpacer,imageItem];
+    //解决手势问题
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
 }
 
 #pragma mark 左侧返回按钮---带图片

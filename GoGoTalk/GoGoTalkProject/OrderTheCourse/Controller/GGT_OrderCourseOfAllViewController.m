@@ -59,7 +59,13 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 
+    /****预约***/
+    [cell.orderButton addTarget:self action:@selector(orderButtonClick) forControlEvents:(UIControlEventTouchUpInside)];
     
+    /****关注***/
+    [cell.focusButton addTarget:self action:@selector(focusButtonClick) forControlEvents:(UIControlEventTouchUpInside)];
+    
+  
     return cell;
     
     
@@ -84,34 +90,68 @@
 
  
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    GGT_DetailsOfTeacherViewController *vc = [[GGT_DetailsOfTeacherViewController alloc]init];
-//    vc.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:vc animated:YES];
-    
+    GGT_DetailsOfTeacherViewController *vc = [[GGT_DetailsOfTeacherViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
-//    GGT_SelectCoursewareViewController *vc = [[GGT_SelectCoursewareViewController alloc]init];
-//    [self.navigationController pushViewController:vc animated:YES];
-    
-    
-    
-    
-//    UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT())];
-//    bgView.backgroundColor = [UIColor blackColor];
-//    bgView.alpha = 0.5;
-//    [self.view addSubview:bgView];
-//    
-
-    
-    [MBProgressHUD showLoading:_tableView];
+#pragma mark   预约
+- (void)orderButtonClick {
+    UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT())];
+    bgView.backgroundColor = [UIColor blackColor];
+    bgView.alpha = 0.5;
+    [self.view.window addSubview:bgView];
     
     GGT_ConfirmBookingAlertView *alertView = [[GGT_ConfirmBookingAlertView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH()-LineW(277))/2, (SCREEN_HEIGHT()-LineH(327))/2, LineW(277), LineH(327))];
-    alertView.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:alertView];
     
+    __weak GGT_ConfirmBookingAlertView *weakview = alertView;
+    alertView.buttonBlock = ^(UIButton *button) {
+        switch (button.tag) {
+            case 800:
+                //关闭
+                [bgView removeFromSuperview];
+                [weakview removeFromSuperview];
+                break;
+            case 801:
+            {
+                [bgView removeFromSuperview];
+                [weakview removeFromSuperview];
+                
+                //更换课件
+                GGT_SelectCoursewareViewController *vc = [[GGT_SelectCoursewareViewController alloc]init];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+                break;
+            case 802:
+                //确认
+                [bgView removeFromSuperview];
+                [weakview removeFromSuperview];
+                break;
+            
+            default:
+                break;
+        }
+        
+        
+        
+    };
+    
+    [self.view.window addSubview:alertView];
 
     
 }
+     
+     
+#pragma mark   关注
+- (void)focusButtonClick {
+    NSLog(@"关注");
 
+    
+}
+     
+
+     
+     
 
 #pragma headerView
 - (void)initHeaderView {

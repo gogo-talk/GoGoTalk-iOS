@@ -55,7 +55,6 @@
 		5BEC18F31EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18F21EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m */; };
 		5BEC18F91EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18F81EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m */; };
 		5BEC18FE1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18FD1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m */; };
-		5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05A11EB07C3400469368 /* UIColor+XCAdditions.m */; };
 		5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05A81EB07D3300469368 /* UIImage+Category.m */; };
 		5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05AB1EB07DA200469368 /* UIView+Layout.m */; };
 		5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05AE1EB07E4D00469368 /* UIButton+timer.m */; };
@@ -211,8 +210,6 @@
 		5BEC18F81EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_DetailsOfTeacherViewController.m; sourceTree = "<group>"; };
 		5BEC18FC1EB882C6009DF2F8 /* GGT_OrderTimeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_OrderTimeTableView.h; sourceTree = "<group>"; };
 		5BEC18FD1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderTimeTableView.m; sourceTree = "<group>"; };
-		5BED05A01EB07C3400469368 /* UIColor+XCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XCAdditions.h"; sourceTree = "<group>"; };
-		5BED05A11EB07C3400469368 /* UIColor+XCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XCAdditions.m"; sourceTree = "<group>"; };
 		5BED05A71EB07D3300469368 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
 		5BED05A81EB07D3300469368 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		5BED05AA1EB07DA200469368 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
@@ -620,8 +617,6 @@
 			children = (
 				D6C7AAA91EB1872000EBF0D1 /* NSArray+SafeExtension.h */,
 				D6C7AAAA1EB1872000EBF0D1 /* NSArray+SafeExtension.m */,
-				5BED05A01EB07C3400469368 /* UIColor+XCAdditions.h */,
-				5BED05A11EB07C3400469368 /* UIColor+XCAdditions.m */,
 				5BED05A71EB07D3300469368 /* UIImage+Category.h */,
 				5BED05A81EB07D3300469368 /* UIImage+Category.m */,
 				5BED05AA1EB07DA200469368 /* UIView+Layout.h */,
@@ -1076,7 +1071,6 @@
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
 				D6B590801EBC0AED00086648 /* GGT_ScheduleNormalCell.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
-				5BED05A21EB07C3400469368 /* UIColor+XCAdditions.m in Sources */,
 				D604309F1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m in Sources */,
 				D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */,
 				3520D0731EC0592500A0B80A /* GGT_UserSettingController.m in Sources */,

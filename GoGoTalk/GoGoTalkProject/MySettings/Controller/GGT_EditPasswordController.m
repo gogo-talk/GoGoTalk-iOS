@@ -21,13 +21,10 @@
     [self setNavigationItems];
     [self initViews];
 }
-//状态栏白色
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
+
+
 -(void)setNavigationItems{
-    self.navigationController.title = self.titleName;
+    self.navigationItem.title = self.titleName;
     //右侧提交按钮
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightBtn setTitle:@"提交" forState:UIControlStateNormal];
@@ -42,6 +39,7 @@
     negativeSpacer.width = -5;
     self.navigationItem.rightBarButtonItems = @[negativeSpacer,rightItem];
 }
+
 //页面布局
 -(void)initViews{
     UIView *baseView = [UIView new];
@@ -63,23 +61,23 @@
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, LineW(15), LineH(44))];
     paddingView.backgroundColor = [UIColor whiteColor];
     
+    
     UITextField *oldTextField = [UITextField new];
     oldTextField.leftViewMode = UITextFieldViewModeAlways;
-    oldTextField.placeholder = @"请输入原始登录密码";
-    //oldTextField.placeholder
-    [oldTextField setValue:[UIFont systemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
-    //[oldTextField setValue:Font(11) forKey:@"placeholderLabel.font"];
+    oldTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"请输入原始登录密码"] attributes:@{NSForegroundColorAttributeName: UICOLOR_FROM_HEX(ColorCCCCCC)}];
+    oldTextField.font = Font(16);
     oldTextField.secureTextEntry = YES;
     oldTextField.leftView = paddingView;
     oldTextField.backgroundColor = [UIColor whiteColor];
     [baseView addSubview:oldTextField];
+    
     UIView *paddingView2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, LineW(15), LineH(44))];
     UITextField *newTextField = [UITextField new];
     newTextField.leftViewMode = UITextFieldViewModeAlways;
-    newTextField.placeholder = @"请设置新密码";
+    newTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"请设置新密码"] attributes:@{NSForegroundColorAttributeName: UICOLOR_FROM_HEX(ColorCCCCCC)}];
+    newTextField.font = Font(16);
     newTextField.secureTextEntry = YES;
     newTextField.leftView = paddingView2;
-    [newTextField setValue:[UIFont systemFontOfSize:16] forKey:@"_placeholderLabel.fon"];
     newTextField.backgroundColor = [UIColor whiteColor];
     [baseView addSubview:newTextField];
     
