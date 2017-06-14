@@ -119,6 +119,7 @@
                 
                 //更换课件
                 GGT_SelectCoursewareViewController *vc = [[GGT_SelectCoursewareViewController alloc]init];
+                vc.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:vc animated:YES];
             }
                 break;
