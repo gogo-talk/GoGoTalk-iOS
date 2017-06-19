@@ -114,12 +114,20 @@
                 break;
             case 801:
             {
-                [bgView removeFromSuperview];
-                [weakview removeFromSuperview];
                 
                 //更换课件
                 GGT_SelectCoursewareViewController *vc = [[GGT_SelectCoursewareViewController alloc]init];
                 vc.hidesBottomBarWhenPushed = YES;
+                vc.changeBlock = ^(NSString *str) {
+
+                    weakview.hidden = NO;
+                    bgView.hidden = NO;
+                    
+                    weakview.kejianField.text = str;
+
+                };
+                weakview.hidden = YES;
+                bgView.hidden = YES;
                 [self.navigationController pushViewController:vc animated:YES];
             }
                 break;

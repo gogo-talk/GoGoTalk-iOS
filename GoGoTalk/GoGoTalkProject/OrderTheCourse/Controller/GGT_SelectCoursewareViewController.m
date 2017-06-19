@@ -15,6 +15,8 @@
 
 @property (nonatomic, assign) NSInteger selcetedIndex;
 
+@property (nonatomic, copy) NSString *selectStr;
+
 @end
 
 @implementation GGT_SelectCoursewareViewController
@@ -67,7 +69,8 @@
     //显示选中的cell
     GGT_SelectCoursewareViewCell *cell = [_tableView cellForRowAtIndexPath:indexPath];
     cell.selectedImgView.hidden = NO;
-    
+
+    self.selectStr = [NSString stringWithFormat:@"%ld",indexPath.row];
 }
 
 
@@ -77,8 +80,12 @@
 
 
 - (void)rightAction {
+    if (self.changeBlock) {
+        self.changeBlock(self.selectStr);
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

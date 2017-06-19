@@ -119,6 +119,7 @@
         UITextField *textField = [[UITextField alloc]init];
         textField.font = Font(16);
         textField.backgroundColor = UICOLOR_RANDOM_COLOR();
+        textField.tag = 200 +i;
         textField.textColor = UICOLOR_FROM_HEX(Color333333);
         [bgView addSubview:textField];
         
@@ -161,7 +162,11 @@
  
     }
 
-    
+    self.nameField = (UITextField *) [bgView viewWithTag:200];
+    self.kejianField = (UITextField *) [bgView viewWithTag:201];
+    self.dateField = (UITextField *) [bgView viewWithTag:202];
+
+
     for (int i=0; i<2;i++) {
         //分割线
         UIView *headerlineView = [[UIView alloc]init];

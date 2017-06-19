@@ -8,6 +8,8 @@
 
 #import "BaseViewController.h"
 
+typedef void(^ChangeBlock)(NSString *str);
 @interface GGT_SelectCoursewareViewController : BaseViewController
 
+@property (nonatomic, copy) ChangeBlock changeBlock;
 @end

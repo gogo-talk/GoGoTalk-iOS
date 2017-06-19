@@ -12,6 +12,8 @@
 #import "GGT_InfoListViewController.h"
 #import "GGT_UserSettingController.h"
 #import "GGT_FeedbackController.h"
+#import "GGT_OrderCourseOfFocusViewController.h"
+
 @interface GGT_MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray *infoArray;
@@ -23,6 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
+
+    
     /*--------------------虚拟数据start----------------------  */
     self.isVIP = true;
     NSMutableArray *mArray = [NSMutableArray array];
@@ -43,7 +48,6 @@
     self.infoArray2 = mArray2;
     /*--------------------虚拟数据end----------------------  */
     [self setNavigationStyle];
-    self.view.backgroundColor = UICOLOR_FROM_HEX(0xf2f2f2);
     [self setLeftBackButton];
     [self setUserInfo];
     //用户设置tableView
@@ -166,17 +170,54 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     
-    //进入设置页面
-    if(indexPath.section == 1 && indexPath.row == 1){
-        GGT_UserSettingController *vc = [GGT_UserSettingController new];
-        vc.title = @"设置";
-        [self.navigationController pushViewController:vc animated:YES];
+    switch (indexPath.section) {
+        case 0: //第一段
+            switch (indexPath.row) {
+                case 0: //我的课时
+                    
+                    break;
+                case 1: //关注外教
+                {
+                    GGT_OrderCourseOfFocusViewController *vc = [[GGT_OrderCourseOfFocusViewController alloc]init];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    vc.isSecondVc = YES;
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+                    break;
+                case 2: //我的订单
+                    
+                    break;
+                case 3: //测评报告
+                    
+                    break;
+                default:
+                    break;
+            }
+            break;
+            
+        case 1: //第二段
+            switch (indexPath.row) {
+                case 0: //意见反馈
+                {
+                    GGT_FeedbackController *vc = [GGT_FeedbackController new];
+                    vc.title = @"意见反馈";
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+                    break;
+                case 1://进入设置页面
+                {
+                    GGT_UserSettingController *vc = [GGT_UserSettingController new];
+                    vc.title = @"设置";
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+                    break;
+                default:
+                    break;
+            }
+            break;
+        default:
+            break;
     }
-    //意见反馈
-    if(indexPath.section == 1 && indexPath.row == 0){
-        GGT_FeedbackController *vc = [GGT_FeedbackController new];
-        vc.title = @"意见反馈";
-        [self.navigationController pushViewController:vc animated:YES];
-    }
+    
 }
 @end

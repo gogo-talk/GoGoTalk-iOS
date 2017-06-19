@@ -75,7 +75,7 @@
         [self addSubview:cell];
         
         if (_numberOfCell > 3) {
-            if (i == 3) {
+            if (i == 2) {
                 cell.layer.borderColor = [UIColor redColor].CGColor;
                 cell.layer.borderWidth = 2;
                 cell.transform = CGAffineTransformMakeScale(1 + 0.2, 1  + 0.2);

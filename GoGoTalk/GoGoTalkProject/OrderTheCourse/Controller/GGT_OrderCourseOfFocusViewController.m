@@ -23,19 +23,40 @@
 
 @implementation GGT_OrderCourseOfFocusViewController
 
+//为了解决偏移量造成的返回视图问题
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if (self.isSecondVc == YES) {
+        _PScrollView.pageScrollView.contentOffset = CGPointMake(0, 0);
+    }
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     
+    if (self.isSecondVc == YES) {
+        [self setLeftBackButton];
+    }
  
     [self initHeaderView];
     
-//    [self initTableView];
+    [self initTableView];
 }
 
 - (void)initTableView {
-    GGT_DetailsOfTeacherView *View = [[GGT_DetailsOfTeacherView alloc]initWithFrame:CGRectMake(0, LineY(130), SCREEN_WIDTH(), SCREEN_HEIGHT()-64-LineH(130))];
-    [self.view addSubview:View];
+
+    GGT_OrderTimeTableView *orderTimeView = [[GGT_OrderTimeTableView alloc]init];
+    [self.view addSubview:orderTimeView];
+    
+    [orderTimeView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).with.offset(130);
+        make.left.equalTo(self.view.mas_left).with.offset(0);
+        make.right.equalTo(self.view.mas_right).with.offset(-0);
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-0);
+    }];
+    
 }
 
 - (void)initHeaderView {
@@ -72,13 +93,14 @@
                   @"19",
                   nil];
     [_PScrollView.pageScrollView reloadData];
-    
     [self.view addSubview:_PScrollView];
     
+
     
-    UIView *arrowView = [[UIView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH()/2-2, 110,4, 10)];
-    arrowView.backgroundColor = [UIColor colorWithRed:239.0f/255.0f green:79.0f/255.0f blue:104.0f/255.0f alpha:1.0f];
-    [self.view addSubview:arrowView];
+    UIImageView *sanjiaoImgView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH()/2-9, 120,18, 10)];
+    sanjiaoImgView.image = UIIMAGE_FROM_NAME(@"sanjiaoxing_wode");
+    [self.view addSubview:sanjiaoImgView];
+    
 }
 
 
@@ -97,7 +119,7 @@
     
     
     UIImageView *iconImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height)];
-    iconImgView.image = UIIMAGE_FROM_NAME(@"mingcheng_yuyue_tanchuang");
+    iconImgView.image = UIIMAGE_FROM_NAME(@"wode_top");
     [cell addSubview:iconImgView];
 
     return cell;
@@ -131,7 +153,7 @@
 {
     
     NSInteger index = scrollView.contentOffset.x / scrollView.frame.size.width;
-        NSLog(@"华东的第 %ld 个头像",index);
+        NSLog(@"滑动的第 %ld 个头像",index);
     
     for (int i=0; i<_dataArray.count; i++) {
         UIView *view = [self.view viewWithTag:100 + i];

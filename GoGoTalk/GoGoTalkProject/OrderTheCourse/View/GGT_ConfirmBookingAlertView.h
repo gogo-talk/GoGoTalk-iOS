@@ -15,4 +15,11 @@ typedef void(^ButtonBlock)(UIButton *button);
 
 //按钮
 @property (nonatomic, copy) ButtonBlock  buttonBlock;
+//姓名
+@property (nonatomic, strong) UITextField *nameField;
+//课件
+@property (nonatomic, strong) UITextField *kejianField;
+//时间
+@property (nonatomic, strong) UITextField *dateField;
+
 @end
