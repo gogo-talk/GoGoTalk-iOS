@@ -79,6 +79,8 @@
     self.phoneAccountField.tintColor = UICOLOR_FROM_HEX(ColorCCCCCC);
     self.phoneAccountField.delegate = self;
     self.phoneAccountField.keyboardType = UIKeyboardTypeNumberPad;
+    self.phoneAccountField.clearButtonMode = YES;
+    [self.phoneAccountField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.phoneAccountView addSubview:self.phoneAccountField];
     
     [self.phoneAccountField mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -138,6 +140,8 @@
     self.passwordField.tintColor = UICOLOR_FROM_HEX(ColorCCCCCC);
     self.passwordField.delegate = self;
     self.passwordField.secureTextEntry = YES;
+    self.passwordField.clearButtonMode = YES;
+     [self.passwordField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.passwordView addSubview:self.passwordField];
     
     

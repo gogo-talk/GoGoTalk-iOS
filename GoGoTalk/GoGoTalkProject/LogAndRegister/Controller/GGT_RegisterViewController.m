@@ -63,6 +63,11 @@
 
 #pragma mark 注册
 - (void)registerLoadData {
+    //需要先对文本放弃第一响应者
+    [self.registerView.phoneAccountField resignFirstResponder];
+    [self.registerView.passwordField resignFirstResponder];
+    
+    
     if(IsStrEmpty(self.registerView.phoneAccountField.text)) {
         [MBProgressHUD showMessage:@"请输入手机号码" toView:self.view];
         return;
@@ -84,81 +89,31 @@
     }
     
     //只有账号和密码。其余的设置为空或者默认
-     NSDictionary *postDic = @{@"UserId":@0,@"Cell":self.registerView.phoneAccountField.text,@"NickName":@"",@"Password":self.registerView.passwordField.text,@"Sex":@3,@"Birthday":@"",@"OrgId":@0};
-    
-    
-    [MBProgressHUD hideHUDForView:self.view];
-    [MBProgressHUD showLoading:self.view];
-//    [BaseNetManager afPostRequest:URL_Resigt parms:postDic finished:^(id responseObj) {
-//        [MBProgressHUD hideHUDForView:self.view];
-//
-//        NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
-//        NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-//        NSLog(@"注册成功url=%@~~~%@",URL_Resigt,jsonStr);
-//        
-//        
-//        if ([responseObj[@"result"] isEqual:@1]) {
-//            [MBProgressHUD showMessage:responseObj[@"msg"] toView:self.view];
-//            
-//            if (IsStrEmpty(responseObj[@"msg"])) {
-//                [MBProgressHUD showMessage:@"注册成功" toView:self.view];
-//            }
-//            
-//            
-//            [self performSelector:@selector(turnToHomeClick) withObject:nil afterDelay:1.5f];
-//          
-//        } else {
-//            
-//            [MBProgressHUD showMessage:responseObj[@"msg"] toView:self.view];
-//            
-//            if (IsStrEmpty(responseObj[@"msg"])) {
-//                [MBProgressHUD showMessage:@"注册失败" toView:self.view];
-//            }
-//            
-//        }
-//        
-//        
-//        
-//    } failed:^(NSString *errorMsg) {
-//        
-//    }];
+    NSDictionary *postDic = @{@"UserName":self.registerView.phoneAccountField.text,@"Password":self.registerView.passwordField.text,@"OrgLink":IsStrEmpty([UserDefaults() objectForKey:K_registerID])?@"":[UserDefaults() objectForKey:K_registerID]};
     
     [[BaseService share] sendPostRequestWithPath:URL_Resigt parameters:postDic token:NO viewController:self success:^(id responseObject) {
-        [MBProgressHUD hideHUDForView:self.view];
         
-        NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
-        NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"注册成功url=%@~~~%@",URL_Resigt,jsonStr);
+        [MBProgressHUD showMessage:responseObject[@"msg"] toView:self.view];
+        
+        [UserDefaults() setObject:responseObject[@"data"][@"userToken"] forKey:K_userToken];
+        [UserDefaults() setObject:self.registerView.phoneAccountField.text forKey:@"phoneNumber"];
+        [UserDefaults() synchronize];
         
         
-        if ([responseObject[@"result"] isEqual:@1]) {
-            [MBProgressHUD showMessage:responseObject[@"msg"] toView:self.view];
-            
-            if (IsStrEmpty(responseObject[@"msg"])) {
-                [MBProgressHUD showMessage:@"注册成功" toView:self.view];
-            }
-            
-            
-            [self performSelector:@selector(turnToHomeClick) withObject:nil afterDelay:1.5f];
-            
-        } else {
-            
-            [MBProgressHUD showMessage:responseObject[@"msg"] toView:self.view];
-            
-            if (IsStrEmpty(responseObject[@"msg"])) {
-                [MBProgressHUD showMessage:@"注册失败" toView:self.view];
-            }
-            
-        }
+        [self performSelector:@selector(turnToHomeClick) withObject:nil afterDelay:0.0f];
+        
     } failure:^(NSError *error) {
+        [MBProgressHUD showMessage:error.userInfo[@"msg"] toView:self.view];
         
     }];
+    
+
 }
 
 
 -(void)turnToHomeClick{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:@"yes" forKey:@"login"];
+    [UserDefaults() setObject:@"yes" forKey:@"login"];
+    [UserDefaults() synchronize];
     BaseTabBarController *tabVc = [[BaseTabBarController alloc]init];
     [self.navigationController pushViewController:tabVc animated:YES];
 }

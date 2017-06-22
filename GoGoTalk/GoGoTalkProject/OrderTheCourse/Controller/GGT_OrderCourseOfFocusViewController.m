@@ -36,16 +36,36 @@
     [super viewDidLoad];
     self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     
+    //为了和我的--中的关注外教区分
     if (self.isSecondVc == YES) {
         [self setLeftBackButton];
     }
- 
+    
+    
+    //请求数据
+    [self initLoadData];
+    
+    
+    //头部滚动头像
     [self initHeaderView];
     
-    [self initTableView];
+    //下面的课表模块
+    [self initCollectionView];
 }
 
-- (void)initTableView {
+#pragma mark 请求数据
+- (void)initLoadData {
+    [[BaseService share] sendGetRequestWithPath:URL_GetTeacherFollow token:YES viewController:self success:^(id responseObject) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
+}
+
+
+#pragma mark 时间选择
+- (void)initCollectionView {
 
     GGT_OrderTimeTableView *orderTimeView = [[GGT_OrderTimeTableView alloc]init];
     [self.view addSubview:orderTimeView];
@@ -59,6 +79,7 @@
     
 }
 
+#pragma mark 头部滚动头像
 - (void)initHeaderView {
     
     _PScrollView = [[GGT_FocusOnOfPageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), 110)];

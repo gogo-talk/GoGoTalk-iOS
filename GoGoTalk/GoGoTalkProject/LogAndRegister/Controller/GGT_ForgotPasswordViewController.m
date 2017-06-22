@@ -61,6 +61,11 @@
 
 #pragma mark 确认
 - (void)confirmLoadData {
+    //需要先对文本放弃第一响应者
+    [self.forgotPasswordView.phoneAccountField resignFirstResponder];
+    [self.forgotPasswordView.verificationCodeField resignFirstResponder];
+    [self.forgotPasswordView.passwordField resignFirstResponder];
+    
     if(IsStrEmpty(self.forgotPasswordView.phoneAccountField.text)) {
         [MBProgressHUD showMessage:@"请输入手机号码" toView:self.view];
         return;
@@ -91,39 +96,14 @@
     NSDictionary *postDic = @{@"cell":self.forgotPasswordView.phoneAccountField.text,@"code":self.forgotPasswordView.verificationCodeField.text,@"newPsw":self.forgotPasswordView.passwordField.text};
     
     
-    [MBProgressHUD hideHUDForView:self.view];
-    [MBProgressHUD showLoading:self.view];
-    [BaseNetManager afPostRequest:URL_ChangePwdByCode parms:postDic finished:^(id responseObj) {
-        [MBProgressHUD hideHUDForView:self.view];
+    [[BaseService share] sendPostRequestWithPath:URL_ChangePwdByCode parameters:postDic token:NO viewController:self success:^(id responseObject) {
         
-        NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
-        NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"修改密码url=%@~~~%@",URL_ChangePwdByCode,jsonStr);
+        [MBProgressHUD showMessage:responseObject[@"msg"] toView:self.view];
         
+        [self performSelector:@selector(turnToHomeClick) withObject:nil afterDelay:0.0f];
         
-        if ([responseObj[@"result"] isEqual:@1]) {
-            [MBProgressHUD showMessage:responseObj[@"msg"] toView:self.view];
-            
-            if (IsStrEmpty(responseObj[@"msg"])) {
-                [MBProgressHUD showMessage:@"密码找回成功" toView:self.view];
-            }
-            
-            
-            [self performSelector:@selector(turnToHomeClick) withObject:nil afterDelay:1.5f];
-            
-        } else {
-            
-            [MBProgressHUD showMessage:responseObj[@"msg"] toView:self.view];
-            
-            if (IsStrEmpty(responseObj[@"msg"])) {
-                [MBProgressHUD showMessage:@"短信验证码错误" toView:self.view];
-            }
-            
-        }
-        
-        
-        
-    } failed:^(NSString *errorMsg) {
+    } failure:^(NSError *error) {
+        [MBProgressHUD showMessage:error.userInfo[@"msg"] toView:self.view];
         
     }];
 }
@@ -152,31 +132,14 @@
     NSString *cellStr = [NSString stringWithFormat:@"cell=%@",self.forgotPasswordView.phoneAccountField.text];
     NSString *urlStr = [NSString stringWithFormat:@"%@?%@",URL_GetChangePasswordSMS,cellStr];
     
-    
-    [MBProgressHUD hideHUDForView:self.view];
-    [MBProgressHUD showLoading:self.view];
-    [BaseNetManager afGetRequest:urlStr contentType:nil finished:^(id responseObj) {
-        [MBProgressHUD hideHUDForView:self.view];
-
-        NSError* error;
-        NSDictionary* resultDic = [NSJSONSerialization JSONObjectWithData:responseObj options:kNilOptions error:&error];
-
+    [[BaseService share] sendGetRequestWithPath:urlStr token:NO viewController:self success:^(id responseObject) {
         
-        NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:resultDic options:NSJSONWritingPrettyPrinted error:nil];
-        NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+        [self.forgotPasswordView.getCodeButton addTimer];
+        [MBProgressHUD showMessage:responseObject[@"msg"] toView:self.view];
         
-        NSLog(@"获取验证码url=%@~~~%@",urlStr,jsonStr);
-
-        if ([resultDic[@"result"] isEqual:@1]) {
-            [self.forgotPasswordView.getCodeButton addTimer];
-            [MBProgressHUD showMessage:resultDic[@"msg"] toView:self.view];
-            
-        } else {
-            
-            [MBProgressHUD showMessage:resultDic[@"msg"] toView:self.view];
-            
-        }
-    } failed:^(NSString *errorMsg) {
+        
+    } failure:^(NSError *error) {
+        [MBProgressHUD showMessage:error.userInfo[@"msg"] toView:self.view];
         
     }];
     

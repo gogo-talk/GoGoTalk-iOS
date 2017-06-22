@@ -27,10 +27,13 @@
 #define IsDicEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref) count] == 0))
 
 
-//公司地址
-#define PrefixAddress @"http://learnapi.gogo-talk.com:9332"
-
 #define phoneNumber @"4008787276"
+
+//NSUserDefaults 存储的宏定义
+#define K_userToken @"userToken"
+#define K_studentName @"studentName"
+#define K_registerID @"K_registerID"
+
 
 /*
  比例

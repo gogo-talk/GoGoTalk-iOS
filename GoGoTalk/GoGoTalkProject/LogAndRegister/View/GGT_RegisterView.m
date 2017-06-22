@@ -20,14 +20,24 @@
 
 
 - (void)setUpContentView {
+    UIImageView *backImgView = [[UIImageView alloc]init];
+    backImgView.image = UIIMAGE_FROM_NAME(@"fanhui_zhuce_hong");
+    [self addSubview:backImgView];
+    
+    [backImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.mas_left).with.offset(LineX(10));
+        make.top.equalTo(self.mas_top).with.offset(LineY(33));
+        make.size.mas_offset(CGSizeMake(LineW(9), LineH(16)));
+    }];
+    
+    
     self.backButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [self.backButton setImage:[UIImage imageNamed:@"fanhui_zhuce_hong"] forState:(UIControlStateNormal)];
     [self addSubview:self.backButton];
-
+    
     [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).with.offset(LineX(10));
-        make.top.equalTo(self.mas_top).with.offset(LineY(30));
-        make.size.mas_offset(CGSizeMake(LineW(9), LineH(16)));
+        make.top.equalTo(self.mas_top).with.offset(LineY(33));
+        make.size.mas_offset(CGSizeMake(LineW(30), LineH(30)));
     }];
     
     
@@ -90,6 +100,7 @@
     self.phoneAccountField.tintColor = UICOLOR_FROM_HEX(ColorCCCCCC);
     self.phoneAccountField.delegate = self;
     self.phoneAccountField.keyboardType = UIKeyboardTypeNumberPad;
+    self.phoneAccountField.clearButtonMode = YES;
     [self.phoneAccountField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.phoneAccountView addSubview:self.phoneAccountField];
     
@@ -151,6 +162,7 @@
     self.passwordField.delegate = self;
     [self.passwordField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     self.passwordField.secureTextEntry = YES;
+    self.passwordField.clearButtonMode = YES;
     [self.passwordView addSubview:self.passwordField];
     
     

@@ -46,7 +46,13 @@
     self.loginView.backgroundColor = [UIColor whiteColor];
     self.view = self.loginView;
     
-
+    
+    //对手机号进行存储
+    if (!IsStrEmpty([UserDefaults() objectForKey:@"phoneNumber"])) {
+        self.loginView.phoneAccountField.text = [UserDefaults() objectForKey:@"phoneNumber"];
+    }
+    
+    
     //忘记密码
     @weakify(self);
     [[self.loginView.forgotPasswordButton rac_signalForControlEvents:UIControlEventTouchUpInside]
@@ -70,10 +76,10 @@
      subscribeNext:^(id x) {
          @strongify(self);
          
-//         [self loginLoadData];
+         [self loginLoadData];
          
          //假数据，直接跳转到登录
-         [self turnToHomeClick];
+//         [self turnToHomeClick];
          
 
      }];
@@ -82,6 +88,11 @@
 
 #pragma mark 登录按钮处理
 - (void)loginLoadData {
+    //需要先对文本放弃第一响应者
+    [self.loginView.phoneAccountField resignFirstResponder];
+    [self.loginView.passwordField resignFirstResponder];
+    
+    
     if(IsStrEmpty(self.loginView.phoneAccountField.text)) {
         [MBProgressHUD showMessage:@"请输入手机号码" toView:self.view];
         return;
@@ -102,42 +113,34 @@
     }
     
     
-    NSDictionary *postDic = @{@"UserName":self.loginView.phoneAccountField.text,@"Password":self.loginView.passwordField.text,@"DeviceId":@""};
+    NSDictionary *postDic = @{@"UserName":self.loginView.phoneAccountField.text,@"PassWord":self.loginView.passwordField.text,@"OrgLink":IsStrEmpty([UserDefaults() objectForKey:K_registerID])?@"":[UserDefaults() objectForKey:K_registerID]};
     
     
-    [MBProgressHUD hideHUDForView:self.view];
-    [MBProgressHUD showLoading:self.view];
-    [BaseNetManager afPostRequest:URL_Login parms:postDic finished:^(id responseObj) {
-        [MBProgressHUD hideHUDForView:self.view];
+    [[BaseService share] sendPostRequestWithPath:URL_Login parameters:postDic token:NO viewController:self success:^(id responseObject) {
         
-        NSData *jsonData = [NSJSONSerialization  dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
-        NSString*jsonStr=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"登录url=%@~~~%@",URL_Login,jsonStr);
+        [UserDefaults() setObject:responseObject[@"data"][@"dicRes"][@"userToken"] forKey:K_userToken];
+        [UserDefaults() setObject:[NSString stringWithFormat:@"%@",responseObject[@"data"][@"dicRes"][@"studentName"]] forKey:K_studentName];
+        [UserDefaults() setObject:self.loginView.phoneAccountField.text forKey:@"phoneNumber"];
+        [UserDefaults() setObject:self.loginView.passwordField.text forKey:@"password"];
+        [UserDefaults() synchronize];
+        
+        [MBProgressHUD showMessage:responseObject[@"msg"] toView:self.view];
+        
+        [self performSelector:@selector(turnToHomeClick) withObject:nil afterDelay:0.0f];
         
         
-        if ([responseObj[@"result"] isEqual:@1]) {
-            [MBProgressHUD showMessage:responseObj[@"msg"] toView:self.view];
-            
-            
-            [self performSelector:@selector(turnToHomeClick) withObject:nil afterDelay:1.5f];
-            
-        } else {
-            
-            [MBProgressHUD showMessage:responseObj[@"msg"] toView:self.view];
-            
-        }
- 
-    } failed:^(NSString *errorMsg) {
+    } failure:^(NSError *error) {
+        
+        [MBProgressHUD showMessage:error.userInfo[@"msg"] toView:self.view];
         
     }];
-
-    
     
 }
 
 - (void)turnToHomeClick {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:@"yes" forKey:@"login"];
+    
+    [UserDefaults() setObject:@"yes" forKey:@"login"];
+    [UserDefaults() synchronize];
     BaseTabBarController *tabVc = [[BaseTabBarController alloc]init];
     [self.navigationController pushViewController:tabVc animated:YES];
 }

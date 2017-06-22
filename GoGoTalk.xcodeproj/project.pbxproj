@@ -51,6 +51,10 @@
 		5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFA91EB05241004DF44D /* BaseTabBarController.m */; };
 		5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFAF1EB05320004DF44D /* BaseNavigationController.m */; };
 		5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AFC41EB054A8004DF44D /* GGT_RegisterViewController.m */; };
+		5BD7F8B71EFBB51E003EE9AD /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7F8B21EFBB51E003EE9AD /* NSArray+Log.m */; };
+		5BD7F8B81EFBB51E003EE9AD /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7F8B41EFBB51E003EE9AD /* NSDictionary+Log.m */; };
+		5BD7F8B91EFBB51E003EE9AD /* NSString+unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7F8B61EFBB51E003EE9AD /* NSString+unicode.m */; };
+		5BD7F8BC1EFBC1DB003EE9AD /* GGT_ChoicePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7F8BB1EFBC1DB003EE9AD /* GGT_ChoicePickView.m */; };
 		5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18E81EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m */; };
 		5BEC18ED1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18EC1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m */; };
 		5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18EF1EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m */; };
@@ -89,7 +93,6 @@
 		D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB91EB1877800EBF0D1 /* GGT_HomeReservationViewController.m */; };
 		D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AABC1EB1879600EBF0D1 /* GGT_LoginViewController.m */; };
 		D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AABE1EB1879600EBF0D1 /* GGT_NewFeatherViewController.m */; };
-		D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC31EB18EF100EBF0D1 /* BaseNetManager.m */; };
 		D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC61EB1903900EBF0D1 /* UIButton+XCHelperBlock.m */; };
 		D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAC91EB190DA00EBF0D1 /* NSString+XCHelper.m */; };
 		D6E0A5A21EC2FCE7006A003D /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E0A5A01EC2FCE7006A003D /* BaseService.m */; };
@@ -204,6 +207,14 @@
 		5BC2AFAF1EB05320004DF44D /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		5BC2AFC31EB054A8004DF44D /* GGT_RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_RegisterViewController.h; sourceTree = "<group>"; };
 		5BC2AFC41EB054A8004DF44D /* GGT_RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_RegisterViewController.m; sourceTree = "<group>"; };
+		5BD7F8B11EFBB51E003EE9AD /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		5BD7F8B21EFBB51E003EE9AD /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		5BD7F8B31EFBB51E003EE9AD /* NSDictionary+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
+		5BD7F8B41EFBB51E003EE9AD /* NSDictionary+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
+		5BD7F8B51EFBB51E003EE9AD /* NSString+unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+unicode.h"; sourceTree = "<group>"; };
+		5BD7F8B61EFBB51E003EE9AD /* NSString+unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+unicode.m"; sourceTree = "<group>"; };
+		5BD7F8BA1EFBC1DB003EE9AD /* GGT_ChoicePickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ChoicePickView.h; sourceTree = "<group>"; };
+		5BD7F8BB1EFBC1DB003EE9AD /* GGT_ChoicePickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ChoicePickView.m; sourceTree = "<group>"; };
 		5BEC18E71EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_BookExperienceClassViewController.h; sourceTree = "<group>"; };
 		5BEC18E81EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_BookExperienceClassViewController.m; sourceTree = "<group>"; };
 		5BEC18EB1EB83C20009DF2F8 /* GGT_BookExperienceClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_BookExperienceClassView.h; sourceTree = "<group>"; };
@@ -279,8 +290,6 @@
 		D6C7AABD1EB1879600EBF0D1 /* GGT_NewFeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_NewFeatherViewController.h; sourceTree = "<group>"; };
 		D6C7AABE1EB1879600EBF0D1 /* GGT_NewFeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_NewFeatherViewController.m; sourceTree = "<group>"; };
 		D6C7AAC11EB187AB00EBF0D1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		D6C7AAC21EB18EF100EBF0D1 /* BaseNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetManager.h; sourceTree = "<group>"; };
-		D6C7AAC31EB18EF100EBF0D1 /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
 		D6C7AAC51EB1903800EBF0D1 /* UIButton+XCHelperBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XCHelperBlock.h"; sourceTree = "<group>"; };
 		D6C7AAC61EB1903900EBF0D1 /* UIButton+XCHelperBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XCHelperBlock.m"; sourceTree = "<group>"; };
 		D6C7AAC81EB190DA00EBF0D1 /* NSString+XCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XCHelper.h"; sourceTree = "<group>"; };
@@ -656,8 +665,6 @@
 				5BC2AFA91EB05241004DF44D /* BaseTabBarController.m */,
 				5BC2AFAE1EB05320004DF44D /* BaseNavigationController.h */,
 				5BC2AFAF1EB05320004DF44D /* BaseNavigationController.m */,
-				D6C7AAC21EB18EF100EBF0D1 /* BaseNetManager.h */,
-				D6C7AAC31EB18EF100EBF0D1 /* BaseNetManager.m */,
 				5B0B4F3B1EB0665B00D81B8E /* GGT_Singleton.h */,
 				5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */,
 				5B0B4F461EB06D5400D81B8E /* MBProgressHUD+Extension.h */,
@@ -665,6 +672,19 @@
 				5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */,
 			);
 			path = CommonClass;
+			sourceTree = "<group>";
+		};
+		5BD7F8B01EFBB51E003EE9AD /* 打印中文 */ = {
+			isa = PBXGroup;
+			children = (
+				5BD7F8B11EFBB51E003EE9AD /* NSArray+Log.h */,
+				5BD7F8B21EFBB51E003EE9AD /* NSArray+Log.m */,
+				5BD7F8B31EFBB51E003EE9AD /* NSDictionary+Log.h */,
+				5BD7F8B41EFBB51E003EE9AD /* NSDictionary+Log.m */,
+				5BD7F8B51EFBB51E003EE9AD /* NSString+unicode.h */,
+				5BD7F8B61EFBB51E003EE9AD /* NSString+unicode.m */,
+			);
+			path = "打印中文";
 			sourceTree = "<group>";
 		};
 		5BEC18EA1EB83C0F009DF2F8 /* View */ = {
@@ -714,6 +734,8 @@
 				5B6119FE1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.m */,
 				5B611A001EF7C2880011CF2E /* GGT_FocusOnOfPageView.h */,
 				5B611A011EF7C2880011CF2E /* GGT_FocusOnOfPageView.m */,
+				5BD7F8BA1EFBC1DB003EE9AD /* GGT_ChoicePickView.h */,
+				5BD7F8BB1EFBC1DB003EE9AD /* GGT_ChoicePickView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -739,6 +761,7 @@
 		D66C6EDE1EBB1D560058D12C /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				5BD7F8B01EFBB51E003EE9AD /* 打印中文 */,
 				D67E18D71EC077060046497E /* PlaceholderTextView.h */,
 				D67E18D81EC077060046497E /* PlaceholderTextView.m */,
 				D66C6EDF1EBB1D5E0058D12C /* XCStarView.h */,
@@ -1039,6 +1062,7 @@
 				D6E0A5A21EC2FCE7006A003D /* BaseService.m in Sources */,
 				D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */,
 				D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */,
+				5BD7F8B71EFBB51E003EE9AD /* NSArray+Log.m in Sources */,
 				3541E2411EC43C0200A175CC /* GGT_FeedbackMessageController.m in Sources */,
 				D604309C1EBC7CDB00F53437 /* GGT_PreviewTopView.m in Sources */,
 				D606076A1EC006B200A31E8B /* UIAlertController+Color.m in Sources */,
@@ -1048,6 +1072,7 @@
 				5BEC18FE1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m in Sources */,
 				D60430A21EBC864300F53437 /* UIView+XCHelper.m in Sources */,
 				5BEC18F31EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m in Sources */,
+				5BD7F8B91EFBB51E003EE9AD /* NSString+unicode.m in Sources */,
 				D6B5916A1EBC716700086648 /* BaseBackViewController.m in Sources */,
 				3552104B1EBC766C0057EA59 /* GGT_EditUserInfoController.m in Sources */,
 				D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */,
@@ -1055,6 +1080,7 @@
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
 				5B0881661EC2C77400BED063 /* GGT_SelectCoursewareViewController.m in Sources */,
 				3520D06D1EC012C800A0B80A /* GGT_EditPasswordController.m in Sources */,
+				5BD7F8B81EFBB51E003EE9AD /* NSDictionary+Log.m in Sources */,
 				5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */,
 				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
 				D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */,
@@ -1062,7 +1088,6 @@
 				D67E18D91EC077060046497E /* PlaceholderTextView.m in Sources */,
 				D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */,
 				5BEC18ED1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m in Sources */,
-				D6C7AAC41EB18EF100EBF0D1 /* BaseNetManager.m in Sources */,
 				355210481EBC49BE0057EA59 /* GGT_InfoListCell.m in Sources */,
 				5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */,
 				5B0881601EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m in Sources */,
@@ -1074,6 +1099,7 @@
 				D6C7AAB71EB1876900EBF0D1 /* GGT_OrderCourseViewController.m in Sources */,
 				358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */,
 				D6C7AAAE1EB1873200EBF0D1 /* GGT_MineViewController.m in Sources */,
+				5BD7F8BC1EFBC1DB003EE9AD /* GGT_ChoicePickView.m in Sources */,
 				D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */,
 				5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */,
 				5B695B2F1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m in Sources */,

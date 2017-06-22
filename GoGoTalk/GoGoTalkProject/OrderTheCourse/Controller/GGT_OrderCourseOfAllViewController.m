@@ -11,8 +11,9 @@
 #import "GGT_DetailsOfTeacherViewController.h"
 #import "GGT_ConfirmBookingAlertView.h"
 #import "GGT_SelectCoursewareViewController.h"
+#import "GGT_ChoicePickView.h"
 
-@interface GGT_OrderCourseOfAllViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface GGT_OrderCourseOfAllViewController () <UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -26,6 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    //新建tap手势
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture)];
+    tapGesture.cancelsTouchesInView = NO;
+    tapGesture.delegate = self;
+    [self.view addGestureRecognizer:tapGesture];
+    
     [self initHeaderView];
   
     [self initTableView];
@@ -172,11 +179,14 @@
     [self.view addSubview:headerView];
     
     
+    
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(LineX(15), 0, SCREEN_WIDTH()-LineW(37), LineH(44))];
     titleLabel.text = @"今天（星期一） 14：00";
     titleLabel.font = Font(15);
     titleLabel.textColor = UICOLOR_FROM_HEX(kThemeColor);
     [headerView addSubview:titleLabel];
+    
+    
     
     UIImageView *entImgView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH()-LineW(22), LineY(16), LineW(7), LineH(12))];
     entImgView.image = UIIMAGE_FROM_NAME(@"jinru_yueke_shijianshaixuan");
@@ -187,6 +197,85 @@
     UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(LineX(10), LineY(43.5), SCREEN_WIDTH()-LineW(10), LineH(0.5))];
     lineView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     [headerView addSubview:lineView];
+    
+    
+    
+    UIControl *selectBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    selectBtn.frame = CGRectMake(0, 0, SCREEN_WIDTH(), LineH(44));
+    [selectBtn addTarget:self action:@selector(selectBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
+    [headerView addSubview:selectBtn];
+    
+}
+
+
+#pragma mark 选择日期
+- (void)selectBtnClick {
+    GGT_ChoicePickView *view = [[GGT_ChoicePickView alloc]init];
+    view.backgroundColor = UICOLOR_FROM_HEX(0xF5F6F8);
+    view.tag = 888;
+    __weak GGT_ChoicePickView *weakview = view;
+    view.DateBlock = ^(UIButton *button,NSString *dayStr,NSString *timeStr) {
+        if (button.tag == 111) {
+            [weakview removeFromSuperview];
+
+        } else if(button.tag == 222) {
+            NSLog(@"%@--%@",dayStr,timeStr);
+            [weakview removeFromSuperview];
+
+            
+            [self initDataSource:dayStr timeStr:timeStr];
+            
+        }
+    };
+    [self.view.window addSubview:view];
+    
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.window.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(230)));
+        make.bottom.equalTo(self.view.window.mas_bottom).with.offset(-0);
+    }];
+
+}
+
+
+- (void)initDataSource:(NSString *)dayStr timeStr:(NSString *)timeStr {
+//    pageIndex string  第几页
+//    pageSize string 每页条数
+//    date string 日期
+//    time string 时间
+
+//    NSString *urlStr = [NSString stringWithFormat:@"%@?pageIndex=%@pageSize=%@date=%@time=%@",URL_GetPageTeacherLesson,@"1",@"20",dayStr,timeStr];
+//    [[BaseService share] sendGetRequestWithPath:urlStr token:YES viewController:self success:^(id responseObject) {
+//        
+//    } failure:^(NSError *error) {
+//        
+//    }];
+    
+//    NSDictionary *postDic = @{@"pageIndex":@"1",@"pageSize":@"20",@"date":dayStr,@"time":timeStr};
+//    [[BaseService share] sendPostRequestWithPath:URL_GetPageTeacherLesson parameters:postDic token:YES viewController:self success:^(id responseObject) {
+//        
+//    } failure:^(NSError *error) {
+//        
+//    }];
+  
+    
+
+}
+
+
+//轻击手势触发方法----点击空白处，消除弹出框
+-(void)tapGesture {
+    UIView *view1 = [self.view viewWithTag:888];
+    [view1 removeFromSuperview];
+}
+
+//解决手势和按钮冲突
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    
+    if ([touch.view isKindOfClass:[UIButton class]]){
+        return NO;
+    }
+    return YES;
 }
 
 

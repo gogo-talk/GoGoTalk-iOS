@@ -26,7 +26,6 @@
 #import "AppInformation.h"
 #import "AppUIInformation.h"
 #import "BaseViewController.h"
-#import "BaseNetManager.h"
 #import "BaseBackViewController.h"
 #import "BaseService.h"
 #import "GGT_Singleton.h"
@@ -44,7 +43,10 @@
 
 
 
-
+static NSString * const xc_returnCode = @"result";
+static NSString * const xc_returnMsg = @"msg";
+static NSString * const xc_message = @"msg";
+static NSString * const xc_alert_message = @"网络不给力，请稍后再试";
 
 
 

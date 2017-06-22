@@ -66,6 +66,7 @@
     self.phoneAccountField.tintColor = UICOLOR_FROM_HEX(ColorCCCCCC);
     self.phoneAccountField.delegate = self;
     self.phoneAccountField.keyboardType = UIKeyboardTypeNumberPad;
+    self.phoneAccountField.clearButtonMode = YES;
     [self.phoneAccountField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.phoneAccountView addSubview:self.phoneAccountField];
     
@@ -135,6 +136,7 @@
     self.verificationCodeField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"请输入验证码"] attributes:@{NSForegroundColorAttributeName: UICOLOR_FROM_HEX(ColorCCCCCC)}];
     self.verificationCodeField.tintColor = UICOLOR_FROM_HEX(ColorCCCCCC);
     self.verificationCodeField.delegate = self;
+    self.verificationCodeField.clearButtonMode = YES;
     [self.verificationCodeField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.verificationCodeView addSubview:self.verificationCodeField];
     
@@ -210,6 +212,7 @@
     self.passwordField.tintColor = UICOLOR_FROM_HEX(ColorCCCCCC);
     self.passwordField.delegate = self;
     self.passwordField.secureTextEntry = YES;
+    self.passwordField.clearButtonMode = YES;
     [self.passwordField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.passwordView addSubview:self.passwordField];
     
