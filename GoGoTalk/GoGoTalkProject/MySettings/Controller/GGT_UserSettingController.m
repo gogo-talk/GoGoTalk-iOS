@@ -9,6 +9,8 @@
 #import "GGT_UserSettingController.h"
 #import "GGT_UserSettingCell.h"
 #import "GGT_AboutUsController.h"
+#import "GGT_LoginViewController.h"
+
 @interface GGT_UserSettingController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 //虚拟数据
@@ -128,6 +130,7 @@
         UIButton *btn = [[UIButton alloc] init];
         [btn setTitle:@"退出登录" forState:UIControlStateNormal];
         [btn setTitleColor:UICOLOR_FROM_HEX(0xea5851) forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(loginOutClick) forControlEvents:(UIControlEventTouchUpInside)];
         [footView addSubview:btn];
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(footView.mas_top).with.offset(30);
@@ -140,6 +143,12 @@
         return footView;
     }
     return nil;
+}
+
+- (void)loginOutClick {
+    GGT_LoginViewController *loginVc = [[GGT_LoginViewController alloc]init];
+    BaseNavigationController *nav = [[BaseNavigationController alloc]initWithRootViewController:loginVc];
+    self.view.window.rootViewController = nav;
 }
 
 @end

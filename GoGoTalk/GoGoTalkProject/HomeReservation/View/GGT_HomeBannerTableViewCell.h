@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdCycleScrollView.h"
 
-@interface GGT_HomeBannerTableViewCell : UITableViewCell
+
+typedef void(^AdBlockClick)(NSInteger selectedIndex);
+
+@interface GGT_HomeBannerTableViewCell : UITableViewCell <AdCycleScrollViewDelegate>
 
 @property (nonatomic, strong) UIView *bgView;
+@property (nonatomic, strong) AdCycleScrollView *adScroll;
 
+
+- (void)getAdDataArray:(NSArray *)array;
+
+@property (nonatomic, copy) AdBlockClick adBlockClick;
 @end

@@ -40,7 +40,8 @@
         [subview removeFromSuperview];
     }
     float totalHeight = 0;
-//    float totalWidth = 0;
+    float totalWidth = 0;
+    float Width = 0;
 
     
     CGRect previousFrame = CGRectZero;
@@ -52,13 +53,17 @@
             label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, LineW(54), LineH(24))];
 
             totalHeight = LineH(24);
-//            totalWidth = LineW(54);
+            totalWidth = LineW(54);
+
         } else {
             CGRect newRect = CGRectZero;
             if (previousFrame.origin.x + previousFrame.size.width + LineW(54) + LABEL_MARGIN > self.frame.size.width) {
                 newRect.origin = CGPointMake(0, previousFrame.origin.y + LineH(24) + BOTTOM_MARGIN);
+                totalHeight += totalHeight + BOTTOM_MARGIN;
+                Width = self.frame.size.width;
             } else {
                 newRect.origin = CGPointMake(previousFrame.origin.x + previousFrame.size.width + LABEL_MARGIN, previousFrame.origin.y);
+                totalWidth = previousFrame.origin.x + previousFrame.size.width + LABEL_MARGIN + LineW(54);
             }
             newRect.size = CGSizeMake(LineW(54), LineH(24));
             label = [[UILabel alloc] initWithFrame:newRect];
@@ -80,7 +85,6 @@
         [label.layer setBorderWidth:LineW(0.5)];
         label.userInteractionEnabled = self.allowClick;
         
-//        NSLog(@"----%@",NSStringFromCGRect(label.frame));
 
         UIControl *control = [[UIControl alloc] initWithFrame:CGRectMake(0, 0, label.width, label.height)];
         control.tag = [textArray indexOfObject:text];
@@ -89,8 +93,13 @@
         [self addSubview:label];
         
     }
-    sizeFit = CGSizeMake(self.frame.size.width, totalHeight + 1.0f);
-//    sizeFit = CGSizeMake(totalWidth, totalHeight + 1.0f);
+    if (Width > totalWidth) {
+        sizeFit = CGSizeMake(self.frame.size.width, totalHeight + 1.0f);
+
+    } else {
+        sizeFit = CGSizeMake(totalWidth, totalHeight + 1.0f);
+
+    }
 
 }
 

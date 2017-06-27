@@ -10,7 +10,7 @@
 #import "GGT_FocusOnOfPageScrollView.h"
 #import "GGT_FocusOnOfPageView.h"
 #import "GGT_DetailsOfTeacherView.h"
-
+#import "GGT_NoMoreDateAlertView.h"
 
 @interface GGT_OrderCourseOfFocusViewController () <OTPageScrollViewDataSource,OTPageScrollViewDelegate>
 
@@ -41,16 +41,18 @@
         [self setLeftBackButton];
     }
     
+    GGT_NoMoreDateAlertView *nodataView = [[GGT_NoMoreDateAlertView alloc]initWithFrame:CGRectMake(0, LineY(180), SCREEN_WIDTH(), LineW(180)) andImageString:@"wudingdan_wode" andAlertString:@"您暂时没有关注任何外教"];
+    [self.view addSubview:nodataView];
     
     //请求数据
-    [self initLoadData];
+//    [self initLoadData];
     
     
     //头部滚动头像
-    [self initHeaderView];
+//    [self initHeaderView];
     
     //下面的课表模块
-    [self initCollectionView];
+//    [self initCollectionView];
 }
 
 #pragma mark 请求数据

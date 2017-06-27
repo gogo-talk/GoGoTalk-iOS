@@ -12,13 +12,14 @@
 #import "GGT_ConfirmBookingAlertView.h"
 #import "GGT_SelectCoursewareViewController.h"
 #import "GGT_ChoicePickView.h"
+#import "GGT_AllWithNoDateView.h"
 
 @interface GGT_OrderCourseOfAllViewController () <UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
-
+@property (nonatomic,strong) GGT_AllWithNoDateView *allWithNoDateView;
 
 @end
 
@@ -35,6 +36,7 @@
     
     [self initHeaderView];
   
+    
     [self initTableView];
     
     [self getLoadData];
@@ -55,6 +57,12 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     [self.view addSubview:self.tableView];
+    
+    
+    _allWithNoDateView = [[GGT_AllWithNoDateView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-49-64-LineH(54))];
+    [_tableView addSubview:_allWithNoDateView];
+    _allWithNoDateView.hidden = YES;
+    
 }
 
 #pragma mark tableview的代理
@@ -179,11 +187,26 @@
     [self.view addSubview:headerView];
     
     
+
+    //当前是周几
+    NSDate*date = [NSDate date];
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init] ;
+    [dateFormatter setDateFormat:@"EEEE"];
+     NSString *weekStr = [dateFormatter stringFromDate:date];
+    
+    //当前是什么时间
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm"];
+    NSDate *datenow = [NSDate date];
+    NSString *currentTimeString = [formatter stringFromDate:datenow];
+
     
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(LineX(15), 0, SCREEN_WIDTH()-LineW(37), LineH(44))];
-    titleLabel.text = @"今天（星期一） 14：00";
+//    titleLabel.text = @"今天（星期一） 14：00";
+    titleLabel.text = [NSString stringWithFormat:@"今天（%@） %@",weekStr,currentTimeString];
     titleLabel.font = Font(15);
     titleLabel.textColor = UICOLOR_FROM_HEX(kThemeColor);
+    titleLabel.tag = 888;
     [headerView addSubview:titleLabel];
     
     
@@ -222,6 +245,8 @@
             NSLog(@"%@--%@",dayStr,timeStr);
             [weakview removeFromSuperview];
 
+            UILabel *titleLabel = (UILabel *)[self.view viewWithTag:888];
+            titleLabel.text = [NSString stringWithFormat:@"%@  %@",dayStr,timeStr];
             
             [self initDataSource:dayStr timeStr:timeStr];
             
@@ -244,12 +269,14 @@
 //    date string 日期
 //    time string 时间
 
-//    NSString *urlStr = [NSString stringWithFormat:@"%@?pageIndex=%@pageSize=%@date=%@time=%@",URL_GetPageTeacherLesson,@"1",@"20",dayStr,timeStr];
-//    [[BaseService share] sendGetRequestWithPath:urlStr token:YES viewController:self success:^(id responseObject) {
-//        
-//    } failure:^(NSError *error) {
-//        
-//    }];
+    
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@?pageIndex=%@&pageSize=%@&date=%@&time=%@",URL_GetPageTeacherLesson,@"1",@"20",dayStr,timeStr];
+    [[BaseService share] sendGetRequestWithPath:urlStr token:YES viewController:self success:^(id responseObject) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
     
 //    NSDictionary *postDic = @{@"pageIndex":@"1",@"pageSize":@"20",@"date":dayStr,@"time":timeStr};
 //    [[BaseService share] sendPostRequestWithPath:URL_GetPageTeacherLesson parameters:postDic token:YES viewController:self success:^(id responseObject) {

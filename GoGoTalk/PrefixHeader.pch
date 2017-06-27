@@ -27,6 +27,7 @@
 #import "AppUIInformation.h"
 #import "BaseViewController.h"
 #import "BaseBackViewController.h"
+#import "BaseNavigationController.h"
 #import "BaseService.h"
 #import "GGT_Singleton.h"
 #import "GGT_Request_Url.h"

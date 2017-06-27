@@ -135,54 +135,8 @@
     }];
     
     
-    /*
-    self.contentView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
-
     
-    GGT_NoMoreDateAlertView *nodataView = [[GGT_NoMoreDateAlertView alloc]initWithFrame:CGRectMake(0, LineY(80), SCREEN_WIDTH(), LineW(180)) andImageString:@"wudingdan_wode" andAlertString:@"此时间段没有老师"];
-    [self.contentView addSubview:nodataView];
-
-    
-    //推荐时间
-    UILabel *tuijianLabel = [[UILabel alloc]init];
-    tuijianLabel.frame = CGRectMake(0, nodataView.y+nodataView.height+LineY(34), SCREEN_WIDTH(), LineW(18));
-    tuijianLabel.text = @"推荐时间";
-    tuijianLabel.font = Font(16);
-    tuijianLabel.textAlignment = NSTextAlignmentCenter;
-    tuijianLabel.textColor = UICOLOR_FROM_HEX(kThemeColor);
-    [self.contentView addSubview:tuijianLabel];
-
-    
-    
-    self.tagsView = [[OrderTimeTagsView alloc] init];
-    self.tagsView.frame = CGRectMake(20,tuijianLabel.y+tuijianLabel.height+LineY(20),SCREEN_WIDTH()-40,LineH(100));
-    self.tagsView.textColor = UICOLOR_FROM_HEX(kThemeColor);
-    self.tagsView.textSize = LineW(12);
-    self.tagsView.bordColor = UICOLOR_FROM_HEX(kThemeColor);
-    self.tagsView.textbackgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
-    self.tagsView.allowClick = YES;
-    self.tagsView.cornerRadius = LineH(12);
-    [self.tagsView setTags:@[@"15:30",@"17:00",@"19:30"]];
-    
-    self.tagsView.tagClickedBlock = ^(NSString *tagString){
-        NSLog(@"tagString---%@",tagString);
-    };
-
-  
-    [self.contentView addSubview:self.tagsView];
-
-    //刷新标签UI高度
-    [self.tagsView display];
-     */
 }
-
-
-//- (void)setTagsWithArray:(NSArray *)array{
-//    
-//    [self.tagsView setTags:array];
-//    
-//    self.tagsView.frame = CGRectMake(self.tagsView.frame.origin.x, self.tagsView.frame.origin.y, [self.tagsView fittedSize].width, [self.tagsView fittedSize].height);
-//}
 
 
 

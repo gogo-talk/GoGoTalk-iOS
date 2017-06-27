@@ -21,32 +21,35 @@
 }
 
 - (void)initCellView {
-    self.bgView = [[UIView alloc]init];
+    self.bgView = [[UIView alloc]initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH()-20, LineH(100))];
     self.bgView.layer.masksToBounds = YES;
     self.bgView.layer.cornerRadius = LineW(5);
     self.bgView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:self.bgView];
     
-    
-    [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView.mas_left).with.offset(LineX(10));
-        make.right.equalTo(self.contentView.mas_right).with.offset(-LineX(10));
-        make.top.equalTo(self.contentView.mas_top).with.offset(0);
-        make.bottom.equalTo(self.contentView.mas_bottom).with.offset(0);
-    }];
-    
+
+    _adScroll = [[AdCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, self.bgView.width, self.bgView.height)];
+    _adScroll.delegate = self;
+    _adScroll.pageControlAliment = AdCycleScrollViewPageControlAlimentCenter;
+    [self.bgView addSubview:_adScroll];
 }
 
-//-(void)setFrame:(CGRect)frame{
-//    
-//    frame.origin.x = LineX(5);
-//    frame.size.width -= 2* frame.origin.x;
-//    
-//    frame.origin.y = LineY(5);
-//    frame.size.height -= 1.5* frame.origin.y;
-//    [super setFrame:frame];
-//    
-//}
+
+- (void)getAdDataArray:(NSArray *)array {
+    
+    _adScroll.imagesUrlArray = array;
+    [_adScroll refreshPageControlStyle];
+}
+
+-(void)cycleScrollView:(AdCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)selectedIndex {
+//    NSLog(@"----%ld",(long)selectedIndex);
+    
+    if (self.adBlockClick) {
+        self.adBlockClick(selectedIndex);
+    }
+    
+    
+}
 
 
 @end

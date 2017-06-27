@@ -26,9 +26,11 @@
 		5B0881661EC2C77400BED063 /* GGT_SelectCoursewareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0881651EC2C77400BED063 /* GGT_SelectCoursewareViewController.m */; };
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
+		5B0F4D251F01EDA700CE7D4C /* GGT_AdCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0F4D241F01EDA700CE7D4C /* GGT_AdCycleViewController.m */; };
 		5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D2D1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m */; };
 		5B348D341EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D331EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m */; };
 		5B348D371EC1C6BA00FAB820 /* OrderTimeTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D361EC1C6BA00FAB820 /* OrderTimeTagsView.m */; };
+		5B4370501EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B43704F1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m */; };
 		5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B577CD21EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m */; };
 		5B6119FF1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6119FE1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.m */; };
 		5B611A021EF7C2880011CF2E /* GGT_FocusOnOfPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B611A011EF7C2880011CF2E /* GGT_FocusOnOfPageView.m */; };
@@ -55,6 +57,8 @@
 		5BD7F8B81EFBB51E003EE9AD /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7F8B41EFBB51E003EE9AD /* NSDictionary+Log.m */; };
 		5BD7F8B91EFBB51E003EE9AD /* NSString+unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7F8B61EFBB51E003EE9AD /* NSString+unicode.m */; };
 		5BD7F8BC1EFBC1DB003EE9AD /* GGT_ChoicePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7F8BB1EFBC1DB003EE9AD /* GGT_ChoicePickView.m */; };
+		5BE4E1411F012000002F0E01 /* AdCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE4E13E1F012000002F0E01 /* AdCollectionViewCell.m */; };
+		5BE4E1421F012000002F0E01 /* AdCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE4E1401F012000002F0E01 /* AdCycleScrollView.m */; };
 		5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18E81EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m */; };
 		5BEC18ED1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18EC1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m */; };
 		5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18EF1EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m */; };
@@ -155,12 +159,16 @@
 		5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_Singleton.m; sourceTree = "<group>"; };
 		5B0B4F461EB06D5400D81B8E /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
 		5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
+		5B0F4D231F01EDA700CE7D4C /* GGT_AdCycleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AdCycleViewController.h; sourceTree = "<group>"; };
+		5B0F4D241F01EDA700CE7D4C /* GGT_AdCycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_AdCycleViewController.m; sourceTree = "<group>"; };
 		5B348D2C1EC1A85E00FAB820 /* GGT_OrderForeignListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_OrderForeignListCell.h; sourceTree = "<group>"; };
 		5B348D2D1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderForeignListCell.m; sourceTree = "<group>"; };
 		5B348D321EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_NoMoreDateAlertView.h; sourceTree = "<group>"; };
 		5B348D331EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_NoMoreDateAlertView.m; sourceTree = "<group>"; };
 		5B348D351EC1C6BA00FAB820 /* OrderTimeTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTimeTagsView.h; sourceTree = "<group>"; };
 		5B348D361EC1C6BA00FAB820 /* OrderTimeTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTimeTagsView.m; sourceTree = "<group>"; };
+		5B43704E1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AllWithNoDateView.h; sourceTree = "<group>"; };
+		5B43704F1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_AllWithNoDateView.m; sourceTree = "<group>"; };
 		5B577CD11EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_OrderTimeCollectionViewCell.h; sourceTree = "<group>"; };
 		5B577CD21EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderTimeCollectionViewCell.m; sourceTree = "<group>"; };
 		5B6119FD1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_FocusOnOfPageScrollView.h; sourceTree = "<group>"; };
@@ -215,6 +223,10 @@
 		5BD7F8B61EFBB51E003EE9AD /* NSString+unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+unicode.m"; sourceTree = "<group>"; };
 		5BD7F8BA1EFBC1DB003EE9AD /* GGT_ChoicePickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ChoicePickView.h; sourceTree = "<group>"; };
 		5BD7F8BB1EFBC1DB003EE9AD /* GGT_ChoicePickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ChoicePickView.m; sourceTree = "<group>"; };
+		5BE4E13D1F012000002F0E01 /* AdCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdCollectionViewCell.h; sourceTree = "<group>"; };
+		5BE4E13E1F012000002F0E01 /* AdCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdCollectionViewCell.m; sourceTree = "<group>"; };
+		5BE4E13F1F012000002F0E01 /* AdCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdCycleScrollView.h; sourceTree = "<group>"; };
+		5BE4E1401F012000002F0E01 /* AdCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdCycleScrollView.m; sourceTree = "<group>"; };
 		5BEC18E71EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_BookExperienceClassViewController.h; sourceTree = "<group>"; };
 		5BEC18E81EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_BookExperienceClassViewController.m; sourceTree = "<group>"; };
 		5BEC18EB1EB83C20009DF2F8 /* GGT_BookExperienceClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_BookExperienceClassView.h; sourceTree = "<group>"; };
@@ -593,6 +605,8 @@
 			children = (
 				D6C7AAB81EB1877800EBF0D1 /* GGT_HomeReservationViewController.h */,
 				D6C7AAB91EB1877800EBF0D1 /* GGT_HomeReservationViewController.m */,
+				5B0F4D231F01EDA700CE7D4C /* GGT_AdCycleViewController.h */,
+				5B0F4D241F01EDA700CE7D4C /* GGT_AdCycleViewController.m */,
 				5BEC18E71EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.h */,
 				5BEC18E81EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m */,
 			);
@@ -694,6 +708,10 @@
 				5BEC18EC1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m */,
 				5B695B271EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.h */,
 				5B695B281EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m */,
+				5BE4E13D1F012000002F0E01 /* AdCollectionViewCell.h */,
+				5BE4E13E1F012000002F0E01 /* AdCollectionViewCell.m */,
+				5BE4E13F1F012000002F0E01 /* AdCycleScrollView.h */,
+				5BE4E1401F012000002F0E01 /* AdCycleScrollView.m */,
 				5B695B2A1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.h */,
 				5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */,
 				5B695B2D1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.h */,
@@ -736,6 +754,8 @@
 				5B611A011EF7C2880011CF2E /* GGT_FocusOnOfPageView.m */,
 				5BD7F8BA1EFBC1DB003EE9AD /* GGT_ChoicePickView.h */,
 				5BD7F8BB1EFBC1DB003EE9AD /* GGT_ChoicePickView.m */,
+				5B43704E1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.h */,
+				5B43704F1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1084,11 +1104,13 @@
 				5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */,
 				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
 				D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */,
+				5BE4E1421F012000002F0E01 /* AdCycleScrollView.m in Sources */,
 				5B695B291EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m in Sources */,
 				D67E18D91EC077060046497E /* PlaceholderTextView.m in Sources */,
 				D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */,
 				5BEC18ED1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m in Sources */,
 				355210481EBC49BE0057EA59 /* GGT_InfoListCell.m in Sources */,
+				5BE4E1411F012000002F0E01 /* AdCollectionViewCell.m in Sources */,
 				5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */,
 				5B0881601EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m in Sources */,
 				358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */,
@@ -1108,6 +1130,7 @@
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
 				D6B590801EBC0AED00086648 /* GGT_ScheduleNormalCell.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
+				5B0F4D251F01EDA700CE7D4C /* GGT_AdCycleViewController.m in Sources */,
 				D604309F1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m in Sources */,
 				D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */,
 				3520D0731EC0592500A0B80A /* GGT_UserSettingController.m in Sources */,
@@ -1139,6 +1162,7 @@
 				5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */,
 				5B611A021EF7C2880011CF2E /* GGT_FocusOnOfPageView.m in Sources */,
 				5BA10D411EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m in Sources */,
+				5B4370501EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m in Sources */,
 				D60FA5161EC9872000838DE4 /* FLAnimatedImageView+WebCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

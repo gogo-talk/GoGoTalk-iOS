@@ -21,6 +21,10 @@
 #import "GGT_HomeBedtimeStoryCell.h"
 
 #import "GGT_BookExperienceClassViewController.h"
+#import "GGT_AdCycleViewController.h"
+
+
+
 
 @interface GGT_HomeReservationViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -77,6 +81,21 @@
             bannerCell= [[GGT_HomeBannerTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"banner"];
         }
         bannerCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        NSMutableArray * picArray= [NSMutableArray arrayWithObjects:@"http://www.ld12.com/upimg358/allimg/c151129/144WW1420B60-401445_lit.jpg",
+                                    @"http://img4.duitang.com/uploads/item/201508/11/20150811220329_XyZAv.png",
+                                    @"http://tx.haiqq.com/uploads/allimg/150326/160R95612-10.jpg",
+                                    @"http://img5q.duitang.com/uploads/item/201507/22/20150722145119_hJnyP.jpeg",
+                                    @"http://imgsrc.baidu.com/forum/w=580/sign=dc0e6c8c8101a18bf0eb1247ae2e0761/1cb3c90735fae6cd2c5341c109b30f2440a70fc7.jpg", nil];
+        
+        [bannerCell getAdDataArray:picArray];
+        
+        bannerCell.adBlockClick = ^(NSInteger selectedIndex) {
+            GGT_AdCycleViewController *vc = [[GGT_AdCycleViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        };
+        
+        
         
         return bannerCell;
         
