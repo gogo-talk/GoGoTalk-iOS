@@ -31,7 +31,7 @@
     _adScroll = [[AdCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, self.bgView.width, self.bgView.height)];
     _adScroll.delegate = self;
     _adScroll.pageControlAliment = AdCycleScrollViewPageControlAlimentCenter;
-    [self.bgView addSubview:_adScroll];
+//    [self.bgView addSubview:_adScroll];
 }
 
 
