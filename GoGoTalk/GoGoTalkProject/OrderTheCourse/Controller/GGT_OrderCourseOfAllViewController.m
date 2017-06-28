@@ -39,7 +39,32 @@
     
     [self initTableView];
     
-    [self getLoadData];
+    
+    @weakify(self);
+    _tableView.mj_header = [XCNormalHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        self.dataArray = [NSMutableArray array];
+        
+        [self getLoadData];
+        [self.tableView.mj_header endRefreshing];
+
+    }];
+    [self.tableView.mj_header beginRefreshing];
+
+    
+    // 设置自动切换透明度(在导航栏下面自动隐藏)
+//    _tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    _tableView.mj_footer = [XCNormalFooter footerWithRefreshingBlock:^{
+        @strongify(self);
+
+        [self.tableView.mj_footer endRefreshing];
+        
+        
+        
+    }];
+    
+    
 }
 
 - (void)getLoadData {

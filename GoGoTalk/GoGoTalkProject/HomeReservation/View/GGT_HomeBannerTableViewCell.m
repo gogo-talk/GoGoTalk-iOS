@@ -34,7 +34,7 @@
 //    [self.bgView addSubview:_adScroll];
 }
 
-
+#pragma mark 对数据赋值
 - (void)getAdDataArray:(NSArray *)array {
     
     _adScroll.imagesUrlArray = array;

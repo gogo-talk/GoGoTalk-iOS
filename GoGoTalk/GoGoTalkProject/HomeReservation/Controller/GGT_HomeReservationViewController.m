@@ -19,6 +19,8 @@
 
 //睡前故事
 #import "GGT_HomeBedtimeStoryCell.h"
+#import "GGT_BedTimeStoryViewController.h"
+
 
 #import "GGT_BookExperienceClassViewController.h"
 #import "GGT_AdCycleViewController.h"
@@ -43,18 +45,34 @@
     
     
     [self initTableView];
+    
+    
+    @weakify(self);
+    self.tableView.mj_header = [XCNormalHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        self.dataArray = [NSMutableArray array];
+        
+        [self getLoadData];
+        [self.tableView.mj_header endRefreshing];
+        
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    
+    
+    // 设置自动切换透明度(在导航栏下面自动隐藏)
+    _tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    _tableView.mj_footer = [XCNormalFooter footerWithRefreshingBlock:^{
+        @strongify(self);
+        
+        [self.tableView.mj_footer endRefreshing];
+    }];
+    
+    
+    
 }
 
-
-- (void)initTableView {
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-64-49) style:(UITableViewStyleGrouped)];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.view addSubview:self.tableView];
-    
-    //    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    //    self.tableView.estimatedRowHeight = 44.0;
+- (void)getLoadData {
     
     
     NSArray *a1 = @[@"1"];
@@ -67,6 +85,18 @@
     //    self.dataArray = [NSMutableArray arrayWithObjects:a1,a2,a3,a4, nil];
     
     [self.tableView reloadData];
+}
+
+- (void)initTableView {
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-64-49) style:(UITableViewStyleGrouped)];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:self.tableView];
+    
+    //    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    //    self.tableView.estimatedRowHeight = 44.0;
+
     
     
 }
@@ -106,6 +136,10 @@
         }
         commonCell.selectionStyle = UITableViewCellSelectionStyleNone;
         
+        //立即预约
+        [commonCell.yuyueshitingButton addTarget:self action:@selector(yuyueshitingButtonClick) forControlEvents:(UIControlEventTouchUpInside)];
+        
+
         
         //获取不同的状态
         //            [commonCell getStasus:@"1"];
@@ -193,21 +227,15 @@
     } else if (indexPath.section == 1) {
         //        GGT_HomeCommonCenterCell *commonCell = [_tableView cellForRowAtIndexPath:indexPath];
         
-        //立即预约
-        //        @weakify(self);
-        //        [[commonCell.yuyueshitingButton rac_signalForControlEvents:UIControlEventTouchUpInside]
-        //         subscribeNext:^(id x) {
-        //             @strongify(self);
-        GGT_BookExperienceClassViewController *vc = [[GGT_BookExperienceClassViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-        //         }];
-        
+   
+    
         
         
     } else if (indexPath.section == 2){
-        //        GGT_HomeBedtimeStoryCell *bedtimeCell = [_tableView cellForRowAtIndexPath:indexPath];
-        
+
+        GGT_BedTimeStoryViewController *vc = [[GGT_BedTimeStoryViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+
     }
     
     
@@ -384,8 +412,18 @@
     return nil;
 }
 
+#pragma mark 立即预约
+- (void)yuyueshitingButtonClick {
+    GGT_BookExperienceClassViewController *vc = [[GGT_BookExperienceClassViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 /***********************************************************************/
+
+
+
 #pragma mark 导航栏设置
 - (void)initNavigationBar {
     self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);

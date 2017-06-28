@@ -27,6 +27,9 @@
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5B0F4D251F01EDA700CE7D4C /* GGT_AdCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0F4D241F01EDA700CE7D4C /* GGT_AdCycleViewController.m */; };
+		5B2C619A1F039CF900B44892 /* XCNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C61961F039CF900B44892 /* XCNormalFooter.m */; };
+		5B2C619B1F039CF900B44892 /* XCNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C61991F039CF900B44892 /* XCNormalHeader.m */; };
+		5B2C619E1F03A18A00B44892 /* GGT_BedTimeStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C619D1F03A18A00B44892 /* GGT_BedTimeStoryViewController.m */; };
 		5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D2D1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m */; };
 		5B348D341EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D331EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m */; };
 		5B348D371EC1C6BA00FAB820 /* OrderTimeTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D361EC1C6BA00FAB820 /* OrderTimeTagsView.m */; };
@@ -161,6 +164,12 @@
 		5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
 		5B0F4D231F01EDA700CE7D4C /* GGT_AdCycleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AdCycleViewController.h; sourceTree = "<group>"; };
 		5B0F4D241F01EDA700CE7D4C /* GGT_AdCycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_AdCycleViewController.m; sourceTree = "<group>"; };
+		5B2C61961F039CF900B44892 /* XCNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCNormalFooter.m; sourceTree = "<group>"; };
+		5B2C61971F039CF900B44892 /* XCNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCNormalFooter.h; sourceTree = "<group>"; };
+		5B2C61981F039CF900B44892 /* XCNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCNormalHeader.h; sourceTree = "<group>"; };
+		5B2C61991F039CF900B44892 /* XCNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCNormalHeader.m; sourceTree = "<group>"; };
+		5B2C619C1F03A18A00B44892 /* GGT_BedTimeStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_BedTimeStoryViewController.h; sourceTree = "<group>"; };
+		5B2C619D1F03A18A00B44892 /* GGT_BedTimeStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_BedTimeStoryViewController.m; sourceTree = "<group>"; };
 		5B348D2C1EC1A85E00FAB820 /* GGT_OrderForeignListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_OrderForeignListCell.h; sourceTree = "<group>"; };
 		5B348D2D1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderForeignListCell.m; sourceTree = "<group>"; };
 		5B348D321EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_NoMoreDateAlertView.h; sourceTree = "<group>"; };
@@ -609,6 +618,8 @@
 				5B0F4D241F01EDA700CE7D4C /* GGT_AdCycleViewController.m */,
 				5BEC18E71EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.h */,
 				5BEC18E81EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m */,
+				5B2C619C1F03A18A00B44892 /* GGT_BedTimeStoryViewController.h */,
+				5B2C619D1F03A18A00B44892 /* GGT_BedTimeStoryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -671,6 +682,10 @@
 		5BC2AFA41EB050B8004DF44D /* CommonClass */ = {
 			isa = PBXGroup;
 			children = (
+				5B2C61961F039CF900B44892 /* XCNormalFooter.m */,
+				5B2C61971F039CF900B44892 /* XCNormalFooter.h */,
+				5B2C61981F039CF900B44892 /* XCNormalHeader.h */,
+				5B2C61991F039CF900B44892 /* XCNormalHeader.m */,
 				D6C7AAA31EB186F800EBF0D1 /* BaseViewController.h */,
 				D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */,
 				D6B591681EBC716600086648 /* BaseBackViewController.h */,
@@ -1102,6 +1117,7 @@
 				3520D06D1EC012C800A0B80A /* GGT_EditPasswordController.m in Sources */,
 				5BD7F8B81EFBB51E003EE9AD /* NSDictionary+Log.m in Sources */,
 				5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */,
+				5B2C619B1F039CF900B44892 /* XCNormalHeader.m in Sources */,
 				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
 				D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */,
 				5BE4E1421F012000002F0E01 /* AdCycleScrollView.m in Sources */,
@@ -1158,11 +1174,13 @@
 				5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */,
 				5BA575F41EC049A900C7512A /* GGT_VipCurrentStatusCell.m in Sources */,
 				D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */,
+				5B2C619E1F03A18A00B44892 /* GGT_BedTimeStoryViewController.m in Sources */,
 				5BB689391EC450150095CE58 /* GGT_SelectCoursewareViewCell.m in Sources */,
 				5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */,
 				5B611A021EF7C2880011CF2E /* GGT_FocusOnOfPageView.m in Sources */,
 				5BA10D411EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m in Sources */,
 				5B4370501EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m in Sources */,
+				5B2C619A1F039CF900B44892 /* XCNormalFooter.m in Sources */,
 				D60FA5161EC9872000838DE4 /* FLAnimatedImageView+WebCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
