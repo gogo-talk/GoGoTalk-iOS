@@ -76,10 +76,10 @@
      subscribeNext:^(id x) {
          @strongify(self);
          
-         [self loginLoadData];
+//         [self loginLoadData];
          
          //假数据，直接跳转到登录
-//         [self turnToHomeClick];
+         [self turnToHomeClick];
          
 
      }];

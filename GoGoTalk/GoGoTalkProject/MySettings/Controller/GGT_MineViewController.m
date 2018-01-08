@@ -47,8 +47,8 @@
     [mArray2 addObject:dic6];
     self.infoArray2 = mArray2;
     /*--------------------虚拟数据end----------------------  */
-    [self setNavigationStyle];
-    [self setLeftBackButton];
+    self.navigationItem.title = @"我的";
+
     [self setUserInfo];
     //用户设置tableView
     [self userSetting];
@@ -56,14 +56,7 @@
     
     
 }
-//设置导航栏样式
--(void)setNavigationStyle
-{
-    self.navigationItem.title = @"我的";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"fanhui_top"] style:UIBarButtonItemStylePlain target:self action:nil];
-    self.navigationController.navigationBar.barTintColor = UICOLOR_FROM_HEX(0xEA5851);
-    self.navigationController.navigationBar.translucent = NO;
-}
+
 //设置用户信息
 -(void)setUserInfo
 {

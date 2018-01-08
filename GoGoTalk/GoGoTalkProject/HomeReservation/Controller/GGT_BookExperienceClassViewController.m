@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self setLeftBackButton];
+//    [self setLeftBackButton];
     self.navigationItem.title = @"预约体验课";
     
     GGT_BookExperienceClassView *bookView = [[GGT_BookExperienceClassView alloc]init];

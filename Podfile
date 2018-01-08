@@ -13,7 +13,6 @@ target 'GoGoTalk' do
     pod 'ReactiveCocoa', '~> 2.5.0'             # 必须加上上面的use_frameworks!
     
     pod 'AFNetworking'
-    pod 'FMDB'
     pod 'Reachability'
     pod 'SDWebImage'
     pod 'YYModel'
@@ -21,7 +20,6 @@ target 'GoGoTalk' do
     
     pod 'Bugly'
     pod 'IQKeyboardManager'
-    pod 'FSCalendar'
     pod 'ZFPlayer'
     pod 'FLAnimatedImage'
     

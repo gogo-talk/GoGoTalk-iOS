@@ -10,7 +10,7 @@
 #import "GGT_HomeReservationViewController.h"
 #import "GGT_OrderCourseViewController.h"
 #import "GGT_ScheduleViewController.h"
-#import "GGT_DiscoveryViewController.h"
+#import "GGT_MineViewController.h"
 #import "BaseNavigationController.h"
 
 
@@ -34,13 +34,13 @@
 
 - (void)setupChildControllers {
     
-    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"home_tab" rootViewControllerClass:[GGT_HomeReservationViewController class] tabbarTitle:@"首页"];
-    
+//    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"home_tab" rootViewControllerClass:[GGT_HomeReservationViewController class] tabbarTitle:@"首页"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"kebiao_tab" rootViewControllerClass:[GGT_ScheduleViewController class] tabbarTitle:@"课表"];
+
     [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"yueke_tab" rootViewControllerClass:[GGT_OrderCourseViewController class] tabbarTitle:@"约课"];
     
-    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"kebiao_tab" rootViewControllerClass:[GGT_ScheduleViewController class] tabbarTitle:@"课表"];
     
-    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"faxian_tab" rootViewControllerClass:[GGT_DiscoveryViewController class] tabbarTitle:@"发现"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"faxian_tab" rootViewControllerClass:[GGT_MineViewController class] tabbarTitle:@"我的"];
     
 }
 

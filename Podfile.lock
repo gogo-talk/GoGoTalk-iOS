@@ -16,10 +16,6 @@ PODS:
     - AFNetworking/NSURLSession
   - Bugly (2.4.8)
   - FLAnimatedImage (1.0.12)
-  - FMDB (2.6.2):
-    - FMDB/standard (= 2.6.2)
-  - FMDB/standard (2.6.2)
-  - FSCalendar (2.7.6)
   - IQKeyboardManager (4.0.9)
   - JCore (1.1.3)
   - JPush (3.0.5):
@@ -59,8 +55,6 @@ DEPENDENCIES:
   - AFNetworking
   - Bugly
   - FLAnimatedImage
-  - FMDB
-  - FSCalendar
   - IQKeyboardManager
   - JPush
   - Masonry
@@ -80,8 +74,6 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Bugly: da3c02408c14838d498429320545a8e439392978
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  FSCalendar: feef792968ca0166bafc93e02fcd840b07d256e5
   IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
   JCore: dff3c50e9a7522a508cd9096ca79165968e1aed3
   JPush: dd0b776998aa705a6242b947bf72e5a640387cfe
@@ -96,6 +88,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZFPlayer: 8dc82b4508fbba4ee59d0304c52e30f8b3390244
 
-PODFILE CHECKSUM: 277c283af40171c5b20e0b08b7eb40571f32cf4e
+PODFILE CHECKSUM: 04ccae85c5e3f7bb28cf1a995ffac6d95bb8fbcb
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

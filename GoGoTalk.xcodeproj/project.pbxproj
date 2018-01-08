@@ -18,7 +18,6 @@
 		3552104B1EBC766C0057EA59 /* GGT_EditUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */; };
 		358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F522C1EBB034D004A7692 /* GGT_UserInfo.m */; };
 		358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */; };
-		35A3F6021EC2FAF300C88A18 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A3F6011EC2FAF300C88A18 /* Reveal.framework */; };
 		35DE2CD01EBCC08600E41B34 /* GGT_EditAgeSexController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DE2CCF1EBCC08600E41B34 /* GGT_EditAgeSexController.m */; };
 		35DE2CD91EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DE2CD81EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m */; };
 		5B01DEFD1EC3FA2C006D39A3 /* GGT_DetailsOfTeacherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01DEFC1EC3FA2C006D39A3 /* GGT_DetailsOfTeacherView.m */; };
@@ -73,28 +72,17 @@
 		5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED05AE1EB07E4D00469368 /* UIButton+timer.m */; };
 		5BED05B11EB07EA200469368 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */; };
 		D2AAA160595C68A78E962B45 /* Pods_GoGoTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A1D3B82B2C52C65F92C3DB /* Pods_GoGoTalk.framework */; };
-		D60430991EBC7CA000F53437 /* GGT_ScheduleStudyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D60430981EBC7CA000F53437 /* GGT_ScheduleStudyingCell.m */; };
-		D604309C1EBC7CDB00F53437 /* GGT_PreviewTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D604309B1EBC7CDB00F53437 /* GGT_PreviewTopView.m */; };
-		D604309F1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D604309E1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m */; };
 		D60430A21EBC864300F53437 /* UIView+XCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D60430A11EBC864300F53437 /* UIView+XCHelper.m */; };
 		D606076A1EC006B200A31E8B /* UIAlertController+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D60607691EC006B200A31E8B /* UIAlertController+Color.m */; };
-		D606076D1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D606076C1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m */; };
 		D60FA5161EC9872000838DE4 /* FLAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D60FA5151EC9872000838DE4 /* FLAnimatedImageView+WebCache.m */; };
 		D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */; };
 		D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66C6EE01EBB1D5E0058D12C /* XCStarView.m */; };
-		D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */; };
 		D67E18D91EC077060046497E /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67E18D81EC077060046497E /* PlaceholderTextView.m */; };
-		D68205421EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D68205411EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m */; };
-		D68205461EC04D5D00CA312B /* GGT_CourseEvaluateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D68205451EC04D5D00CA312B /* GGT_CourseEvaluateVC.m */; };
-		D682054D1EC05B0500CA312B /* GGT_EvaluateView.m in Sources */ = {isa = PBXBuildFile; fileRef = D682054C1EC05B0500CA312B /* GGT_EvaluateView.m */; };
-		D6B590801EBC0AED00086648 /* GGT_ScheduleNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */; };
-		D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */; };
 		D6B591671EBC676800086648 /* OYCountDownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B591661EBC676800086648 /* OYCountDownManager.m */; };
 		D6B5916A1EBC716700086648 /* BaseBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B591691EBC716600086648 /* BaseBackViewController.m */; };
 		D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAA41EB186F800EBF0D1 /* BaseViewController.m */; };
 		D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAAA1EB1872000EBF0D1 /* NSArray+SafeExtension.m */; };
 		D6C7AAAE1EB1873200EBF0D1 /* GGT_MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAAD1EB1873200EBF0D1 /* GGT_MineViewController.m */; };
-		D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB01EB1874800EBF0D1 /* GGT_DiscoveryViewController.m */; };
 		D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB31EB1875800EBF0D1 /* GGT_ScheduleViewController.m */; };
 		D6C7AAB71EB1876900EBF0D1 /* GGT_OrderCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB61EB1876900EBF0D1 /* GGT_OrderCourseViewController.m */; };
 		D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7AAB91EB1877800EBF0D1 /* GGT_HomeReservationViewController.m */; };
@@ -147,7 +135,6 @@
 		358F522C1EBB034D004A7692 /* GGT_UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserInfo.m; sourceTree = "<group>"; };
 		358F52311EBB2FF3004A7692 /* GGT_SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_SettingTableViewCell.h; sourceTree = "<group>"; };
 		358F52321EBB2FF3004A7692 /* GGT_SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_SettingTableViewCell.m; sourceTree = "<group>"; };
-		35A3F6011EC2FAF300C88A18 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		35DE2CCE1EBCC08600E41B34 /* GGT_EditAgeSexController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_EditAgeSexController.h; sourceTree = "<group>"; };
 		35DE2CCF1EBCC08600E41B34 /* GGT_EditAgeSexController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_EditAgeSexController.m; sourceTree = "<group>"; };
 		35DE2CD71EBCCEEB00E41B34 /* GGT_AgeSexPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AgeSexPickerView.h; sourceTree = "<group>"; };
@@ -256,38 +243,18 @@
 		5BED05AE1EB07E4D00469368 /* UIButton+timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+timer.m"; sourceTree = "<group>"; };
 		5BED05B01EB07EA200469368 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		BDDE48A6BF0DF60B4B82782D /* Pods-GoGoTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGoTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk.release.xcconfig"; sourceTree = "<group>"; };
-		D60430971EBC7CA000F53437 /* GGT_ScheduleStudyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleStudyingCell.h; sourceTree = "<group>"; };
-		D60430981EBC7CA000F53437 /* GGT_ScheduleStudyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleStudyingCell.m; sourceTree = "<group>"; };
-		D604309A1EBC7CDB00F53437 /* GGT_PreviewTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_PreviewTopView.h; sourceTree = "<group>"; };
-		D604309B1EBC7CDB00F53437 /* GGT_PreviewTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_PreviewTopView.m; sourceTree = "<group>"; };
-		D604309D1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_PreviewCoursewareVC.h; sourceTree = "<group>"; };
-		D604309E1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_PreviewCoursewareVC.m; sourceTree = "<group>"; };
 		D60430A01EBC864300F53437 /* UIView+XCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCHelper.h"; sourceTree = "<group>"; };
 		D60430A11EBC864300F53437 /* UIView+XCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCHelper.m"; sourceTree = "<group>"; };
 		D60607681EC006B200A31E8B /* UIAlertController+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Color.h"; sourceTree = "<group>"; };
 		D60607691EC006B200A31E8B /* UIAlertController+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Color.m"; sourceTree = "<group>"; };
-		D606076B1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_PreviewCourseAlertView.h; sourceTree = "<group>"; };
-		D606076C1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_PreviewCourseAlertView.m; sourceTree = "<group>"; };
 		D60FA5141EC9872000838DE4 /* FLAnimatedImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImageView+WebCache.h"; sourceTree = "<group>"; };
 		D60FA5151EC9872000838DE4 /* FLAnimatedImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImageView+WebCache.m"; sourceTree = "<group>"; };
 		D66C6EDB1EBADD100058D12C /* UIView+XCCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCCornerRadius.h"; sourceTree = "<group>"; };
 		D66C6EDC1EBADD100058D12C /* UIView+XCCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCCornerRadius.m"; sourceTree = "<group>"; };
 		D66C6EDF1EBB1D5E0058D12C /* XCStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCStarView.h; sourceTree = "<group>"; };
 		D66C6EE01EBB1D5E0058D12C /* XCStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCStarView.m; sourceTree = "<group>"; };
-		D66F8E721EB972CF0048B9C9 /* GGT_CalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_CalendarCell.h; sourceTree = "<group>"; };
-		D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_CalendarCell.m; sourceTree = "<group>"; };
 		D67E18D71EC077060046497E /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
 		D67E18D81EC077060046497E /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
-		D68205401EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_CourseVideoPlaybackVC.h; sourceTree = "<group>"; };
-		D68205411EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_CourseVideoPlaybackVC.m; sourceTree = "<group>"; };
-		D68205441EC04D5D00CA312B /* GGT_CourseEvaluateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_CourseEvaluateVC.h; sourceTree = "<group>"; };
-		D68205451EC04D5D00CA312B /* GGT_CourseEvaluateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_CourseEvaluateVC.m; sourceTree = "<group>"; };
-		D682054B1EC05B0500CA312B /* GGT_EvaluateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_EvaluateView.h; sourceTree = "<group>"; };
-		D682054C1EC05B0500CA312B /* GGT_EvaluateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_EvaluateView.m; sourceTree = "<group>"; };
-		D6B5907E1EBC0AED00086648 /* GGT_ScheduleNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleNormalCell.h; sourceTree = "<group>"; };
-		D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleNormalCell.m; sourceTree = "<group>"; };
-		D6B590811EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleFinishedCanPlayCell.h; sourceTree = "<group>"; };
-		D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleFinishedCanPlayCell.m; sourceTree = "<group>"; };
 		D6B591651EBC676800086648 /* OYCountDownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYCountDownManager.h; sourceTree = "<group>"; };
 		D6B591661EBC676800086648 /* OYCountDownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYCountDownManager.m; sourceTree = "<group>"; };
 		D6B591681EBC716600086648 /* BaseBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseBackViewController.h; sourceTree = "<group>"; };
@@ -298,8 +265,6 @@
 		D6C7AAAA1EB1872000EBF0D1 /* NSArray+SafeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeExtension.m"; sourceTree = "<group>"; };
 		D6C7AAAC1EB1873200EBF0D1 /* GGT_MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_MineViewController.h; sourceTree = "<group>"; };
 		D6C7AAAD1EB1873200EBF0D1 /* GGT_MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_MineViewController.m; sourceTree = "<group>"; };
-		D6C7AAAF1EB1874800EBF0D1 /* GGT_DiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_DiscoveryViewController.h; sourceTree = "<group>"; };
-		D6C7AAB01EB1874800EBF0D1 /* GGT_DiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_DiscoveryViewController.m; sourceTree = "<group>"; };
 		D6C7AAB21EB1875800EBF0D1 /* GGT_ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ScheduleViewController.h; sourceTree = "<group>"; };
 		D6C7AAB31EB1875800EBF0D1 /* GGT_ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ScheduleViewController.m; sourceTree = "<group>"; };
 		D6C7AAB51EB1876900EBF0D1 /* GGT_OrderCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_OrderCourseViewController.h; sourceTree = "<group>"; };
@@ -327,7 +292,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A3F6021EC2FAF300C88A18 /* Reveal.framework in Frameworks */,
 				D2AAA160595C68A78E962B45 /* Pods_GoGoTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,34 +340,9 @@
 		4B5CFEF708289DAD86D147C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				35A3F6011EC2FAF300C88A18 /* Reveal.framework */,
 				22A1D3B82B2C52C65F92C3DB /* Pods_GoGoTalk.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5BA10D291EB1D35B0091093C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/Discovery/Model";
-			sourceTree = "<group>";
-		};
-		5BA10D2A1EB1D35B0091093C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/Discovery/View";
-			sourceTree = "<group>";
-		};
-		5BA10D2B1EB1D3820091093C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			path = "../../../../../../xiehenry/Desktop/GoGoTalk-iOS/GoGoTalk/GoGoTalkProject/Schedule/Model";
 			sourceTree = "<group>";
 		};
 		5BC2AF4B1EB0473D004DF44D = {
@@ -478,7 +417,6 @@
 				5BC2AFA41EB050B8004DF44D /* CommonClass */,
 				5BC2AFA31EB050A1004DF44D /* Extension */,
 				5BC2AF901EB0500A004DF44D /* MySettings */,
-				5BC2AF8F1EB04FD1004DF44D /* Discovery */,
 				5BC2AF8E1EB04F97004DF44D /* Schedule */,
 				5BC2AF8D1EB04F79004DF44D /* OrderTheCourse */,
 				5BC2AF8C1EB04F70004DF44D /* HomeReservation */,
@@ -521,20 +459,8 @@
 			isa = PBXGroup;
 			children = (
 				5BC2AF971EB05042004DF44D /* Controller */,
-				5BA10D2B1EB1D3820091093C /* Model */,
-				D66F8E711EB972CF0048B9C9 /* View */,
 			);
 			path = Schedule;
-			sourceTree = "<group>";
-		};
-		5BC2AF8F1EB04FD1004DF44D /* Discovery */ = {
-			isa = PBXGroup;
-			children = (
-				5BA10D291EB1D35B0091093C /* Model */,
-				5BA10D2A1EB1D35B0091093C /* View */,
-				5BC2AF941EB0503B004DF44D /* Controller */,
-			);
-			path = Discovery;
 			sourceTree = "<group>";
 		};
 		5BC2AF901EB0500A004DF44D /* MySettings */ = {
@@ -572,22 +498,10 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		5BC2AF941EB0503B004DF44D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D6C7AAAF1EB1874800EBF0D1 /* GGT_DiscoveryViewController.h */,
-				D6C7AAB01EB1874800EBF0D1 /* GGT_DiscoveryViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		5BC2AF971EB05042004DF44D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				D682053C1EC04AC700CA312B /* 课表 */,
-				D682053D1EC04AD300CA312B /* 课前预习 */,
-				D68205431EC04CC800CA312B /* 录播课程回放 */,
-				D68205471EC0503200CA312B /* 课后评价 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -784,15 +698,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D654AEDD1EC1550C00A21DD9 /* 课后评价 */ = {
-			isa = PBXGroup;
-			children = (
-				D682054B1EC05B0500CA312B /* GGT_EvaluateView.h */,
-				D682054C1EC05B0500CA312B /* GGT_EvaluateView.m */,
-			);
-			name = "课后评价";
-			sourceTree = "<group>";
-		};
 		D66C6EDE1EBB1D560058D12C /* Others */ = {
 			isa = PBXGroup;
 			children = (
@@ -811,16 +716,6 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
-		D66F8E711EB972CF0048B9C9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D682053E1EC04B3E00CA312B /* 课表 */,
-				D682053F1EC04B4E00CA312B /* 课前预习 */,
-				D654AEDD1EC1550C00A21DD9 /* 课后评价 */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		D682053C1EC04AC700CA312B /* 课表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -828,59 +723,6 @@
 				D6C7AAB31EB1875800EBF0D1 /* GGT_ScheduleViewController.m */,
 			);
 			name = "课表";
-			sourceTree = "<group>";
-		};
-		D682053D1EC04AD300CA312B /* 课前预习 */ = {
-			isa = PBXGroup;
-			children = (
-				D604309D1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.h */,
-				D604309E1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m */,
-			);
-			name = "课前预习";
-			sourceTree = "<group>";
-		};
-		D682053E1EC04B3E00CA312B /* 课表 */ = {
-			isa = PBXGroup;
-			children = (
-				D66F8E721EB972CF0048B9C9 /* GGT_CalendarCell.h */,
-				D66F8E731EB972CF0048B9C9 /* GGT_CalendarCell.m */,
-				D60430971EBC7CA000F53437 /* GGT_ScheduleStudyingCell.h */,
-				D60430981EBC7CA000F53437 /* GGT_ScheduleStudyingCell.m */,
-				D6B5907E1EBC0AED00086648 /* GGT_ScheduleNormalCell.h */,
-				D6B5907F1EBC0AED00086648 /* GGT_ScheduleNormalCell.m */,
-				D6B590811EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.h */,
-				D6B590821EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m */,
-			);
-			name = "课表";
-			sourceTree = "<group>";
-		};
-		D682053F1EC04B4E00CA312B /* 课前预习 */ = {
-			isa = PBXGroup;
-			children = (
-				D604309A1EBC7CDB00F53437 /* GGT_PreviewTopView.h */,
-				D604309B1EBC7CDB00F53437 /* GGT_PreviewTopView.m */,
-				D606076B1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.h */,
-				D606076C1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m */,
-			);
-			name = "课前预习";
-			sourceTree = "<group>";
-		};
-		D68205431EC04CC800CA312B /* 录播课程回放 */ = {
-			isa = PBXGroup;
-			children = (
-				D68205401EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.h */,
-				D68205411EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m */,
-			);
-			name = "录播课程回放";
-			sourceTree = "<group>";
-		};
-		D68205471EC0503200CA312B /* 课后评价 */ = {
-			isa = PBXGroup;
-			children = (
-				D68205441EC04D5D00CA312B /* GGT_CourseEvaluateVC.h */,
-				D68205451EC04D5D00CA312B /* GGT_CourseEvaluateVC.m */,
-			);
-			name = "课后评价";
 			sourceTree = "<group>";
 		};
 		D6C7ABA41EB1D50900EBF0D1 /* Model */ = {
@@ -1046,13 +888,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoGoTalk-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A14247F9C90CA6A5493AF65A /* [CP] Copy Pods Resources */ = {
@@ -1061,9 +906,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk-resources.sh",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1076,9 +925,34 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoGoTalk/Pods-GoGoTalk-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/ZFPlayer/ZFPlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZFPlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1093,13 +967,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				35DE2CD91EBCCEEB00E41B34 /* GGT_AgeSexPickerView.m in Sources */,
-				D68205461EC04D5D00CA312B /* GGT_CourseEvaluateVC.m in Sources */,
 				D6E0A5A21EC2FCE7006A003D /* BaseService.m in Sources */,
-				D66F8E741EB972CF0048B9C9 /* GGT_CalendarCell.m in Sources */,
 				D6C7AABA1EB1877800EBF0D1 /* GGT_HomeReservationViewController.m in Sources */,
 				5BD7F8B71EFBB51E003EE9AD /* NSArray+Log.m in Sources */,
 				3541E2411EC43C0200A175CC /* GGT_FeedbackMessageController.m in Sources */,
-				D604309C1EBC7CDB00F53437 /* GGT_PreviewTopView.m in Sources */,
 				D606076A1EC006B200A31E8B /* UIAlertController+Color.m in Sources */,
 				5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */,
 				5B6119FF1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.m in Sources */,
@@ -1123,7 +994,6 @@
 				5BE4E1421F012000002F0E01 /* AdCycleScrollView.m in Sources */,
 				5B695B291EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m in Sources */,
 				D67E18D91EC077060046497E /* PlaceholderTextView.m in Sources */,
-				D6C7AAB11EB1874800EBF0D1 /* GGT_DiscoveryViewController.m in Sources */,
 				5BEC18ED1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m in Sources */,
 				355210481EBC49BE0057EA59 /* GGT_InfoListCell.m in Sources */,
 				5BE4E1411F012000002F0E01 /* AdCollectionViewCell.m in Sources */,
@@ -1132,7 +1002,6 @@
 				358F52331EBB2FF3004A7692 /* GGT_SettingTableViewCell.m in Sources */,
 				D6B591671EBC676800086648 /* OYCountDownManager.m in Sources */,
 				5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */,
-				D606076D1EC00C6800A31E8B /* GGT_PreviewCourseAlertView.m in Sources */,
 				5B348D371EC1C6BA00FAB820 /* OrderTimeTagsView.m in Sources */,
 				D6C7AAB71EB1876900EBF0D1 /* GGT_OrderCourseViewController.m in Sources */,
 				358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */,
@@ -1144,23 +1013,17 @@
 				3542B8E41EC1BE4A00EA4D4B /* GGT_FeedbackController.m in Sources */,
 				D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */,
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
-				D6B590801EBC0AED00086648 /* GGT_ScheduleNormalCell.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
 				5B0F4D251F01EDA700CE7D4C /* GGT_AdCycleViewController.m in Sources */,
-				D604309F1EBC7D9C00F53437 /* GGT_PreviewCoursewareVC.m in Sources */,
-				D6B590831EBC0B5000086648 /* GGT_ScheduleFinishedCanPlayCell.m in Sources */,
 				3520D0731EC0592500A0B80A /* GGT_UserSettingController.m in Sources */,
-				D60430991EBC7CA000F53437 /* GGT_ScheduleStudyingCell.m in Sources */,
 				5BEC18F91EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m in Sources */,
 				5B695B2C1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m in Sources */,
 				D66C6EDD1EBADD100058D12C /* UIView+XCCornerRadius.m in Sources */,
 				35DE2CD01EBCC08600E41B34 /* GGT_EditAgeSexController.m in Sources */,
 				5BA10D441EB1E2490091093C /* GGT_RegisterView.m in Sources */,
-				D682054D1EC05B0500CA312B /* GGT_EvaluateView.m in Sources */,
 				3542B8E11EC1A49100EA4D4B /* GGT_AboutUsController.m in Sources */,
 				5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */,
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
-				D68205421EC04C5C00CA312B /* GGT_CourseVideoPlaybackVC.m in Sources */,
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
 				5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */,
 				3520D0761EC0593D00A0B80A /* GGT_UserSettingCell.m in Sources */,
