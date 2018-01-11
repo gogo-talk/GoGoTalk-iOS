@@ -25,6 +25,7 @@
     [super viewDidLoad];
 
     self.tabBar.tintColor = UICOLOR_FROM_HEX(kThemeColor);
+
     //设置tabbar不透明
     self.tabBar.translucent = NO;
     //设置视图
@@ -34,7 +35,6 @@
 
 - (void)setupChildControllers {
     
-//    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"home_tab" rootViewControllerClass:[GGT_HomeReservationViewController class] tabbarTitle:@"首页"];
     [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"kebiao_tab" rootViewControllerClass:[GGT_ScheduleViewController class] tabbarTitle:@"课表"];
 
     [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"yueke_tab" rootViewControllerClass:[GGT_OrderCourseViewController class] tabbarTitle:@"约课"];

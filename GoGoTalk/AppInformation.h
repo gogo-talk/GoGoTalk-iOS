@@ -35,31 +35,33 @@
 #define K_registerID @"K_registerID"
 
 
-/*
- 比例
- */
-// 屏幕高度 考虑到横屏的宽高比
-#define XMGHeight SCREEN_HEIGHT()
-// 屏幕宽度 考虑到横屏的宽高比
-#define XMGWidth SCREEN_WIDTH()
-// 以iPhone5为基准(UI妹纸给你的设计图是iPhone5的),当然你也可以改,但是出图是按照7P(6P)的图片出的,因为大图压缩还是清晰的,小图拉伸就不清晰了,所以只出一套最大的图片即可
-#define XMGiPhone6W 375.0
-#define XMGiPhone6H 667.0
-// 计算比例
-// x比例 1.293750 在iPhone7的屏幕上
-#define XMGScaleX XMGWidth / XMGiPhone6W
-// y比例 1.295775
-#define XMGScaleY XMGHeight / XMGiPhone6H
+/*比例*/
+//判断是否是iPhone X
+#define iPhoneX (UIScreen instancesRespondToSelector:@selector(currentMoode)] ? CGSizeEqualToSize(CGSizeMake(1125,2436),[[UIScreen mainScreen] currentMode].size) : NO)
+//状态栏高度
+#define STATUS_BAR_HEIGHT (iPhoneX ? 44.0 : 20.0)
+//导航高度
+#define NAVIGATION_BAR_HEIGHT (iPhoneX ? 88.0 : 64.0)
+//tabbar高度
+#define TAB_BAR_HEIGHT (iPhoneX ? (49.0 + 34.0)) : 49.0)
+//home indicator---以前home键部分
+#define HOME_INDICATOR_HEIGHT (iPhoneX ? 34.0 : 0.0)
+
+
+// 以6 7 8 的宽高作为参照，计算比例
+//高度系数 812.0 是iPhoneX的高度尺寸，667.0表示是iPhone 8 的高度，如果你觉的它会变化，那我也很无奈
+#define XMGScaleY (SCREEN_HEIGHT() == 812.0 ? SCREEN_HEIGHT()/667.0 : 667.0/667.0)
+#define XMGScaleX SCREEN_WIDTH() / 375.0
 // X坐标
 #define LineX(l) l*XMGScaleX
-// Y坐标
+// Y坐标m
 #define LineY(l) l*XMGScaleY
 //width比例
 #define LineW(l) l*XMGScaleX
 //height比例
 #define LineH(l) l*XMGScaleY
 // 字体
-#define Font(x) [UIFont systemFontOfSize:x*XMGScaleX]
+#define Font(x) [UIFont systemFontOfSize:x*XMGScaleY]
 
 /**
  @abstract UIAlterController弹框.

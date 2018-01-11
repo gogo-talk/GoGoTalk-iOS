@@ -9,8 +9,6 @@
 #import "GGT_ScheduleViewController.h"
 
 @interface GGT_ScheduleViewController ()
-
-
 @end
 
 @implementation GGT_ScheduleViewController

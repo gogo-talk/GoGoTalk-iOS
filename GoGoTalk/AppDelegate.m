@@ -58,11 +58,13 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *lastVersion = [userDefaults objectForKey:key];
     
+
     if ([currentVersion isEqualToString:lastVersion]) {
         if ([[userDefaults objectForKey:@"login"] isEqualToString:@"yes"]) {
             
-
+            
             self.window.rootViewController = tabVc;
+            tabVc.tabBarController.selectedIndex = 2;
             
         } else {
 
@@ -71,8 +73,8 @@
         }
         
         //启动图和引导图没有状态栏，之后都加载状态栏---并修改为白色
-        [[UIApplication sharedApplication] setStatusBarHidden:NO];
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+//        [[UIApplication sharedAp plication] setStatusBarHidden:NO];
+//        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
         
     }else{
         // 卸载重装后或第一次进入应用

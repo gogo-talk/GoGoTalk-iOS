@@ -24,12 +24,12 @@
 @implementation GGT_OrderCourseOfFocusViewController
 
 //为了解决偏移量造成的返回视图问题
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    if (self.isSecondVc == YES) {
-        _PScrollView.pageScrollView.contentOffset = CGPointMake(0, 0);
-    }
-}
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    if (self.isSecondVc == YES) {
+//        _PScrollView.pageScrollView.contentOffset = CGPointMake(0, 0);
+//    }
+//}
 
 
 - (void)viewDidLoad {
@@ -37,22 +37,22 @@
     self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     
     //为了和我的--中的关注外教区分
-    if (self.isSecondVc == YES) {
-        [self setLeftBackButton];
-    }
+//    if (self.isSecondVc == YES) {
+//        [self setLeftBackButton];
+//    }
     
 //    GGT_NoMoreDateAlertView *nodataView = [[GGT_NoMoreDateAlertView alloc]initWithFrame:CGRectMake(0, LineY(180), SCREEN_WIDTH(), LineW(180)) andImageString:@"wudingdan_wode" andAlertString:@"您暂时没有关注任何外教"];
 //    [self.view addSubview:nodataView];
     
     //请求数据
-    [self initLoadData];
-    
-    
-//    头部滚动头像
-    [self initHeaderView];
-    
-//    下面的课表模块
-    [self initCollectionView];
+//    [self initLoadData];
+//
+//
+////    头部滚动头像
+//    [self initHeaderView];
+//
+////    下面的课表模块
+//    [self initCollectionView];
 }
 
 #pragma mark 请求数据

@@ -25,56 +25,78 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
-
+   
+    //设置导航
+    [self setNav];
+    
+    //设置用户信息
+    [self setUserInfo];
+    
+    
+    
     
     /*--------------------虚拟数据start----------------------  */
-    self.isVIP = true;
-    NSMutableArray *mArray = [NSMutableArray array];
-    NSDictionary *dic1 = @{@"icon":@"keshi_wodeliebiao",@"title":@"我的课时",@"subtitle":@"剩余120课时，有效期至2019.03.12"};
-    NSDictionary *dic2 =@{@"icon":@"guanzhu_wode_liebiao",@"title":@"关注外教",@"subtitle":@"14位"};
-    NSDictionary *dic3 = @{@"icon":@"dingdan_wode_liebiao",@"title":@"我的订单",@"subtitle":@""};
-    NSDictionary *dic4 = @{@"icon":@"pingce_wode_liebiao",@"title":@"测评报告",@"subtitle":@""};
-    [mArray addObject:dic1];
-    [mArray addObject:dic2];
-    [mArray addObject:dic3];
-    [mArray addObject:dic4];
-    self.infoArray = mArray;
-    NSMutableArray *mArray2 = [NSMutableArray array];
-    NSDictionary *dic5 = @{@"icon":@"yijianfankv_wode_liebiao",@"title":@"意见反馈",@"subtitle":@""};
-    NSDictionary *dic6 =@{@"icon":@"shezhi_wode_biebiao",@"title":@"设置",@"subtitle":@""};
-    [mArray2 addObject:dic5];
-    [mArray2 addObject:dic6];
-    self.infoArray2 = mArray2;
-    /*--------------------虚拟数据end----------------------  */
-    self.navigationItem.title = @"我的";
-
-    [self setUserInfo];
-    //用户设置tableView
-    [self userSetting];
+//    self.isVIP = true;
+//    NSMutableArray *mArray = [NSMutableArray array];
+//    NSDictionary *dic1 = @{@"icon":@"keshi_wodeliebiao",@"title":@"我的课时",@"subtitle":@"剩余120课时，有效期至2019.03.12"};
+//    NSDictionary *dic2 =@{@"icon":@"guanzhu_wode_liebiao",@"title":@"关注外教",@"subtitle":@"14位"};
+//    NSDictionary *dic3 = @{@"icon":@"dingdan_wode_liebiao",@"title":@"我的订单",@"subtitle":@""};
+//    NSDictionary *dic4 = @{@"icon":@"pingce_wode_liebiao",@"title":@"测评报告",@"subtitle":@""};
+//    [mArray addObject:dic1];
+//    [mArray addObject:dic2];
+//    [mArray addObject:dic3];
+//    [mArray addObject:dic4];
+//    self.infoArray = mArray;
+//    NSMutableArray *mArray2 = [NSMutableArray array];
+//    NSDictionary *dic5 = @{@"icon":@"yijianfankv_wode_liebiao",@"title":@"意见反馈",@"subtitle":@""};
+//    NSDictionary *dic6 =@{@"icon":@"shezhi_wode_biebiao",@"title":@"设置",@"subtitle":@""};
+//    [mArray2 addObject:dic5];
+//    [mArray2 addObject:dic6];
+//    self.infoArray2 = mArray2;
+//    /*--------------------虚拟数据end----------------------  */
+//
+//    [self setUserInfo];
+//    //用户设置tableView
+//    [self userSetting];
     
     
     
 }
+
 
 //设置用户信息
--(void)setUserInfo
-{
+-(void)setUserInfo {
     GGT_UserInfo *userInfo = [GGT_UserInfo new];
+    userInfo.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:userInfo];
+    
     [userInfo mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(0);
-        make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(LineH(168));
+        make.top.equalTo(self.view.mas_top).offset(0);
+        make.left.right.equalTo(self.view);
+        make.height.mas_equalTo(LineH(176));
     }];
-    self.userIfnoView = userInfo;
-    @weakify(self);
-    [[self.userIfnoView.headerButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        @strongify(self);
-        GGT_InfoListViewController *infoController = [GGT_InfoListViewController new];
-        [self.navigationController pushViewController:infoController animated:YES];
-    }];
+    
+//    @weakify(self);
+//    [[self.userIfnoView.headerButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+//        @strongify(self);
+//        GGT_InfoListViewController *infoController = [GGT_InfoListViewController new];
+//        [self.navigationController pushViewController:infoController animated:YES];
+//    }];
 }
+
+
+#pragma mark 导航
+- (void)setNav {
+    self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
+    self.navigationItem.title = @"我的";
+    //隐藏导航下的黑线
+    [self.navigationController.navigationBar  setBackgroundImage:[[UIImage alloc] init] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+}
+
+
+/*
+
 //设置item
 -(void)userSetting
 {
@@ -213,4 +235,5 @@
     }
     
 }
+ */
 @end

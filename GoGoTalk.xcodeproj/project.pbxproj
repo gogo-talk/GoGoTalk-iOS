@@ -26,6 +26,7 @@
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5B0F4D251F01EDA700CE7D4C /* GGT_AdCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0F4D241F01EDA700CE7D4C /* GGT_AdCycleViewController.m */; };
+		5B1913DE20070C0E00F1BCB5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1913DD20070C0E00F1BCB5 /* Launch Screen.storyboard */; };
 		5B2C619A1F039CF900B44892 /* XCNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C61961F039CF900B44892 /* XCNormalFooter.m */; };
 		5B2C619B1F039CF900B44892 /* XCNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C61991F039CF900B44892 /* XCNormalHeader.m */; };
 		5B2C619E1F03A18A00B44892 /* GGT_BedTimeStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C619D1F03A18A00B44892 /* GGT_BedTimeStoryViewController.m */; };
@@ -151,6 +152,7 @@
 		5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
 		5B0F4D231F01EDA700CE7D4C /* GGT_AdCycleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AdCycleViewController.h; sourceTree = "<group>"; };
 		5B0F4D241F01EDA700CE7D4C /* GGT_AdCycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_AdCycleViewController.m; sourceTree = "<group>"; };
+		5B1913DD20070C0E00F1BCB5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5B2C61961F039CF900B44892 /* XCNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCNormalFooter.m; sourceTree = "<group>"; };
 		5B2C61971F039CF900B44892 /* XCNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCNormalFooter.h; sourceTree = "<group>"; };
 		5B2C61981F039CF900B44892 /* XCNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCNormalHeader.h; sourceTree = "<group>"; };
@@ -313,13 +315,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		358F52291EBB033C004A7692 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		358F522A1EBB0342004A7692 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +338,13 @@
 				22A1D3B82B2C52C65F92C3DB /* Pods_GoGoTalk.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B1913DF200752FD00F1BCB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5BC2AF4B1EB0473D004DF44D = {
@@ -372,6 +374,7 @@
 			children = (
 				5BC2AF5A1EB0473D004DF44D /* AppDelegate.h */,
 				5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */,
+				5B1913DD20070C0E00F1BCB5 /* Launch Screen.storyboard */,
 				5BC2AF8A1EB04E31004DF44D /* GoGoTalkProject */,
 				5BC2AF571EB0473D004DF44D /* Supporting Files */,
 			);
@@ -466,9 +469,9 @@
 		5BC2AF901EB0500A004DF44D /* MySettings */ = {
 			isa = PBXGroup;
 			children = (
-				358F522A1EBB0342004A7692 /* View */,
-				358F52291EBB033C004A7692 /* Model */,
 				5BC2AF911EB05030004DF44D /* Controller */,
+				5B1913DF200752FD00F1BCB5 /* Model */,
+				358F522A1EBB0342004A7692 /* View */,
 			);
 			path = MySettings;
 			sourceTree = "<group>";
@@ -815,7 +818,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = GGT_;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = XieHenry;
 				TargetAttributes = {
 					5BC2AF531EB0473D004DF44D = {
@@ -860,6 +863,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1913DE20070C0E00F1BCB5 /* Launch Screen.storyboard in Resources */,
 				5BC2AF641EB0473D004DF44D /* Assets.xcassets in Resources */,
 				5BED05B11EB07EA200469368 /* MBProgressHUD.bundle in Resources */,
 			);
@@ -1090,7 +1094,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1098,7 +1104,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1139,7 +1149,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1147,7 +1159,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1177,7 +1193,6 @@
 			baseConfigurationReference = 1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = YZK33WLG48;
 				ENABLE_BITCODE = NO;
@@ -1187,7 +1202,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GoGoTalk/PrefixHeader.pch";
 				INFOPLIST_FILE = GoGoTalk/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gogo-talk.GoGoTalk";
@@ -1201,7 +1216,6 @@
 			baseConfigurationReference = BDDE48A6BF0DF60B4B82782D /* Pods-GoGoTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = YZK33WLG48;
 				ENABLE_BITCODE = NO;
@@ -1211,7 +1225,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GoGoTalk/PrefixHeader.pch";
 				INFOPLIST_FILE = GoGoTalk/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gogo-talk.GoGoTalk";

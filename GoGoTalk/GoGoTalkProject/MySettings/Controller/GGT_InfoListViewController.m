@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UICOLOR_FROM_HEX(0xf2f2f2);
+    self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     [self setNavigationStyle];
     [self createTableView];
     NSMutableArray *mArray1 = [NSMutableArray array];

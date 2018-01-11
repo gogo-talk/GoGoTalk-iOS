@@ -29,40 +29,36 @@
     [super viewDidLoad];
 
     //新建tap手势
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture)];
-    tapGesture.cancelsTouchesInView = NO;
-    tapGesture.delegate = self;
-    [self.view addGestureRecognizer:tapGesture];
-    
-    [self initHeaderView];
-  
-    
-    [self initTableView];
-    
-    
-    @weakify(self);
-    _tableView.mj_header = [XCNormalHeader headerWithRefreshingBlock:^{
-        @strongify(self);
-        self.dataArray = [NSMutableArray array];
-        
-        [self getLoadData];
-        [self.tableView.mj_header endRefreshing];
-
-    }];
-    [self.tableView.mj_header beginRefreshing];
-
-    
-    // 设置自动切换透明度(在导航栏下面自动隐藏)
-//    _tableView.mj_header.automaticallyChangeAlpha = YES;
-    
-    _tableView.mj_footer = [XCNormalFooter footerWithRefreshingBlock:^{
-        @strongify(self);
-
-        [self.tableView.mj_footer endRefreshing];
-        
-        
-        
-    }];
+//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture)];
+//    tapGesture.cancelsTouchesInView = NO;
+//    tapGesture.delegate = self;
+//    [self.view addGestureRecognizer:tapGesture];
+//
+//    [self initHeaderView];
+//
+//
+//    [self initTableView];
+//
+//
+//    @weakify(self);
+//    _tableView.mj_header = [XCNormalHeader headerWithRefreshingBlock:^{
+//        @strongify(self);
+//        self.dataArray = [NSMutableArray array];
+//
+//        [self getLoadData];
+//        [self.tableView.mj_header endRefreshing];
+//
+//    }];
+//    [self.tableView.mj_header beginRefreshing];
+//
+//
+//    // 设置自动切换透明度(在导航栏下面自动隐藏)
+////    _tableView.mj_header.automaticallyChangeAlpha = YES;
+//
+//    _tableView.mj_footer = [XCNormalFooter footerWithRefreshingBlock:^{
+//        @strongify(self);
+//        [self.tableView.mj_footer endRefreshing];
+//    }];
     
     
 }
