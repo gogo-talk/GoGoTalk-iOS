@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GGT_EditUserInfoController : BaseBackViewController
-@property(nonatomic, strong) NSString *titleName;
-@property(nonatomic, strong) NSString *info;
-@property(nonatomic, strong) NSDictionary *params;
+@property(nonatomic, strong) NSString *placeStr;
 @end

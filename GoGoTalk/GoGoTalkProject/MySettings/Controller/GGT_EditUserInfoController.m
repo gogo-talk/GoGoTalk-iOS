@@ -8,102 +8,87 @@
 
 #import "GGT_EditUserInfoController.h"
 
-@interface GGT_EditUserInfoController ()<UITextFieldDelegate>
-@property(nonatomic, weak)UITextField *editTextField;
-
-@property(nonatomic, weak) UIBarButtonItem *rightItem;
+@interface GGT_EditUserInfoController () <UITextFieldDelegate>
+@property(nonatomic, strong) UITextField *editTextField;
+@property(nonatomic, strong) UIButton *finishedButton;
 @end
 
 @implementation GGT_EditUserInfoController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UICOLOR_FROM_HEX(0xf2f2f2);
-    [self setNavigationItems];
+    self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
+    
+    
     [self createEditTextField];
     
 }
 
--(void)setNavigationItems
-{
-    //导航栏标题
-    self.navigationItem.title = self.titleName;
-    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [rightBtn setTitle:@"提交" forState:UIControlStateNormal];
-    
-    rightBtn.frame = CGRectMake(0, 0, 100, 30);
-    rightBtn.titleLabel.font = Font(16);
-    [rightBtn sizeToFit];
-    [rightBtn addTarget:self action:@selector(updateInfo:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
-    [rightItem setEnabled:NO];
-    self.rightItem = rightItem;
-    //创建FixedSpace。用来控制上面按钮位置
-    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    //设置negativeSpacer的宽度
-    negativeSpacer.width = -5;
-    self.navigationItem.rightBarButtonItems = @[negativeSpacer,rightItem];
-    
-}
--(void)updateInfo:(UIButton *)sender
-{
-    NSLog(@"提交了信息");
-}
--(void)createEditTextField
-{
+
+-(void)createEditTextField {
     UIView *bgView = [UIView new];
     bgView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:bgView];
-    UITextField *editTextField = [UITextField new];
-    editTextField.placeholder = @"请输入信息";
-    editTextField.font = Font(16);
-    editTextField.text = self.info;
-    editTextField.backgroundColor = [UIColor whiteColor];
-    self.editTextField = editTextField;
-    self.editTextField.delegate = self;
-    [bgView addSubview:editTextField];
     
     [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(LineH(44));
-        make.top.mas_equalTo(LineY(10));
-        make.left.mas_equalTo(0);
-        make.right.mas_equalTo(0);
+        make.height.mas_equalTo(LineH(49));
+        make.top.equalTo(self.view.mas_top).with.offset(LineY(10));
+        make.left.equalTo(self.view.mas_left).with.offset(0);
+        make.right.equalTo(self.view.mas_right).with.offset(-0);
     }];
     
     
-    [editTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+    self.editTextField = [UITextField new];
+    self.editTextField.font = Font(16);
+    self.editTextField.delegate = self;
+    self.editTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeStr attributes:@{NSForegroundColorAttributeName: UICOLOR_FROM_HEX(ColorCCCCCC)}];
+    [self.editTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    [bgView addSubview:self.editTextField];
+
+    [self.editTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(bgView.mas_left).with.offset(LineX(20));
-        make.top.mas_equalTo(bgView.mas_top);
-        make.bottom.mas_equalTo(bgView.mas_bottom);
-        make.right.mas_equalTo(bgView.mas_right);
+        make.right.equalTo(bgView.mas_right).with.offset(-LineX(20));
+        make.top.bottom.equalTo(bgView);
+    }];
+    
+    
+    //确认
+    self.finishedButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [self.finishedButton setTitle:@"确 认" forState:(UIControlStateNormal)];
+    [self.finishedButton setTitleColor:UICOLOR_FROM_HEX(ColorFFFFFF) forState:(UIControlStateNormal)];
+    self.finishedButton.titleLabel.font = Font(18);
+    self.finishedButton.layer.cornerRadius = LineH(22);
+    self.finishedButton.layer.masksToBounds = YES;
+    self.finishedButton.backgroundColor = UICOLOR_FROM_HEX(ColorCCCCCC);
+    [self.view addSubview:self.finishedButton];
+    
+    [self.finishedButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).with.offset(LineX(30));
+        make.right.equalTo(self.view.mas_right).with.offset(-LineX(30));
+        make.top.equalTo(self.editTextField.mas_bottom).with.offset(LineY(30));
+        make.height.mas_offset(LineH(44));
     }];
 }
+
+
+#pragma mark 检测输入框
+- (void)textFieldDidChange:(UITextField *)textField {
+    if (textField.text.length >0) {
+        self.finishedButton.enabled = YES;
+        self.finishedButton.backgroundColor = UICOLOR_FROM_HEX(ColorEA5851);
+        
+    } else {
+        self.finishedButton.enabled = NO;
+        self.finishedButton.backgroundColor = UICOLOR_FROM_HEX(ColorCCCCCC);
+
+    }
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-#pragma mark -- UITextFieldDelegate
--(void)textFieldDidEndEditing:(UITextField *)textField
-{
-    if([textField.text isEqualToString:self.info] || textField.text.length <= 6){
-        [self.rightItem setEnabled:NO];
-        [self.rightItem setTintColor:[UIColor redColor]];
-        NSLog(@"输入的内容相同或内容为空，不可提交。输入的:%@!!原内容:%@",self.info,textField.text);
-    }else{
-        [self.rightItem setEnabled:YES];
-    }
-    
-}
 @end

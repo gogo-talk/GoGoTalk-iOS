@@ -86,18 +86,20 @@
         cell = [[GGT_InfoListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellStr];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    
 
     cell.leftLabel.text = [[self.leftTitleArray safe_objectAtIndex:indexPath.section] safe_objectAtIndex:indexPath.row];
+    cell.rightLabel.text = [[self.leftTitleArray safe_objectAtIndex:indexPath.section] safe_objectAtIndex:indexPath.row];
 
-    
     if (indexPath.section == 0) {
-        cell.iconImgView.hidden = NO;
+        cell.headerImgButton.hidden = NO;
+        [cell.headerImgButton addTarget:self action:@selector(headerImgButtonClick) forControlEvents:(UIControlEventTouchUpInside)];
     }
     
     if (indexPath.section == 1 && indexPath.row == 0) {
-        cell.isRefreshView = YES;
+        [cell freshCell:YES];
     } else {
-        cell.isRefreshView = NO;
+        [cell freshCell:NO];
     }
     
     
@@ -106,80 +108,59 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) { //头像部分
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-        UIAlertAction *button1 = [UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            //相机相册的选择
-            UIImagePickerController * picker=[[UIImagePickerController alloc]init];
-            picker.delegate=self;
-            picker.allowsEditing = YES;//设置可编辑
-            //相机
-            if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
-                picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    switch (indexPath.section) {
+        case 1:
+            switch (indexPath.row) {
+                case 1: //英文名
+                {
+                    GGT_EditUserInfoController *vc = [[GGT_EditUserInfoController alloc]init];
+                    vc.navigationItem.title = @"英文名";
+                    vc.placeStr = @"请输入您的英文名";
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+                    break;
+                case 2: //中文名
+                {
+                    GGT_EditUserInfoController *vc = [[GGT_EditUserInfoController alloc]init];
+                    vc.navigationItem.title = @"中文名";
+                    vc.placeStr = @"请输入您的中文名";
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+                    break;
+                case 3: //生日
+          
+                    break;
+                case 4: //性别
+        
+                    break;
+                case 5: //家长称呼
+                {
+                    GGT_EditUserInfoController *vc = [[GGT_EditUserInfoController alloc]init];
+                    vc.navigationItem.title = @"家长称呼";
+                    vc.placeStr = @"请输入您的称呼";
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+                    break;
+                case 6: //所在地
+              
+                    break;
+                    
+                default:
+                    break;
             }
-            [self presentViewController:picker animated:YES completion:nil];
-        }];
-        
-        UIAlertAction *button2 = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            //相机相册的选择
-            UIImagePickerController * picker=[[UIImagePickerController alloc]init];
-            picker.delegate=self;
-            picker.allowsEditing = YES;//设置可编辑
-            [self presentViewController:picker animated:YES completion:nil];
+            break;
+        case 2: //修改密码
+        {
+            GGT_EditPasswordController *vc = [[GGT_EditPasswordController alloc]init];
+            vc.navigationItem.title = @"修改密码";
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
-        }];
-        
-        UIAlertAction *button3 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-    
-        [alert addAction:button1];
-        [alert addAction:button2];
-        [alert addAction:button3];
-        [self presentViewController:alert animated:YES completion:nil];
+        default:
+            break;
     }
-    
-    //返回后cell不选中
-//    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    if(indexPath.section == 0 && (indexPath.row == 0 || indexPath.row == 1)){
-//        GGT_EditUserInfoController *evc = [GGT_EditUserInfoController new];
-//        evc.titleName = self.cellArray1[indexPath.row][@"title"];
-//        evc.info = self.cellArray1[indexPath.row][@"subtitle"];
-//        [self.navigationController pushViewController:evc animated:YES];
-//    }
-//    if(indexPath.section==0 && (indexPath.row == 2 || indexPath.row == 3)){
-//        GGT_EditAgeSexController *evc = [GGT_EditAgeSexController new];
-//        evc.titleName = self.cellArray1[indexPath.row][@"title"];
-//        if(indexPath.row == 2){
-//            evc.prompt = @"请选择年龄";
-//        }
-//        if(indexPath.row == 3){
-//            evc.prompt = @"请选择性别";
-//        }
-//        [self.navigationController pushViewController:evc animated:YES];
-//    }
-//    if(indexPath.section == 1 && indexPath.row == 1){
-//        GGT_EditUserInfoController *evc = [GGT_EditUserInfoController new];
-//        evc.titleName = self.cellArray2[indexPath.row][@"title"];
-//        evc.info = self.cellArray2[indexPath.row][@"subtitle"];
-//        [self.navigationController pushViewController:evc animated:YES];
-//    }
-//    if(indexPath.section == 2 && indexPath.row == 0){
-//        GGT_EditPasswordController *evc = [GGT_EditPasswordController new];
-//        evc.titleName = self.cellArray3[indexPath.row][@"title"];
-//        [self.navigationController pushViewController:evc animated:YES];
-//    }
 }
-
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    //获取image   UIImagePickerControllerOriginalImage
-    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
-    UIImage *iconImage = [image imageScaledToSize:CGSizeMake(400, 400)];
-
-    
-    GGT_InfoListCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-    cell.iconImgView.image = iconImage;
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 
 
 
@@ -203,6 +184,60 @@
     headerView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     return headerView;
 }
+
+
+
+#pragma mark 头像设置
+-(void)headerImgButtonClick {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *button1 = [UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //相机相册的选择
+        UIImagePickerController * picker=[[UIImagePickerController alloc]init];
+        picker.delegate=self;
+        picker.allowsEditing = YES;//设置可编辑
+        //相机
+        if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        }
+        [self presentViewController:picker animated:YES completion:nil];
+    }];
+    
+    UIAlertAction *button2 = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //相机相册的选择
+        UIImagePickerController * picker=[[UIImagePickerController alloc]init];
+        picker.delegate=self;
+        picker.allowsEditing = YES;//设置可编辑
+        [self presentViewController:picker animated:YES completion:nil];
+        
+    }];
+    
+    UIAlertAction *button3 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:button1];
+    [alert addAction:button2];
+    [alert addAction:button3];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    //获取image   UIImagePickerControllerOriginalImage
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    UIImage *iconImage = [image imageScaledToSize:CGSizeMake(400, 400)];
+    
+    
+    GGT_InfoListCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [cell.headerImgButton setBackgroundImage:iconImage forState:(UIControlStateNormal)];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
+
+
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

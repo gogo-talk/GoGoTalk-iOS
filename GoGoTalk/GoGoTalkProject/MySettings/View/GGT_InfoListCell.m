@@ -45,34 +45,16 @@
     
     
     self.rightLabel = [UILabel new];
-    self.rightLabel.textColor = UICOLOR_FROM_HEX(Color999999);
-    self.rightLabel.font = Font(12);
+    self.rightLabel.textColor = UICOLOR_FROM_HEX(Color666666);
+    self.rightLabel.font = Font(16);
     self.rightLabel.textAlignment = NSTextAlignmentRight;
     [self addSubview:self.rightLabel];
     
-    if (self.isRefreshView == YES) {
-        self.enterImgView.hidden = YES;
-        
-        [self.rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.mas_equalTo(self.contentView.mas_centerY);
-            make.right.equalTo(self.mas_right).with.offset(-LineX(20));
-            make.height.mas_equalTo(LineH(15));
-        }];
-        
-    } else {
-        self.enterImgView.hidden = NO;
-
-        [self.rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.mas_equalTo(self.contentView.mas_centerY);
-            make.right.equalTo(self.enterImgView.mas_left).with.offset(-LineX(12));
-            make.height.mas_equalTo(LineH(15));
-        }];
-    }
-    
-   
-    
-   
-    
+    [self.rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.contentView.mas_centerY);
+        make.right.equalTo(self.enterImgView.mas_left).with.offset(-LineX(12));
+        make.height.mas_equalTo(LineH(15));
+    }];
     
     
     self.lineView = [UIView new];
@@ -88,21 +70,44 @@
     
     
     
-    self.iconImgView = [UIImageView new];
-//    self.iconImgView.backgroundColor = UICOLOR_RANDOM_COLOR();
-    [self addSubview:self.iconImgView];
-    self.iconImgView.hidden = YES;
+    self.headerImgButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.headerImgButton.backgroundColor = UICOLOR_RANDOM_COLOR();
+    [self addSubview:self.headerImgButton];
+    self.headerImgButton.hidden = YES;
     
-    [self.iconImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.headerImgButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.enterImgView.mas_left).with.offset(-LineX(10));
         make.centerY.mas_equalTo(self.mas_centerY);
         make.size.mas_equalTo(CGSizeMake(LineW(60), LineW(60)));
     }];
 }
 
+-(void)freshCell : (BOOL)isFreshCell {
+    if (isFreshCell == YES) {
+        self.enterImgView.hidden = YES;
+        
+        [self.rightLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.mas_equalTo(self.contentView.mas_centerY);
+            make.right.equalTo(self.mas_right).with.offset(-LineX(20));
+            make.height.mas_equalTo(LineH(15));
+        }];
+        
+    } else {
+        self.enterImgView.hidden = NO;
+        
+        [self.rightLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.mas_equalTo(self.contentView.mas_centerY);
+            make.right.equalTo(self.enterImgView.mas_left).with.offset(-LineX(12));
+            make.height.mas_equalTo(LineH(15));
+        }];
+    }
+    
+}
+
+
 
 - (void)drawRect:(CGRect)rect {
-    [self.iconImgView xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:LineW(30)];
+    [self.headerImgButton xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:LineW(30)];
 }
 
 

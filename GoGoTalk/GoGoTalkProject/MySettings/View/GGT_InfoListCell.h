@@ -26,12 +26,13 @@
  */
 @property (nonatomic, strong) UIView *lineView;
 /**
- 头像
+ 头像按钮
  */
-@property (nonatomic, strong) UIImageView *iconImgView;
+@property(nonatomic, strong) UIButton *headerImgButton;
 /**
  手机号部分，刷新坐标
  */
-@property (nonatomic) BOOL isRefreshView;
+-(void)freshCell : (BOOL)isFreshCell;
+
 
 @end
