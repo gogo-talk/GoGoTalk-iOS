@@ -25,6 +25,7 @@ static CGFloat const margin44 = 44.0f;
 #define ColorFFFFFF 0xFFFFFF  //白色
 #define Color999999 0x999999
 #define ColorCF131B 0xCF131B
+#define ColorEB5B54 0xEB5B54
 
 
 //灰色界面背景

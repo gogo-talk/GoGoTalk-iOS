@@ -54,10 +54,10 @@
 #define XMGScaleX SCREEN_WIDTH() / 375.0
 // X坐标
 #define LineX(l) l*XMGScaleX
-// Y坐标m
-#define LineY(l) l*XMGScaleY
 //width比例
 #define LineW(l) l*XMGScaleX
+// Y坐标
+#define LineY(l) l*XMGScaleY
 //height比例
 #define LineH(l) l*XMGScaleY
 // 字体

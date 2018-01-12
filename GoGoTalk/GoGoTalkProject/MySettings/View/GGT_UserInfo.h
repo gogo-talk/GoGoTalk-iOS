@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GGT_UserInfo : UIView
-@property(nonatomic, strong) UIButton *headerButton;
+@property(nonatomic, strong) UIControl *headerControl;
 @end

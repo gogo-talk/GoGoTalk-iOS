@@ -9,6 +9,29 @@
 #import <UIKit/UIKit.h>
 
 @interface GGT_InfoListCell : UITableViewCell
-@property(nonatomic, strong) NSDictionary *infoDic;
-+ (instancetype)cellWithTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath;
+/**
+ 左边文字
+ */
+@property (nonatomic, strong) UILabel *leftLabel;
+/**
+ 进入的图片
+ */
+@property (nonatomic, strong) UIImageView *enterImgView;
+/**
+ 右边文字
+ */
+@property (nonatomic, strong) UILabel *rightLabel;
+/**
+ 底部分割线
+ */
+@property (nonatomic, strong) UIView *lineView;
+/**
+ 头像
+ */
+@property (nonatomic, strong) UIImageView *iconImgView;
+/**
+ 手机号部分，刷新坐标
+ */
+@property (nonatomic) BOOL isRefreshView;
+
 @end

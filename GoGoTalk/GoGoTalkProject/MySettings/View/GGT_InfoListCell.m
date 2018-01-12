@@ -7,77 +7,103 @@
 //
 
 #import "GGT_InfoListCell.h"
+
+
 @interface GGT_InfoListCell()
-@property(nonatomic, strong) NSIndexPath *indexPath;
 @end
+
 @implementation GGT_InfoListCell
--(void)setInfoDic:(NSDictionary *)infoDic
-{
-    [self createCell:infoDic];
-}
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
--(instancetype)initWithFrame:(CGRect)frame
-{
-    if(self = [super initWithFrame:frame]){
-        
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]){
+        [self buildUI];
     }
     return self;
 }
--(void)createCell:(NSDictionary *)info
-{
-    UILabel *titleLabel = [[UILabel alloc] init];
-    titleLabel.text = info[@"title"];
-    titleLabel.textColor = UICOLOR_FROM_HEX(0x333333);
-    titleLabel.font = Font(16);
-    [self.contentView addSubview:titleLabel];
-    UILabel *subLabel = [UILabel new];
-    subLabel.text = info[@"subtitle"];
-    subLabel.textColor = UICOLOR_FROM_HEX(0x999999);
-    subLabel.font = Font(16);
-    [self.contentView addSubview:subLabel];
+
+- (void)buildUI {
+    self.leftLabel = [UILabel new];
+    self.leftLabel.textColor = UICOLOR_FROM_HEX(Color333333);
+    self.leftLabel.font = Font(16);
+    [self addSubview:self.leftLabel];
     
-    
-    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.contentView.mas_centerY);
-        make.left.equalTo(self.contentView.mas_left).with.offset(LineX(20));
+    [self.leftLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.contentView.mas_centerY);
+        make.left.equalTo(self.mas_left).with.offset(LineX(20));
+        make.height.mas_equalTo(LineH(18));
     }];
-    [subLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.contentView.mas_centerY);
-        CGFloat right;
-        if(self.indexPath.section == 1 && self.indexPath.row == 0){
-            right = LineX(-5);
-        }else{
-            right = LineX(5);
-        }
-        make.right.equalTo(self.contentView.mas_right).with.offset(right);
+
+    
+    self.enterImgView = [UIImageView new];
+    self.enterImgView.image = UIIMAGE_FROM_NAME(@"jinru_wode_liebiao");
+    [self addSubview:self.enterImgView];
+    
+    [self.enterImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.mas_right).with.offset(-LineX(20));
+        make.centerY.mas_equalTo(self.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(LineW(7), LineH(12)));
     }];
     
+    
+    self.rightLabel = [UILabel new];
+    self.rightLabel.textColor = UICOLOR_FROM_HEX(Color999999);
+    self.rightLabel.font = Font(12);
+    self.rightLabel.textAlignment = NSTextAlignmentRight;
+    [self addSubview:self.rightLabel];
+    
+    if (self.isRefreshView == YES) {
+        self.enterImgView.hidden = YES;
+        
+        [self.rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.mas_equalTo(self.contentView.mas_centerY);
+            make.right.equalTo(self.mas_right).with.offset(-LineX(20));
+            make.height.mas_equalTo(LineH(15));
+        }];
+        
+    } else {
+        self.enterImgView.hidden = NO;
+
+        [self.rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.mas_equalTo(self.contentView.mas_centerY);
+            make.right.equalTo(self.enterImgView.mas_left).with.offset(-LineX(12));
+            make.height.mas_equalTo(LineH(15));
+        }];
+    }
+    
+   
+    
+   
+    
+    
+    
+    self.lineView = [UIView new];
+    self.lineView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
+    [self addSubview:self.lineView];
+    
+    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.mas_left).with.offset(LineX(15));
+        make.right.equalTo(self.mas_right).with.offset(-0);
+        make.bottom.mas_equalTo(-0);
+        make.height.mas_equalTo(LineH(0.5));
+    }];
+    
+    
+    
+    self.iconImgView = [UIImageView new];
+//    self.iconImgView.backgroundColor = UICOLOR_RANDOM_COLOR();
+    [self addSubview:self.iconImgView];
+    self.iconImgView.hidden = YES;
+    
+    [self.iconImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.enterImgView.mas_left).with.offset(-LineX(10));
+        make.centerY.mas_equalTo(self.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(LineW(60), LineW(60)));
+    }];
 }
-+ (instancetype)cellWithTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath
-{
-    GGT_InfoListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listCell"];
-    if(cell == nil){
-        cell = [[GGT_InfoListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"listCell"];
-    }
-    if(indexPath.section == 2){
-        //去掉指定CELL的分割线
-        cell.separatorInset = UIEdgeInsetsMake(0, SCREEN_WIDTH(), 0, 0);
-    }
-    if(indexPath.section == 1 && indexPath.row == 0){
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }else{
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
-    cell.indexPath = indexPath;
-    return cell;
+
+
+- (void)drawRect:(CGRect)rect {
+    [self.iconImgView xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:LineW(30)];
 }
+
+
 @end
