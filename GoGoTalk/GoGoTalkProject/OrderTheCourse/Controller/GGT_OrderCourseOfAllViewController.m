@@ -254,32 +254,32 @@
 
 #pragma mark 选择日期
 - (void)selectBtnClick {
-    GGT_ChoicePickView *view = [[GGT_ChoicePickView alloc]init];
-    view.backgroundColor = UICOLOR_FROM_HEX(0xF5F6F8);
-    view.tag = 888;
-    __weak GGT_ChoicePickView *weakview = view;
-    view.DateBlock = ^(UIButton *button,NSString *dayStr,NSString *timeStr) {
-        if (button.tag == 111) {
-            [weakview removeFromSuperview];
-
-        } else if(button.tag == 222) {
-            NSLog(@"%@--%@",dayStr,timeStr);
-            [weakview removeFromSuperview];
-
-            UILabel *titleLabel = (UILabel *)[self.view viewWithTag:888];
-            titleLabel.text = [NSString stringWithFormat:@"%@  %@",dayStr,timeStr];
-            
-            [self initDataSource:dayStr timeStr:timeStr];
-            
-        }
-    };
-    [self.view.window addSubview:view];
-    
-    [view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.window.mas_centerX);
-        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(230)));
-        make.bottom.equalTo(self.view.window.mas_bottom).with.offset(-0);
-    }];
+//    GGT_ChoicePickView *view = [[GGT_ChoicePickView alloc]init];
+//    view.backgroundColor = UICOLOR_FROM_HEX(0xF5F6F8);
+//    view.tag = 888;
+//    __weak GGT_ChoicePickView *weakview = view;
+//    view.DateBlock = ^(UIButton *button,NSString *dayStr,NSString *timeStr) {
+//        if (button.tag == 111) {
+//            [weakview removeFromSuperview];
+//
+//        } else if(button.tag == 222) {
+//            NSLog(@"%@--%@",dayStr,timeStr);
+//            [weakview removeFromSuperview];
+//
+//            UILabel *titleLabel = (UILabel *)[self.view viewWithTag:888];
+//            titleLabel.text = [NSString stringWithFormat:@"%@  %@",dayStr,timeStr];
+//
+//            [self initDataSource:dayStr timeStr:timeStr];
+//
+//        }
+//    };
+//    [self.view.window addSubview:view];
+//
+//    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.equalTo(self.view.window.mas_centerX);
+//        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(230)));
+//        make.bottom.equalTo(self.view.window.mas_bottom).with.offset(-0);
+//    }];
 
 }
 

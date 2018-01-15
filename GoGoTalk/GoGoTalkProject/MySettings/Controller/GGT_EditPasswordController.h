@@ -9,6 +9,4 @@
 #import "BaseBackViewController.h"
 
 @interface GGT_EditPasswordController : BaseBackViewController
-@property(nonatomic, strong) NSString *titleName;
-
 @end

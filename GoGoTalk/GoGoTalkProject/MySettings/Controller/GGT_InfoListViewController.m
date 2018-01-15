@@ -9,18 +9,15 @@
 #import "GGT_InfoListViewController.h"
 #import "GGT_InfoListCell.h"
 #import "GGT_EditUserInfoController.h"
-#import "GGT_EditAgeSexController.h"
 #import "GGT_EditPasswordController.h"
 #import "UIImage+Category.h"
+#import "GGT_ChoicePickView.h"
 
-@interface GGT_InfoListViewController()
+@interface GGT_InfoListViewController() <UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray *leftTitleArray;
 @end
 
-@interface GGT_InfoListViewController ()<UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
-
-@end
 
 @implementation GGT_InfoListViewController
 
@@ -34,6 +31,8 @@
     
     [self createTableView];
     [self getLoadData];
+    
+    
 }
 
 - (void)getLoadData {
@@ -128,10 +127,71 @@
                 }
                     break;
                 case 3: //生日
-          
+                {
+                    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT())];
+                    bgView.backgroundColor = [UIColor blackColor];
+                    bgView.alpha = 0.5;
+                    [self.view.window addSubview:bgView];
+                    
+                    
+                    GGT_ChoicePickView *view = [[GGT_ChoicePickView alloc]initWithFrame:CGRectMake(0, 0, 0, 0) method:BirthdayType];
+                    view.backgroundColor = UICOLOR_FROM_HEX(0xF5F6F8);
+                    view.tag = 222;
+                    __weak GGT_ChoicePickView *weakview = view;
+                    
+                    view.birthdayBlock = ^(NSString *dateStr) {
+                        [self changePickViewData:dateStr IDStr:@"" type:@"birthdayType"];
+                        
+                        //默认打印日期是当前日期，今日日期， 2017年05月27日
+                        [weakview removeFromSuperview];
+                        [bgView removeFromSuperview];
+                    };
+                    
+                    view.cancleBlock = ^(BOOL cancleBool) {
+                        [weakview removeFromSuperview];
+                        [bgView removeFromSuperview];
+                    };
+                    
+                    [self.view.window addSubview:view];
+                    
+                    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+                        make.centerX.equalTo(self.view.mas_centerX);
+                        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(256)));
+                        make.bottom.equalTo(self.view.mas_bottom).with.offset(-0);
+                    }];
+                    
+                }
                     break;
                 case 4: //性别
-        
+                {
+                    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT())];
+                    bgView.backgroundColor = [UIColor blackColor];
+                    bgView.alpha = 0.5;
+                    [self.view.window addSubview:bgView];
+                    
+                    GGT_ChoicePickView *view = [[GGT_ChoicePickView alloc]initWithFrame:CGRectMake(0, 0, 0, 0) method:SexType];
+                    view.backgroundColor = UICOLOR_FROM_HEX(0xF5F6F8);
+                    view.tag = 111;
+                    __weak GGT_ChoicePickView *weakview = view;
+                    view.sexBlock = ^(NSString *dateStr) {
+                        //默认选中是男
+                        [self changePickViewData:dateStr IDStr:@"" type:@"sexType"];
+                        [weakview removeFromSuperview];
+                        [bgView removeFromSuperview];
+
+                    };
+                    view.cancleBlock = ^(BOOL cancleBool) {
+                        [weakview removeFromSuperview];
+                        [bgView removeFromSuperview];
+                    };
+                    [self.view.window addSubview:view];
+                    
+                    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+                        make.centerX.equalTo(self.view.mas_centerX);
+                        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(150)));
+                        make.bottom.equalTo(self.view.mas_bottom).with.offset(-0);
+                    }];
+                }
                     break;
                 case 5: //家长称呼
                 {
@@ -142,7 +202,36 @@
                 }
                     break;
                 case 6: //所在地
-              
+                {
+                    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT())];
+                    bgView.backgroundColor = [UIColor blackColor];
+                    bgView.alpha = 0.5;
+                    [self.view.window addSubview:bgView];
+                    
+                    GGT_ChoicePickView *view = [[GGT_ChoicePickView alloc]initWithFrame:CGRectMake(0, 0, 0, 0) method:AddressType];
+                    view.backgroundColor = UICOLOR_FROM_HEX(0xF5F6F8);
+                    __weak GGT_ChoicePickView *weakview = view;
+                    view.tag = 333;
+                    view.addressBlock = ^(NSString *addressStr,NSString *addressIdStr) {
+                        [self changePickViewData:addressStr IDStr:addressIdStr type:@"addressType"];
+                        
+                        //直接点击完成，打印null，可以默认选中北京市的第一条信息 北京市-北京市-东城区
+                        [weakview removeFromSuperview];
+                        [bgView removeFromSuperview];
+                    };
+                    
+                    view.cancleBlock = ^(BOOL cancleBool) {
+                        [weakview removeFromSuperview];
+                        [bgView removeFromSuperview];
+                    };
+                    [self.view.window addSubview:view];
+                    
+                    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+                        make.centerX.equalTo(self.view.mas_centerX);
+                        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(256)));
+                        make.bottom.equalTo(self.view.mas_bottom).with.offset(-0);
+                    }];
+                }
                     break;
                     
                 default:
@@ -218,6 +307,7 @@
     [alert addAction:button3];
     [self presentViewController:alert animated:YES completion:nil];
 }
+
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     //获取image   UIImagePickerControllerOriginalImage
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
@@ -231,12 +321,11 @@
 
 
 
-
-
-
-
-
-
+- (void)changePickViewData:(NSString *)changeStr   IDStr:(NSString *)idStr  type:(NSString *)Type {
+ 
+    
+    
+}
 
 
 - (void)didReceiveMemoryWarning {

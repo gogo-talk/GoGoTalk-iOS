@@ -11,7 +11,8 @@
 #import "GGT_MineHomeCell.h"
 #import "GGT_InfoListViewController.h"
 #import "GGT_UserSettingController.h"
-
+#import "GGT_MyClassTimeViewController.h"
+#import "GGT_MyRreportViewController.h"
 
 @interface GGT_MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong) UITableView *tableView;
@@ -184,10 +185,16 @@
         case 0: //第一段
             switch (indexPath.row) {
                 case 0: //我的课时
-                    
+                {
+                    GGT_MyClassTimeViewController *vc = [[GGT_MyClassTimeViewController alloc] init];
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
                     break;
                 case 1: //我的报告
-                    
+                {
+                    GGT_MyRreportViewController *vc = [[GGT_MyRreportViewController alloc] init];
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
                     break;
                 case 2: //我的订单
                     

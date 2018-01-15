@@ -29,9 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
-
-    
     [self initView];
+
 }
 
 
@@ -162,7 +161,6 @@
         self.finishedButton.enabled = NO;
         self.finishedButton.backgroundColor = UICOLOR_FROM_HEX(ColorCCCCCC);
     }
-    
 }
 
 
