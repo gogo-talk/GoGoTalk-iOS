@@ -37,15 +37,16 @@
 
 /*比例*/
 //判断是否是iPhone X
-#define iPhoneX (UIScreen instancesRespondToSelector:@selector(currentMoode)] ? CGSizeEqualToSize(CGSizeMake(1125,2436),[[UIScreen mainScreen] currentMode].size) : NO)
+//([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+//#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMoode)] ? CGSizeEqualToSize(CGSizeMake(1125,2436),[[UIScreen mainScreen] currentMode].size) : NO)
 //状态栏高度
-#define STATUS_BAR_HEIGHT (iPhoneX ? 44.0 : 20.0)
+#define STATUS_BAR_HEIGHT (iPhoneX() ? 44.0 : 20.0)
 //导航高度
-#define NAVIGATION_BAR_HEIGHT (iPhoneX ? 88.0 : 64.0)
+#define NAVIGATION_BAR_HEIGHT (iPhoneX() ? 88.0 : 64.0)
 //tabbar高度
-#define TAB_BAR_HEIGHT (iPhoneX ? (49.0 + 34.0)) : 49.0)
+#define TAB_BAR_HEIGHT (iPhoneX() ? (49.0 + 34.0) : 49.0)
 //home indicator---以前home键部分
-#define HOME_INDICATOR_HEIGHT (iPhoneX ? 34.0 : 0.0)
+#define HOME_INDICATOR_HEIGHT (iPhoneX() ? 34.0 : 0.0)
 
 
 // 以6 7 8 的宽高作为参照，计算比例
@@ -150,6 +151,14 @@ static inline BOOL iPhone6Plus()
     return [UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO;
 }
 
+/**
+ @abstract 判断本机是否为iPhoneX.
+ **/
+static inline BOOL iPhoneX()
+{
+    return [UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO;
+}
+
 /*
  @abstract 判断是否是iPad
  */
@@ -179,6 +188,14 @@ static inline UIColor *UICOLOR_FROM_RGB_ALPHA(CGFloat r,CGFloat g,CGFloat b,CGFl
 {
     return [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:a];
 }
+/**
+ @abstract 根据HEX值来获取UICOLOR. 带透明度
+ **/
+static inline UIColor *UICOLOR_FROM_HEX_ALPHA(NSInteger hex, NSInteger alpha)
+{
+    return [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:alpha/100.0f];
+}
+
 /**
  @abstract 随机色
  **/

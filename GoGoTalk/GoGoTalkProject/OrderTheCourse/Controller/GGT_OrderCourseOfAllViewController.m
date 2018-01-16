@@ -9,14 +9,11 @@
 #import "GGT_OrderCourseOfAllViewController.h"
 #import "GGT_OrderForeignListCell.h"
 #import "GGT_DetailsOfTeacherViewController.h"
-#import "GGT_ConfirmBookingAlertView.h"
-#import "GGT_SelectCoursewareViewController.h"
-#import "GGT_ChoicePickView.h"
+#import "GGT_CourseOfChoiceTimeViewController.h"
 #import "GGT_AllWithNoDateView.h"
 
-@interface GGT_OrderCourseOfAllViewController () <UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 
-
+@interface GGT_OrderCourseOfAllViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic,strong) GGT_AllWithNoDateView *allWithNoDateView;
@@ -27,62 +24,64 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
 
-    //新建tap手势
-//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture)];
-//    tapGesture.cancelsTouchesInView = NO;
-//    tapGesture.delegate = self;
-//    [self.view addGestureRecognizer:tapGesture];
-//
-//    [self initHeaderView];
-//
-//
-//    [self initTableView];
-//
-//
-//    @weakify(self);
-//    _tableView.mj_header = [XCNormalHeader headerWithRefreshingBlock:^{
-//        @strongify(self);
-//        self.dataArray = [NSMutableArray array];
-//
-//        [self getLoadData];
-//        [self.tableView.mj_header endRefreshing];
-//
-//    }];
-//    [self.tableView.mj_header beginRefreshing];
-//
-//
-//    // 设置自动切换透明度(在导航栏下面自动隐藏)
-////    _tableView.mj_header.automaticallyChangeAlpha = YES;
-//
-//    _tableView.mj_footer = [XCNormalFooter footerWithRefreshingBlock:^{
-//        @strongify(self);
-//        [self.tableView.mj_footer endRefreshing];
-//    }];
-    
+    //头部时间选择
+    [self initHeaderView];
+
+    [self initTableView];
+
+
+    @weakify(self);
+    self.tableView.mj_header = [XCNormalHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        self.dataArray = [NSMutableArray array];
+        [self getLoadData];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+
+
+    //设置自动切换透明度(在导航栏下面自动隐藏)
+    //_tableView.mj_header.automaticallyChangeAlpha = YES;
+    self.tableView.mj_footer = [XCNormalFooter footerWithRefreshingBlock:^{
+        @strongify(self);
+        [self.tableView.mj_footer endRefreshing];
+    }];
     
 }
+
+
 
 - (void)getLoadData {
     
     self.dataArray = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8", nil];
+    [self.tableView.mj_header endRefreshing];
     [self.tableView reloadData];
 }
 
 
 - (void)initTableView {
     
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, LineY(54), SCREEN_WIDTH(), SCREEN_HEIGHT()-49-64-LineH(54)) style:(UITableViewStylePlain)];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:(UITableViewStylePlain)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     [self.view addSubview:self.tableView];
     
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).with.offset(0);
+        make.right.equalTo(self.view.mas_right).with.offset(-0);
+        make.top.equalTo(self.view.mas_top).with.offset(LineY(49));
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-0);
+    }];
     
-    _allWithNoDateView = [[GGT_AllWithNoDateView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-49-64-LineH(54))];
-    [_tableView addSubview:_allWithNoDateView];
-    _allWithNoDateView.hidden = YES;
+    
+    
+    
+//    _allWithNoDateView = [[GGT_AllWithNoDateView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT()-49-64-LineH(54))];
+//    [_tableView addSubview:_allWithNoDateView];
+//    _allWithNoDateView.hidden = YES;
     
 }
 
@@ -111,15 +110,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
-//    return 1;
-
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return LineH(70);
-    //如果没有数据，就展示这个高度
-//    return self.tableView.height;
+    return LineH(84);
 }
 
 
@@ -133,200 +128,123 @@
 
 #pragma mark   预约
 - (void)orderButtonClick {
-    UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH(), SCREEN_HEIGHT())];
-    bgView.backgroundColor = [UIColor blackColor];
-    bgView.alpha = 0.5;
-    [self.view.window addSubview:bgView];
-    
-    GGT_ConfirmBookingAlertView *alertView = [[GGT_ConfirmBookingAlertView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH()-LineW(277))/2, (SCREEN_HEIGHT()-LineH(327))/2, LineW(277), LineH(327))];
-    
-    __weak GGT_ConfirmBookingAlertView *weakview = alertView;
-    alertView.buttonBlock = ^(UIButton *button) {
-        switch (button.tag) {
-            case 800:
-                //关闭
-                [bgView removeFromSuperview];
-                [weakview removeFromSuperview];
-                break;
-            case 801:
-            {
-                
-                //更换课件
-                GGT_SelectCoursewareViewController *vc = [[GGT_SelectCoursewareViewController alloc]init];
-                vc.hidesBottomBarWhenPushed = YES;
-                vc.changeBlock = ^(NSString *str) {
 
-                    weakview.hidden = NO;
-                    bgView.hidden = NO;
-                    
-                    weakview.kejianField.text = str;
-
-                };
-                weakview.hidden = YES;
-                bgView.hidden = YES;
-                [self.navigationController pushViewController:vc animated:YES];
-            }
-                break;
-            case 802:
-                //确认
-                [bgView removeFromSuperview];
-                [weakview removeFromSuperview];
-                break;
-            
-            default:
-                break;
-        }
-        
-        
-        
-    };
-    
-    [self.view.window addSubview:alertView];
-
-    
 }
      
      
 #pragma mark   关注
 - (void)focusButtonClick {
     NSLog(@"关注");
-
-    
 }
      
 
-     
-     
 
-#pragma headerView
-- (void)initHeaderView {
-    self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
-    
-    UIView *headerView = [[UIView alloc]init];
-    headerView.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
-    headerView.frame = CGRectMake(0, LineY(10), SCREEN_WIDTH(), LineH(44));
-    [self.view addSubview:headerView];
-    
-    
 
-    //当前是周几
-    NSDate*date = [NSDate date];
-    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init] ;
-    [dateFormatter setDateFormat:@"EEEE"];
-     NSString *weekStr = [dateFormatter stringFromDate:date];
-    
-    //当前是什么时间
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"HH:mm"];
-    NSDate *datenow = [NSDate date];
-    NSString *currentTimeString = [formatter stringFromDate:datenow];
-
-    
-    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(LineX(15), 0, SCREEN_WIDTH()-LineW(37), LineH(44))];
-//    titleLabel.text = @"今天（星期一） 14：00";
-    titleLabel.text = [NSString stringWithFormat:@"今天（%@） %@",weekStr,currentTimeString];
-    titleLabel.font = Font(15);
-    titleLabel.textColor = UICOLOR_FROM_HEX(kThemeColor);
-    titleLabel.tag = 888;
-    [headerView addSubview:titleLabel];
-    
-    
-    
-    UIImageView *entImgView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH()-LineW(22), LineY(16), LineW(7), LineH(12))];
-    entImgView.image = UIIMAGE_FROM_NAME(@"jinru_yueke_shijianshaixuan");
-    [headerView addSubview:entImgView];
-    
-    
-    //底部的分割线
-    UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(LineX(10), LineY(43.5), SCREEN_WIDTH()-LineW(10), LineH(0.5))];
-    lineView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
-    [headerView addSubview:lineView];
-    
-    
-    
-    UIControl *selectBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    selectBtn.frame = CGRectMake(0, 0, SCREEN_WIDTH(), LineH(44));
-    [selectBtn addTarget:self action:@selector(selectBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
-    [headerView addSubview:selectBtn];
-    
-}
 
 
 #pragma mark 选择日期
 - (void)selectBtnClick {
-//    GGT_ChoicePickView *view = [[GGT_ChoicePickView alloc]init];
-//    view.backgroundColor = UICOLOR_FROM_HEX(0xF5F6F8);
-//    view.tag = 888;
-//    __weak GGT_ChoicePickView *weakview = view;
-//    view.DateBlock = ^(UIButton *button,NSString *dayStr,NSString *timeStr) {
-//        if (button.tag == 111) {
-//            [weakview removeFromSuperview];
-//
-//        } else if(button.tag == 222) {
-//            NSLog(@"%@--%@",dayStr,timeStr);
-//            [weakview removeFromSuperview];
-//
-//            UILabel *titleLabel = (UILabel *)[self.view viewWithTag:888];
-//            titleLabel.text = [NSString stringWithFormat:@"%@  %@",dayStr,timeStr];
-//
-//            [self initDataSource:dayStr timeStr:timeStr];
-//
-//        }
-//    };
-//    [self.view.window addSubview:view];
-//
-//    [view mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerX.equalTo(self.view.window.mas_centerX);
-//        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(230)));
-//        make.bottom.equalTo(self.view.window.mas_bottom).with.offset(-0);
-//    }];
-
+    GGT_CourseOfChoiceTimeViewController *vc = [[GGT_CourseOfChoiceTimeViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
-- (void)initDataSource:(NSString *)dayStr timeStr:(NSString *)timeStr {
-//    pageIndex string  第几页
-//    pageSize string 每页条数
-//    date string 日期
-//    time string 时间
-
+#pragma headerView
+- (void)initHeaderView {
+    UIView *headerbgView = [[UIView alloc]init];
+    headerbgView.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
+    [self.view addSubview:headerbgView];
     
-    
-    NSString *urlStr = [NSString stringWithFormat:@"%@?pageIndex=%@&pageSize=%@&date=%@&time=%@",URL_GetPageTeacherLesson,@"1",@"20",dayStr,timeStr];
-    [[BaseService share] sendGetRequestWithPath:urlStr token:YES viewController:self success:^(id responseObject) {
-        
-    } failure:^(NSError *error) {
-        
+    [headerbgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).with.offset(0);
+        make.right.equalTo(self.view.mas_right).with.offset(-0);
+        make.top.equalTo(self.view.mas_top).with.offset(0);
+        make.height.mas_equalTo(LineH(49));
     }];
     
-//    NSDictionary *postDic = @{@"pageIndex":@"1",@"pageSize":@"20",@"date":dayStr,@"time":timeStr};
-//    [[BaseService share] sendPostRequestWithPath:URL_GetPageTeacherLesson parameters:postDic token:YES viewController:self success:^(id responseObject) {
-//        
-//    } failure:^(NSError *error) {
-//        
-//    }];
-  
     
-
-}
-
-
-//轻击手势触发方法----点击空白处，消除弹出框
--(void)tapGesture {
-    UIView *view1 = [self.view viewWithTag:888];
-    [view1 removeFromSuperview];
-}
-
-//解决手势和按钮冲突
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    UIView *headerView = [[UIView alloc]init];
+    headerView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
+    headerView.layer.masksToBounds = YES;
+    headerView.layer.cornerRadius = LineH(14.5);
+    [headerbgView addSubview:headerView];
     
-    if ([touch.view isKindOfClass:[UIButton class]]){
-        return NO;
-    }
-    return YES;
+    [headerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).with.offset(LineX(10));
+        make.right.equalTo(self.view.mas_right).with.offset(-LineX(10));
+        make.top.equalTo(self.view.mas_top).with.offset(LineY(10));
+        make.height.mas_equalTo(LineH(29));
+    }];
+    
+    
+    UIImageView *leftImgView = [[UIImageView alloc]init];
+    leftImgView.backgroundColor = UICOLOR_RANDOM_COLOR();
+    [headerView addSubview:leftImgView];
+    
+    [leftImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(headerView.mas_left).with.offset(LineX(15));
+        make.centerY.equalTo(headerView.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(LineW(15), LineW(15)));
+    }];
+    
+    
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.text = @"12月18日 （周一） 10：30";
+    titleLabel.font = Font(14);
+    titleLabel.textColor = UICOLOR_FROM_HEX(Color666666);
+    [headerView addSubview:titleLabel];
+    
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(leftImgView.mas_right).with.offset(LineX(10));
+        make.centerY.equalTo(headerView.mas_centerY);
+        make.height.mas_equalTo(LineH(20));
+    }];
+    
+    UIImageView *entImgView = [[UIImageView alloc] init];
+    entImgView.backgroundColor = UICOLOR_RANDOM_COLOR();
+    [headerView addSubview:entImgView];
+    
+    [entImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(headerView.mas_right).with.offset(-LineX(15));
+        make.centerY.equalTo(headerView.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(LineW(20), LineW(20)));
+    }];
+    
+    
+    //底部的分割线
+    UIView *lineView = [[UIView alloc] init];
+    lineView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
+    [headerbgView addSubview:lineView];
+    
+    [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(headerbgView.mas_left).with.offset(LineX(10));
+        make.right.equalTo(headerbgView.mas_right).with.offset(-0);
+        make.bottom.equalTo(headerbgView.mas_bottom).with.offset(-0);
+        make.height.mas_equalTo(LineH(0.5));
+    }];
+    
+    UIControl *selectBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [selectBtn addTarget:self action:@selector(selectBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
+    [headerView addSubview:selectBtn];
+    
+    [selectBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.bottom.equalTo(headerView);
+    }];
 }
 
-
+/* //当前是周几
+ NSDate*date = [NSDate date];
+ NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init] ;
+ [dateFormatter setDateFormat:@"EEEE"];
+ NSString *weekStr = [dateFormatter stringFromDate:date];
+ 
+ //当前是什么时间
+ NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+ [formatter setDateFormat:@"HH:mm"];
+ NSDate *datenow = [NSDate date];
+ NSString *currentTimeString = [formatter stringFromDate:datenow];
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

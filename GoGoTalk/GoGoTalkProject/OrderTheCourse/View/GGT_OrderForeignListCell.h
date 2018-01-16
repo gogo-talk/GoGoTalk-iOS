@@ -19,10 +19,6 @@
 @property (nonatomic, strong) UILabel *nameLabel;
 //关注
 @property (nonatomic, strong) UIButton *focusButton;
-//次数img
-@property (nonatomic, strong) UIImageView *orderNumImageView;
-//次数
-@property (nonatomic, strong) UILabel *orderNumLabel;
 //预约按钮
 @property (nonatomic, strong) UIButton *orderButton;
 

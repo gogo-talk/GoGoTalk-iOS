@@ -27,10 +27,16 @@
 		5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D2D1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m */; };
 		5B348D341EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D331EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m */; };
 		5B348D371EC1C6BA00FAB820 /* OrderTimeTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D361EC1C6BA00FAB820 /* OrderTimeTagsView.m */; };
+		5B422E98200DCF680044E113 /* GGT_CourseOfChoiceTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B422E97200DCF680044E113 /* GGT_CourseOfChoiceTimeViewController.m */; };
+		5B422E9B200DE6D10044E113 /* GGT_CourseDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B422E9A200DE6D10044E113 /* GGT_CourseDateCell.m */; };
+		5B422E9E200DE74F0044E113 /* GGT_PageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B422E9D200DE74F0044E113 /* GGT_PageControl.m */; };
+		5B422EA1200DE8550044E113 /* GGT_OrderCourseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B422EA0200DE8550044E113 /* GGT_OrderCourseCollectionViewCell.m */; };
+		5B422EA4200DEA740044E113 /* GGT_DateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B422EA3200DEA740044E113 /* GGT_DateModel.m */; };
+		5B422EA7200DF7320044E113 /* GGT_ChoiceTimeOfSexCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B422EA6200DF7320044E113 /* GGT_ChoiceTimeOfSexCell.m */; };
+		5B422EAA200DF75C0044E113 /* GGT_ChoiceTimeOfDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B422EA9200DF75C0044E113 /* GGT_ChoiceTimeOfDateCell.m */; };
+		5B422EAD200DF76D0044E113 /* GGT_ChoiceTimeOfTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B422EAC200DF76D0044E113 /* GGT_ChoiceTimeOfTimeCell.m */; };
 		5B4370501EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B43704F1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m */; };
 		5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B577CD21EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m */; };
-		5B6119FF1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6119FE1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.m */; };
-		5B611A021EF7C2880011CF2E /* GGT_FocusOnOfPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B611A011EF7C2880011CF2E /* GGT_FocusOnOfPageView.m */; };
 		5B695B291EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B281EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m */; };
 		5B695B2C1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */; };
 		5B695B2F1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B2E1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m */; };
@@ -156,14 +162,26 @@
 		5B348D331EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_NoMoreDateAlertView.m; sourceTree = "<group>"; };
 		5B348D351EC1C6BA00FAB820 /* OrderTimeTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTimeTagsView.h; sourceTree = "<group>"; };
 		5B348D361EC1C6BA00FAB820 /* OrderTimeTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTimeTagsView.m; sourceTree = "<group>"; };
+		5B422E96200DCF680044E113 /* GGT_CourseOfChoiceTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_CourseOfChoiceTimeViewController.h; sourceTree = "<group>"; };
+		5B422E97200DCF680044E113 /* GGT_CourseOfChoiceTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_CourseOfChoiceTimeViewController.m; sourceTree = "<group>"; };
+		5B422E99200DE6D10044E113 /* GGT_CourseDateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_CourseDateCell.h; sourceTree = "<group>"; };
+		5B422E9A200DE6D10044E113 /* GGT_CourseDateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_CourseDateCell.m; sourceTree = "<group>"; };
+		5B422E9C200DE74F0044E113 /* GGT_PageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_PageControl.h; sourceTree = "<group>"; };
+		5B422E9D200DE74F0044E113 /* GGT_PageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_PageControl.m; sourceTree = "<group>"; };
+		5B422E9F200DE8550044E113 /* GGT_OrderCourseCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_OrderCourseCollectionViewCell.h; sourceTree = "<group>"; };
+		5B422EA0200DE8550044E113 /* GGT_OrderCourseCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderCourseCollectionViewCell.m; sourceTree = "<group>"; };
+		5B422EA2200DEA740044E113 /* GGT_DateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_DateModel.h; sourceTree = "<group>"; };
+		5B422EA3200DEA740044E113 /* GGT_DateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_DateModel.m; sourceTree = "<group>"; };
+		5B422EA5200DF7320044E113 /* GGT_ChoiceTimeOfSexCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ChoiceTimeOfSexCell.h; sourceTree = "<group>"; };
+		5B422EA6200DF7320044E113 /* GGT_ChoiceTimeOfSexCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ChoiceTimeOfSexCell.m; sourceTree = "<group>"; };
+		5B422EA8200DF75C0044E113 /* GGT_ChoiceTimeOfDateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ChoiceTimeOfDateCell.h; sourceTree = "<group>"; };
+		5B422EA9200DF75C0044E113 /* GGT_ChoiceTimeOfDateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ChoiceTimeOfDateCell.m; sourceTree = "<group>"; };
+		5B422EAB200DF76D0044E113 /* GGT_ChoiceTimeOfTimeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ChoiceTimeOfTimeCell.h; sourceTree = "<group>"; };
+		5B422EAC200DF76D0044E113 /* GGT_ChoiceTimeOfTimeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ChoiceTimeOfTimeCell.m; sourceTree = "<group>"; };
 		5B43704E1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AllWithNoDateView.h; sourceTree = "<group>"; };
 		5B43704F1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_AllWithNoDateView.m; sourceTree = "<group>"; };
 		5B577CD11EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_OrderTimeCollectionViewCell.h; sourceTree = "<group>"; };
 		5B577CD21EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_OrderTimeCollectionViewCell.m; sourceTree = "<group>"; };
-		5B6119FD1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_FocusOnOfPageScrollView.h; sourceTree = "<group>"; };
-		5B6119FE1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_FocusOnOfPageScrollView.m; sourceTree = "<group>"; };
-		5B611A001EF7C2880011CF2E /* GGT_FocusOnOfPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_FocusOnOfPageView.h; sourceTree = "<group>"; };
-		5B611A011EF7C2880011CF2E /* GGT_FocusOnOfPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_FocusOnOfPageView.m; sourceTree = "<group>"; };
 		5B695B271EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_HomeBannerTableViewCell.h; sourceTree = "<group>"; };
 		5B695B281EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_HomeBannerTableViewCell.m; sourceTree = "<group>"; };
 		5B695B2A1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_HomeCommonCenterCell.h; sourceTree = "<group>"; };
@@ -533,6 +551,8 @@
 				5BEC18EF1EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m */,
 				5BEC18F11EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.h */,
 				5BEC18F21EB852CB009DF2F8 /* GGT_OrderCourseOfFocusViewController.m */,
+				5B422E96200DCF680044E113 /* GGT_CourseOfChoiceTimeViewController.h */,
+				5B422E97200DCF680044E113 /* GGT_CourseOfChoiceTimeViewController.m */,
 				5BEC18F71EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.h */,
 				5BEC18F81EB88165009DF2F8 /* GGT_DetailsOfTeacherViewController.m */,
 				5B0881641EC2C77400BED063 /* GGT_SelectCoursewareViewController.h */,
@@ -676,6 +696,8 @@
 		5BEC18FA1EB88244009DF2F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B422EA2200DEA740044E113 /* GGT_DateModel.h */,
+				5B422EA3200DEA740044E113 /* GGT_DateModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -695,12 +717,20 @@
 				5B01DEFC1EC3FA2C006D39A3 /* GGT_DetailsOfTeacherView.m */,
 				5BB689371EC450150095CE58 /* GGT_SelectCoursewareViewCell.h */,
 				5BB689381EC450150095CE58 /* GGT_SelectCoursewareViewCell.m */,
-				5B6119FD1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.h */,
-				5B6119FE1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.m */,
-				5B611A001EF7C2880011CF2E /* GGT_FocusOnOfPageView.h */,
-				5B611A011EF7C2880011CF2E /* GGT_FocusOnOfPageView.m */,
 				5B43704E1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.h */,
 				5B43704F1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m */,
+				5B422E99200DE6D10044E113 /* GGT_CourseDateCell.h */,
+				5B422E9A200DE6D10044E113 /* GGT_CourseDateCell.m */,
+				5B422E9C200DE74F0044E113 /* GGT_PageControl.h */,
+				5B422E9D200DE74F0044E113 /* GGT_PageControl.m */,
+				5B422E9F200DE8550044E113 /* GGT_OrderCourseCollectionViewCell.h */,
+				5B422EA0200DE8550044E113 /* GGT_OrderCourseCollectionViewCell.m */,
+				5B422EA5200DF7320044E113 /* GGT_ChoiceTimeOfSexCell.h */,
+				5B422EA6200DF7320044E113 /* GGT_ChoiceTimeOfSexCell.m */,
+				5B422EA8200DF75C0044E113 /* GGT_ChoiceTimeOfDateCell.h */,
+				5B422EA9200DF75C0044E113 /* GGT_ChoiceTimeOfDateCell.m */,
+				5B422EAB200DF76D0044E113 /* GGT_ChoiceTimeOfTimeCell.h */,
+				5B422EAC200DF76D0044E113 /* GGT_ChoiceTimeOfTimeCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -989,7 +1019,6 @@
 				5BD7F8B71EFBB51E003EE9AD /* NSArray+Log.m in Sources */,
 				D606076A1EC006B200A31E8B /* UIAlertController+Color.m in Sources */,
 				5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */,
-				5B6119FF1EF7C25E0011CF2E /* GGT_FocusOnOfPageScrollView.m in Sources */,
 				D6C7AABF1EB1879600EBF0D1 /* GGT_LoginViewController.m in Sources */,
 				5BEC18FE1EB882C6009DF2F8 /* GGT_OrderTimeTableView.m in Sources */,
 				D60430A21EBC864300F53437 /* UIView+XCHelper.m in Sources */,
@@ -999,6 +1028,7 @@
 				5BA04E15200CD610004748FE /* GGT_MyRreportViewController.m in Sources */,
 				3552104B1EBC766C0057EA59 /* GGT_EditUserInfoController.m in Sources */,
 				D6C7AAAB1EB1872000EBF0D1 /* NSArray+SafeExtension.m in Sources */,
+				5B422E98200DCF680044E113 /* GGT_CourseOfChoiceTimeViewController.m in Sources */,
 				5B348D341EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m in Sources */,
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
 				5B0881661EC2C77400BED063 /* GGT_SelectCoursewareViewController.m in Sources */,
@@ -1007,6 +1037,8 @@
 				5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */,
 				5B2C619B1F039CF900B44892 /* XCNormalHeader.m in Sources */,
 				5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */,
+				5B422EAA200DF75C0044E113 /* GGT_ChoiceTimeOfDateCell.m in Sources */,
+				5B422EAD200DF76D0044E113 /* GGT_ChoiceTimeOfTimeCell.m in Sources */,
 				D6C7AAC01EB1879600EBF0D1 /* GGT_NewFeatherViewController.m in Sources */,
 				5BE4E1421F012000002F0E01 /* AdCycleScrollView.m in Sources */,
 				5B695B291EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m in Sources */,
@@ -1043,14 +1075,17 @@
 				5B577CD31EB972CA005F009F /* GGT_OrderTimeCollectionViewCell.m in Sources */,
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
+				5B422E9E200DE74F0044E113 /* GGT_PageControl.m in Sources */,
 				5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */,
 				355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */,
 				5B01DEFD1EC3FA2C006D39A3 /* GGT_DetailsOfTeacherView.m in Sources */,
+				5B422EA1200DE8550044E113 /* GGT_OrderCourseCollectionViewCell.m in Sources */,
 				5BA575F11EC0495B00C7512A /* GGT_VipInfoHeaderCell.m in Sources */,
 				5BBB27EE20087F13008EA2C6 /* GGT_MineHomeCell.m in Sources */,
 				5BA04DC2200C8705004748FE /* GGT_MyClassTimeCell.m in Sources */,
 				5BA575F71EC049FA00C7512A /* GGT_VipPastStateCell.m in Sources */,
 				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
+				5B422EA7200DF7320044E113 /* GGT_ChoiceTimeOfSexCell.m in Sources */,
 				D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */,
 				D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */,
 				5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */,
@@ -1059,12 +1094,13 @@
 				5B2C619E1F03A18A00B44892 /* GGT_BedTimeStoryViewController.m in Sources */,
 				5BB689391EC450150095CE58 /* GGT_SelectCoursewareViewCell.m in Sources */,
 				5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */,
-				5B611A021EF7C2880011CF2E /* GGT_FocusOnOfPageView.m in Sources */,
 				5BA04E18200CD685004748FE /* GGT_MyRreportListCell.m in Sources */,
+				5B422EA4200DEA740044E113 /* GGT_DateModel.m in Sources */,
 				5BA10D411EB1DC4D0091093C /* GGT_ForgotPasswordViewController.m in Sources */,
 				5B4370501EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m in Sources */,
 				5B2C619A1F039CF900B44892 /* XCNormalFooter.m in Sources */,
 				D60FA5161EC9872000838DE4 /* FLAnimatedImageView+WebCache.m in Sources */,
+				5B422E9B200DE6D10044E113 /* GGT_CourseDateCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

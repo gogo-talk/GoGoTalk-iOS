@@ -13,112 +13,66 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
         self.contentView.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
-
-        
-
         [self initCellView];
-        
     }
     return self;
 }
 
 - (void)initCellView {
-    
     //头像
     self.iconImageView = [[UIImageView alloc]init];
-//    self.iconImageView.image = [UIImage imageNamed:@""];
-//    self.iconImageView.backgroundColor = UICOLOR_RANDOM_COLOR();
-    self.iconImageView.layer.masksToBounds = YES;
-    self.iconImageView.layer.cornerRadius = LineW(25);
-    self.iconImageView.layer.borderWidth = LineW(0.5);
-    self.iconImageView.layer.borderColor = UICOLOR_FROM_HEX(ColorF2F2F2).CGColor;
+    self.iconImageView.backgroundColor = UICOLOR_RANDOM_COLOR();
     [self.contentView addSubview:self.iconImageView];
     
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView.mas_left).with.offset(LineX(15));
-        make.top.equalTo(self.contentView.mas_top).with.offset(LineY(10));
-        make.size.mas_offset(CGSizeMake(LineW(50), LineW(50)));
+        make.centerY.equalTo(self.contentView.mas_centerY);
+        make.size.mas_offset(CGSizeMake(LineH(60), LineH(60)));
     }];
     
     
     
     //姓名
     self.nameLabel = [[UILabel alloc]init];
-    self.nameLabel.text = @"bo";
+    self.nameLabel.text = @"Ruisun";
     self.nameLabel.font = Font(16);
     self.nameLabel.textColor = UICOLOR_FROM_HEX(Color333333);
     [self.contentView addSubview:self.nameLabel];
     
-    
-    //关注
-    self.focusButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [self.focusButton setImage:UIIMAGE_FROM_NAME(@"jiaguanzhu_yueke") forState:(UIControlStateNormal)];
-    [self.contentView addSubview:self.focusButton];
-    
-    
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.iconImageView.mas_right).with.offset(LineX(10));
-        make.right.equalTo(self.focusButton.mas_left).with.offset(-LineX(15));
+        make.left.equalTo(self.iconImageView.mas_right).with.offset(LineX(15));
         make.top.equalTo(self.contentView.mas_top).with.offset(LineY(20));
         make.height.mas_offset(LineW(18));
     }];
     
     
+    //关注
+    self.focusButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+//    [self.focusButton setImage:UIIMAGE_FROM_NAME(@"jiaguanzhu_yueke") forState:(UIControlStateNormal)];
+    self.focusButton.backgroundColor = UICOLOR_RANDOM_COLOR();
+    [self.contentView addSubview:self.focusButton];
+
     [self.focusButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.nameLabel.mas_right).with.offset(LineX(15));
-        make.bottom.equalTo(self.nameLabel.mas_bottom);
-        make.size.mas_offset(CGSizeMake(LineW(30), LineW(15)));
+        make.left.equalTo(self.nameLabel.mas_left);
+        make.top.equalTo(self.nameLabel.mas_bottom).with.offset(LineY(10));
+        make.size.mas_offset(CGSizeMake(LineW(55), LineW(23)));
     }];
-    
-    
-    
-    //次数img
-    self.orderNumImageView = [[UIImageView alloc]init];
-    self.orderNumImageView.image = [UIImage imageNamed:@"shangkecishu_yueke_liebiao"];
-    [self.contentView addSubview:self.orderNumImageView];
     
 
-    //次数
-    self.orderNumLabel = [[UILabel alloc]init];
-    self.orderNumLabel.text = @"236次";
-    self.orderNumLabel.font = Font(10);
-    self.orderNumLabel.textColor = UICOLOR_FROM_HEX(Color999999);
-    [self.contentView addSubview:self.orderNumLabel];
-    
-    [self.orderNumImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.iconImageView.mas_right).with.offset(LineX(10));
-        make.right.equalTo(self.orderNumLabel.mas_left).with.offset(-LineX(5));
-        make.top.equalTo(self.nameLabel.mas_bottom).with.offset(LineY(10));
-        make.size.mas_offset(CGSizeMake(LineW(10), LineW(10)));
-    }];
-    
-    [self.orderNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.orderNumImageView.mas_right).with.offset(LineX(5));
-        make.top.equalTo(self.nameLabel.mas_bottom).with.offset(LineY(10));
-        make.height.mas_offset(LineW(12));
-    }];
-    
-    
-  
-    
   
    //预约按钮
     self.orderButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [self.orderButton setTitle:@"预约" forState:(UIControlStateNormal)];
-    [self.orderButton setTitleColor:UICOLOR_FROM_HEX(ColorFFFFFF) forState:(UIControlStateNormal)];
-    self.orderButton.titleLabel.font = Font(12);
-    self.orderButton.backgroundColor = UICOLOR_FROM_HEX(kThemeColor);
-    self.orderButton.layer.masksToBounds = YES;
-    self.orderButton.layer.cornerRadius = LineH(12);
+    [self.orderButton setTitleColor:UICOLOR_FROM_HEX(ColorEA5851) forState:(UIControlStateNormal)];
+    self.orderButton.titleLabel.font = Font(13);
     [self.contentView addSubview:self.orderButton];
     
     
     [self.orderButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.contentView.mas_right).with.offset(-LineX(15));
         make.centerY.equalTo(self.contentView.mas_centerY);
-        make.size.mas_offset(CGSizeMake(LineW(54), LineW(24)));
+        make.size.mas_offset(CGSizeMake(LineW(66), LineH(30)));
     }];
     
     
@@ -133,11 +87,15 @@
         make.bottom.equalTo(self.contentView.mas_bottom).with.offset(-0);;
         make.height.mas_offset(LineW(0.5));
     }];
-    
-    
-    
 }
 
+- (void)drawRect:(CGRect)rect {
+    [self.iconImageView xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:LineH(30)];
+    [self.iconImageView addBorderForViewWithBorderWidth:LineW(0.5) BorderColor:UICOLOR_FROM_HEX(ColorF2F2F2) CornerRadius:LineH(30)];
+   
+    [self.orderButton xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:LineH(15)];
+    [self.orderButton addBorderForViewWithBorderWidth:LineH(1) BorderColor:UICOLOR_FROM_HEX(ColorEA5851) CornerRadius:LineH(15)];
+}
 
 
 
