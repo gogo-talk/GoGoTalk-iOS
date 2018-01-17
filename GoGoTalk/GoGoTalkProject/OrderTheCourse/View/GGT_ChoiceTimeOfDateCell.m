@@ -7,10 +7,9 @@
 //
 
 #import "GGT_ChoiceTimeOfDateCell.h"
-#import "GGT_OrderCourseCollectionViewCell.h"
+#import "GGT_ChoiceTimeOfDateView.h"
+#import "GGT_ChoiceTimeOfDateView.h"
 
-static CGFloat const xc_cellWidth = 51.0f;
-static CGFloat const xc_cellHeight = 50.0f;
 
 @interface GGT_ChoiceTimeOfDateCell() <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView *xc_collectionView;
@@ -29,9 +28,16 @@ static CGFloat const xc_cellHeight = 50.0f;
 
 - (void)getLoadData {
     self.xc_dateMuArray = [NSMutableArray array];
-    for (NSInteger i=0; i<14; i++) {
-        [self.xc_dateMuArray addObject:[NSString stringWithFormat:@"%ld",(long)i]];
+    NSMutableArray *arr1 = [NSMutableArray array];
+    NSMutableArray *arr2 = [NSMutableArray array];
+
+    for (NSInteger i=0; i<7; i++) {
+        [arr1 addObject:[NSString stringWithFormat:@"%ld",(long)i]];
     }
+    for (NSInteger i=8; i<14; i++) {
+        [arr2 addObject:[NSString stringWithFormat:@"%ld",(long)i]];
+    }
+    self.xc_dateMuArray = [NSMutableArray arrayWithObjects:arr1,arr2, nil];
     [self.xc_collectionView reloadData];
 }
 
@@ -73,121 +79,49 @@ static CGFloat const xc_cellHeight = 50.0f;
     }];
     
     
-#pragma mark ******************collectionView******************
-    // collectionView
-    UICollectionViewFlowLayout *xc_layout = [[UICollectionViewFlowLayout alloc] init];
-    xc_layout.itemSize = CGSizeMake(LineW(xc_cellWidth), LineH(xc_cellHeight));
-    xc_layout.minimumLineSpacing = 0;
-    xc_layout.minimumInteritemSpacing = 0;
-    xc_layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+#pragma mark ******************UIScrollView******************
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.pagingEnabled = YES;
+    scrollView.contentSize = CGSizeMake(SCREEN_WIDTH()*2, LineH(50));
+    [self addSubview:scrollView];
     
-    self.xc_collectionView = ({
-        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:xc_layout];
-        collectionView.delegate = self;
-        collectionView.dataSource = self;
-        collectionView.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
-        collectionView.showsVerticalScrollIndicator = NO;
-        collectionView.showsHorizontalScrollIndicator = NO;
-        collectionView.pagingEnabled = YES;
-        collectionView.layer.masksToBounds = YES;
-        collectionView.layer.cornerRadius = LineH(3);
-        collectionView;
-    });
-    [self addSubview:self.xc_collectionView];
-    
-    [self.xc_collectionView  mas_makeConstraints:^(MASConstraintMaker *make) {
+    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.mas_left).offset(0);
+        make.right.equalTo(self.mas_right).offset(-0);
         make.top.equalTo(titleLabel.mas_bottom).with.offset(LineY(15));
-        make.left.equalTo(self.mas_left).offset(LineX(12.5));
-        make.right.equalTo(self.mas_right).offset(-LineX(12.5));
-        make.height.mas_equalTo(LineY(xc_cellHeight));
+        make.height.mas_equalTo(LineH(50));
     }];
     
-    // 注册collectionViewCell
-    [self.xc_collectionView registerClass:[GGT_OrderCourseCollectionViewCell class] forCellWithReuseIdentifier:@"GGT_OrderCourseCollectionViewCell"];
-}
-
-// 组数
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
-}
-
-// 每组个数
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.xc_dateMuArray.count;
-}
-
-// 设置cell的大小
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(LineW(xc_cellWidth), LineH(xc_cellHeight));
-}
-
-//返回行内部cell（item）之间的距离
--(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-//    return LineH(0);
-    return 0.001;
-
-}
-
-//返回行间距 上下间距
--(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-//    return LineH(0);
-    return 0.001;
-}
-
-//定义每个UICollectionView 的间距
--(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-//    return UIEdgeInsetsMake(LineY(0), LineX(20), LineY(0), LineX(20));
-    return UIEdgeInsetsMake(0,0,0, 0);
-
-}
-
-// 设置cell
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identify = @"GGT_OrderCourseCollectionViewCell";
-    GGT_OrderCourseCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identify forIndexPath:indexPath];
-
-    return cell;
-}
-
-// 设置header和footer
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     
-    return nil;
-}
-
-// collectionView的footer高度
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-    return CGSizeMake(0, 0);
-}
-
-// collectionView的header高度
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-    return CGSizeMake(0, 0);
-}
-
-
-// 选中cell的时候
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    GGT_DateModel *model = self.xc_dateMuArray[indexPath.row];
-//    model.selectType = XCCellITypeSelect;
-//    [collectionView reloadData];
+    GGT_ChoiceTimeOfDateView *dateView1 = [[GGT_ChoiceTimeOfDateView alloc] initWithFrame:CGRectZero getArray: [self.xc_dateMuArray safe_objectAtIndex:0]];
+    dateView1.layer.masksToBounds = YES;
+    dateView1.layer.cornerRadius = LineH(3);
+    dateView1.layer.borderWidth = LineH(1);
+    dateView1.layer.borderColor = UICOLOR_FROM_HEX(ColorEA5851).CGColor;
+    [scrollView addSubview:dateView1];
+    
+    [dateView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(scrollView.mas_left).offset(0);
+        make.top.equalTo(scrollView.mas_top).with.offset(0);
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(50)));
+    }];
     
     
+    GGT_ChoiceTimeOfDateView *dateView2 = [[GGT_ChoiceTimeOfDateView alloc] initWithFrame:CGRectZero getArray: [self.xc_dateMuArray safe_objectAtIndex:1]];
+    dateView2.layer.masksToBounds = YES;
+    dateView2.layer.cornerRadius = LineH(3);
+    dateView2.layer.borderWidth = LineH(1);
+    dateView2.layer.borderColor = UICOLOR_FROM_HEX(ColorEA5851).CGColor;
+    [scrollView addSubview:dateView2];
     
-    // 选中上面的cell时 要刷新下面数据 请求接口
-//    if (self.getDateBlock) {
-//        self.getDateBlock(model.DateTime);
-//    }
+    [dateView2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(scrollView.mas_left).offset(SCREEN_WIDTH());
+        make.top.equalTo(scrollView.mas_top).with.offset(0);
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(50)));
+    }];
+    
 }
 
-
-// 取消选中cell的时候
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    GGT_DateModel *model = self.xc_dateMuArray[indexPath.row];
-//    model.selectType = XCCellTypeDeselect;
-//    [self.xc_dateMuArray replaceObjectAtIndex:indexPath.row withObject:model];
-    
-}
 
 
 

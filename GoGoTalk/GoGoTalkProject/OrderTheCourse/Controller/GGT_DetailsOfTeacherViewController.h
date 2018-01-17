@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface GGT_DetailsOfTeacherViewController : BaseViewController
+@interface GGT_DetailsOfTeacherViewController : BaseBackViewController
 
 @end

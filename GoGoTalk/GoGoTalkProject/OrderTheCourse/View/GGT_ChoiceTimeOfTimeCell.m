@@ -73,19 +73,6 @@ static CGFloat const xc_cellHeight = 34.0f;
         make.height.mas_equalTo(LineW(15));
     }];
     
-    
-    UIView *lineView = [[UIView alloc] init];
-    lineView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
-    [self addSubview:lineView];
-    
-    [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left).offset(LineX(3));
-        make.right.equalTo(self.mas_right).offset(-LineX(3));
-        make.bottom.equalTo(self.mas_bottom).with.offset(-0);
-        make.height.mas_equalTo(LineH(0.5));
-    }];
-    
-    
 #pragma mark ******************collectionView******************
     // collectionView
     UICollectionViewFlowLayout *xc_layout = [[UICollectionViewFlowLayout alloc] init];
@@ -146,7 +133,7 @@ static CGFloat const xc_cellHeight = 34.0f;
 
 //定义每个UICollectionView 的间距
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(LineY(5), LineX(10), LineY(5), LineX(10));
+    return UIEdgeInsetsMake(0, LineX(10), 0, LineX(10));
 }
 
 // 设置cell

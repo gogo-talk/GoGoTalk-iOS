@@ -9,7 +9,4 @@
 #import "BaseViewController.h"
 
 @interface GGT_OrderCourseOfFocusViewController : BaseViewController
-
-@property BOOL isSecondVc;
-
 @end

@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
+    self.view.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
     self.navigationItem.title = @"选择时间";
     [self setLeftItem:@""];
     [self setRightButtonWithImg:@"guanbi_xuanzekejian"];
@@ -38,7 +38,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
+    self.tableView.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
     [self.view addSubview:self.tableView];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -80,12 +80,25 @@
         return cell;
         
     } else if (indexPath.row == 3) {
-        static NSString *cellStr = @"GGT_ChoiceTimeOfDateCell";
-        GGT_ChoiceTimeOfDateCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
+        static NSString *cellStr = @"UITableViewCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
         if (!cell) {
-            cell= [[GGT_ChoiceTimeOfDateCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellStr];
+            cell= [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellStr];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
+        
+        
+        UIButton *finishButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        finishButton.frame =CGRectMake((SCREEN_WIDTH()-LineW(180))/2, LineY(15), LineW(180), LineH(40));
+        [finishButton setTitle:@"确 定" forState:(UIControlStateNormal)];
+        finishButton.titleLabel.font = Font(17);
+        [finishButton setTitleColor:UICOLOR_FROM_HEX(ColorEA5851) forState:(UIControlStateNormal)];
+        [finishButton addTarget:self action:@selector(finishButtonClick) forControlEvents:(UIControlEventTouchUpInside)];
+        [finishButton xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:LineH(20)];
+        [finishButton addBorderForViewWithBorderWidth:LineW(1) BorderColor:UICOLOR_FROM_HEX(ColorEA5851) CornerRadius:LineH(20)];
+        [cell.contentView addSubview:finishButton];
+        
+        
         return cell;
     }
     
@@ -110,6 +123,12 @@
         return LineH(70);
     }
     return 0.001;
+}
+
+
+
+- (void)finishButtonClick {
+    
 }
 
 

@@ -26,6 +26,7 @@
 		5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D2D1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m */; };
 		5B348D341EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D331EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m */; };
 		5B348D371EC1C6BA00FAB820 /* OrderTimeTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B348D361EC1C6BA00FAB820 /* OrderTimeTagsView.m */; };
+		5B3C3567200F5B6F00D1A69C /* GGT_TeacherDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3C3566200F5B6F00D1A69C /* GGT_TeacherDetailHeaderView.m */; };
 		5B422E98200DCF680044E113 /* GGT_CourseOfChoiceTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B422E97200DCF680044E113 /* GGT_CourseOfChoiceTimeViewController.m */; };
 		5B422E9B200DE6D10044E113 /* GGT_CourseDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B422E9A200DE6D10044E113 /* GGT_CourseDateCell.m */; };
 		5B422E9E200DE74F0044E113 /* GGT_PageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B422E9D200DE74F0044E113 /* GGT_PageControl.m */; };
@@ -38,6 +39,7 @@
 		5B695B291EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B281EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m */; };
 		5B695B2C1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */; };
 		5B695B2F1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B2E1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m */; };
+		5B8479E2200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8479E1200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.m */; };
 		5BA04DB9200C4E76004748FE /* GGT_ChoicePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA04DB8200C4E76004748FE /* GGT_ChoicePickView.m */; };
 		5BA04DBC200C7EB9004748FE /* AddressList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5BA04DBB200C7EB9004748FE /* AddressList.txt */; };
 		5BA04DBF200C8019004748FE /* GGT_MyClassTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA04DBE200C8019004748FE /* GGT_MyClassTimeViewController.m */; };
@@ -157,6 +159,8 @@
 		5B348D331EC1A8BF00FAB820 /* GGT_NoMoreDateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_NoMoreDateAlertView.m; sourceTree = "<group>"; };
 		5B348D351EC1C6BA00FAB820 /* OrderTimeTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTimeTagsView.h; sourceTree = "<group>"; };
 		5B348D361EC1C6BA00FAB820 /* OrderTimeTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTimeTagsView.m; sourceTree = "<group>"; };
+		5B3C3565200F5B6F00D1A69C /* GGT_TeacherDetailHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_TeacherDetailHeaderView.h; sourceTree = "<group>"; };
+		5B3C3566200F5B6F00D1A69C /* GGT_TeacherDetailHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_TeacherDetailHeaderView.m; sourceTree = "<group>"; };
 		5B422E96200DCF680044E113 /* GGT_CourseOfChoiceTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_CourseOfChoiceTimeViewController.h; sourceTree = "<group>"; };
 		5B422E97200DCF680044E113 /* GGT_CourseOfChoiceTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_CourseOfChoiceTimeViewController.m; sourceTree = "<group>"; };
 		5B422E99200DE6D10044E113 /* GGT_CourseDateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_CourseDateCell.h; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 		5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_HomeCommonCenterCell.m; sourceTree = "<group>"; };
 		5B695B2D1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_HomeBedtimeStoryCell.h; sourceTree = "<group>"; };
 		5B695B2E1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_HomeBedtimeStoryCell.m; sourceTree = "<group>"; };
+		5B8479E0200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ChoiceTimeOfDateView.h; sourceTree = "<group>"; };
+		5B8479E1200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ChoiceTimeOfDateView.m; sourceTree = "<group>"; };
 		5BA04DB7200C4E76004748FE /* GGT_ChoicePickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ChoicePickView.h; sourceTree = "<group>"; };
 		5BA04DB8200C4E76004748FE /* GGT_ChoicePickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ChoicePickView.m; sourceTree = "<group>"; };
 		5BA04DBB200C7EB9004748FE /* AddressList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AddressList.txt; sourceTree = "<group>"; };
@@ -714,8 +720,12 @@
 				5B422EA6200DF7320044E113 /* GGT_ChoiceTimeOfSexCell.m */,
 				5B422EA8200DF75C0044E113 /* GGT_ChoiceTimeOfDateCell.h */,
 				5B422EA9200DF75C0044E113 /* GGT_ChoiceTimeOfDateCell.m */,
+				5B8479E0200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.h */,
+				5B8479E1200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.m */,
 				5B422EAB200DF76D0044E113 /* GGT_ChoiceTimeOfTimeCell.h */,
 				5B422EAC200DF76D0044E113 /* GGT_ChoiceTimeOfTimeCell.m */,
+				5B3C3565200F5B6F00D1A69C /* GGT_TeacherDetailHeaderView.h */,
+				5B3C3566200F5B6F00D1A69C /* GGT_TeacherDetailHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1063,9 +1073,11 @@
 				355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */,
 				5B422EA1200DE8550044E113 /* GGT_OrderCourseCollectionViewCell.m in Sources */,
 				5BA575F11EC0495B00C7512A /* GGT_VipInfoHeaderCell.m in Sources */,
+				5B8479E2200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.m in Sources */,
 				5BBB27EE20087F13008EA2C6 /* GGT_MineHomeCell.m in Sources */,
 				5BA04DC2200C8705004748FE /* GGT_MyClassTimeCell.m in Sources */,
 				5BA575F71EC049FA00C7512A /* GGT_VipPastStateCell.m in Sources */,
+				5B3C3567200F5B6F00D1A69C /* GGT_TeacherDetailHeaderView.m in Sources */,
 				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
 				5B422EA7200DF7320044E113 /* GGT_ChoiceTimeOfSexCell.m in Sources */,
 				D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */,
