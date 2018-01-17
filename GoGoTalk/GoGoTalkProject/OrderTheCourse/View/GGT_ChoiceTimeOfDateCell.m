@@ -123,18 +123,23 @@ static CGFloat const xc_cellHeight = 50.0f;
 
 //返回行内部cell（item）之间的距离
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return LineH(0);
+//    return LineH(0);
+    return 0.001;
+
 }
 
 //返回行间距 上下间距
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return LineH(0);
+//    return LineH(0);
+    return 0.001;
 }
 
 //定义每个UICollectionView 的间距
-//-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
 //    return UIEdgeInsetsMake(LineY(0), LineX(20), LineY(0), LineX(20));
-//}
+    return UIEdgeInsetsMake(0,0,0, 0);
+
+}
 
 // 设置cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

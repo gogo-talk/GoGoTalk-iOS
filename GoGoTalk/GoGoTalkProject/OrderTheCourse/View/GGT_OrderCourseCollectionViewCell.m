@@ -28,48 +28,52 @@ static CGFloat const xc_cellCornerRadius = 10.0f;
 
 // 创建UI
 - (void)buildUI {
-    // 父view
-    self.xc_contentView = ({
-        UIView *view = [UIView new];
-        view.backgroundColor = [UIColor whiteColor];
-        view;
-    });
-    [self addSubview:self.xc_contentView];
+    self.backgroundColor = [UIColor clearColor];
     
-    [self.xc_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self).insets(UIEdgeInsetsMake(1, 1, 1, 1));
-    }];
+    
+    // 父view
+//    self.xc_contentView = ({
+//        UIView *view = [UIView new];
+//        view.backgroundColor = [UIColor whiteColor];
+//        view;
+//    });
+//    [self addSubview:self.xc_contentView];
+//
+//    [self.xc_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self).insets(UIEdgeInsetsMake(0, 0, 0, 0));
+//    }];
+    
     
     // 星期
-    self.xc_weekDayLabel = ({
-        UILabel *label = [UILabel new];
-        label.font = Font(13);
-        label.textAlignment = NSTextAlignmentCenter;
-        label;
-    });
-    self.xc_weekDayLabel.text = @"1111";
-    [self.xc_contentView addSubview:self.xc_weekDayLabel];
-    
-    [self.xc_weekDayLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.xc_contentView).offset(LineY(margin10));
-        make.left.right.equalTo(self.xc_contentView);
-        //make.height.equalTo(@28);
-    }];
-    
-    // 日期
-    self.xc_timeLabel = ({
-        UILabel *label = [UILabel new];
-        label.font = Font(13);
-        label.textAlignment = NSTextAlignmentCenter;
-        label;
-    });
-    self.xc_timeLabel.text = @"2222";
-    [self.xc_contentView addSubview:self.xc_timeLabel];
-    
-    [self.xc_timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.xc_weekDayLabel.mas_bottom).offset(LineY(margin5));
-        make.left.right.equalTo(self.xc_contentView);
-    }];
+//    self.xc_weekDayLabel = ({
+//        UILabel *label = [UILabel new];
+//        label.font = Font(13);
+//        label.textAlignment = NSTextAlignmentCenter;
+//        label;
+//    });
+//    self.xc_weekDayLabel.text = @"1111";
+//    [self.xc_contentView addSubview:self.xc_weekDayLabel];
+//
+//    [self.xc_weekDayLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.xc_contentView).offset(LineY(margin10));
+//        make.left.right.equalTo(self.xc_contentView);
+//        //make.height.equalTo(@28);
+//    }];
+//
+//    // 日期
+//    self.xc_timeLabel = ({
+//        UILabel *label = [UILabel new];
+//        label.font = Font(13);
+//        label.textAlignment = NSTextAlignmentCenter;
+//        label;
+//    });
+//    self.xc_timeLabel.text = @"2222";
+//    [self.xc_contentView addSubview:self.xc_timeLabel];
+//
+//    [self.xc_timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.xc_weekDayLabel.mas_bottom).offset(LineY(margin5));
+//        make.left.right.equalTo(self.xc_contentView);
+//    }];
 }
 
 - (void)drawRect:(CGRect)rect {

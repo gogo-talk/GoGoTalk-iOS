@@ -105,7 +105,7 @@
     } else if (indexPath.row == 1) {
         return LineH(132);
     } else if (indexPath.row == 2) {
-        return LineH(310);
+        return LineH(300);
     } else if (indexPath.row == 3) {
         return LineH(70);
     }

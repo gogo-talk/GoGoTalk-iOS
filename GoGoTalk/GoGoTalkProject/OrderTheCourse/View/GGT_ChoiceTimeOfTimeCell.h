@@ -11,3 +11,23 @@
 @interface GGT_ChoiceTimeOfTimeCell : UITableViewCell
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@interface GGT_OrderTimeCollectionViewCell : UICollectionViewCell
+@property (nonatomic, strong) UILabel *timeLabel;
+@property (nonatomic, strong) UIView *lineView;
+@end
