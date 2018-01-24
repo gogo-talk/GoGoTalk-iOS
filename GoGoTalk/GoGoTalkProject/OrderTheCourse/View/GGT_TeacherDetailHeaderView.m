@@ -137,6 +137,8 @@
     self.infoScrollView.contentSize = CGSizeMake(SCREEN_WIDTH()-LineW(30), LineH(1200));
 //    self.infoScrollView.backgroundColor = UICOLOR_RANDOM_COLOR();
     self.infoScrollView.pagingEnabled = YES;
+    self.infoScrollView.showsVerticalScrollIndicator = false;
+    self.infoScrollView.showsHorizontalScrollIndicator = false;
     [self addSubview:self.infoScrollView];
     
     [self.infoScrollView mas_makeConstraints:^(MASConstraintMaker *make) {

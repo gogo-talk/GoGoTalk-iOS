@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GGT_ChoiceTimeOfDateView : UIView
-- (instancetype)initWithFrame:(CGRect)frame getArray:(NSArray *)array;
+//- (instancetype)initWithFrame:(CGRect)frame getArray:(NSArray *)array;
 
 - (void)getCellArray : (NSArray *)array;
 @end

@@ -93,32 +93,32 @@
     }];
     
     
-    GGT_ChoiceTimeOfDateView *dateView1 = [[GGT_ChoiceTimeOfDateView alloc] initWithFrame:CGRectZero getArray: [self.xc_dateMuArray safe_objectAtIndex:0]];
-    dateView1.layer.masksToBounds = YES;
-    dateView1.layer.cornerRadius = LineH(3);
-    dateView1.layer.borderWidth = LineH(1);
-    dateView1.layer.borderColor = UICOLOR_FROM_HEX(ColorEA5851).CGColor;
-    [scrollView addSubview:dateView1];
+//    GGT_ChoiceTimeOfDateView *dateView1 = [[GGT_ChoiceTimeOfDateView alloc] initWithFrame:CGRectZero getArray: [self.xc_dateMuArray safe_objectAtIndex:0]];
+//    dateView1.layer.masksToBounds = YES;
+//    dateView1.layer.cornerRadius = LineH(3);
+//    dateView1.layer.borderWidth = LineH(1);
+//    dateView1.layer.borderColor = UICOLOR_FROM_HEX(ColorEA5851).CGColor;
+//    [scrollView addSubview:dateView1];
+//
+//    [dateView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(scrollView.mas_left).offset(0);
+//        make.top.equalTo(scrollView.mas_top).with.offset(0);
+//        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(50)));
+//    }];
     
-    [dateView1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(scrollView.mas_left).offset(0);
-        make.top.equalTo(scrollView.mas_top).with.offset(0);
-        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(50)));
-    }];
     
-    
-    GGT_ChoiceTimeOfDateView *dateView2 = [[GGT_ChoiceTimeOfDateView alloc] initWithFrame:CGRectZero getArray: [self.xc_dateMuArray safe_objectAtIndex:1]];
-    dateView2.layer.masksToBounds = YES;
-    dateView2.layer.cornerRadius = LineH(3);
-    dateView2.layer.borderWidth = LineH(1);
-    dateView2.layer.borderColor = UICOLOR_FROM_HEX(ColorEA5851).CGColor;
-    [scrollView addSubview:dateView2];
-    
-    [dateView2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(scrollView.mas_left).offset(SCREEN_WIDTH());
-        make.top.equalTo(scrollView.mas_top).with.offset(0);
-        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(50)));
-    }];
+//    GGT_ChoiceTimeOfDateView *dateView2 = [[GGT_ChoiceTimeOfDateView alloc] initWithFrame:CGRectZero getArray: [self.xc_dateMuArray safe_objectAtIndex:1]];
+//    dateView2.layer.masksToBounds = YES;
+//    dateView2.layer.cornerRadius = LineH(3);
+//    dateView2.layer.borderWidth = LineH(1);
+//    dateView2.layer.borderColor = UICOLOR_FROM_HEX(ColorEA5851).CGColor;
+//    [scrollView addSubview:dateView2];
+//
+//    [dateView2 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(scrollView.mas_left).offset(SCREEN_WIDTH());
+//        make.top.equalTo(scrollView.mas_top).with.offset(0);
+//        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH(), LineH(50)));
+//    }];
     
 }
 

@@ -14,16 +14,16 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Bugly (2.4.8)
+  - Bugly (2.5.0)
   - FLAnimatedImage (1.0.12)
-  - IQKeyboardManager (4.0.9)
-  - JCore (1.1.3)
-  - JPush (3.0.5):
-    - JCore (~> 1.1.1)
-  - Masonry (1.0.2)
-  - MBProgressHUD (1.0.0)
+  - IQKeyboardManager (5.0.7)
+  - JCore (1.1.7)
+  - JPush (3.0.8):
+    - JCore (~> 1.1.7)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
   - MJExtension (3.0.13)
-  - MJRefresh (3.1.12)
+  - MJRefresh (3.1.15.1)
   - Reachability (3.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -32,23 +32,23 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
-  - UMengUShare/Core (6.4.4):
+  - SDWebImage (4.2.3):
+    - SDWebImage/Core (= 4.2.3)
+  - SDWebImage/Core (4.2.3)
+  - UMengUShare/Core (6.4.8.1):
     - UMengUShare/Network
-  - UMengUShare/Network (6.4.4)
-  - UMengUShare/Social/QQ (6.4.4):
+  - UMengUShare/Network (6.4.8.1)
+  - UMengUShare/Social/QQ (6.4.8.1):
     - UMengUShare/Core
     - UMengUShare/Social/ReducedQQ
-  - UMengUShare/Social/ReducedQQ (6.4.4):
+  - UMengUShare/Social/ReducedQQ (6.4.8.1):
     - UMengUShare/Core
-  - UMengUShare/Social/ReducedSina (6.4.4):
+  - UMengUShare/Social/ReducedSina (6.4.8.1):
     - UMengUShare/Core
-  - UMengUShare/Social/ReducedWeChat (6.4.4):
+  - UMengUShare/Social/ReducedWeChat (6.4.8.1):
     - UMengUShare/Core
   - YYModel (1.0.4)
-  - ZFPlayer (2.1.3):
+  - ZFPlayer (2.1.5):
     - Masonry
 
 DEPENDENCIES:
@@ -72,22 +72,22 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Bugly: da3c02408c14838d498429320545a8e439392978
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
-  JCore: dff3c50e9a7522a508cd9096ca79165968e1aed3
-  JPush: dd0b776998aa705a6242b947bf72e5a640387cfe
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  IQKeyboardManager: 0bfa4607d39924116b5c0c8b55b5d789288b5cba
+  JCore: f7459c81c135281a874a6beafdd321666adcc834
+  JPush: 9574d072cc37e93fa293ba69b43ce763c440943a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  UMengUShare: cd54ae52958426b79aa9193a7b02058d6a6d9aa0
+  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+  UMengUShare: 9e2d22f32aeaf09702ca833ec530895aab995c4f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
-  ZFPlayer: 8dc82b4508fbba4ee59d0304c52e30f8b3390244
+  ZFPlayer: 8a80bf8eb4638b97fbceaefcd3ca9978e9f17c9d
 
 PODFILE CHECKSUM: 04ccae85c5e3f7bb28cf1a995ffac6d95bb8fbcb
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0
