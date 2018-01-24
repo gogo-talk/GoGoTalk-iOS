@@ -22,7 +22,7 @@
 - (void)initCellView {
     //头像
     self.iconImageView = [[UIImageView alloc]init];
-    self.iconImageView.backgroundColor = UICOLOR_RANDOM_COLOR();
+    self.iconImageView.image = UIIMAGE_FROM_NAME(@"default-avatar");
     [self.contentView addSubview:self.iconImageView];
     
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -49,8 +49,7 @@
     
     //关注
     self.focusButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-//    [self.focusButton setImage:UIIMAGE_FROM_NAME(@"jiaguanzhu_yueke") forState:(UIControlStateNormal)];
-    self.focusButton.backgroundColor = UICOLOR_RANDOM_COLOR();
+    [self.focusButton setBackgroundImage:UIIMAGE_FROM_NAME(@"icon-jiaguanzhu") forState:(UIControlStateNormal)];
     [self.contentView addSubview:self.focusButton];
 
     [self.focusButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -90,11 +89,11 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    [self.iconImageView xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:LineH(30)];
-    [self.iconImageView addBorderForViewWithBorderWidth:LineW(0.5) BorderColor:UICOLOR_FROM_HEX(ColorF2F2F2) CornerRadius:LineH(30)];
+    [self.iconImageView xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:30];
+    [self.iconImageView addBorderForViewWithBorderWidth:0.5 BorderColor:UICOLOR_FROM_HEX(ColorF2F2F2) CornerRadius:30];
    
-    [self.orderButton xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:LineH(15)];
-    [self.orderButton addBorderForViewWithBorderWidth:LineH(1) BorderColor:UICOLOR_FROM_HEX(ColorEA5851) CornerRadius:LineH(15)];
+    [self.orderButton xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:margin15];
+    [self.orderButton addBorderForViewWithBorderWidth:1 BorderColor:UICOLOR_FROM_HEX(ColorEA5851) CornerRadius:margin15];
 }
 
 

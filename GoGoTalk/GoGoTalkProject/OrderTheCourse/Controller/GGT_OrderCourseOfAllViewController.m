@@ -167,7 +167,7 @@
     UIView *headerView = [[UIView alloc]init];
     headerView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     headerView.layer.masksToBounds = YES;
-    headerView.layer.cornerRadius = LineH(14.5);
+    headerView.layer.cornerRadius = 14.5;
     [headerbgView addSubview:headerView];
     
     [headerView mas_makeConstraints:^(MASConstraintMaker *make) {
