@@ -34,13 +34,13 @@ static CGFloat const xc_cellHeight = 34.0f;
 
 -(void)buildUI {
     UIImageView *imgView = [[UIImageView alloc] init];
-    imgView.backgroundColor = UICOLOR_RANDOM_COLOR();
+    imgView.image = UIIMAGE_FROM_NAME(@"icon-shijian");
     [self addSubview:imgView];
     
     [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left).offset(LineX(10));
-        make.top.equalTo(self.mas_top).with.offset(LineY(margin15));
-        make.size.mas_equalTo(CGSizeMake(LineW(15), LineW(15)));
+        make.left.equalTo(self.mas_left).offset(margin10);
+        make.top.equalTo(self.mas_top).with.offset(margin15);
+        make.size.mas_equalTo(CGSizeMake(margin15, margin15));
     }];
     
     
@@ -51,9 +51,9 @@ static CGFloat const xc_cellHeight = 34.0f;
     [self addSubview:leftLabel];
     
     [leftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(imgView.mas_right).offset(LineX(5));
-        make.top.equalTo(self.mas_top).with.offset(LineY(margin15));
-        make.height.mas_equalTo(LineW(15));
+        make.left.equalTo(imgView.mas_right).offset(5);
+        make.top.equalTo(self.mas_top).with.offset(margin15);
+        make.height.mas_equalTo(margin15);
     }];
     
     UILabel *rightLabel = [[UILabel alloc] init];
@@ -68,9 +68,9 @@ static CGFloat const xc_cellHeight = 34.0f;
     [self addSubview:rightLabel];
     
     [rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.mas_right).offset(-LineX(10));
-        make.top.equalTo(self.mas_top).with.offset(LineY(margin15));
-        make.height.mas_equalTo(LineW(15));
+        make.right.equalTo(self.mas_right).offset(-margin10);
+        make.top.equalTo(self.mas_top).with.offset(margin15);
+        make.height.mas_equalTo(margin15);
     }];
     
 #pragma mark ******************collectionView******************
@@ -96,10 +96,10 @@ static CGFloat const xc_cellHeight = 34.0f;
     [self addSubview:self.xc_collectionView];
     
     [self.xc_collectionView  mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(leftLabel.mas_bottom).with.offset(LineY(15));
+        make.top.equalTo(leftLabel.mas_bottom).with.offset(margin15);
         make.left.equalTo(self.mas_left).offset(0);
         make.right.equalTo(self.mas_right).offset(-0);
-        make.bottom.equalTo(self.mas_bottom).offset(-LineY(0.5));
+        make.bottom.equalTo(self.mas_bottom).offset(-0.5);
     }];
     
     // 注册collectionViewCell

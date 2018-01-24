@@ -25,8 +25,8 @@
     
     [self.leftLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self.contentView.mas_centerY);
-        make.left.equalTo(self.mas_left).with.offset(LineX(15));
-        make.height.mas_equalTo(LineH(16));
+        make.left.equalTo(self.mas_left).with.offset(margin15);
+        make.height.mas_equalTo(16);
     }];
     
     
@@ -38,7 +38,7 @@
     [self.centerLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self.contentView.mas_centerY);
         make.centerX.mas_equalTo(self.contentView.mas_centerX);
-        make.height.mas_equalTo(LineH(16));
+        make.height.mas_equalTo(16);
     }];
     
     
@@ -51,8 +51,8 @@
     
     [self.rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self.contentView.mas_centerY);
-        make.right.equalTo(self.contentView.mas_right).with.offset(-LineX(15));
-        make.height.mas_equalTo(LineH(15));
+        make.right.equalTo(self.contentView.mas_right).with.offset(-margin15);
+        make.height.mas_equalTo(margin15);
     }];
     
     
@@ -61,10 +61,10 @@
     [self addSubview:self.lineView];
     
     [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left).with.offset(LineX(15));
+        make.left.equalTo(self.mas_left).with.offset(margin15);
         make.right.equalTo(self.mas_right).with.offset(-0);
         make.bottom.mas_equalTo(-0);
-        make.height.mas_equalTo(LineH(0.5));
+        make.height.mas_equalTo(0.5);
     }];
 }
 

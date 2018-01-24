@@ -25,7 +25,7 @@
     self.view.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
     self.navigationItem.title = @"选择时间";
     [self setLeftItem:@""];
-    [self setRightButtonWithImg:@"guanbi_xuanzekejian"];
+    [self setRightButtonWithImg:@"icon-guanbi"];
 
     [self initTableView];
 

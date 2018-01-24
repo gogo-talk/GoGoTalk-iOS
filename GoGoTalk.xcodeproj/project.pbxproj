@@ -14,7 +14,6 @@
 		355210481EBC49BE0057EA59 /* GGT_InfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355210471EBC49BE0057EA59 /* GGT_InfoListCell.m */; };
 		3552104B1EBC766C0057EA59 /* GGT_EditUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */; };
 		358F522D1EBB034D004A7692 /* GGT_UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 358F522C1EBB034D004A7692 /* GGT_UserInfo.m */; };
-		5B0881601EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B08815F1EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m */; };
 		5B0881661EC2C77400BED063 /* GGT_SelectCoursewareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0881651EC2C77400BED063 /* GGT_SelectCoursewareViewController.m */; };
 		5B0B4F3D1EB0665B00D81B8E /* GGT_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F3C1EB0665B00D81B8E /* GGT_Singleton.m */; };
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
@@ -56,7 +55,6 @@
 		5BA575F11EC0495B00C7512A /* GGT_VipInfoHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA575F01EC0495B00C7512A /* GGT_VipInfoHeaderCell.m */; };
 		5BA575F41EC049A900C7512A /* GGT_VipCurrentStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA575F31EC049A900C7512A /* GGT_VipCurrentStatusCell.m */; };
 		5BA575F71EC049FA00C7512A /* GGT_VipPastStateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA575F61EC049FA00C7512A /* GGT_VipPastStateCell.m */; };
-		5BB689391EC450150095CE58 /* GGT_SelectCoursewareViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB689381EC450150095CE58 /* GGT_SelectCoursewareViewCell.m */; };
 		5BBB27EE20087F13008EA2C6 /* GGT_MineHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB27ED20087F13008EA2C6 /* GGT_MineHomeCell.m */; };
 		5BC2AF591EB0473D004DF44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF581EB0473D004DF44D /* main.m */; };
 		5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AF5B1EB0473D004DF44D /* AppDelegate.m */; };
@@ -136,8 +134,6 @@
 		3552104A1EBC766C0057EA59 /* GGT_EditUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_EditUserInfoController.m; sourceTree = "<group>"; };
 		358F522B1EBB034D004A7692 /* GGT_UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_UserInfo.h; sourceTree = "<group>"; };
 		358F522C1EBB034D004A7692 /* GGT_UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_UserInfo.m; sourceTree = "<group>"; };
-		5B08815E1EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_ConfirmBookingAlertView.h; sourceTree = "<group>"; };
-		5B08815F1EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_ConfirmBookingAlertView.m; sourceTree = "<group>"; };
 		5B0881641EC2C77400BED063 /* GGT_SelectCoursewareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_SelectCoursewareViewController.h; sourceTree = "<group>"; };
 		5B0881651EC2C77400BED063 /* GGT_SelectCoursewareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_SelectCoursewareViewController.m; sourceTree = "<group>"; };
 		5B0B4F3B1EB0665B00D81B8E /* GGT_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_Singleton.h; sourceTree = "<group>"; };
@@ -218,8 +214,6 @@
 		5BA575F31EC049A900C7512A /* GGT_VipCurrentStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_VipCurrentStatusCell.m; sourceTree = "<group>"; };
 		5BA575F51EC049FA00C7512A /* GGT_VipPastStateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_VipPastStateCell.h; sourceTree = "<group>"; };
 		5BA575F61EC049FA00C7512A /* GGT_VipPastStateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_VipPastStateCell.m; sourceTree = "<group>"; };
-		5BB689371EC450150095CE58 /* GGT_SelectCoursewareViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_SelectCoursewareViewCell.h; sourceTree = "<group>"; };
-		5BB689381EC450150095CE58 /* GGT_SelectCoursewareViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_SelectCoursewareViewCell.m; sourceTree = "<group>"; };
 		5BBB27EC20087F13008EA2C6 /* GGT_MineHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_MineHomeCell.h; sourceTree = "<group>"; };
 		5BBB27ED20087F13008EA2C6 /* GGT_MineHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_MineHomeCell.m; sourceTree = "<group>"; };
 		5BC2AF541EB0473D004DF44D /* GoGoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -704,10 +698,6 @@
 			children = (
 				5B348D2C1EC1A85E00FAB820 /* GGT_OrderForeignListCell.h */,
 				5B348D2D1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m */,
-				5B08815E1EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.h */,
-				5B08815F1EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m */,
-				5BB689371EC450150095CE58 /* GGT_SelectCoursewareViewCell.h */,
-				5BB689381EC450150095CE58 /* GGT_SelectCoursewareViewCell.m */,
 				5B43704E1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.h */,
 				5B43704F1EFD29D7000CD5F9 /* GGT_AllWithNoDateView.m */,
 				5B422E99200DE6D10044E113 /* GGT_CourseDateCell.h */,
@@ -1043,7 +1033,6 @@
 				5BE4E1411F012000002F0E01 /* AdCollectionViewCell.m in Sources */,
 				5BED05AC1EB07DA200469368 /* UIView+Layout.m in Sources */,
 				5BA04DBF200C8019004748FE /* GGT_MyClassTimeViewController.m in Sources */,
-				5B0881601EC2AD5B00BED063 /* GGT_ConfirmBookingAlertView.m in Sources */,
 				D6B591671EBC676800086648 /* OYCountDownManager.m in Sources */,
 				5BC2AF5C1EB0473D004DF44D /* AppDelegate.m in Sources */,
 				5B348D371EC1C6BA00FAB820 /* OrderTimeTagsView.m in Sources */,
@@ -1087,7 +1076,6 @@
 				5BA575F41EC049A900C7512A /* GGT_VipCurrentStatusCell.m in Sources */,
 				D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */,
 				5B2C619E1F03A18A00B44892 /* GGT_BedTimeStoryViewController.m in Sources */,
-				5BB689391EC450150095CE58 /* GGT_SelectCoursewareViewCell.m in Sources */,
 				5B348D2E1EC1A85E00FAB820 /* GGT_OrderForeignListCell.m in Sources */,
 				5BA04E18200CD685004748FE /* GGT_MyRreportListCell.m in Sources */,
 				5B422EA4200DEA740044E113 /* GGT_DateModel.m in Sources */,

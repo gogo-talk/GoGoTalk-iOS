@@ -28,19 +28,19 @@
     
     [self.leftLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self.contentView.mas_centerY);
-        make.left.equalTo(self.mas_left).with.offset(LineX(20));
-        make.height.mas_equalTo(LineH(18));
+        make.left.equalTo(self.mas_left).with.offset(margin20);
+        make.height.mas_equalTo(18);
     }];
 
     
     self.enterImgView = [UIImageView new];
-    self.enterImgView.image = UIIMAGE_FROM_NAME(@"jinru_wode_liebiao");
+    self.enterImgView.image = UIIMAGE_FROM_NAME(@"icon-liebiaojinru");
     [self addSubview:self.enterImgView];
     
     [self.enterImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.mas_right).with.offset(-LineX(20));
+        make.right.equalTo(self.mas_right).with.offset(-margin20);
         make.centerY.mas_equalTo(self.mas_centerY);
-        make.size.mas_equalTo(CGSizeMake(LineW(7), LineH(12)));
+        make.size.mas_equalTo(CGSizeMake(7, 12));
     }];
     
     
@@ -52,8 +52,8 @@
     
     [self.rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self.contentView.mas_centerY);
-        make.right.equalTo(self.enterImgView.mas_left).with.offset(-LineX(12));
-        make.height.mas_equalTo(LineH(15));
+        make.right.equalTo(self.enterImgView.mas_left).with.offset(-12);
+        make.height.mas_equalTo(margin15);
     }];
     
     
@@ -62,23 +62,23 @@
     [self addSubview:self.lineView];
     
     [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left).with.offset(LineX(15));
+        make.left.equalTo(self.mas_left).with.offset(margin15);
         make.right.equalTo(self.mas_right).with.offset(-0);
         make.bottom.mas_equalTo(-0);
-        make.height.mas_equalTo(LineH(0.5));
+        make.height.mas_equalTo(0.5);
     }];
     
     
     
     self.headerImgButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    self.headerImgButton.backgroundColor = UICOLOR_RANDOM_COLOR();
+    [self.headerImgButton setBackgroundImage:UIIMAGE_FROM_NAME(@"mrtx-xueyuan-nan") forState:UIControlStateNormal];
     [self addSubview:self.headerImgButton];
     self.headerImgButton.hidden = YES;
     
     [self.headerImgButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.enterImgView.mas_left).with.offset(-LineX(10));
+        make.right.equalTo(self.enterImgView.mas_left).with.offset(-margin10);
         make.centerY.mas_equalTo(self.mas_centerY);
-        make.size.mas_equalTo(CGSizeMake(LineW(60), LineW(60)));
+        make.size.mas_equalTo(CGSizeMake(60, 60));
     }];
 }
 
@@ -88,8 +88,8 @@
         
         [self.rightLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(self.contentView.mas_centerY);
-            make.right.equalTo(self.mas_right).with.offset(-LineX(20));
-            make.height.mas_equalTo(LineH(15));
+            make.right.equalTo(self.mas_right).with.offset(-margin20);
+            make.height.mas_equalTo(margin15);
         }];
         
     } else {
@@ -97,8 +97,8 @@
         
         [self.rightLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(self.contentView.mas_centerY);
-            make.right.equalTo(self.enterImgView.mas_left).with.offset(-LineX(12));
-            make.height.mas_equalTo(LineH(15));
+            make.right.equalTo(self.enterImgView.mas_left).with.offset(-12);
+            make.height.mas_equalTo(margin15);
         }];
     }
     

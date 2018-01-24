@@ -26,9 +26,9 @@
     [self.contentView addSubview:self.iconImageView];
     
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView.mas_left).with.offset(LineX(15));
+        make.left.equalTo(self.contentView.mas_left).with.offset(margin15);
         make.centerY.equalTo(self.contentView.mas_centerY);
-        make.size.mas_offset(CGSizeMake(LineH(60), LineH(60)));
+        make.size.mas_offset(CGSizeMake(60, 60));
     }];
     
     
@@ -41,9 +41,9 @@
     [self.contentView addSubview:self.nameLabel];
     
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.iconImageView.mas_right).with.offset(LineX(15));
-        make.top.equalTo(self.contentView.mas_top).with.offset(LineY(20));
-        make.height.mas_offset(LineW(18));
+        make.left.equalTo(self.iconImageView.mas_right).with.offset(margin15);
+        make.top.equalTo(self.contentView.mas_top).with.offset(margin20);
+        make.height.mas_offset(18);
     }];
     
     
@@ -55,8 +55,8 @@
 
     [self.focusButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.nameLabel.mas_left);
-        make.top.equalTo(self.nameLabel.mas_bottom).with.offset(LineY(10));
-        make.size.mas_offset(CGSizeMake(LineW(55), LineW(23)));
+        make.top.equalTo(self.nameLabel.mas_bottom).with.offset(margin10);
+        make.size.mas_offset(CGSizeMake(55, 23));
     }];
     
 
@@ -70,9 +70,9 @@
     
     
     [self.orderButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.contentView.mas_right).with.offset(-LineX(15));
+        make.right.equalTo(self.contentView.mas_right).with.offset(-margin15);
         make.centerY.equalTo(self.contentView.mas_centerY);
-        make.size.mas_offset(CGSizeMake(LineW(66), LineH(30)));
+        make.size.mas_offset(CGSizeMake(66,30));
     }];
     
     
@@ -82,10 +82,10 @@
     [self.contentView addSubview:lineView];
     
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView.mas_left).with.offset(LineX(10));
+        make.left.equalTo(self.contentView.mas_left).with.offset(margin10);
         make.right.equalTo(self.contentView.mas_right).with.offset(-0);
         make.bottom.equalTo(self.contentView.mas_bottom).with.offset(-0);;
-        make.height.mas_offset(LineW(0.5));
+        make.height.mas_offset(0.5);
     }];
 }
 

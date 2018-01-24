@@ -35,12 +35,12 @@
 
 - (void)setupChildControllers {
     
-    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"kebiao_tab" rootViewControllerClass:[GGT_ScheduleViewController class] tabbarTitle:@"课表"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"kebiao-tab" rootViewControllerClass:[GGT_ScheduleViewController class] tabbarTitle:@"课表"];
 
-    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"yueke_tab" rootViewControllerClass:[GGT_OrderCourseViewController class] tabbarTitle:@"约课"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"yueke-tab" rootViewControllerClass:[GGT_OrderCourseViewController class] tabbarTitle:@"约课"];
     
     
-    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"faxian_tab" rootViewControllerClass:[GGT_MineViewController class] tabbarTitle:@"我的"];
+    [self setupChildNavigationControllerWithClass:[BaseNavigationController class] tabbarImageName:@"wode-tab" rootViewControllerClass:[GGT_MineViewController class] tabbarTitle:@"我的"];
     
 }
 
@@ -52,7 +52,7 @@
     UINavigationController *navVc = [[class  alloc] initWithRootViewController:rootVC];
     navVc.tabBarItem.title = title;
     navVc.tabBarItem.image = [[UIImage imageNamed:name] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    navVc.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_yi", name]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    navVc.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@-yi", name]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     navVc.tabBarItem.imageInsets = UIEdgeInsetsMake(-2, 0, 2, 0);
     
     //设置字体偏移量，防止字体偏下
@@ -72,7 +72,6 @@
     
 }
 
-
 //暂时解决横竖屏问题----不过如果是横屏启动的话，会出现bug
 /*
 //支持旋转
@@ -85,6 +84,7 @@
     return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 */
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

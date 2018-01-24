@@ -99,12 +99,15 @@
     UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.tableView.width, LineY(144))];
     headerView.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
     
-    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH()-LineH(60))/2, LineY(25), LineH(60), LineH(60))];
-    logoView.image = [UIImage imageNamed:@"AboutUs"];
+    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH()-LineH(68))/2, LineY(25), LineH(68), LineH(68))];
+    logoView.image = [UIImage imageNamed:@"icon-qidongtubiao"];
     [headerView addSubview:logoView];
     
     UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, logoView.y+logoView.height+LineY(8), SCREEN_WIDTH(), LineH(13))];
-    label1.text = @"V1.0.0";
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    // app版本
+    NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    label1.text = [NSString stringWithFormat:@"V%@",app_Version];
     label1.textColor = UICOLOR_FROM_HEX(ColorEA5851);
     label1.textAlignment = NSTextAlignmentCenter;
     label1.font = Font(13);

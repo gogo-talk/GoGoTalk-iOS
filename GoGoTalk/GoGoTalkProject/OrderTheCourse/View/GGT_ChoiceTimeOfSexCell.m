@@ -22,13 +22,13 @@
 
 -(void)buildUI {
     UIImageView *imgView = [[UIImageView alloc] init];
-    imgView.backgroundColor = UICOLOR_RANDOM_COLOR();
+    imgView.image = UIIMAGE_FROM_NAME(@"icon-xingbie");
     [self addSubview:imgView];
     
     [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left).offset(LineX(10));
-        make.top.equalTo(self.mas_top).with.offset(LineY(margin15));
-        make.size.mas_equalTo(CGSizeMake(LineW(15), LineW(15)));
+        make.left.equalTo(self.mas_left).offset(margin10);
+        make.top.equalTo(self.mas_top).with.offset(margin15);
+        make.size.mas_equalTo(CGSizeMake(13, 14));
     }];
     
     
@@ -39,9 +39,9 @@
     [self addSubview:titleLabel];
     
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(imgView.mas_right).offset(LineX(5));
-        make.top.equalTo(self.mas_top).with.offset(LineY(margin15));
-        make.height.mas_equalTo(LineW(15));
+        make.left.equalTo(imgView.mas_right).offset(5);
+        make.top.equalTo(self.mas_top).with.offset(margin15);
+        make.height.mas_equalTo(margin15);
     }];
     
     
@@ -66,9 +66,9 @@
         
         
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.mas_left).offset(LineX(11) + LineX(70)*i);
-            make.top.equalTo(titleLabel.mas_bottom).with.offset(LineY(margin15));
-            make.size.mas_equalTo(CGSizeMake(LineW(54), LineW(29)));
+            make.left.equalTo(self.mas_left).offset(11 + 70*i);
+            make.top.equalTo(titleLabel.mas_bottom).with.offset(margin15);
+            make.size.mas_equalTo(CGSizeMake(54, 29));
         }];
     }
     
@@ -78,10 +78,10 @@
     [self addSubview:lineView];
     
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left).offset(LineX(3));
-        make.right.equalTo(self.mas_right).offset(-LineX(3));
+        make.left.equalTo(self.mas_left).offset(3);
+        make.right.equalTo(self.mas_right).offset(-3);
         make.bottom.equalTo(self.mas_bottom).with.offset(-0);
-        make.height.mas_equalTo(LineH(0.5));
+        make.height.mas_equalTo(0.5);
     }];
     
 }

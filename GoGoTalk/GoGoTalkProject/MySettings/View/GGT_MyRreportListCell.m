@@ -36,7 +36,7 @@
     
     [bgView  mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).with.offset(0);
-        make.top.equalTo(self.mas_top).with.offset(LineY(10));
+        make.top.equalTo(self.mas_top).with.offset(margin10);
         make.right.equalTo(self.mas_right).with.offset(-0);
         make.bottom.equalTo(self.mas_bottom).with.offset(-0);
     }];
@@ -47,9 +47,9 @@
     [bgView addSubview:self.leftImgView];
     
     [self.leftImgView  mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(bgView.mas_left).with.offset(LineX(10));
+        make.left.equalTo(bgView.mas_left).with.offset(margin10);
         make.centerY.equalTo(bgView.mas_centerY);
-        make.size.mas_equalTo(CGSizeMake(LineH(44), LineH(44)));
+        make.size.mas_equalTo(CGSizeMake(44, 44));
     }];
     
     
@@ -60,9 +60,9 @@
     [bgView addSubview:self.topLabel];
     
     [self.topLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.leftImgView.mas_right).with.offset(LineX(10));
-        make.top.equalTo(bgView.mas_top).with.offset(LineY(13));
-        make.height.mas_equalTo(LineH(16));
+        make.left.equalTo(self.leftImgView.mas_right).with.offset(margin10);
+        make.top.equalTo(bgView.mas_top).with.offset(13);
+        make.height.mas_equalTo(16);
     }];
     
     
@@ -73,9 +73,9 @@
     [bgView addSubview:self.bottomLabel];
     
     [self.bottomLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.leftImgView.mas_right).with.offset(LineX(10));
-        make.top.equalTo(self.topLabel.mas_bottom).with.offset(LineY(8));
-        make.height.mas_equalTo(LineH(16));
+        make.left.equalTo(self.leftImgView.mas_right).with.offset(margin10);
+        make.top.equalTo(self.topLabel.mas_bottom).with.offset(8);
+        make.height.mas_equalTo(16);
     }];
     
     
@@ -88,10 +88,9 @@
     
     [self.rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(bgView.mas_centerY);
-        make.right.equalTo(bgView.mas_right).with.offset(-LineX(10));
-        make.height.mas_equalTo(LineH(18));
+        make.right.equalTo(bgView.mas_right).with.offset(-margin10);
+        make.height.mas_equalTo(18);
     }];
-
 }
 
 - (void)drawRect:(CGRect)rect {

@@ -72,7 +72,7 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left).with.offset(0);
         make.right.equalTo(self.view.mas_right).with.offset(-0);
-        make.top.equalTo(self.view.mas_top).with.offset(LineY(49));
+        make.top.equalTo(self.view.mas_top).with.offset(49);
         make.bottom.equalTo(self.view.mas_bottom).with.offset(-0);
     }];
     
@@ -160,7 +160,7 @@
         make.left.equalTo(self.view.mas_left).with.offset(0);
         make.right.equalTo(self.view.mas_right).with.offset(-0);
         make.top.equalTo(self.view.mas_top).with.offset(0);
-        make.height.mas_equalTo(LineH(49));
+        make.height.mas_equalTo(49);
     }];
     
     
@@ -171,21 +171,21 @@
     [headerbgView addSubview:headerView];
     
     [headerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view.mas_left).with.offset(LineX(10));
-        make.right.equalTo(self.view.mas_right).with.offset(-LineX(10));
-        make.top.equalTo(self.view.mas_top).with.offset(LineY(10));
-        make.height.mas_equalTo(LineH(29));
+        make.left.equalTo(self.view.mas_left).with.offset(margin10);
+        make.right.equalTo(self.view.mas_right).with.offset(-margin10);
+        make.top.equalTo(self.view.mas_top).with.offset(margin10);
+        make.height.mas_equalTo(29);
     }];
     
     
     UIImageView *leftImgView = [[UIImageView alloc]init];
-    leftImgView.backgroundColor = UICOLOR_RANDOM_COLOR();
+    leftImgView.image = UIIMAGE_FROM_NAME(@"icon-shijian");
     [headerView addSubview:leftImgView];
     
     [leftImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(headerView.mas_left).with.offset(LineX(15));
+        make.left.equalTo(headerView.mas_left).with.offset(margin15);
         make.centerY.equalTo(headerView.mas_centerY);
-        make.size.mas_equalTo(CGSizeMake(LineW(15), LineW(15)));
+        make.size.mas_equalTo(CGSizeMake(margin15, margin15));
     }];
     
     
@@ -196,19 +196,19 @@
     [headerView addSubview:titleLabel];
     
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(leftImgView.mas_right).with.offset(LineX(10));
+        make.left.equalTo(leftImgView.mas_right).with.offset(margin10);
         make.centerY.equalTo(headerView.mas_centerY);
-        make.height.mas_equalTo(LineH(20));
+        make.height.mas_equalTo(margin20);
     }];
     
     UIImageView *entImgView = [[UIImageView alloc] init];
-    entImgView.backgroundColor = UICOLOR_RANDOM_COLOR();
+    entImgView.image = UIIMAGE_FROM_NAME(@"icon-saixuan");
     [headerView addSubview:entImgView];
     
     [entImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(headerView.mas_right).with.offset(-LineX(15));
+        make.right.equalTo(headerView.mas_right).with.offset(-margin15);
         make.centerY.equalTo(headerView.mas_centerY);
-        make.size.mas_equalTo(CGSizeMake(LineW(20), LineW(20)));
+        make.size.mas_equalTo(CGSizeMake(margin15, margin15));
     }];
     
     
@@ -218,10 +218,10 @@
     [headerbgView addSubview:lineView];
     
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(headerbgView.mas_left).with.offset(LineX(10));
+        make.left.equalTo(headerbgView.mas_left).with.offset(margin20);
         make.right.equalTo(headerbgView.mas_right).with.offset(-0);
         make.bottom.equalTo(headerbgView.mas_bottom).with.offset(-0);
-        make.height.mas_equalTo(LineH(0.5));
+        make.height.mas_equalTo(0.5);
     }];
     
     UIControl *selectBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];

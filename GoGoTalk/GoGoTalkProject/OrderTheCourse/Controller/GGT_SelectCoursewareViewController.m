@@ -7,7 +7,6 @@
 //
 
 #import "GGT_SelectCoursewareViewController.h"
-#import "GGT_SelectCoursewareViewCell.h"
 
 @interface GGT_SelectCoursewareViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -47,30 +46,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GGT_SelectCoursewareViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCell"];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCell"];
     if (!cell) {
-        cell = [[GGT_SelectCoursewareViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"TableViewCell"];
+        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"TableViewCell"];
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.titleLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
-    cell.selectedImgView.hidden = YES;
+
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //对原来的进行隐藏
-    for (int i=0; i<10; i++) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
-        GGT_SelectCoursewareViewCell *cell = [_tableView cellForRowAtIndexPath:indexPath];
-        cell.selectedImgView.hidden = YES;
-    }
-    
-    //显示选中的cell
-    GGT_SelectCoursewareViewCell *cell = [_tableView cellForRowAtIndexPath:indexPath];
-    cell.selectedImgView.hidden = NO;
-
-    self.selectStr = [NSString stringWithFormat:@"%ld",indexPath.row];
 }
 
 

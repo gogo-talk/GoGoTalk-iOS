@@ -36,9 +36,6 @@
 
 
 /*比例*/
-//判断是否是iPhone X
-//([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
-//#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMoode)] ? CGSizeEqualToSize(CGSizeMake(1125,2436),[[UIScreen mainScreen] currentMode].size) : NO)
 //状态栏高度
 #define STATUS_BAR_HEIGHT (iPhoneX() ? 44.0 : 20.0)
 //导航高度

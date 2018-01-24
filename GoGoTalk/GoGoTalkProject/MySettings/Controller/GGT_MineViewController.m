@@ -36,17 +36,17 @@
 
 - (void)getLoadData {
     NSMutableArray *mArray = [NSMutableArray array];
-    NSDictionary *dic1 = @{@"icon":@"keshi_wodeliebiao",@"title":@"我的课时",@"subtitle":@"剩余120课时"};
-    NSDictionary *dic2 = @{@"icon":@"pingce_wode_liebiao",@"title":@"我的报告",@"subtitle":@""};
-    NSDictionary *dic3 = @{@"icon":@"dingdan_wode_liebiao",@"title":@"我的订单",@"subtitle":@""};
+    NSDictionary *dic1 = @{@"icon":@"icon-wodekeshi",@"title":@"我的课时",@"subtitle":@"剩余120课时"};
+    NSDictionary *dic2 = @{@"icon":@"icon-wodebaogao",@"title":@"我的报告",@"subtitle":@""};
+    NSDictionary *dic3 = @{@"icon":@"icon-wodedingdan",@"title":@"我的订单",@"subtitle":@""};
     [mArray addObject:dic1];
     [mArray addObject:dic2];
     [mArray addObject:dic3];
     
     
     NSMutableArray *mArray2 = [NSMutableArray array];
-    NSDictionary *dic5 = @{@"icon":@"yijianfankv_wode_liebiao",@"title":@"新手指导",@"subtitle":@""};
-    NSDictionary *dic6 =@{@"icon":@"shezhi_wode_biebiao",@"title":@"设置",@"subtitle":@""};
+    NSDictionary *dic5 = @{@"icon":@"icon-xinshouyindao",@"title":@"新手指导",@"subtitle":@""};
+    NSDictionary *dic6 =@{@"icon":@"icon-shezhi",@"title":@"设置",@"subtitle":@""};
     [mArray2 addObject:dic5];
     [mArray2 addObject:dic6];
     
@@ -66,7 +66,7 @@
     [userInfo mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(0);
         make.left.right.equalTo(self.view);
-        make.height.mas_equalTo(LineH(176));
+        make.height.mas_equalTo(179);
     }];
     
     
@@ -79,9 +79,9 @@
     [self.view addSubview:self.tableView];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(userInfo.mas_bottom).with.offset(LineY(10));
-        make.left.equalTo(self.view.mas_left).with.offset(LineX(10));
-        make.right.equalTo(self.view.mas_right).with.offset(LineX(-10));
+        make.top.equalTo(userInfo.mas_bottom).with.offset(margin10);
+        make.left.equalTo(self.view.mas_left).with.offset(14);
+        make.right.equalTo(self.view.mas_right).with.offset(-14);
         make.bottom.mas_equalTo(self.view.mas_bottom);
     }];
     
