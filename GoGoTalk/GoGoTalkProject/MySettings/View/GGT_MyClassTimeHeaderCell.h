@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KNCirclePercentView.h"
+#import "GGT_Pieview.h"
 
 @interface GGT_MyClassTimeHeaderCell : UITableViewCell
-
 @end

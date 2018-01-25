@@ -74,8 +74,6 @@
             cell = [[GGT_MyClassTimeHeaderCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellStr];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
-
-        
         
         return cell;
     } else  {

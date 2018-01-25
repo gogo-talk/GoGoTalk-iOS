@@ -38,14 +38,13 @@
 		5B695B291EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B281EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m */; };
 		5B695B2C1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */; };
 		5B695B2F1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B2E1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m */; };
+		5B83A4A22019BEBD0033D23F /* GGT_Pieview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83A4A12019BEBD0033D23F /* GGT_Pieview.m */; };
 		5B8479E2200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8479E1200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.m */; };
 		5BA04DB9200C4E76004748FE /* GGT_ChoicePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA04DB8200C4E76004748FE /* GGT_ChoicePickView.m */; };
 		5BA04DBC200C7EB9004748FE /* AddressList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5BA04DBB200C7EB9004748FE /* AddressList.txt */; };
 		5BA04DBF200C8019004748FE /* GGT_MyClassTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA04DBE200C8019004748FE /* GGT_MyClassTimeViewController.m */; };
 		5BA04DC2200C8705004748FE /* GGT_MyClassTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA04DC1200C8705004748FE /* GGT_MyClassTimeCell.m */; };
 		5BA04DC5200C88E4004748FE /* GGT_MyClassTimeHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA04DC4200C88E4004748FE /* GGT_MyClassTimeHeaderCell.m */; };
-		5BA04DCA200C8ED9004748FE /* KNPercentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA04DC6200C8ED9004748FE /* KNPercentLabel.m */; };
-		5BA04DCB200C8ED9004748FE /* KNCirclePercentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA04DC8200C8ED9004748FE /* KNCirclePercentView.m */; };
 		5BA04E15200CD610004748FE /* GGT_MyRreportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA04E14200CD610004748FE /* GGT_MyRreportViewController.m */; };
 		5BA04E18200CD685004748FE /* GGT_MyRreportListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA04E17200CD685004748FE /* GGT_MyRreportListCell.m */; };
 		5BA10D201EB1D19F0091093C /* GGT_ForgotPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA10D1A1EB1D19F0091093C /* GGT_ForgotPasswordView.m */; };
@@ -181,6 +180,8 @@
 		5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_HomeCommonCenterCell.m; sourceTree = "<group>"; };
 		5B695B2D1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_HomeBedtimeStoryCell.h; sourceTree = "<group>"; };
 		5B695B2E1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_HomeBedtimeStoryCell.m; sourceTree = "<group>"; };
+		5B83A4A02019BEBD0033D23F /* GGT_Pieview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_Pieview.h; sourceTree = "<group>"; };
+		5B83A4A12019BEBD0033D23F /* GGT_Pieview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_Pieview.m; sourceTree = "<group>"; };
 		5B8479E0200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ChoiceTimeOfDateView.h; sourceTree = "<group>"; };
 		5B8479E1200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ChoiceTimeOfDateView.m; sourceTree = "<group>"; };
 		5BA04DB7200C4E76004748FE /* GGT_ChoicePickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ChoicePickView.h; sourceTree = "<group>"; };
@@ -192,10 +193,6 @@
 		5BA04DC1200C8705004748FE /* GGT_MyClassTimeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_MyClassTimeCell.m; sourceTree = "<group>"; };
 		5BA04DC3200C88E4004748FE /* GGT_MyClassTimeHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_MyClassTimeHeaderCell.h; sourceTree = "<group>"; };
 		5BA04DC4200C88E4004748FE /* GGT_MyClassTimeHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_MyClassTimeHeaderCell.m; sourceTree = "<group>"; };
-		5BA04DC6200C8ED9004748FE /* KNPercentLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNPercentLabel.m; sourceTree = "<group>"; };
-		5BA04DC7200C8ED9004748FE /* KNCirclePercentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNCirclePercentView.h; sourceTree = "<group>"; };
-		5BA04DC8200C8ED9004748FE /* KNCirclePercentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNCirclePercentView.m; sourceTree = "<group>"; };
-		5BA04DC9200C8ED9004748FE /* KNPercentLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNPercentLabel.h; sourceTree = "<group>"; };
 		5BA04E13200CD610004748FE /* GGT_MyRreportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_MyRreportViewController.h; sourceTree = "<group>"; };
 		5BA04E14200CD610004748FE /* GGT_MyRreportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_MyRreportViewController.m; sourceTree = "<group>"; };
 		5BA04E16200CD685004748FE /* GGT_MyRreportListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_MyRreportListCell.h; sourceTree = "<group>"; };
@@ -345,14 +342,12 @@
 				5BA04DB8200C4E76004748FE /* GGT_ChoicePickView.m */,
 				5BA04DC3200C88E4004748FE /* GGT_MyClassTimeHeaderCell.h */,
 				5BA04DC4200C88E4004748FE /* GGT_MyClassTimeHeaderCell.m */,
+				5B83A4A02019BEBD0033D23F /* GGT_Pieview.h */,
+				5B83A4A12019BEBD0033D23F /* GGT_Pieview.m */,
 				5BA04DC0200C8705004748FE /* GGT_MyClassTimeCell.h */,
 				5BA04DC1200C8705004748FE /* GGT_MyClassTimeCell.m */,
 				5BA04E16200CD685004748FE /* GGT_MyRreportListCell.h */,
 				5BA04E17200CD685004748FE /* GGT_MyRreportListCell.m */,
-				5BA04DC7200C8ED9004748FE /* KNCirclePercentView.h */,
-				5BA04DC8200C8ED9004748FE /* KNCirclePercentView.m */,
-				5BA04DC9200C8ED9004748FE /* KNPercentLabel.h */,
-				5BA04DC6200C8ED9004748FE /* KNPercentLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,7 +452,6 @@
 		5BC2AF8B1EB04E92004DF44D /* LogAndRegister */ = {
 			isa = PBXGroup;
 			children = (
-				D6C7ABAB1EB1D58A00EBF0D1 /* Model */,
 				5BC2AFA01EB05057004DF44D /* Controller */,
 				5BC2AFA11EB05057004DF44D /* View */,
 			);
@@ -468,7 +462,6 @@
 			isa = PBXGroup;
 			children = (
 				5BEC18EA1EB83C0F009DF2F8 /* View */,
-				D6C7ABA41EB1D50900EBF0D1 /* Model */,
 				5BC2AF9D1EB05051004DF44D /* Controller */,
 			);
 			path = HomeReservation;
@@ -756,20 +749,6 @@
 			name = "课表";
 			sourceTree = "<group>";
 		};
-		D6C7ABA41EB1D50900EBF0D1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D6C7ABAB1EB1D58A00EBF0D1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		D6E0A59E1EC2FCE7006A003D /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -1041,13 +1020,12 @@
 				D6C7AAAE1EB1873200EBF0D1 /* GGT_MineViewController.m in Sources */,
 				D6C7AACA1EB190DA00EBF0D1 /* NSString+XCHelper.m in Sources */,
 				5BED05A91EB07D3300469368 /* UIImage+Category.m in Sources */,
-				5BA04DCA200C8ED9004748FE /* KNPercentLabel.m in Sources */,
 				5B695B2F1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m in Sources */,
-				5BA04DCB200C8ED9004748FE /* KNCirclePercentView.m in Sources */,
 				5BA04DC5200C88E4004748FE /* GGT_MyClassTimeHeaderCell.m in Sources */,
 				D66C6EE11EBB1D5E0058D12C /* XCStarView.m in Sources */,
 				5BA04DB9200C4E76004748FE /* GGT_ChoicePickView.m in Sources */,
 				5BC2AFC51EB054A8004DF44D /* GGT_RegisterViewController.m in Sources */,
+				5B83A4A22019BEBD0033D23F /* GGT_Pieview.m in Sources */,
 				5BC2AF591EB0473D004DF44D /* main.m in Sources */,
 				5B0F4D251F01EDA700CE7D4C /* GGT_AdCycleViewController.m in Sources */,
 				3520D0731EC0592500A0B80A /* GGT_UserSettingController.m in Sources */,

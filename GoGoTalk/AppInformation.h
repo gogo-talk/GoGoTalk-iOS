@@ -47,7 +47,7 @@
 
 
 // 以6 7 8 的宽高作为参照，计算比例
-//高度系数 812.0 是iPhoneX的高度尺寸，667.0表示是iPhone 8 的高度，如果你觉的它会变化，那我也很无奈
+//高度系数 812.0 是iPhoneX的高度尺寸，667.0表示是iPhone 8 的高度
 #define XMGScaleY (SCREEN_HEIGHT() == 812.0 ? SCREEN_HEIGHT()/667.0 : 667.0/667.0)
 #define XMGScaleX SCREEN_WIDTH() / 375.0
 // X坐标
