@@ -11,8 +11,7 @@
 #import "GGT_ChoiceTimeOfDateView.h"
 
 
-@interface GGT_ChoiceTimeOfDateCell() <UICollectionViewDelegate, UICollectionViewDataSource>
-@property (nonatomic, strong) UICollectionView *xc_collectionView;
+@interface GGT_ChoiceTimeOfDateCell()
 @property (nonatomic, strong) NSMutableArray *xc_dateMuArray;
 @end
 
@@ -38,7 +37,6 @@
         [arr2 addObject:[NSString stringWithFormat:@"%ld",(long)i]];
     }
     self.xc_dateMuArray = [NSMutableArray arrayWithObjects:arr1,arr2, nil];
-    [self.xc_collectionView reloadData];
 }
 
 

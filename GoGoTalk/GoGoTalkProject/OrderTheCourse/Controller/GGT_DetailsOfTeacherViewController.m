@@ -22,6 +22,7 @@
     
     self.teacherDetailHeaderView = [[GGT_TeacherDetailHeaderView alloc] init];
     [self.teacherDetailHeaderView.guanzhuButton addTarget:self action:@selector(guanzhuButtonClick) forControlEvents:(UIControlEventTouchUpInside)];
+    self.teacherDetailHeaderView.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
     [self.view addSubview:self.teacherDetailHeaderView];
     
     [self.teacherDetailHeaderView mas_makeConstraints:^(MASConstraintMaker *make) {

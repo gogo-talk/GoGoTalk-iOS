@@ -80,7 +80,11 @@
     // 设置提醒框背景色
     hud.bezelView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
     //设置菊花颜色
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     [UIActivityIndicatorView appearanceWhenContainedIn:[MBProgressHUD class], nil].color = [UIColor whiteColor];
+#pragma clang diagnostic pop
+
 //    hud.activityIndicatorColor = [UIColor whiteColor];
     hud.removeFromSuperViewOnHide = YES;
     return hud;
