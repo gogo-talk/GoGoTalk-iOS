@@ -38,6 +38,7 @@
 		5B695B291EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B281EBC2D0800A42795 /* GGT_HomeBannerTableViewCell.m */; };
 		5B695B2C1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */; };
 		5B695B2F1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B695B2E1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m */; };
+		5B6B99AA201ED0100012BA60 /* GGT_LevelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B99A9201ED0100012BA60 /* GGT_LevelListView.m */; };
 		5B83A4A22019BEBD0033D23F /* GGT_Pieview.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83A4A12019BEBD0033D23F /* GGT_Pieview.m */; };
 		5B8479E2200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8479E1200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.m */; };
 		5B8B2D67201AF6E400439A0F /* GGT_NotVipHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B2D66201AF6E400439A0F /* GGT_NotVipHomeView.m */; };
@@ -184,6 +185,8 @@
 		5B695B2B1EBC2E4600A42795 /* GGT_HomeCommonCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_HomeCommonCenterCell.m; sourceTree = "<group>"; };
 		5B695B2D1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_HomeBedtimeStoryCell.h; sourceTree = "<group>"; };
 		5B695B2E1EBC2E7300A42795 /* GGT_HomeBedtimeStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_HomeBedtimeStoryCell.m; sourceTree = "<group>"; };
+		5B6B99A8201ED0100012BA60 /* GGT_LevelListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_LevelListView.h; sourceTree = "<group>"; };
+		5B6B99A9201ED0100012BA60 /* GGT_LevelListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_LevelListView.m; sourceTree = "<group>"; };
 		5B83A4A02019BEBD0033D23F /* GGT_Pieview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_Pieview.h; sourceTree = "<group>"; };
 		5B83A4A12019BEBD0033D23F /* GGT_Pieview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_Pieview.m; sourceTree = "<group>"; };
 		5B8479E0200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ChoiceTimeOfDateView.h; sourceTree = "<group>"; };
@@ -437,6 +440,8 @@
 				5B8B2D69201B0BA400439A0F /* GGT_LessonDaishangView.m */,
 				5B8B2D6E201B2E9B00439A0F /* GGT_EvaluationReportView.h */,
 				5B8B2D6F201B2E9B00439A0F /* GGT_EvaluationReportView.m */,
+				5B6B99A8201ED0100012BA60 /* GGT_LevelListView.h */,
+				5B6B99A9201ED0100012BA60 /* GGT_LevelListView.m */,
 			);
 			path = "非正式学员";
 			sourceTree = "<group>";
@@ -1133,6 +1138,7 @@
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
 				5B422E9E200DE74F0044E113 /* GGT_PageControl.m in Sources */,
 				5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */,
+				5B6B99AA201ED0100012BA60 /* GGT_LevelListView.m in Sources */,
 				355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */,
 				5B422EA1200DE8550044E113 /* GGT_OrderCourseCollectionViewCell.m in Sources */,
 				5BA575F11EC0495B00C7512A /* GGT_VipInfoHeaderCell.m in Sources */,

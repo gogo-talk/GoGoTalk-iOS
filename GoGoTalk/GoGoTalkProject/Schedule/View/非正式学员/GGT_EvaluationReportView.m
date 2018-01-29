@@ -21,7 +21,7 @@
 //当前英语等级
 @property (nonatomic, strong) UILabel *levelLabel;
 //等级图示
-@property (nonatomic, strong) UIView *levelView;
+@property (nonatomic, strong) GGT_LevelListView *levelListView;
 
 @end
 
@@ -110,21 +110,21 @@
     [bgImgView addSubview:self.levelLabel];
     
     [self.levelLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(bgImgView.mas_top).with.offset(10);
+        make.top.equalTo(bgImgView.mas_top).with.offset(24);
         make.centerX.equalTo(bgImgView.mas_centerX);
-        make.height.mas_equalTo(50);
+        make.height.mas_equalTo(20);
     }];
     
     
     //等级图示
-    self.levelView = [[UIView alloc]init];
-    self.levelView.backgroundColor = UICOLOR_RANDOM_COLOR();
-    [self addSubview:self.levelView];
+    self.levelListView = [[GGT_LevelListView alloc]init];
+    [self.levelListView upDateLevelUI:@"L10"];
+    [self addSubview:self.levelListView];
     
-    [self.levelView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(bgImgView);
+    [self.levelListView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(bgImgView.mas_centerX);
         make.top.equalTo(self.levelLabel.mas_bottom).with.offset(10);
-        make.height.mas_equalTo(190);
+        make.size.mas_equalTo(CGSizeMake(283, 210)); //263 + 20
     }];
     
     
@@ -133,12 +133,12 @@
     [self.chakanbaogaoButton setTitle:@"查看测评报告" forState:(UIControlStateNormal)];
     [self.chakanbaogaoButton setTitleColor:UICOLOR_FROM_HEX(ColorFFFFFF) forState:(UIControlStateNormal)];
     self.chakanbaogaoButton.backgroundColor = UICOLOR_FROM_HEX(ColorEA5851);
-    self.chakanbaogaoButton.titleLabel.font = Font(17);
+    self.chakanbaogaoButton.titleLabel.font = Font(14);
     [bgImgView addSubview:self.chakanbaogaoButton];
     
     
     [self.chakanbaogaoButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.levelView.mas_bottom).with.offset(20);
+        make.top.equalTo(self.levelListView.mas_bottom).with.offset(20);
         make.centerX.equalTo(bgImgView.mas_centerX);
         make.size.mas_equalTo(CGSizeMake(180, 34));
     }];
@@ -149,7 +149,7 @@
     [self.buyClassButton setTitle:@"购买课程套餐" forState:(UIControlStateNormal)];
     [self.buyClassButton setTitleColor:UICOLOR_FROM_HEX(ColorEA5851) forState:(UIControlStateNormal)];
     self.buyClassButton.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
-    self.buyClassButton.titleLabel.font = Font(17);
+    self.buyClassButton.titleLabel.font = Font(14);
     [bgImgView addSubview:self.buyClassButton];
     
     

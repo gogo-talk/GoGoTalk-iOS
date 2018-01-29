@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GGT_LevelListView.h"
 
 @interface GGT_EvaluationReportView : UIView
 /**测试报告已生成**/
