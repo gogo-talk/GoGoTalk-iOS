@@ -60,7 +60,7 @@
 #define LineH(l) l*XMGScaleY
 // 字体
 #define Font(x) [UIFont systemFontOfSize:x*XMGScaleY]
-#define FontDefult(x) [UIFont systemFontOfSize:x]
+#define SystemFont(x) [UIFont systemFontOfSize:x]
 
 /**
  @abstract UIAlterController弹框.

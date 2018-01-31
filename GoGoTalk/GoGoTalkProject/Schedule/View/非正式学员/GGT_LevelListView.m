@@ -57,7 +57,7 @@
         UILabel *levelAlertLabel = [[UILabel alloc] init];
         levelAlertLabel.textColor = UICOLOR_FROM_HEX(ColorEA5851);
         levelAlertLabel.textAlignment = NSTextAlignmentCenter;
-        levelAlertLabel.font = [UIFont systemFontOfSize:11];
+        levelAlertLabel.font = SystemFont(10);
         levelAlertLabel.tag = 300 +i;
         [levelImgView addSubview:levelAlertLabel];
         levelAlertLabel.hidden = YES;
@@ -115,6 +115,7 @@
     UILabel *levelAlertLabel = [self viewWithTag:303];
     levelAlertLabel.hidden = NO;
     levelAlertLabel.text = lavel;
+
 
 }
 

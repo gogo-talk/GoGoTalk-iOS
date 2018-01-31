@@ -133,14 +133,14 @@
     [self.chakanbaogaoButton setTitle:@"查看测评报告" forState:(UIControlStateNormal)];
     [self.chakanbaogaoButton setTitleColor:UICOLOR_FROM_HEX(ColorFFFFFF) forState:(UIControlStateNormal)];
     self.chakanbaogaoButton.backgroundColor = UICOLOR_FROM_HEX(ColorEA5851);
-    self.chakanbaogaoButton.titleLabel.font = Font(14);
+    self.chakanbaogaoButton.titleLabel.font = SystemFont(17);
     [bgImgView addSubview:self.chakanbaogaoButton];
     
     
     [self.chakanbaogaoButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.levelListView.mas_bottom).with.offset(20);
         make.centerX.equalTo(bgImgView.mas_centerX);
-        make.size.mas_equalTo(CGSizeMake(180, 34));
+        make.size.mas_equalTo(CGSizeMake(180, 39));
     }];
     
     
@@ -149,14 +149,14 @@
     [self.buyClassButton setTitle:@"购买课程套餐" forState:(UIControlStateNormal)];
     [self.buyClassButton setTitleColor:UICOLOR_FROM_HEX(ColorEA5851) forState:(UIControlStateNormal)];
     self.buyClassButton.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
-    self.buyClassButton.titleLabel.font = Font(14);
+    self.buyClassButton.titleLabel.font = SystemFont(17);
     [bgImgView addSubview:self.buyClassButton];
     
     
     [self.buyClassButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.chakanbaogaoButton.mas_bottom).with.offset(20);
+        make.top.equalTo(self.chakanbaogaoButton.mas_bottom).with.offset(15);
         make.centerX.equalTo(bgImgView.mas_centerX);
-        make.size.mas_equalTo(CGSizeMake(180, 34));
+        make.size.mas_equalTo(CGSizeMake(180, 39));
     }];
     
     
@@ -168,7 +168,7 @@
     self.kechengtixiButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [self.kechengtixiButton setTitle:@"课程体系" forState:(UIControlStateNormal)];
     [self.kechengtixiButton setTitleColor:UICOLOR_FROM_HEX(Color666666) forState:(UIControlStateNormal)];
-    self.kechengtixiButton.titleLabel.font = Font(14);
+    self.kechengtixiButton.titleLabel.font = SystemFont(14);
     [bgImgView addSubview:self.kechengtixiButton];
     
     
@@ -182,7 +182,7 @@
     self.shizifuwuButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [self.shizifuwuButton setTitle:@"师资服务" forState:(UIControlStateNormal)];
     [self.shizifuwuButton setTitleColor:UICOLOR_FROM_HEX(Color666666) forState:(UIControlStateNormal)];
-    self.shizifuwuButton.titleLabel.font = Font(14);
+    self.shizifuwuButton.titleLabel.font = SystemFont(14);
     [bgImgView addSubview:self.shizifuwuButton];
     
     
@@ -195,10 +195,10 @@
 
 
 -(void)drawRect:(CGRect)rect {
-    [self.chakanbaogaoButton xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:17];
+    [self.chakanbaogaoButton xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:19.5];
     
-    [self.buyClassButton xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:17];
-    [self.buyClassButton addBorderForViewWithBorderWidth:1 BorderColor:UICOLOR_FROM_HEX(ColorEA5851) CornerRadius:17];
+    [self.buyClassButton xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:19.5];
+    [self.buyClassButton addBorderForViewWithBorderWidth:1 BorderColor:UICOLOR_FROM_HEX(ColorEA5851) CornerRadius:19.5];
     
     
     [self.kechengtixiButton xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:17];

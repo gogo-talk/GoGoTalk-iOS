@@ -72,13 +72,13 @@
     //开课时间
     self.startTimeLabel = [[UILabel alloc] init];
     self.startTimeLabel.textColor = UICOLOR_FROM_HEX(ColorFFFFFF);
-    self.startTimeLabel.text = @"04月17日（周三）13：00开课";
+    self.startTimeLabel.text = @"04月17日（周三）13：00 开课";
+    [self.startTimeLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15]];
     self.startTimeLabel.textAlignment = NSTextAlignmentCenter;
-    self.startTimeLabel.font = Font(15);
     [bgImgView addSubview:self.startTimeLabel];
     
     [self.startTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(bgImgView.mas_top).with.offset(25);
+        make.top.equalTo(bgImgView.mas_top).with.offset(23);
         make.centerX.equalTo(bgImgView.mas_centerX);
         make.height.mas_equalTo(15);
     }];
@@ -103,7 +103,7 @@
     self.teacherNameLabel.textColor = UICOLOR_FROM_HEX(Color333333);
     self.teacherNameLabel.text = @"Ruisun";
     self.teacherNameLabel.textAlignment = NSTextAlignmentCenter;
-    self.teacherNameLabel.font = Font(16);
+    self.teacherNameLabel.font = SystemFont(16);
     [bgImgView addSubview:self.teacherNameLabel];
     
     [self.teacherNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -118,7 +118,7 @@
     self.kechengNameLabel.textColor = UICOLOR_FROM_HEX(Color333333);
     self.kechengNameLabel.text = @"Lesson1-1 [体验课]";
     self.kechengNameLabel.textAlignment = NSTextAlignmentCenter;
-    self.kechengNameLabel.font = Font(16);
+    self.kechengNameLabel.font = SystemFont(16);
     
     NSMutableAttributedString * mutableAttriStr = [[NSMutableAttributedString alloc] initWithString:@"Lesson1-1 [体验课]"];
     if ([@"Lesson1-1 [体验课]" containsString:@"[体验课]"]) {
@@ -145,7 +145,7 @@
     [self.enterClassButton setTitle:@"进入教室" forState:(UIControlStateNormal)];
     [self.enterClassButton setTitleColor:UICOLOR_FROM_HEX(ColorFFFFFF) forState:(UIControlStateNormal)];
     self.enterClassButton.backgroundColor = UICOLOR_FROM_HEX(ColorEA5851);
-    self.enterClassButton.titleLabel.font = Font(17);
+    self.enterClassButton.titleLabel.font = SystemFont(17);
     [bgImgView addSubview:self.enterClassButton];
     
     
@@ -161,7 +161,7 @@
     [self.keqianyuxiButton setTitle:@"课前预习" forState:(UIControlStateNormal)];
     [self.keqianyuxiButton setTitleColor:UICOLOR_FROM_HEX(ColorEA5851) forState:(UIControlStateNormal)];
     self.keqianyuxiButton.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
-    self.keqianyuxiButton.titleLabel.font = Font(17);
+    self.keqianyuxiButton.titleLabel.font = SystemFont(17);
     [bgImgView addSubview:self.keqianyuxiButton];
     
     
@@ -177,7 +177,7 @@
     [self.classxuzhiButton setTitle:@"上课须知" forState:(UIControlStateNormal)];
     [self.classxuzhiButton setTitleColor:UICOLOR_FROM_HEX(ColorEA5851) forState:(UIControlStateNormal)];
     self.classxuzhiButton.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
-    self.classxuzhiButton.titleLabel.font = Font(17);
+    self.classxuzhiButton.titleLabel.font = SystemFont(17);
     [bgImgView addSubview:self.classxuzhiButton];
     
     
@@ -198,7 +198,7 @@
     [self.alertLabel changeLineSpaceWithSpace:5];
     self.alertLabel.textAlignment = NSTextAlignmentCenter;
     self.alertLabel.numberOfLines = 0;
-    self.alertLabel.font = Font(14);
+    self.alertLabel.font = SystemFont(14);
     [bgImgView addSubview:self.alertLabel];
     
     [self.alertLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -212,7 +212,7 @@
     self.phoneNumLabel.textColor = UICOLOR_FROM_HEX(ColorEA5851);
     self.phoneNumLabel.text = @"客服电话：400-8787-276";
     self.phoneNumLabel.textAlignment = NSTextAlignmentCenter;
-    self.phoneNumLabel.font = Font(14);
+    self.phoneNumLabel.font = SystemFont(14);
     [bgImgView addSubview:self.phoneNumLabel];
     
     [self.phoneNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -227,7 +227,7 @@
     [self.bodadianhuaButton setTitle:@"拨打电话" forState:(UIControlStateNormal)];
     [self.bodadianhuaButton setTitleColor:UICOLOR_FROM_HEX(ColorEA5851) forState:(UIControlStateNormal)];
     self.bodadianhuaButton.backgroundColor = UICOLOR_FROM_HEX(ColorFFFFFF);
-    self.bodadianhuaButton.titleLabel.font = Font(17);
+    self.bodadianhuaButton.titleLabel.font = SystemFont(17);
     [bgImgView addSubview:self.bodadianhuaButton];
     
     
@@ -258,13 +258,13 @@
     footerLabel1.textColor = UICOLOR_FROM_HEX(Color666666);
     footerLabel1.text = @"电脑上课，请登录官网 \"www.gogo-talk.com\"";
     footerLabel1.textAlignment = NSTextAlignmentCenter;
-    footerLabel1.font = Font(13);
+    footerLabel1.font = SystemFont(13);
     [bgImgView addSubview:footerLabel1];
     
     [footerLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(footerImgView1.mas_centerY);
         make.left.equalTo(footerImgView1.mas_right).with.offset(10);
-        make.height.mas_equalTo(12);
+        make.height.mas_equalTo(13);
     }];
     
     
@@ -283,13 +283,13 @@
     footerLabel2.textColor = UICOLOR_FROM_HEX(Color666666);
     footerLabel2.text = @"iPad上课，请在App Store 下载 \"GoGo英语HD\"";
     footerLabel2.textAlignment = NSTextAlignmentCenter;
-    footerLabel2.font = Font(13);
+    footerLabel2.font = SystemFont(13);
     [bgImgView addSubview:footerLabel2];
     
     [footerLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(footerImgView2.mas_centerY);
         make.left.equalTo(footerImgView2.mas_right).with.offset(10);
-        make.height.mas_equalTo(12);
+        make.height.mas_equalTo(13);
     }];
 }
 

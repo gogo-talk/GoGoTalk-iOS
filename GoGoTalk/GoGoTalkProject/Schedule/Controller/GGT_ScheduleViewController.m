@@ -48,14 +48,17 @@
 //        make.bottom.equalTo(self.view.mas_bottom).with.offset(-0);
 //    }];
     
-    GGT_EvaluationReportView *view = [[GGT_EvaluationReportView alloc] init];
-    [self.view addSubview:view];
     
-    [view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.view);
-        make.top.equalTo(self.view.mas_top).with.offset(0);
-        make.bottom.equalTo(self.view.mas_bottom).with.offset(-0);
-    }];
+//    GGT_EvaluationReportView *view = [[GGT_EvaluationReportView alloc] init];
+//    [self.view addSubview:view];
+//
+//    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.right.equalTo(self.view);
+//        make.top.equalTo(self.view.mas_top).with.offset(0);
+//        make.bottom.equalTo(self.view.mas_bottom).with.offset(-0);
+//    }];
+    
+    
     
 }
 

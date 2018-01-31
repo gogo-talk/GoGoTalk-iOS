@@ -50,11 +50,11 @@
     titleLabel1.textColor = UICOLOR_FROM_HEX(Color333333);
     titleLabel1.text = @"青少英语在线外教1对1体验课";
     titleLabel1.textAlignment = NSTextAlignmentCenter;
-    titleLabel1.font = Font(16);
+    titleLabel1.font = SystemFont(16);
     [bgImgView addSubview:titleLabel1];
     
     [titleLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(bgImgView.mas_top).with.offset(150);
+        make.top.equalTo(bgImgView.mas_top).with.offset(160);
         make.centerX.equalTo(bgImgView.mas_centerX);
         make.height.mas_equalTo(16);
     }];
@@ -64,7 +64,7 @@
     titleLabel2.textColor = UICOLOR_FROM_HEX(Color333333);
     titleLabel2.text = @"及专业英语水平测试报告";
     titleLabel2.textAlignment = NSTextAlignmentCenter;
-    titleLabel2.font = Font(14);
+    titleLabel2.font = SystemFont(14);
     [bgImgView addSubview:titleLabel2];
     
     [titleLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -91,7 +91,7 @@
     titleLabel3.textColor = UICOLOR_FROM_HEX(0x4D4D4D);
     titleLabel3.text = @"课程顾问会及时联系您安排体验课";
     titleLabel3.textAlignment = NSTextAlignmentCenter;
-    titleLabel3.font = Font(14);
+    titleLabel3.font = SystemFont(14);
     [bgImgView addSubview:titleLabel3];
     
     [titleLabel3 mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -102,35 +102,35 @@
 
 
     
+    UILabel *titleLabel4 = [[UILabel alloc] init];
+    titleLabel4.textColor = UICOLOR_FROM_HEX(Color999999);
+    titleLabel4.text = @"如有疑问，请拨打电话：400-8787-276";
+    titleLabel4.textAlignment = NSTextAlignmentCenter;
+    titleLabel4.font = SystemFont(12);
+    [bgImgView addSubview:titleLabel4];
+    
+    [titleLabel4 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(titleLabel3.mas_bottom).with.offset(19);
+        make.centerX.equalTo(bgImgView.mas_centerX).with.offset(10);
+        make.height.mas_equalTo(12);
+    }];
+    
+    
     UIImageView *wenhaoImgView = [UIImageView new];
     wenhaoImgView.image = UIIMAGE_FROM_NAME(@"kb_feixhengshi_yiwen");
     [bgImgView addSubview:wenhaoImgView];
 
     [wenhaoImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(titleLabel3.mas_bottom).with.offset(19);
-        make.left.equalTo(bgImgView.mas_left).with.offset(55);
+        make.right.equalTo(titleLabel4.mas_left).with.offset(-6);
         make.size.mas_equalTo(CGSizeMake(14, 14));
-    }];
-    
-    
-    UILabel *titleLabel4 = [[UILabel alloc] init];
-    titleLabel4.textColor = UICOLOR_FROM_HEX(Color999999);
-    titleLabel4.text = @"如有疑问，请拨打电话：400-8787-276";
-    titleLabel4.textAlignment = NSTextAlignmentCenter;
-    titleLabel4.font = Font(12);
-    [bgImgView addSubview:titleLabel4];
-    
-    [titleLabel4 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(titleLabel3.mas_bottom).with.offset(19);
-        make.left.equalTo(wenhaoImgView.mas_right).with.offset(6);
-        make.height.mas_equalTo(12);
     }];
     
     
     self.kechengtixiButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [self.kechengtixiButton setTitle:@"课程体系" forState:(UIControlStateNormal)];
     [self.kechengtixiButton setTitleColor:UICOLOR_FROM_HEX(Color666666) forState:(UIControlStateNormal)];
-    self.kechengtixiButton.titleLabel.font = Font(14);
+    self.kechengtixiButton.titleLabel.font = SystemFont(14);
     [bgImgView addSubview:self.kechengtixiButton];
     
     
@@ -144,7 +144,7 @@
     self.shizifuwuButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [self.shizifuwuButton setTitle:@"师资服务" forState:(UIControlStateNormal)];
     [self.shizifuwuButton setTitleColor:UICOLOR_FROM_HEX(Color666666) forState:(UIControlStateNormal)];
-    self.shizifuwuButton.titleLabel.font = Font(14);
+    self.shizifuwuButton.titleLabel.font = SystemFont(14);
     [bgImgView addSubview:self.shizifuwuButton];
     
     
