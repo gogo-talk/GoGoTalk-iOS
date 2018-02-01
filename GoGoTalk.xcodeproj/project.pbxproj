@@ -19,6 +19,10 @@
 		5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B4F471EB06D5400D81B8E /* MBProgressHUD+Extension.m */; };
 		5B0F4D251F01EDA700CE7D4C /* GGT_AdCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0F4D241F01EDA700CE7D4C /* GGT_AdCycleViewController.m */; };
 		5B1913DE20070C0E00F1BCB5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1913DD20070C0E00F1BCB5 /* Launch Screen.storyboard */; };
+		5B25EE982022B8A8000A7447 /* GGT_ClassUnFinishedListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B25EE972022B8A8000A7447 /* GGT_ClassUnFinishedListCell.m */; };
+		5B25EEA120230A2F000A7447 /* GGT_ClassFinishedListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B25EEA020230A2F000A7447 /* GGT_ClassFinishedListCell.m */; };
+		5B25EEA420230B10000A7447 /* GGT_ClassUnFinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B25EEA320230B10000A7447 /* GGT_ClassUnFinishedViewController.m */; };
+		5B25EEA720230B1D000A7447 /* GGT_ClassFinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B25EEA620230B1D000A7447 /* GGT_ClassFinishedViewController.m */; };
 		5B2C619A1F039CF900B44892 /* XCNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C61961F039CF900B44892 /* XCNormalFooter.m */; };
 		5B2C619B1F039CF900B44892 /* XCNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C61991F039CF900B44892 /* XCNormalHeader.m */; };
 		5B2C619E1F03A18A00B44892 /* GGT_BedTimeStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C619D1F03A18A00B44892 /* GGT_BedTimeStoryViewController.m */; };
@@ -147,6 +151,14 @@
 		5B0F4D231F01EDA700CE7D4C /* GGT_AdCycleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_AdCycleViewController.h; sourceTree = "<group>"; };
 		5B0F4D241F01EDA700CE7D4C /* GGT_AdCycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_AdCycleViewController.m; sourceTree = "<group>"; };
 		5B1913DD20070C0E00F1BCB5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		5B25EE962022B8A8000A7447 /* GGT_ClassUnFinishedListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ClassUnFinishedListCell.h; sourceTree = "<group>"; };
+		5B25EE972022B8A8000A7447 /* GGT_ClassUnFinishedListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ClassUnFinishedListCell.m; sourceTree = "<group>"; };
+		5B25EE9F20230A2F000A7447 /* GGT_ClassFinishedListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ClassFinishedListCell.h; sourceTree = "<group>"; };
+		5B25EEA020230A2F000A7447 /* GGT_ClassFinishedListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ClassFinishedListCell.m; sourceTree = "<group>"; };
+		5B25EEA220230B10000A7447 /* GGT_ClassUnFinishedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ClassUnFinishedViewController.h; sourceTree = "<group>"; };
+		5B25EEA320230B10000A7447 /* GGT_ClassUnFinishedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ClassUnFinishedViewController.m; sourceTree = "<group>"; };
+		5B25EEA520230B1D000A7447 /* GGT_ClassFinishedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ClassFinishedViewController.h; sourceTree = "<group>"; };
+		5B25EEA620230B1D000A7447 /* GGT_ClassFinishedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ClassFinishedViewController.m; sourceTree = "<group>"; };
 		5B2C61961F039CF900B44892 /* XCNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCNormalFooter.m; sourceTree = "<group>"; };
 		5B2C61971F039CF900B44892 /* XCNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCNormalFooter.h; sourceTree = "<group>"; };
 		5B2C61981F039CF900B44892 /* XCNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCNormalHeader.h; sourceTree = "<group>"; };
@@ -449,8 +461,8 @@
 		5B8B2D62201AF6B500439A0F /* 正式学员 */ = {
 			isa = PBXGroup;
 			children = (
-				5B8B2D63201AF6B500439A0F /* 已结课 */,
 				5B8B2D64201AF6B500439A0F /* 未结课 */,
+				5B8B2D63201AF6B500439A0F /* 已结课 */,
 			);
 			path = "正式学员";
 			sourceTree = "<group>";
@@ -458,6 +470,8 @@
 		5B8B2D63201AF6B500439A0F /* 已结课 */ = {
 			isa = PBXGroup;
 			children = (
+				5B25EE9F20230A2F000A7447 /* GGT_ClassFinishedListCell.h */,
+				5B25EEA020230A2F000A7447 /* GGT_ClassFinishedListCell.m */,
 			);
 			path = "已结课";
 			sourceTree = "<group>";
@@ -465,6 +479,8 @@
 		5B8B2D64201AF6B500439A0F /* 未结课 */ = {
 			isa = PBXGroup;
 			children = (
+				5B25EE962022B8A8000A7447 /* GGT_ClassUnFinishedListCell.h */,
+				5B25EE972022B8A8000A7447 /* GGT_ClassUnFinishedListCell.m */,
 			);
 			path = "未结课";
 			sourceTree = "<group>";
@@ -537,13 +553,13 @@
 		5BC2AF8A1EB04E31004DF44D /* GoGoTalkProject */ = {
 			isa = PBXGroup;
 			children = (
+				5BC2AF8E1EB04F97004DF44D /* Schedule */,
+				5BC2AF8D1EB04F79004DF44D /* OrderTheCourse */,
+				5BC2AF901EB0500A004DF44D /* MySettings */,
 				D66C6EDE1EBB1D560058D12C /* Others */,
 				D6E0A59E1EC2FCE7006A003D /* Network */,
 				5BC2AFA41EB050B8004DF44D /* CommonClass */,
 				5BC2AFA31EB050A1004DF44D /* Extension */,
-				5BC2AF901EB0500A004DF44D /* MySettings */,
-				5BC2AF8E1EB04F97004DF44D /* Schedule */,
-				5BC2AF8D1EB04F79004DF44D /* OrderTheCourse */,
 				5BC2AF8C1EB04F70004DF44D /* HomeReservation */,
 				5BC2AF8B1EB04E92004DF44D /* LogAndRegister */,
 			);
@@ -626,6 +642,10 @@
 			children = (
 				D6C7AAB21EB1875800EBF0D1 /* GGT_ScheduleViewController.h */,
 				D6C7AAB31EB1875800EBF0D1 /* GGT_ScheduleViewController.m */,
+				5B25EEA220230B10000A7447 /* GGT_ClassUnFinishedViewController.h */,
+				5B25EEA320230B10000A7447 /* GGT_ClassUnFinishedViewController.m */,
+				5B25EEA520230B1D000A7447 /* GGT_ClassFinishedViewController.h */,
+				5B25EEA620230B1D000A7447 /* GGT_ClassFinishedViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1094,6 +1114,8 @@
 				5BC2AFB01EB05320004DF44D /* BaseNavigationController.m in Sources */,
 				5B0881661EC2C77400BED063 /* GGT_SelectCoursewareViewController.m in Sources */,
 				3520D06D1EC012C800A0B80A /* GGT_EditPasswordController.m in Sources */,
+				5B25EE982022B8A8000A7447 /* GGT_ClassUnFinishedListCell.m in Sources */,
+				5B25EEA720230B1D000A7447 /* GGT_ClassFinishedViewController.m in Sources */,
 				5BD7F8B81EFBB51E003EE9AD /* NSDictionary+Log.m in Sources */,
 				5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */,
 				5B8B2D67201AF6E400439A0F /* GGT_NotVipHomeView.m in Sources */,
@@ -1137,6 +1159,7 @@
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
 				5B422E9E200DE74F0044E113 /* GGT_PageControl.m in Sources */,
+				5B25EEA120230A2F000A7447 /* GGT_ClassFinishedListCell.m in Sources */,
 				5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */,
 				5B6B99AA201ED0100012BA60 /* GGT_LevelListView.m in Sources */,
 				355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */,
@@ -1151,6 +1174,7 @@
 				5B422EA7200DF7320044E113 /* GGT_ChoiceTimeOfSexCell.m in Sources */,
 				D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */,
 				D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */,
+				5B25EEA420230B10000A7447 /* GGT_ClassUnFinishedViewController.m in Sources */,
 				5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */,
 				5BA575F41EC049A900C7512A /* GGT_VipCurrentStatusCell.m in Sources */,
 				D6C7AAC71EB1903900EBF0D1 /* UIButton+XCHelperBlock.m in Sources */,
