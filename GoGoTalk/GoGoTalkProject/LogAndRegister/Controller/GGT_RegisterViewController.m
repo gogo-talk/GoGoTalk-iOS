@@ -49,6 +49,12 @@
         [self.navigationController popViewControllerAnimated:YES];
       }];
     
+    //立即登录
+    [[self.registerView.loginButton rac_signalForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+         @strongify(self);
+         [self.navigationController popViewControllerAnimated:YES];
+     }];
     
     //注册
     [[self.registerView.registerButton rac_signalForControlEvents:UIControlEventTouchUpInside]
