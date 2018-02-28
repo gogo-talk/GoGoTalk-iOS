@@ -1,51 +1,38 @@
 //
-//  GGT_ClassFinishedViewController.m
+//  GGT_ClassDetailViewController.m
 //  GoGoTalk
 //
-//  Created by XieHenry on 2018/2/1.
+//  Created by XieHenry on 2018/2/27.
 //  Copyright © 2018年 XieHenry. All rights reserved.
 //
 
-#import "GGT_ClassFinishedViewController.h"
-#import "GGT_ClassFinishedListCell.h"
 #import "GGT_ClassFinishedDetailViewController.h"
+#import "GGT_ClassFinishedDetailCell.h"
 
-@interface GGT_ClassFinishedViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface GGT_ClassFinishedDetailViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
+
 @end
 
-@implementation GGT_ClassFinishedViewController
+@implementation GGT_ClassFinishedDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.view.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
+    self.navigationItem.title = @"课程详情";
+    
+    self.dataArray = [NSMutableArray array];
     [self initTableView];
-    
-    @weakify(self);
-    self.tableView.mj_header = [XCNormalHeader headerWithRefreshingBlock:^{
-        @strongify(self);
-        self.dataArray = [NSMutableArray array];
-        [self getLoadData];
-    }];
-    [self.tableView.mj_header beginRefreshing];
-    
-    
-    //设置自动切换透明度(在导航栏下面自动隐藏)
-    //_tableView.mj_header.automaticallyChangeAlpha = YES;
-    self.tableView.mj_footer = [XCNormalFooter footerWithRefreshingBlock:^{
-        @strongify(self);
-        [self.tableView.mj_footer endRefreshing];
-    }];
+    [self getLoadData];
 
 }
 
 - (void)getLoadData {
-    self.dataArray = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8", nil];
+    self.dataArray = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6", nil];
     [self.tableView.mj_header endRefreshing];
     [self.tableView reloadData];
 }
-
 
 - (void)initTableView {
     self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:(UITableViewStylePlain)];
@@ -55,6 +42,10 @@
     self.tableView.backgroundColor = UICOLOR_FROM_HEX(ColorF2F2F2);
     self.tableView.showsVerticalScrollIndicator = false;
     self.tableView.showsHorizontalScrollIndicator = false;
+    
+    self.tableView.estimatedRowHeight = 100; //  随便设个值
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     [self.view addSubview:self.tableView];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -67,13 +58,15 @@
 
 #pragma mark tableview的代理
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellStr = @"GGT_ClassFinishedListCell";
-    GGT_ClassFinishedListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
+    static NSString *cellStr = @"GGT_ClassFinishedDetailCell";
+    GGT_ClassFinishedDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
     if (!cell) {
-        cell= [[GGT_ClassFinishedListCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellStr];
+        cell= [[GGT_ClassFinishedDetailCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellStr];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
+    //布局UI变化
+    [cell freshUICell:indexPath.row];
     
     return cell;
 }
@@ -84,21 +77,23 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return LineH(124);
-    return 141;
+    if (indexPath.row == 0) {
+        return 115;
+    } else if (indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4) {
+        return LineH(49);
+    } else {
+        return UITableViewAutomaticDimension;
+    }
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    GGT_ClassFinishedDetailViewController *vc = [[GGT_ClassFinishedDetailViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 @end
+
