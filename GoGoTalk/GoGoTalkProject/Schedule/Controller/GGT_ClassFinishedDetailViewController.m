@@ -7,7 +7,9 @@
 //
 
 #import "GGT_ClassFinishedDetailViewController.h"
+#import "GGT_ClassFinishedDetailHeaderCell.h"
 #import "GGT_ClassFinishedDetailCell.h"
+#import "GGT_ClassFinishedDetailFooterCell.h"
 
 @interface GGT_ClassFinishedDetailViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -51,24 +53,47 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left).with.offset(0);
         make.right.equalTo(self.view.mas_right).with.offset(-0);
-        make.top.equalTo(self.view.mas_top).with.offset(10);
+        make.top.equalTo(self.view.mas_top).with.offset(0);
         make.bottom.equalTo(self.view.mas_bottom).with.offset(-0);
     }];
 }
 
 #pragma mark tableview的代理
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellStr = @"GGT_ClassFinishedDetailCell";
-    GGT_ClassFinishedDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
-    if (!cell) {
-        cell= [[GGT_ClassFinishedDetailCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellStr];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (indexPath.row == 0) {
+        static NSString *cellStr = @"GGT_ClassFinishedDetailHeaderCell";
+        GGT_ClassFinishedDetailHeaderCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
+        if (!cell) {
+            cell= [[GGT_ClassFinishedDetailHeaderCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellStr];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        return cell;
+    } else if (indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4) {
+        static NSString *cellStr = @"GGT_ClassFinishedDetailCell";
+        GGT_ClassFinishedDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
+        if (!cell) {
+            cell= [[GGT_ClassFinishedDetailCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellStr];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        
+        //布局UI变化
+        [cell freshUICell:indexPath.row];
+        
+        return cell;
+    } else if (indexPath.row == 5) {
+        
+        static NSString *cellStr = @"GGT_ClassFinishedDetailFooterCell";
+        GGT_ClassFinishedDetailFooterCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
+        if (!cell) {
+            cell= [[GGT_ClassFinishedDetailFooterCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellStr];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        
+
+        return cell;
     }
     
-    //布局UI变化
-    [cell freshUICell:indexPath.row];
-    
-    return cell;
+    return nil;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -78,7 +103,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        return 115;
+        return LineH(115);
     } else if (indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4) {
         return LineH(49);
     } else {

@@ -19,13 +19,11 @@
     [self setLeftBackButton];
 }
 
-- (BOOL)hidesBottomBarWhenPushed
-{
+- (BOOL)hidesBottomBarWhenPushed {
     return YES;
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     NSLog(@"---%@---dealloc", [self class]);
 }
 

@@ -79,6 +79,10 @@
 		5BD7F8B91EFBB51E003EE9AD /* NSString+unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7F8B61EFBB51E003EE9AD /* NSString+unicode.m */; };
 		5BE4E1411F012000002F0E01 /* AdCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE4E13E1F012000002F0E01 /* AdCollectionViewCell.m */; };
 		5BE4E1421F012000002F0E01 /* AdCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE4E1401F012000002F0E01 /* AdCycleScrollView.m */; };
+		5BEA076520493EC6007367CC /* GGT_ClassFinishedDetailHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA076420493EC6007367CC /* GGT_ClassFinishedDetailHeaderCell.m */; };
+		5BEA07682049415C007367CC /* GGT_ClassFinishedDetailFooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA07672049415C007367CC /* GGT_ClassFinishedDetailFooterCell.m */; };
+		5BEA076B204946B0007367CC /* GGT_ClassFinishedEvaluationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA076A204946B0007367CC /* GGT_ClassFinishedEvaluationController.m */; };
+		5BEA076E204949AC007367CC /* GGT_ClassFinishedEvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA076D204949AC007367CC /* GGT_ClassFinishedEvaluationView.m */; };
 		5BEC18E91EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18E81EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m */; };
 		5BEC18ED1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18EC1EB83C20009DF2F8 /* GGT_BookExperienceClassView.m */; };
 		5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC18EF1EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m */; };
@@ -274,6 +278,14 @@
 		5BE4E13E1F012000002F0E01 /* AdCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdCollectionViewCell.m; sourceTree = "<group>"; };
 		5BE4E13F1F012000002F0E01 /* AdCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdCycleScrollView.h; sourceTree = "<group>"; };
 		5BE4E1401F012000002F0E01 /* AdCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdCycleScrollView.m; sourceTree = "<group>"; };
+		5BEA076320493EC6007367CC /* GGT_ClassFinishedDetailHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ClassFinishedDetailHeaderCell.h; sourceTree = "<group>"; };
+		5BEA076420493EC6007367CC /* GGT_ClassFinishedDetailHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ClassFinishedDetailHeaderCell.m; sourceTree = "<group>"; };
+		5BEA07662049415C007367CC /* GGT_ClassFinishedDetailFooterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ClassFinishedDetailFooterCell.h; sourceTree = "<group>"; };
+		5BEA07672049415C007367CC /* GGT_ClassFinishedDetailFooterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ClassFinishedDetailFooterCell.m; sourceTree = "<group>"; };
+		5BEA0769204946B0007367CC /* GGT_ClassFinishedEvaluationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ClassFinishedEvaluationController.h; sourceTree = "<group>"; };
+		5BEA076A204946B0007367CC /* GGT_ClassFinishedEvaluationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ClassFinishedEvaluationController.m; sourceTree = "<group>"; };
+		5BEA076C204949AC007367CC /* GGT_ClassFinishedEvaluationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGT_ClassFinishedEvaluationView.h; sourceTree = "<group>"; };
+		5BEA076D204949AC007367CC /* GGT_ClassFinishedEvaluationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGT_ClassFinishedEvaluationView.m; sourceTree = "<group>"; };
 		5BEC18E71EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_BookExperienceClassViewController.h; sourceTree = "<group>"; };
 		5BEC18E81EB83B86009DF2F8 /* GGT_BookExperienceClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGT_BookExperienceClassViewController.m; sourceTree = "<group>"; };
 		5BEC18EB1EB83C20009DF2F8 /* GGT_BookExperienceClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGT_BookExperienceClassView.h; sourceTree = "<group>"; };
@@ -478,8 +490,14 @@
 			children = (
 				5B25EE9F20230A2F000A7447 /* GGT_ClassFinishedListCell.h */,
 				5B25EEA020230A2F000A7447 /* GGT_ClassFinishedListCell.m */,
+				5BEA076320493EC6007367CC /* GGT_ClassFinishedDetailHeaderCell.h */,
+				5BEA076420493EC6007367CC /* GGT_ClassFinishedDetailHeaderCell.m */,
 				5B3628FE2045302F00A9E1FB /* GGT_ClassFinishedDetailCell.h */,
 				5B3628FF2045302F00A9E1FB /* GGT_ClassFinishedDetailCell.m */,
+				5BEA07662049415C007367CC /* GGT_ClassFinishedDetailFooterCell.h */,
+				5BEA07672049415C007367CC /* GGT_ClassFinishedDetailFooterCell.m */,
+				5BEA076C204949AC007367CC /* GGT_ClassFinishedEvaluationView.h */,
+				5BEA076D204949AC007367CC /* GGT_ClassFinishedEvaluationView.m */,
 			);
 			path = "已结课";
 			sourceTree = "<group>";
@@ -656,6 +674,8 @@
 				5B25EEA620230B1D000A7447 /* GGT_ClassFinishedViewController.m */,
 				5B3629012045308D00A9E1FB /* GGT_ClassFinishedDetailViewController.h */,
 				5B3629022045308D00A9E1FB /* GGT_ClassFinishedDetailViewController.m */,
+				5BEA0769204946B0007367CC /* GGT_ClassFinishedEvaluationController.h */,
+				5BEA076A204946B0007367CC /* GGT_ClassFinishedEvaluationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1169,15 +1189,18 @@
 				3542B8E11EC1A49100EA4D4B /* GGT_AboutUsController.m in Sources */,
 				5BED05AF1EB07E4D00469368 /* UIButton+timer.m in Sources */,
 				5B3629002045302F00A9E1FB /* GGT_ClassFinishedDetailCell.m in Sources */,
+				5BEA076B204946B0007367CC /* GGT_ClassFinishedEvaluationController.m in Sources */,
 				5BC2AFAA1EB05241004DF44D /* BaseTabBarController.m in Sources */,
 				5B422E9E200DE74F0044E113 /* GGT_PageControl.m in Sources */,
 				5B25EEA120230A2F000A7447 /* GGT_ClassFinishedListCell.m in Sources */,
 				5BA10D211EB1D19F0091093C /* GGT_LoginView.m in Sources */,
 				5B6B99AA201ED0100012BA60 /* GGT_LevelListView.m in Sources */,
+				5BEA076520493EC6007367CC /* GGT_ClassFinishedDetailHeaderCell.m in Sources */,
 				355210451EBC40920057EA59 /* GGT_InfoListViewController.m in Sources */,
 				5B422EA1200DE8550044E113 /* GGT_OrderCourseCollectionViewCell.m in Sources */,
 				5BA575F11EC0495B00C7512A /* GGT_VipInfoHeaderCell.m in Sources */,
 				5B8479E2200F397100C8AE49 /* GGT_ChoiceTimeOfDateView.m in Sources */,
+				5BEA07682049415C007367CC /* GGT_ClassFinishedDetailFooterCell.m in Sources */,
 				5BBB27EE20087F13008EA2C6 /* GGT_MineHomeCell.m in Sources */,
 				5BA04DC2200C8705004748FE /* GGT_MyClassTimeCell.m in Sources */,
 				5BA575F71EC049FA00C7512A /* GGT_VipPastStateCell.m in Sources */,
@@ -1185,6 +1208,7 @@
 				5B0B4F481EB06D5400D81B8E /* MBProgressHUD+Extension.m in Sources */,
 				5B422EA7200DF7320044E113 /* GGT_ChoiceTimeOfSexCell.m in Sources */,
 				D6C7AAB41EB1875800EBF0D1 /* GGT_ScheduleViewController.m in Sources */,
+				5BEA076E204949AC007367CC /* GGT_ClassFinishedEvaluationView.m in Sources */,
 				D6C7AAA51EB186F800EBF0D1 /* BaseViewController.m in Sources */,
 				5B25EEA420230B10000A7447 /* GGT_ClassUnFinishedViewController.m in Sources */,
 				5BEC18F01EB85290009DF2F8 /* GGT_OrderCourseOfAllViewController.m in Sources */,
@@ -1344,6 +1368,7 @@
 			baseConfigurationReference = 1E45E3E48F16DD5E30B2F6A6 /* Pods-GoGoTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = YZK33WLG48;
 				ENABLE_BITCODE = NO;
@@ -1367,6 +1392,7 @@
 			baseConfigurationReference = BDDE48A6BF0DF60B4B82782D /* Pods-GoGoTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = YZK33WLG48;
 				ENABLE_BITCODE = NO;

@@ -30,7 +30,7 @@
 
 
 #pragma mark 左侧返回按钮
-- (void)setLeftBackButton{
+- (void)setLeftBackButton {
     UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"fanhui_top"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
                                        initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
@@ -42,8 +42,7 @@
 }
 
 #pragma mark 左侧返回按钮---带图片
-- (void)setLeftItem:(NSString *)imageName
-{
+- (void)setLeftItem:(NSString *)imageName {
     UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
                                        initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
@@ -53,7 +52,7 @@
 }
 
 #pragma mark 右侧按钮---文字
-- (void)setRightBarButtonItemTitle:(NSString *)title{
+- (void)setRightBarButtonItemTitle:(NSString *)title {
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightBtn setTitle:title forState:UIControlStateNormal];
     [rightBtn setTitleColor:UICOLOR_FROM_HEX(ColorFFFFFF) forState:UIControlStateNormal];
@@ -68,7 +67,7 @@
 }
 
 #pragma mark 右侧按钮---图片
-- (void)setRightButtonWithImg:(NSString *)imageName{
+- (void)setRightButtonWithImg:(NSString *)imageName {
     UIBarButtonItem *imageItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
     UIBarButtonItem *navSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     navSpace.width = - LineX(5);
@@ -76,7 +75,7 @@
     
 }
 
-- (void)leftAction{
+- (void)leftAction {
     [self.navigationController popViewControllerAnimated:YES];
 }
 

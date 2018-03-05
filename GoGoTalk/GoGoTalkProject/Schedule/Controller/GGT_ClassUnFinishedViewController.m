@@ -8,6 +8,7 @@
 
 #import "GGT_ClassUnFinishedViewController.h"
 #import "GGT_ClassUnFinishedListCell.h"
+#import "GGT_ClassFinishedDetailViewController.h"
 
 @interface GGT_ClassUnFinishedViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -86,13 +87,14 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 124;
+    return LineH(125);
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    GGT_ClassFinishedDetailViewController *vc = [[GGT_ClassFinishedDetailViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

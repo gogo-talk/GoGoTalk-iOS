@@ -90,8 +90,8 @@
     
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.bgcontentView.mas_left).with.offset(margin10);
-        make.top.equalTo(self.startTimeLabel.mas_bottom).with.offset(margin10);
-        make.size.mas_offset(CGSizeMake(60, 60));
+        make.top.equalTo(self.startTimeLabel.mas_bottom).with.offset(13);
+        make.size.mas_offset(CGSizeMake(LineH(60), LineH(60)));
     }];
     
     
@@ -127,12 +127,12 @@
     self.nameLabel = [[UILabel alloc]init];
     self.nameLabel.text = @"Ruisun";
     self.nameLabel.font = SystemFont(15);
-    self.nameLabel.textColor = UICOLOR_FROM_HEX(Color333333);
+    self.nameLabel.textColor = UICOLOR_FROM_HEX(Color999999);
     [self.bgcontentView addSubview:self.nameLabel];
     
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.iconImageView.mas_right).with.offset(margin5);
-        make.top.equalTo(self.jiaocaiNameLabel.mas_bottom).with.offset(margin15);
+        make.top.equalTo(self.jiaocaiNameLabel.mas_bottom).with.offset(margin10);
         make.height.mas_offset(15);
     }];
     
@@ -153,7 +153,7 @@
     self.giftNumLabel = [[UILabel alloc]init];
     self.giftNumLabel.text = @"x230";
     self.giftNumLabel.font = SystemFont(12);
-    self.giftNumLabel.textColor = UICOLOR_FROM_HEX(0xEFB6376);
+    self.giftNumLabel.textColor = UICOLOR_FROM_HEX(ColorEFB637);
     [self.bgcontentView addSubview:self.giftNumLabel];
     
     [self.giftNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -172,7 +172,7 @@
     
     [self.fanhuanAlertLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.bgcontentView.mas_left).with.offset(margin10);
-        make.top.equalTo(self.iconImageView.mas_bottom).with.offset(margin10);
+        make.bottom.equalTo(self.bgcontentView.mas_bottom).with.offset(-margin10);
         make.height.mas_offset(14);
     }];
     
@@ -193,11 +193,11 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    [self.iconImageView xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:30];
-    [self.iconImageView addBorderForViewWithBorderWidth:0.5 BorderColor:UICOLOR_FROM_HEX(ColorF2F2F2) CornerRadius:30];
+    [self.iconImageView xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:LineH(30)];
+    [self.iconImageView addBorderForViewWithBorderWidth:0.5 BorderColor:UICOLOR_FROM_HEX(ColorF2F2F2) CornerRadius:LineH(30)];
     
     [self.pingjiaButton xc_SetCornerWithSideType:XCSideTypeAll cornerRadius:16];
-    [self.pingjiaButton addBorderForViewWithBorderWidth:1 BorderColor:UICOLOR_FROM_HEX(Color666666) CornerRadius:16];
+    [self.pingjiaButton addBorderForViewWithBorderWidth:0.5 BorderColor:UICOLOR_FROM_HEX(Color666666) CornerRadius:16];
 }
 
 

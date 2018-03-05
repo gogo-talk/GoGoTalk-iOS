@@ -31,6 +31,7 @@ static CGFloat const margin44 = 44.0f;
 #define ColorFF6600 0xFF6600
 #define ColorFFCAC7 0xFFCAC7
 #define ColorE6E6E6 0xE6E6E6
+#define ColorEFB637 0xEFB637
 
 
 

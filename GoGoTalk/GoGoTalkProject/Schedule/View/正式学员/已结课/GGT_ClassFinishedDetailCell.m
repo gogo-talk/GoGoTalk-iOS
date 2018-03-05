@@ -40,7 +40,7 @@
     
     //左边文字
     self.leftlabel = [[UILabel alloc] init];
-    self.leftlabel.font = Font(16);
+    self.leftlabel.font = SystemFont(16);
     self.leftlabel.textColor = UICOLOR_FROM_HEX(Color333333);
     [self addSubview:self.leftlabel];
     
@@ -52,32 +52,60 @@
 
     
     //获得奖杯部分
+    self.giftNumLabel = [[UILabel alloc] init];
+    self.giftNumLabel.font = SystemFont(12);
+    self.giftNumLabel.textColor = UICOLOR_FROM_HEX(ColorEFB637);
+    self.giftNumLabel.text = @"x230";
+    [self addSubview:self.giftNumLabel];
+    
+    [self.giftNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.mas_right).with.offset(-10);
+        make.centerY.equalTo(self.mas_centerY);
+        make.height.mas_offset(13);
+    }];
+    
+    
+    self.giftImgView = [[UIImageView alloc] init];
+    self.giftImgView.image = UIIMAGE_FROM_NAME(@"icon-jiangbei");
+    [self addSubview:self.giftImgView];
+    
+    [self.giftImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.giftNumLabel.mas_left).with.offset(-4);
+        make.centerY.equalTo(self.mas_centerY);
+        make.size.mas_offset(CGSizeMake(15, 14));
+    }];
+    
+    
     self.giftLabel = [[UILabel alloc] init];
-    self.giftLabel.font = Font(12);
+    self.giftLabel.font = SystemFont(12);
     self.giftLabel.textColor = UICOLOR_FROM_HEX(ColorEA5851);
     self.giftLabel.text = @"还需要努力哦";
     [self addSubview:self.giftLabel];
     
     [self.giftLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left).with.offset(margin10);
-        make.right.equalTo(self.mas_right).with.offset(-0);
-        make.bottom.equalTo(self.mas_bottom).with.offset(-0);;
-        make.height.mas_offset(0.5);
+        make.right.equalTo(self.giftImgView.mas_left).with.offset(-5);
+        make.centerY.equalTo(self.mas_centerY);
+        make.height.mas_offset(13);
     }];
+
     
-    
-//    @property (nonatomic, strong) UILabel *giftLabel;
-//    @property (nonatomic, strong) UIImageView *giftImgView;
-//    @property (nonatomic, strong) UILabel *giftNumLabel;
-    
-    //3
     self.giftLabel.hidden = YES;
     self.giftImgView.hidden = YES;
     self.giftNumLabel.hidden = YES;
     
     
-    //4
+
+    //评分
+    self.starView = [[UIView alloc] init];
+    self.starView.backgroundColor = UICOLOR_RANDOM_COLOR();
+    [self addSubview:self.starView];
     
+    [self.starView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.mas_right).with.offset(-10);
+        make.centerY.equalTo(self.mas_centerY);
+        make.size.mas_offset(CGSizeMake(100, 30));
+    }];
+    self.starView.hidden = YES;
     
     
     
@@ -111,7 +139,9 @@
         self.leftImgView.hidden = YES;
         self.leftlabel.text = @"获得奖杯";
         self.enterImgView.hidden = YES;
-
+        self.giftLabel.hidden = NO;
+        self.giftImgView.hidden = NO;
+        self.giftNumLabel.hidden = NO;
 
         [self frameChange:NO];
 
@@ -120,6 +150,7 @@
         self.leftImgView.hidden = YES;
         self.leftlabel.text = @"外教评价";
         self.enterImgView.hidden = YES;
+        self.starView.hidden = NO;
 
         [self frameChange:NO];
 

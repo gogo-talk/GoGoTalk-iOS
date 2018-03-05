@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GGT_ClassFinishedDetailViewController : UIViewController
+@interface GGT_ClassFinishedDetailViewController : BaseBackViewController
 
 @end
